@@ -8,5 +8,16 @@ pkgs.mkShellNoCC {
   emacs
   opam
   coq
+      ((emacsPackagesFor pkgs.emacs).emacsWithPackages (
+      epkgs: [
+      epkgs.vterm
+      epkgs.magit
+      epkgs.nix-mode
+
+      ]
+    ))
+
 ];
 }
+
+
