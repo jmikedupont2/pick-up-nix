@@ -1,3 +1,6 @@
 [submodule "time"]
 	path = time
 	url = https://github.com/meta-introspector/time
+[submodule "nixpacks"]
+	path = nixpacks
+	url = https://github.com/railwayapp/nixpacks
