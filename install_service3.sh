@@ -1,5 +1,6 @@
 
 #tailscale status |grep " v" |cut -b15-30  | parallel -j0 "echo ssh {} 'cd /mnt/data1/nix && git submodule init'"
+
 for x in `tailscale status |grep " v" |cut -b15-30 `;
 do
     echo $x;
@@ -11,7 +12,21 @@ do
 #    ssh $x "sudo cp /mnt/data1/nix/time/2024/03/18/guix-cuirass/etc/cuirass-remote-worker-v3.service /etc/systemd/system/cuirass-remote-worker.service"
     ssh $x "sudo systemctl daemon-reload; sudo systemctl stop cuirass-remote-worker.service; sudo systemctl start cuirass-remote-worker.service; sudo systemctl status cuirass-remote-worker.service;"
     
-     
+
+     echo $x;
+     #scp nrpe.cfg $x:/tmp/
+     ssh $x "cd /mnt/data1/nix/time/2024/03/ && git pull origin main"
+     #ssh $x "cd /mnt/data1/nix/time/2024/03/26/pick-up-nix/ && git pull origin main"
+     #ssh $x "cd /mnt/data1/nix/time/2024/03/18/guix-cuirass/ && git log -1 "
+
+     # pull origin main
+     #find  /gnu/store/3mr4ma8fsqc0y94f9bvfhrb00hymdw7n-cuirass-1.99.99-git/lib/systemd/system/cuirass-remote-worker.service /etc/systemd/system/
+     #ssh $x "sudo cp /mnt/data1/nix/time/2024/03/18/guix-cuirass/etc/cuirass-remote-worker-v2.service /etc/systemd/system/cuirass-remote-worker.service"
+     #ssh $x "sudo systemctl daemon-reload;"
+     #ssh $x "sudo systemctl stop cuirass-remote-worker.service;"
+     #ssh $x "sudo systemctl start cuirass-remote-worker.service;"
+     #ssh $x "sudo systemctl status cuirass-remote-worker.service;"
+
      #     #ssh $x "sudo mkdir -p /mnt/data1/ || sudo chown ubuntu: /mnt/data1/ || git clone https://github.com/jmikedupont2/pick-up-nix.git /mnt/data1/nix || d /mnt/data1/nix && git submodule init"
      #     ssh $x "cd /mnt/data1/nix && git init . || git remote add origin https://github.com/jmikedupont2/pick-up-nix.git || git pull origin" &
 
