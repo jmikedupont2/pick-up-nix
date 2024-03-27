@@ -1,7 +1,7 @@
 
 #tailscale status |grep " v" |cut -b15-30  | parallel -j0 "echo ssh {} 'cd /mnt/data1/nix && git submodule init'"
-
-for x in `tailscale status |grep " v" |cut -b15-30 `;
+for x in aaj2 aav3-4 aav3-3 aav3-3 aav3-2 aav3-1 v2-4 v2-3 v2-2 v2-1 v2-0
+#for x in `tailscale status |grep " v" |cut -b15-30 `;
 do
     echo $x;
     #ssh $x "cd /mnt/data1/nix/time/2024/03/18/guix-cuirass/ && git stash && git checkout main && git pull https://github.com/meta-introspector/guix-curiass main"

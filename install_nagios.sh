@@ -1,11 +1,13 @@
 
 #tailscale status |grep " v" |cut -b15-30  | parallel -j0 "echo ssh {} 'cd /mnt/data1/nix && git submodule init'"
- for x in `tailscale status |grep " v" |cut -b15-30 | grep -v "\-0"`;
+# for x in `tailscale status |grep " v" |cut -b15-30 | grep -v "\-0"`;
+for x in v3-0 v3-4 v3-3 v3-2 v3-1 v2-4 v2-3 v2-2 v2-1 v2-0
  do
      echo $x;
      #scp nrpe.cfg $x:/tmp/
-     ssh $x "cd /mnt/data1/nix/time/2024/03/ && git pull origin main"
-     #ssh $x "cd /mnt/data1/nix/time/2024/03/26/pick-up-nix/ && git pull origin main"
+     #     ssha $x "cd /mnt/data1/nix/time/2024/03/ && rm '/mnt/data1/nix/.git/modules/time/index.lock' "
+#     ssha $x "cd /mnt/data1/nix/time/2024/03/ && git fetch && git checkout origin/main "
+     ssha $x "cd /mnt/data1/nix/time/2024/03/26/pick-up-nix/ && git submodule init &&git submodule update  && git checkout origin/master "
      #ssh $x "cd /mnt/data1/nix/time/2024/03/18/guix-cuirass/ && git log -1 "
 
      # pull origin main
