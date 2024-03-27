@@ -6,8 +6,11 @@ for x in v3-0 v3-4 v3-3 v3-2 v3-1 v2-4 v2-3 v2-2 v2-1 v2-0
      echo $x;
      #scp nrpe.cfg $x:/tmp/
      #     ssha $x "cd /mnt/data1/nix/time/2024/03/ && rm '/mnt/data1/nix/.git/modules/time/index.lock' "
-#     ssha $x "cd /mnt/data1/nix/time/2024/03/ && git fetch && git checkout origin/main "
-     ssha $x "cd /mnt/data1/nix/time/2024/03/26/pick-up-nix/ && git submodule init &&git submodule update  && git checkout origin/master "
+     #ssha $x "cd /mnt/data1/nix/time/2024/03/ && git fetch && git checkout origin/main "
+     #ssha $x "cd /mnt/data1/nix/time/2024/03/26/ && git submodule init &&git submodule update .  "
+     ssha $x "cd /mnt/data1/nix/time/2024/03/26/pick-up-nix && git fetch && git checkout origin/master"
+     ssha $x "sudo apt update && sudo apt install -y nagios-nrpe-server  "
+     ssha $x "sudo cp /mnt/data1/nix/time/2024/03/26/pick-up-nix/etc/nagios/nrpe.cfg /etc/nagios/nrpe.cfg   "
      #ssh $x "cd /mnt/data1/nix/time/2024/03/18/guix-cuirass/ && git log -1 "
 
      # pull origin main
