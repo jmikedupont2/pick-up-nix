@@ -118,6 +118,22 @@
         "type": "github"
       }
     },
+    "nixpkgs-unstable": {
+      "locked": {
+        "lastModified": 1757190983,
+        "narHash": "sha256-T18E7WWi+0KFtKbcRyAr97FEtvbg3PfIVVfAj+z6lsk=",
+        "owner": "NixOS",
+        "repo": "nixpkgs",
+        "rev": "b6a9424a20632704f14396070987ff0bdd5c1ac7",
+        "type": "github"
+      },
+      "original": {
+        "owner": "NixOS",
+        "ref": "master",
+        "repo": "nixpkgs",
+        "type": "github"
+      }
+    },
     "nmd": {
       "flake": false,
       "locked": {
@@ -175,7 +191,8 @@
     "root": {
       "inputs": {
         "nix-on-droid": "nix-on-droid",
-        "nixpkgs": "nixpkgs"
+        "nixpkgs": "nixpkgs",
+        "nixpkgs-unstable": "nixpkgs-unstable"
       }
     },
     "scss-reset": {

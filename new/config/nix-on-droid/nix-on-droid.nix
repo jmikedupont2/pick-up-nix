@@ -6,7 +6,7 @@
     # User-facing stuff that you really really want to have
     vim
     git
-    #gemini-cli
+    gemini-cli
     emacs
 #    llvm
 #    ocaml
