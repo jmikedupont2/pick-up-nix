@@ -8,20 +8,20 @@
     git
     gemini-cli
     emacs
-#    llvm
-#    ocaml
-#    coq
-#    haskellPackages.ghc
-##    metacoq
-#    guix
-#    emacsPackages.vterm
+    llvm_18
+    ocaml
+    coq
+    ghc
+    coqPackages.metacoq
+    guix
+    emacsPackages.vterm
     rustc
     cargo
-#    gauche
-#    guile
-#    sops
+    gauche
+    guile
+    sops
     tmux
-#    minizinc
+    minizinc
 #    python3
 #    python3Packages.numpy
 #    python3Packages.scipy
@@ -29,10 +29,10 @@
 #    python3Packages.scikit-learn
 #    python3Packages.tensorflow-lite
 #    python3Packages.pytorch
-#    gcc
-#    gdb
+    #    gcc
+    gdb
     clang
-#    lldb
+    lldb
     pkg-config
     cmake
     gh

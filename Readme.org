@@ -1,8 +1,0 @@
-My homedir in nix
-
-put into /mnt/data1/nix or edit the shell.sh
-#+begin_src shell
-git submodule init
-git submodule update
-bash ./shell.sh
-#+end_src
