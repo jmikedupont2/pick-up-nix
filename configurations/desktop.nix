@@ -7,5 +7,8 @@ environment.systemPackages = with pkgs; [
   opam
   coq
   dune
+  shellcheck
+  tmux
+  asciinema
 ];
 }

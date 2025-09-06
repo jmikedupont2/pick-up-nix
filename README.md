@@ -3,10 +3,10 @@
 This repository contains my NixOS and Nix-on-Droid configurations.
 
 **NixOS Configuration**
-The NixOS configuration is located in the `.config/nix/configuration.nix` file.
+The NixOS configuration is now located in the `configurations/desktop.nix` file.
 
 **Nix-on-Droid Configuration**
-The Nix-on-Droid configuration is located in the `.config/home-manager/home.nix` file.
+The Nix-on-Droid configuration is now located in the `configurations/android.nix` file.
 
 ---
 
@@ -198,6 +198,40 @@ These topics can significantly extend the power and flexibility of your Nix-on-D
 Imagine a fast-paced, energetic video montage. Start with quick cuts of a user's fingers flying across a mobile keyboard, showing various Termux commands and Nix-on-Droid configurations being applied. Transition to scenes of complex development environments running smoothly on a phone (e.g., a web server, a Python script, a game engine). Include visual effects like glowing lines connecting different parts of the system, symbolizing seamless integration. The video should convey a sense of empowerment, efficiency, and the unexpected capability of mobile devices with Nix-on-Droid. Upbeat, driving electronic music plays in the background. The final shot is the user smiling confidently at their phone, with a subtle "Powered by Nix" logo appearing.
 
 ---
+
+## 🏗️ Rework: Supporting Desktop and Android
+
+This repository is now structured to support both desktop NixOS environments and Android (Termux) environments using Nix. The core idea is to centralize common configurations and provide platform-specific entry points through a top-level `flake.nix`.
+
+### New Configuration Structure
+
+*   **`flake.nix`**: The new top-level flake file that defines and orchestrates both desktop and Android configurations.
+*   **`configurations/`**: This directory houses platform-specific Nix configurations.
+    *   **`configurations/desktop.nix`**: Contains packages and configurations primarily for desktop NixOS environments.
+    *   **`configurations/android.nix`**: Contains packages and configurations specifically for Android (Termux) environments using Nix-on-Droid.
+*   **`shell.nix`**: (In root) Remains a generic development shell that can be used on both platforms.
+
+### How to Apply Configurations
+
+*   **For Desktop (NixOS):**
+
+    To apply your desktop configuration, navigate to the root of this repository and use:
+
+    ```bash
+    sudo nixos-rebuild switch --flake .#desktop
+    ```
+
+*   **For Android (Nix-on-Droid):**
+
+    To apply your Android configuration, navigate to the root of this repository and use:
+
+    ```bash
+    nix-on-droid switch --flake .#android
+    ```
+
+This new structure allows for clearer separation and management of your Nix configurations across different devices.
+
+
 
 
 

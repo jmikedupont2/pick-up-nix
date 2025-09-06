@@ -1,3 +1,4 @@
+#!/bin/bash
 export HOSTNAME=introspector
 export HOME=/mnt/data1/nix
 export NIX_CONF=mnt/data1/nix/time/2024/02/23/nix-config/

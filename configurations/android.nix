@@ -36,6 +36,8 @@
     pkg-config
     cmake
     gh
+    shellcheck
+    asciinema
 
     # Some common stuff that people expect to have
     procps
