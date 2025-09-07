@@ -24,10 +24,16 @@
         # Add any Android-specific overlays here
       };
 
-      in
+      commonPackages = pkgs: {
+        hello = pkgs.hello;
+        figlet = pkgs.figlet;
+        # Add other common packages here
+      };
+
+    in
     {
-      packages.x86_64-linux.hello = nixpkgs.legacyPackages.x86_64-linux.hello;
-      packages.aarch64-linux.hello = nixpkgs.legacyPackages.aarch64-linux.hello;
+      packages.x86_64-linux = commonPackages nixpkgs.legacyPackages.x86_64-linux;
+      packages.aarch64-linux = commonPackages nixpkgs.legacyPackages.aarch64-linux;
 
       nixosConfigurations = {
         desktop = nixpkgs.lib.nixosSystem {

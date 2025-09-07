@@ -48,3 +48,6 @@ flycheck_*.el
 /network-security.data
 
 /.git-credentials
+
+# Generated QA report
+qa_build_report.txt
