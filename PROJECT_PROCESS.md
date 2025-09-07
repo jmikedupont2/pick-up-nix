@@ -53,7 +53,7 @@ We are building the Nix-Introspector to reduce the time and complexity of managi
 *   **Control:** We will control the improved process by integrating the tool into a CI pipeline, monitored by this quality plan.
 
 ### 2.4 Architectural Approach (C4)
-The system will be designed as a single **Container** (a command-line application) named `nix-inspector`. This container will be composed of several **Components** (e.g., `NixParser`, `GuixTranslator`, `AstAggregator`). The architecture will be documented and reviewed iteratively.
+The system will be designed as a single **Container** (a command-line application) named `nix-inspector`. This container will be composed of several **Components** (e.g., `NixParser`, `GuixTranslator`, `AstAggregator`). The architecture will be documented and reviewed iteratively. All components, including third-party vendorized tools, will undergo a rigorous nixification process to ensure reproducibility and traceability.
 
 ### 2.5 Quality & Compliance Statement (GMP/ISO 9001)
 This project will be developed in accordance with GMP principles for software development. All code will be version-controlled, all changes will be documented in a change log, and all releases will be **Validated** against a predefined set of user acceptance tests. This document serves as the top-level **Quality Manual** for the project.

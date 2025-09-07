@@ -47,6 +47,12 @@ The command populates the experiment directory with a standardized set of test c
 2.  Known "good" code samples are copied into it.
 3.  Known "bad" code samples (e.g., our currently broken `home/*.nix` files) are also copied. This constitutes the material for the **Validation** process.
 
+### 4.4.1 Nixification of Vendorized Components
+
+Once a third-party tool is vendorized (Step 4.3), it must be "nixified" to ensure it can be built and managed reproducibly within the Nix ecosystem. This involves creating a `default.nix` file for the component and obtaining its `cargoSha256` (for Rust projects) or equivalent content hash.
+
+Refer to the detailed "Standard Operating Procedure (SOP): Nixifying Rust Crates" for the step-by-step guide on this process.
+
 ### 4.5 Step 5: Execution & Measurement (Six Sigma)
 
 The Developer enters the sandboxed shell to perform the evaluation.

@@ -52,3 +52,19 @@ Packages are managed by adding them to the appropriate module in the `home/` dir
 -   **Emacs:** Managed in `home/emacs.nix`.
 -   **Scientific Packages:** Add to `home/scientific.nix`.
 -   **Shared Settings:** General settings (not packages) can be modified in `.config/home-manager/home.nix`.
+
+## Livestreaming
+
+We are livestreaming our development process on X (formerly Twitter) and other platforms. You can follow our progress and interact with us live at:
+
+[https://x.com/introsp3ctor/status/1964663185539248630](https://x.com/introsp3ctor/status/1964663185539248630)
+
+All our development steps are logged using `figlet` on the stream and written to a dedicated log stream.
+
+### Social Media
+
+Follow us on other platforms:
+
+*   TikTok: [https://www.tiktok.com/@solfunmeme](https://www.tiktok.com/@solfunmeme)
+*   Lemon8: Check out solfunmeme’s posts on Lemon8! [https://v.lemon8-app.com/al/OgsMsbfTMx](https://v.lemon8-app.com/al/OgsMsbfTMx)
+*   Linktree: [https://linktr.ee/h4km](https://linktr.ee/h4km)
