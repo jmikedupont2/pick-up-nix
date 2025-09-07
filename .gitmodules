@@ -46,3 +46,6 @@
 [submodule "source/github/meta-introspector/streamofrandom"]
 	path = source/github/meta-introspector/streamofrandom
 	url = ./source/github/meta-introspector/streamofrandom
+[submodule "source/github/meta-introspector/lean4"]
+	path = source/github/meta-introspector/lean4
+	url = ./source/github/meta-introspector/lean4
