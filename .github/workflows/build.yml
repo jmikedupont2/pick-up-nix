@@ -32,7 +32,7 @@ jobs:
           primary-key: nix-store-${{ runner.os }}-${{ hashFiles('flake.nix') }}
 
       - name: Build Android configuration
-        run: nix build .#nixOnDroidConfigurations.android.config.system.build.toplevel
+        run: nix build .#nixOnDroidConfigurations.android.config.system.build.toplevel --system aarch64-linux --impure
 
       - name: Upload Android binary
         uses: ./.github/actions/upload-artifact
