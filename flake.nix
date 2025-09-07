@@ -51,7 +51,7 @@
             ./configurations/android.nix
             # Add any other Android-specific modules here
           ];
-          specialArgs = { inherit android-unstable-pkgs; };
+          
         };
       };
     };
