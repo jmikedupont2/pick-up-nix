@@ -32,7 +32,7 @@ jobs:
           primary-key: nix-store-${{ runner.os }}-${{ hashFiles('flake.nix') }}
 
       - name: Build Android configuration
-        run: nix build .#nixOnDroidConfigurations.android
+        run: nix build .#nixOnDroidConfigurations.android.config.system.build.toplevel
 
       - name: Upload Android binary
         uses: ./.github/actions/upload-artifact
@@ -60,7 +60,7 @@ jobs:
         run: find . -name "*.nix"
 
       - name: Build PC configuration
-        run: nix build .#nixosConfigurations.desktop
+        run: nix build .#nixosConfigurations.desktop.config.system.build.toplevel
 
       - name: Upload PC binary
         uses: ./.github/actions/upload-artifact
