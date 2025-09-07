@@ -55,3 +55,6 @@
 [submodule "vendor/quasi-meta-meme"]
 	path = vendor/quasi-meta-meme
 	url = https://github.com/meta-introspector/quasi-meta-meme
+[submodule "vendor/external/tmux"]
+	path = vendor/external/tmux
+	url = https://github.com/tmux/tmux
