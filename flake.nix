@@ -37,6 +37,7 @@
             # Add any other desktop-specific modules here
           ];
           specialArgs = { inherit unstable-pkgs; };
+          pkgs = import nixpkgs { inherit system; };
         };
       };
 
