@@ -1,0 +1,56 @@
+name: Build and Test
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  android_build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: ./.github/actions/checkout
+
+      - name: Install Nix
+        uses: ./.github/actions/install-nix-action
+
+      - name: Cache Nix store
+        uses: ./.github/actions/cache-nix-action
+        with:
+          primary-key: nix-store-${{ runner.os }}-${{ hashFiles('**/*.nix') }}
+
+      - name: Build Android configuration
+        run: nix build .#android
+
+      - name: Upload Android binary
+        uses: ./.github/actions/upload-artifact
+        with:
+          name: android-binary
+          path: ./result # Assuming the build output is in ./result
+
+  pc_build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: ./.github/actions/checkout
+
+      - name: Install Nix
+        uses: ./.github/actions/install-nix-action
+
+      - name: Cache Nix store
+        uses: ./.github/actions/cache-nix-action
+        with:
+          primary-key: nix-store-${{ runner.os }}-${{ hashFiles('**/*.nix') }}
+
+      - name: Build PC configuration
+        run: nix build .#desktop
+
+      - name: Upload PC binary
+        uses: ./.github/actions/upload-artifact
+        with:
+          name: pc-binary
+          path: ./result # Assuming the build output is in ./result

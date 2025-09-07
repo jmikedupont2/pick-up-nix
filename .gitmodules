@@ -25,3 +25,6 @@
 [submodule "vendor/rnix-parser"]
 	path = vendor/rnix-parser
 	url = https://github.com/nix-community/rnix-parser.git
+[submodule ".github/actions/upload-artifact"]
+	path = .github/actions/upload-artifact
+	url = https://github.com/meta-introspector/upload-artifact

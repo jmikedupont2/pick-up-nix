@@ -38,6 +38,7 @@
     gh
     shellcheck
     asciinema
+    curl
 
     # Some common stuff that people expect to have
     procps
@@ -57,6 +58,31 @@
     xz
     zip
     unzip
+
+    # Packages from nix-env -q (non-xorg)
+    adwaita-icon-theme
+    atk
+    at-spi2-atk
+    at-spi2-core
+    cairo
+    dconf
+    fontconfig
+    freetype
+    gdk-pixbuf
+    glib
+    gnome-themes-extra
+    gtk+3
+    harfbuzz
+    hicolor-icon-theme
+    libepoxy
+    libthai
+    libxkbcommon
+    ncurses
+    pango
+    pixman
+
+    # To include optional xorg packages, uncomment the following line:
+    # (import ./optional-xorg-packages.nix { inherit pkgs; })
   ];
 
   # Backup etc files instead of failing to activate generation if a file already exists in /etc
