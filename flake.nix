@@ -29,26 +29,30 @@
       packages.x86_64-linux.hello = nixpkgs.legacyPackages.x86_64-linux.hello;
       packages.aarch64-linux.hello = nixpkgs.legacyPackages.aarch64-linux.hello;
 
-      nixosConfigurations.desktop = nixpkgs.lib.nixosSystem {
-        inherit system;
-        modules = [
-          ./configurations/desktop.nix
-          # Add any other desktop-specific modules here
-        ];
-        specialArgs = { inherit unstable-pkgs; };
+      nixosConfigurations = {
+        desktop = nixpkgs.lib.nixosSystem {
+          inherit system;
+          modules = [
+            ./configurations/desktop.nix
+            # Add any other desktop-specific modules here
+          ];
+          specialArgs = { inherit unstable-pkgs; };
+        };
       };
 
-      nixOnDroidConfigurations.android = nix-on-droid.lib.nixOnDroidConfiguration {
-        system = androidSystem;
-        pkgs = import nixpkgs {
-          inherit androidSystem;
-          overlays = [ androidOverlay ];
+      nixOnDroidConfigurations = {
+        android = nix-on-droid.lib.nixOnDroidConfiguration {
+          system = androidSystem;
+          pkgs = import nixpkgs {
+            inherit androidSystem;
+            overlays = [ androidOverlay ];
+          };
+          modules = [
+            ./configurations/android.nix
+            # Add any other Android-specific modules here
+          ];
+          specialArgs = { inherit android-unstable-pkgs; };
         };
-        modules = [
-          ./configurations/android.nix
-          # Add any other Android-specific modules here
-        ];
-        specialArgs = { inherit android-unstable-pkgs; };
       };
     };
 }
