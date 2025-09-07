@@ -29,7 +29,7 @@ jobs:
       - name: Cache Nix store
         uses: ./.github/actions/cache-nix-action
         with:
-          primary-key: nix-store-${{ runner.os }}-${{ hashFiles('**/*.nix') }}
+          primary-key: nix-store-${{ runner.os }}-${{ hashFiles('flake.nix') }}
 
       - name: Build Android configuration
         run: nix build .#android
@@ -57,7 +57,7 @@ jobs:
       - name: Cache Nix store
         uses: ./.github/actions/cache-nix-action
         with:
-          primary-key: nix-store-${{ runner.os }}-${{ hashFiles('**/*.nix') }}
+          primary-key: nix-store-${{ runner.os }}-${{ hashFiles('flake.nix') }}
 
       - name: Build PC configuration
         run: nix build .#desktop
