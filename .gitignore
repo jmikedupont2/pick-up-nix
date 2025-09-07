@@ -51,3 +51,7 @@ flycheck_*.el
 
 # Generated QA report
 qa_build_report.txt
+
+# Added by cargo
+
+/target

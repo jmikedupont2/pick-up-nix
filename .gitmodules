@@ -31,3 +31,6 @@
 [submodule "vendor/nix-on-droid"]
 	path = vendor/nix-on-droid
 	url = https://github.com/nix-community/nix-on-droid.git
+[submodule "source/github/jmikedupont2/orgs/Escaped-RDFa/namespace"]
+	path = source/github/jmikedupont2/orgs/Escaped-RDFa/namespace
+	url = https://github.com/Escaped-RDFa/namespace.git

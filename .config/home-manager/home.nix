@@ -1,9 +1,6 @@
 { pkgs, ... }:
 
 {
-  imports = [
-    ../.
-  ];
 
   # A list of packages to be installed for the user.
   home.packages = with pkgs; [
