@@ -55,3 +55,6 @@ qa_build_report.txt
 # Added by cargo
 
 /target
+
+# Lean 4 build log
+lean4_nix_develop.log
