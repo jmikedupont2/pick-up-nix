@@ -5,7 +5,8 @@
 
 # Configuration
 SESSION_NAME="gemini-dev-session"
-LOG_DIR="logs"
+LOG_DIR="${HOME}/logs/gemini"
+mkdir -p "${LOG_DIR}"
 TASK_FILE="task.md" # Placeholder for the task file
 
 # Ensure log directory exists
