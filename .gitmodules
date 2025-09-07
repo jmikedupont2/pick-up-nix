@@ -43,9 +43,7 @@
 [submodule "source/github/meta-introspector/solfunmeme"]
 	path = source/github/meta-introspector/solfunmeme
 	url = https://github.com/meta-introspector/solfunmeme
-[submodule "source/github/meta-introspector/streamofrandom"]
-	path = source/github/meta-introspector/streamofrandom
-	url = ./source/github/meta-introspector/streamofrandom
+
 [submodule "source/github/meta-introspector/lean4"]
 	path = source/github/meta-introspector/lean4
 	url = ./source/github/meta-introspector/lean4
@@ -61,9 +59,7 @@
 [submodule "vendor/external/minizinc-introspector"]
 	path = vendor/external/minizinc-introspector
 	url = https://github.com/meta-introspector/minizinc-introspector
-[submodule "vendor/external/lattice-introspector"]
-	path = vendor/external/lattice-introspector
-	url = https://github.com/meta-introspector/lattice-introspector
+
 [submodule "vendor/external/tmux-interface-rs"]
 	path = vendor/external/tmux-interface-rs
 	url = https://github.com/meta-introspector/tmux-interface-rs
@@ -136,3 +132,12 @@
 [submodule "vendor/external/gemini-cli"]
 	path = vendor/external/gemini-cli
 	url = https://github.com/meta-introspector/gemini-cli
+[submodule "source/github/meta-introspector/streamofrandom"]
+	path = source/github/meta-introspector/streamofrandom
+	url = https://github.com/meta-introspector/streamofrandom
+[submodule "source/github/meta-introspector/lattice-introspector"]
+	path = source/github/meta-introspector/lattice-introspector
+	url = https://github.com/meta-introspector/lattice-introspector
+[submodule "vendor/external/rust"]
+	path = vendor/external/rust
+	url = https://github.com/meta-introspector/rust
