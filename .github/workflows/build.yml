@@ -17,6 +17,8 @@ jobs:
     steps:
       - name: Checkout repository
         uses: ./.github/actions/checkout
+        with:
+          submodules: true
 
       - name: Install Nix
         uses: ./.github/actions/install-nix-action
@@ -40,6 +42,8 @@ jobs:
     steps:
       - name: Checkout repository
         uses: ./.github/actions/checkout
+        with:
+          submodules: true
 
       - name: Install Nix
         uses: ./.github/actions/install-nix-action
