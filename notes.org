@@ -1,0 +1,8 @@
+
+* QuickStart
+
+git clone https://github.com/jmikedupont2/pick-up-nix
+cd pick-up-nix
+./dwim.sh
+
+

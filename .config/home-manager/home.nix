@@ -1,6 +1,13 @@
+{ pkgs, ... }:
+
 {
   imports = [
     ../.
+  ];
+
+  # A list of packages to be installed for the user.
+  home.packages = with pkgs; [
+    # Add user-specific packages here
   ];
 
   custom = {
