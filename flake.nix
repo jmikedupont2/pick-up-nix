@@ -43,6 +43,7 @@
 
       nixOnDroidConfigurations = {
         android = nix-on-droid.lib.nixOnDroidConfiguration {
+          system = androidSystem;
           pkgs = nixpkgs.legacyPackages.${androidSystem};
           modules = [
             ./configurations/android.nix
