@@ -24,8 +24,11 @@
         # Add any Android-specific overlays here
       };
 
-    in
+      in
     {
+      packages.x86_64-linux.hello = nixpkgs.legacyPackages.x86_64-linux.hello;
+      packages.aarch64-linux.hello = nixpkgs.legacyPackages.aarch64-linux.hello;
+
       nixosConfigurations.desktop = nixpkgs.lib.nixosSystem {
         inherit system;
         modules = [
