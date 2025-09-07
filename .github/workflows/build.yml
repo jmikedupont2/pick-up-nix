@@ -31,7 +31,7 @@ jobs:
         with:
           primary-key: nix-store-${{ runner.os }}-${{ hashFiles('flake.nix') }}
 
-            - name: Build Android configuration
+      - name: Build Android configuration
         # run: nix build .#nixOnDroidConfigurations.android
         run: nix build .#packages.x86_64-linux.hello
 
