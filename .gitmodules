@@ -34,3 +34,9 @@
 [submodule "source/github/jmikedupont2/orgs/Escaped-RDFa/namespace"]
 	path = source/github/jmikedupont2/orgs/Escaped-RDFa/namespace
 	url = https://github.com/Escaped-RDFa/namespace.git
+[submodule "source/github/meta-introspector/git-submodule-tools-rs"]
+	path = source/github/meta-introspector/git-submodule-tools-rs
+	url = https://github.com/meta-introspector/git-submodule-tools-rs.git
+[submodule "vendor/external/git-submodule-tools-rs"]
+	path = vendor/external/git-submodule-tools-rs
+	url = https://github.com/meta-introspector/git-submodule-tools-rs
