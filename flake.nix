@@ -37,22 +37,18 @@
             # Add any other desktop-specific modules here
           ];
           specialArgs = { inherit unstable-pkgs; };
-          pkgs = import nixpkgs { inherit system; };
+          pkgs = nixpkgs.legacyPackages.${system};
         };
       };
 
       nixOnDroidConfigurations = {
         android = nix-on-droid.lib.nixOnDroidConfiguration {
           system = androidSystem;
-          pkgs = import nixpkgs {
-            inherit androidSystem;
-            overlays = [ androidOverlay ];
-          };
+          pkgs = nixpkgs.legacyPackages.${androidSystem};
           modules = [
             ./configurations/android.nix
             # Add any other Android-specific modules here
           ];
-          
         };
       };
     };
