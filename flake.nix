@@ -25,7 +25,7 @@
       commonPackages = pkgs: {
         hello = pkgs.hello;
         figlet = pkgs.figlet;
-        gemini-cli = (import nixpkgs-unstable { system = pkgs.stdenv.system; }).gemini-cli;
+        gemini-cli = pkgs.callPackage ./pkgs/gemini-cli {};
       };
     in
     {
