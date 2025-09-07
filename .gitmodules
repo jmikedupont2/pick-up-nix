@@ -4,3 +4,24 @@
 [submodule "vendor/rust-index-guix"]
 	path = vendor/rust-index-guix
 	url = https://github.com/meta-introspector/rust-index-guix.git
+[submodule ".github/actions/install-nix-action"]
+	path = .github/actions/install-nix-action
+	url = https://github.com/meta-introspector/install-nix-action.git
+[submodule ".github/actions/nix-github-actions"]
+	path = .github/actions/nix-github-actions
+	url = https://github.com/meta-introspector/nix-github-actions.git
+[submodule ".github/actions/nix-installer-action"]
+	path = .github/actions/nix-installer-action
+	url = https://github.com/meta-introspector/nix-installer-action.git
+[submodule ".github/actions/cache-nix-action"]
+	path = .github/actions/cache-nix-action
+	url = https://github.com/meta-introspector/cache-nix-action.git
+[submodule ".github/actions/cache"]
+	path = .github/actions/cache
+	url = https://github.com/meta-introspector/cache.git
+[submodule ".github/actions/checkout"]
+	path = .github/actions/checkout
+	url = https://github.com/meta-introspector/checkout.git
+[submodule "vendor/rnix-parser"]
+	path = vendor/rnix-parser
+	url = https://github.com/nix-community/rnix-parser.git
