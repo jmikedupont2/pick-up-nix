@@ -133,3 +133,6 @@
 [submodule "vendor/external/meta-meme"]
 	path = vendor/external/meta-meme
 	url = https://github.com/meta-introspector/meta-meme
+[submodule "vendor/external/gemini-cli"]
+	path = vendor/external/gemini-cli
+	url = https://github.com/meta-introspector/gemini-cli
