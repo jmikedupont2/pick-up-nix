@@ -28,3 +28,6 @@
 [submodule ".github/actions/upload-artifact"]
 	path = .github/actions/upload-artifact
 	url = https://github.com/meta-introspector/upload-artifact
+[submodule "vendor/nix-on-droid"]
+	path = vendor/nix-on-droid
+	url = https://github.com/nix-community/nix-on-droid.git

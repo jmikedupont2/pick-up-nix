@@ -4,7 +4,10 @@
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-24.05"; # Stable channel
     nixpkgs-unstable.url = "github:NixOS/nixpkgs/master";
-    nix-on-droid.url = "github:nix-community/nix-on-droid/release-24.05"; # Stable channel
+    nix-on-droid = {
+      url = "github:nix-community/nix-on-droid/release-24.05"; # Or your preferred nix-on-droid branch
+      inputs.nixpkgs.follows = "nixpkgs"; # Ensure nix-on-droid uses the same nixpkgs
+    };
   };
 
   outputs = { self, nixpkgs, nixpkgs-unstable, nix-on-droid }:

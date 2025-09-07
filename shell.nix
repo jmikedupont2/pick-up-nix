@@ -8,6 +8,7 @@ pkgs.mkShellNoCC {
   opam
   git 
   coq
+  figlet
       ((emacsPackagesFor pkgs.emacs).emacsWithPackages (
       epkgs: [
       epkgs.vterm
