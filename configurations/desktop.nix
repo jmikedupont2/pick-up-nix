@@ -1,4 +1,4 @@
-{ pkgs ? import <nixpkgs> { } }:
+{ pkgs, unstable-pkgs, ... }:
 
 {
 
@@ -10,5 +10,7 @@ environment.systemPackages = with pkgs; [
   shellcheck
   tmux
   asciinema
-];
+] ++ (with unstable-pkgs; [
+  # Add unstable packages here if needed
+]);
 }
