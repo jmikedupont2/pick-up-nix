@@ -49,3 +49,9 @@
 [submodule "source/github/meta-introspector/lean4"]
 	path = source/github/meta-introspector/lean4
 	url = ./source/github/meta-introspector/lean4
+[submodule "vendor/external/forgejo-python"]
+	path = vendor/external/forgejo-python
+	url = https://github.com/meta-introspector/forgejo-python
+[submodule "vendor/quasi-meta-meme"]
+	path = vendor/quasi-meta-meme
+	url = https://github.com/meta-introspector/quasi-meta-meme

@@ -1,3 +1,4 @@
+workspace = { members = ["issue_to_markdown_converter"] }
 [package]
 name = "pick-up-nix"
 version = "0.1.0"
