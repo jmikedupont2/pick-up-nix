@@ -71,7 +71,7 @@
     gdk-pixbuf
     glib
     gnome-themes-extra
-    gtk+3
+    gtk3
     harfbuzz
     hicolor-icon-theme
     libepoxy
