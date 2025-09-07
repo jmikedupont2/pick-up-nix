@@ -40,3 +40,9 @@
 [submodule "vendor/external/git-submodule-tools-rs"]
 	path = vendor/external/git-submodule-tools-rs
 	url = https://github.com/meta-introspector/git-submodule-tools-rs
+[submodule "source/github/meta-introspector/solfunmeme"]
+	path = source/github/meta-introspector/solfunmeme
+	url = https://github.com/meta-introspector/solfunmeme
+[submodule "source/github/meta-introspector/streamofrandom"]
+	path = source/github/meta-introspector/streamofrandom
+	url = ./source/github/meta-introspector/streamofrandom
