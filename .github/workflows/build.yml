@@ -16,7 +16,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
-        uses: ./.github/actions/checkout
+        uses: meta-introspector/checkout@v4
         with:
           submodules: true
 
@@ -41,7 +41,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
-        uses: ./.github/actions/checkout
+        uses: meta-introspector/checkout@v4
         with:
           submodules: true
 
