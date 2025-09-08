@@ -156,3 +156,15 @@
 [submodule "data"]
 	path = data
 	url = /data/data/com.termux.nix/files/home/git/data/
+[submodule "vendor/guix/mes"]
+	path = vendor/guix/mes
+	url = https://github.com/meta-introspector/mes
+[submodule "vendor/guix/guix"]
+	path = vendor/guix/guix
+	url = https://github.com/meta-introspector/guix
+[submodule "vendor/lang-c"]
+	path = vendor/lang-c
+	url = https://github.com/vickenty/lang-c
+[submodule "vendor/steel"]
+	path = vendor/steel
+	url = https://github.com/mattwparas/steel

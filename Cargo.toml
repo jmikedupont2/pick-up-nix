@@ -1,4 +1,4 @@
-workspace = { members = ["source/github/meta-introspector/streamofrandom/livestream-tiktok-plugin/tiktok_cli_adaptor", "source/github/meta-introspector/streamofrandom/livestream-tiktok-plugin/tiktok_viewer_tracker"] }
+workspace = { members = ["source/github/meta-introspector/streamofrandom/livestream-tiktok-plugin/tiktok_cli_adaptor", "source/github/meta-introspector/streamofrandom/livestream-tiktok-plugin/tiktok_viewer_tracker", "tools/if-counter"] }
 [package]
 name = "pick-up-nix"
 version = "0.1.0"
