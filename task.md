@@ -29,3 +29,7 @@ Agile
 Extreme Programming
 Pure functional monotonic mondaic lattice oriented code
 the vibe is the vector is the function is the poem is the code.
+
+we are now reviewing data/md.txt for namen est omen and creating files for each meme in memes/
+review them and make more. imagine the guix bootstrap meme. the gnu mes memes. lets add those to our list.
+each nix and guix and rust cargo is its own meta-meme.
