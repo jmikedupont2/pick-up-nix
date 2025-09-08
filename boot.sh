@@ -4,8 +4,8 @@
 # and then launches the Gemini CLI within that session, configured for this project.
 
 # Configuration
-# SESSION_NAME="gemini-dev-session" # Currently unused
-LOG_DIR="${HOME}/logs/gemini/"
+SESSION_NAME="gemini-dev-session" # Define SESSION_NAME here
+LOG_DIR="${HOME}/logs/gemini"
 mkdir -p "${LOG_DIR}"
 # TASK_FILE="task.md" # Placeholder for the task file, currently unused
 
@@ -16,4 +16,8 @@ mkdir -p "$LOG_DIR"
 # The output will be saved to a unique file in the logs directory
 TIMESTAMP=$(date +"%Y%m%d_%H%M%S")
 ASCIINEMA_REC_FILE="$LOG_DIR/session_$TIMESTAMP.cast"
-asciinema rec "$ASCIINEMA_REC_FILE" --command run_boot.sh
+
+# Start asciinema recording
+./result/bin/asciinema rec "$ASCIINEMA_REC_FILE" --command "./run_boot.sh \"$ASCIINEMA_REC_FILE\" \"$SESSION_NAME\""
+
+# The script will wait here until asciinema finishes (i.e., the tmux session exits)
