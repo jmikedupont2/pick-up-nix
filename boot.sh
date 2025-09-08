@@ -18,6 +18,6 @@ TIMESTAMP=$(date +"%Y%m%d_%H%M%S")
 ASCIINEMA_REC_FILE="$LOG_DIR/session_$TIMESTAMP.cast"
 
 # Start asciinema recording
-~/pick-up-nix/result/bin/asciinema rec "$ASCIINEMA_REC_FILE" --command "/data/data/com.termux.nix/files/home/pick-up-nix/pick-up-nix/run_boot.sh \"$ASCIINEMA_REC_FILE\" \"$SESSION_NAME\""
+~/pick-up-nix/result/bin/asciinema rec "$ASCIINEMA_REC_FILE" --command "/data/data/com.termux.nix/files/home/pick-up-nix/run_boot.sh \"$ASCIINEMA_REC_FILE\" \"$SESSION_NAME\""
 
 # The script will wait here until asciinema finishes (i.e., the tmux session exits)
