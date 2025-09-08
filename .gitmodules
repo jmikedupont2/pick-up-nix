@@ -147,3 +147,9 @@
 [submodule "vendor/external/asciinema"]
 	path = vendor/external/asciinema
 	url = https://github.com/asciinema/asciinema
+[submodule "vendor/nix/nixtract"]
+	path = vendor/nix/nixtract
+	url = https://github.com/tweag/nixtract.git
+[submodule "vendor/nix/nixpkgs-lint"]
+	path = vendor/nix/nixpkgs-lint
+	url = https://github.com/nix-community/nixpkgs-lint.git
