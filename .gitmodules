@@ -63,9 +63,6 @@
 [submodule "vendor/external/tmux-interface-rs"]
 	path = vendor/external/tmux-interface-rs
 	url = https://github.com/meta-introspector/tmux-interface-rs
-[submodule "vendor/external/aichat"]
-	path = vendor/external/aichat
-	url = https://github.com/meta-introspector/aichat
 [submodule "vendor/external/n00b"]
 	path = vendor/external/n00b
 	url = https://github.com/meta-introspector/n00b
