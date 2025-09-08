@@ -141,3 +141,12 @@
 [submodule "vendor/external/rust"]
 	path = vendor/external/rust
 	url = https://github.com/meta-introspector/rust
+[submodule "vendor/external/asciinema-scenario"]
+	path = vendor/external/asciinema-scenario
+	url = https://github.com/garbas/asciinema-scenario
+[submodule "vendor/external/nix-asciinema-agg"]
+	path = vendor/external/nix-asciinema-agg
+	url = https://github.com/a-h/nix-asciinema-agg
+[submodule "vendor/external/asciinema"]
+	path = vendor/external/asciinema
+	url = https://github.com/asciinema/asciinema
