@@ -153,3 +153,6 @@
 [submodule "vendor/nix/nixpkgs-lint"]
 	path = vendor/nix/nixpkgs-lint
 	url = https://github.com/nix-community/nixpkgs-lint.git
+[submodule "data"]
+	path = data
+	url = /data/data/com.termux.nix/files/home/git/data/

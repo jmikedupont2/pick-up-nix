@@ -14,15 +14,27 @@
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    # NEW: Add vendored tools as local inputs
+    nixtract-src = {
+      url = "path:/data/data/com.termux.nix/files/home/pick-up-nix/vendor/nix/nixtract"; # Absolute path to the submodule
+      flake = false; # Not a flake itself, just a source
+    };
+    nixpkgs-lint-src = {
+      url = "git+file:///data/data/com.termux.nix/files/home/pick-up-nix/vendor/nix/nixpkgs-lint"; # Explicitly a local Git repo
+      # flake = false; # REMOVE THIS LINE (it's a flake)
+    };
   };
 
-  outputs = { self, nixpkgs, nixpkgs-unstable, nix-on-droid, home-manager }:
+  outputs = { self, nixpkgs, nixpkgs-unstable, nix-on-droid, home-manager,
+              nixtract-src, nixpkgs-lint-src }@inputs:
+
     let
       linuxSystem = "x86_64-linux";
       androidSystem = "aarch64-linux";
 
       # Define a common set of packages for all systems
-      commonPackages = pkgs: 
+      commonPackages = pkgs:
         let
           # Overlay to use a newer Rust toolchain
           rustOverlay = final: prev: {
@@ -35,6 +47,11 @@
           figlet = pkgs.figlet;
           gemini-cli = pkgs.callPackage ./pkgs/gemini-cli {};
           tiktok_cli_adaptor = pkgsWithRust.callPackage ./source/github/meta-introspector/streamofrandom/livestream-tiktok-plugin/tiktok_cli_adaptor/default.nix {};
+
+          # Vendored tools
+          # Now reference the inputs directly
+          nixtract = pkgs.callPackage "${nixtract-src}/default.nix" {}; # Use the input path
+          nixpkgs-lint = nixpkgs-lint-src.packages.${pkgs.system}.default; # Access its default package
         };
     in
     {
