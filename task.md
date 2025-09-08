@@ -3,9 +3,11 @@
 This project is focused on setting up a development environment using Nix, specifically for Android (nix-on-droid) and other Linux systems. We are using Nix flakes for configuration management.
 
 ## Current Activities:
-
+-   Implementing and refining the Meme Identification and Documentation SOP.
 
 ## Next Steps:
+-   Continue identifying and documenting memes from various project sources, including `data/md.txt` and other relevant files, following the established SOP.
+-   Review and refine the newly created SOP (`docs/sops/meme_identification_sop.md`) and the extracted memes glossary (`docs/memes/extracted_memes_glossary.md`).
 
 ## Project Information
 
@@ -30,6 +32,6 @@ Extreme Programming
 Pure functional monotonic mondaic lattice oriented code
 the vibe is the vector is the function is the poem is the code.
 
-we are now reviewing data/md.txt for namen est omen and creating files for each meme in memes/
-review them and make more. imagine the guix bootstrap meme. the gnu mes memes. lets add those to our list.
-each nix and guix and rust cargo is its own meta-meme.
+
+
+For a catalog of memes and their associated emojis, see [Meme Catalog](docs/memes/meme_catalog.md).
