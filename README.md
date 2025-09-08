@@ -66,5 +66,24 @@ All our development steps are logged using `figlet` on the stream and written to
 Follow us on other platforms:
 
 *   TikTok: [https://www.tiktok.com/@solfunmeme](https://www.tiktok.com/@solfunmeme)
-*   Lemon8: Check out solfunmeme’s posts on Lemon8! [https://v.lemon8-app.com/al/OgsMsbfTMx](https://v.lemon8-app.com/al/OgsMsbfTMx)
+*   Lemon8: Check out solfunmeme’s posts on Lemon8! [https://v.lemon8-app.com/al/OgsMsbfTMx](https://v.tiktok.com/@solfunmeme)
 *   Linktree: [https://linktr.ee/h4km](https://linktr.ee/h4km)
+
+## Building and Using `asciinema` Flake
+
+This project includes a vendored `asciinema` flake. You can build it and use the resulting binary for recording terminal sessions.
+
+To build the `asciinema` flake:
+
+```bash
+nix build ./vendor/external/asciinema
+```
+
+After a successful build, a symlink named `result` will be created in the root of this repository, pointing to the built `asciinema` package in the Nix store.
+
+You can then use the `asciinema` executable located at `./result/bin/asciinema`. For example:
+
+```bash
+./result/bin/asciinema rec my_session.cast
+```
+

@@ -22,11 +22,20 @@
       androidSystem = "aarch64-linux";
 
       # Define a common set of packages for all systems
-      commonPackages = pkgs: {
-        hello = pkgs.hello;
-        figlet = pkgs.figlet;
-        gemini-cli = (import nixpkgs-unstable { system = pkgs.stdenv.system; }).gemini-cli;
-      };
+      commonPackages = pkgs: 
+        let
+          # Overlay to use a newer Rust toolchain
+          rustOverlay = final: prev: {
+            rustToolchain = prev.rust-bin.stable.latest.default;
+          };
+          pkgsWithRust = pkgs.extend rustOverlay; # Corrected line
+        in
+        {
+          hello = pkgs.hello;
+          figlet = pkgs.figlet;
+          gemini-cli = pkgs.callPackage ./pkgs/gemini-cli {};
+          tiktok_cli_adaptor = pkgsWithRust.callPackage ./source/github/meta-introspector/streamofrandom/livestream-tiktok-plugin/tiktok_cli_adaptor/default.nix {};
+        };
     in
     {
       # Expose common packages for direct use with `nix run` or `nix shell`
