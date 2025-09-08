@@ -58,3 +58,6 @@ qa_build_report.txt
 
 # Lean 4 build log
 lean4_nix_develop.log
+
+# Nix build result symlink
+/result
