@@ -3,6 +3,14 @@
 **Document ID:** PI-CRQ-00Y, Rev 1.0 (Placeholder ID)
 **Applicable Standards:** ITILv4, Agile, OODA, GMP, ISO 9001
 
+## 0.0 Status
+
+**Current Status:** In Progress
+
+**Notes:**
+- Initial setup of the CRQ.
+- Direct wiki content extraction is not feasible from this environment. Manual extraction or user-provided content will be required for the next steps (Transformation and Loading).
+
 ---
 
 ## 1.0 Change Description (ITIL)
