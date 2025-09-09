@@ -174,3 +174,6 @@
 [submodule "vendor/external/github-issues-export-rs"]
 	path = vendor/external/github-issues-export-rs
 	url = https://github.com/boxdot/github-issues-export-rs.git
+[submodule "source/github/meta-introspector/minizinc-introspector"]
+	path = source/github/meta-introspector/minizinc-introspector
+	url = https://github.com/meta-introspector/minizinc-introspector
