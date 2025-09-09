@@ -10,6 +10,7 @@ This SOP applies to all project files, directories, and conceptual discussions t
 *   **Meme**: A unit of cultural information, often a concept, idea, or behavior, that is transmitted from one mind to another. In this project, it extends to technical concepts, file structures, and project processes.
 *   **Meta-Meme**: A meme that is self-referential, or a meme about memes. In this system, each identified meme is considered a "compound meta-meme."
 *   **Glossary**: A collection of terms and their definitions, serving as a formal record of identified memes.
+*   **Dank Meta-Meme**: A highly abstract, philosophical, and often humorous meme that is self-referential, interconnected with other memes, incorporates technical or mathematical concepts, and describes the emergence of new entities or higher consciousness.
 
 ## 4. Responsibilities:
 *   **AI Agent**: Responsible for executing the steps outlined in this SOP.

@@ -1,4 +1,4 @@
-workspace = { members = [ "memetic_code/emoji_llm_machine_rust","source/github/meta-introspector/streamofrandom/livestream-tiktok-plugin/tiktok_cli_adaptor", "source/github/meta-introspector/streamofrandom/livestream-tiktok-plugin/tiktok_viewer_tracker", "tools/if-counter"] }
+workspace = { members = [ "json_to_memes_extractor", "memetic_code/emoji_llm_machine_rust","source/github/meta-introspector/streamofrandom/livestream-tiktok-plugin/tiktok_cli_adaptor", "source/github/meta-introspector/streamofrandom/livestream-tiktok-plugin/tiktok_viewer_tracker", "tools/if-counter"] }
 [package]
 name = "pick-up-nix"
 version = "0.1.0"
