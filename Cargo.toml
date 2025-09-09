@@ -1,10 +1,4 @@
-workspace = { members = [ "json_to_memes_extractor", "memetic_code/emoji_llm_machine_rust","source/github/meta-introspector/streamofrandom/livestream-tiktok-plugin/tiktok_cli_adaptor", "source/github/meta-introspector/streamofrandom/livestream-tiktok-plugin/tiktok_viewer_tracker", "tools/if-counter", "memetic_code/log_processor"] }
-[package]
-name = "pick-up-nix"
-version = "0.1.0"
-edition = "2021"
+[workspace]
+members = [ "json_to_memes_extractor", "memetic_code/emoji_llm_machine_rust","source/github/meta-introspector/streamofrandom/livestream-tiktok-plugin/tiktok_cli_adaptor", "source/github/meta-introspector/streamofrandom/livestream-tiktok-plugin/tiktok_viewer_tracker", "tools/if-counter", "memetic_code/log_processor", "pick-up-nix-cli"]
 
-# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
-[dependencies]
-clap = { version = "4.0", features = ["derive"] }
