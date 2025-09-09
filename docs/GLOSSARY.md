@@ -29,6 +29,9 @@ This glossary defines key terms used within the Pick-Up-Nix project documentatio
 *   **`git submodule add`:** A Git command used to add a new submodule to a repository.
 *   **`git submodule update --init --recursive`:** A Git command used to initialize, clone, and update submodules, including nested submodules.
 
+## H
+*   **Hyperspace Anomaly:** A metaphorical term used to describe a sudden, unexpected system crash, particularly in the context of the MIB Crash Retrieval Protocol.
+
 ## I
 *   **Idempotency:** The property of an operation that it can be applied multiple times without changing the result beyond the initial application. In scripting, it means running a script multiple times has the same effect as running it once.
 

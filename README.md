@@ -4,6 +4,34 @@ This repository contains my personal Nix configurations for Android (`nix-on-dro
 
 The configuration is modular, allowing different package sets to be composed for different use cases.
 
+## Getting Started
+
+This section provides a quick guide to setting up and using this Nix configuration project.
+
+### Prerequisites
+
+*   **Nix Installation:** Ensure you have Nix installed on your system. If not, follow the official Nix installation guide.
+*   **Nix Flakes Enabled:** Make sure Nix flakes are enabled. You can enable them by adding `experimental-features = nix-command flakes` to your `nix.conf` file (usually located at `/etc/nix/nix.conf` or `~/.config/nix/nix.conf`).
+
+### 1. Clone the Repository
+
+If you haven't already, clone this repository to your local machine:
+
+```bash
+git clone https://github.com/jmikedupont2/pick-up-nix.git
+cd pick-up-nix
+```
+
+### 2. Apply the Nix-on-Droid Configuration
+
+To apply the Nix configuration to your Android device (via Nix-on-Droid), or to other Linux systems, refer to the detailed instructions in the "Building Configurations" section below.
+
+For Nix-on-Droid, the primary command you'll use is:
+
+```bash
+nix-on-droid switch --flake .#android
+```
+
 ## Repository Structure
 
 -   `flake.nix`: The heart of the configuration. It defines all inputs, manages overlays, and exposes the final system and home configurations.
