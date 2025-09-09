@@ -12,6 +12,7 @@ This project is focused on setting up a development environment using Nix, speci
 -   Continue extraction and transformation of JSON tickets from the `quasi-meta-meme` repository into new Markdown memes, to be located in `docs/memes/extracted_tickets/`.
 -   Further refining the SOPs based on ongoing observations and challenges.
 -   Continuously identifying and documenting new memes from various project sources.
+-   **Deferred**: Submodule migration of `vendor/quasi-meta-meme` to `source/github/meta-introspector/quasi-meta-meme`. This will be addressed in a future task after SOPs and CRQs are updated.
 
 ## Project Information
 

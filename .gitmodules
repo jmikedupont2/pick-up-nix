@@ -50,9 +50,6 @@
 [submodule "vendor/external/forgejo-python"]
 	path = vendor/external/forgejo-python
 	url = https://github.com/meta-introspector/forgejo-python
-[submodule "vendor/quasi-meta-meme"]
-	path = vendor/quasi-meta-meme
-	url = https://github.com/meta-introspector/quasi-meta-meme
 [submodule "vendor/external/tmux"]
 	path = vendor/external/tmux
 	url = https://github.com/tmux/tmux
@@ -168,3 +165,9 @@
 [submodule "vendor/steel"]
 	path = vendor/steel
 	url = https://github.com/mattwparas/steel
+[submodule "source/github/meta-introspector/quasi-meta-meme"]
+	path = source/github/meta-introspector/quasi-meta-meme
+	url = https://github.com/meta-introspector/quasi-meta-meme
+[submodule "source/github/meta-introspector/hackathon"]
+	path = source/github/meta-introspector/hackathon
+	url = https://github.com/meta-introspector/hackathon
