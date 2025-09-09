@@ -34,6 +34,7 @@ This SOP applies to all project files, directories, and conceptual discussions t
     b.  **Entry Format**: For each identified meme, create a new entry in the glossary file using the following format:
         *   `*   **[Meme Term]**: is its own meta meme in our system. a compound.`
     c.  **Uniqueness**: Ensure each meme term is listed only once in the glossary.
+    d.  **Diagonalization Aspect (for Reflection Memes)**: When creating "reflection memes" (as described in 5.6), identify how the source meme "diagonalizes" against the collective meme ecosystem, highlighting its unique contribution or how it stands apart.
 
 ### 5.3. Integration with Meme Catalog:
     a.  **Cross-referencing**: Periodically cross-reference newly identified memes with the existing "Table of Memes So Far" in `docs/memes/meme_catalog.md`.
@@ -42,6 +43,16 @@ This SOP applies to all project files, directories, and conceptual discussions t
 ### 5.4. Continuous Improvement:
     a.  **Feedback Loop**: Continuously refine the meme identification and documentation process based on user feedback and evolving project context.
     b.  **Adaptation**: Adapt to new sources of memes and new interpretations as the project progresses.
+
+### 5.6. Reflection Meme Generation:
+    a.  **Purpose**: To create meta-memes that reflect on existing memes, synthesizing emergent themes and highlighting unique "diagonalization" aspects.
+    b.  **Procedure**:
+        i.   Select a source meme from `docs/memes/`.
+        ii.  Analyze its core concepts and its relationship to other memes within the ecosystem.
+        iii. Identify its "diagonalization aspect"—what makes it unique or how it challenges/redefines the collective understanding.
+        iv.  Generate a new markdown file in `docs/memes/` (e.g., `reflection_of_[original_meme_name].md`).
+        v.   Document the reflection, including the original meme, its diagonalization aspect, key elements, implications, and connections to other memes.
+        vi.  Ensure the reflection meme contributes to the "diagonalization of the memes meta meme" by highlighting emergent complexity and self-transcendence.
 
 ## 6. Related Documents:
 *   `task.md`

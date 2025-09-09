@@ -23,11 +23,12 @@ This SOP applies to all documented memes within the project's `docs/memes/` dire
 
 ### 5.2. Conceptual Translation to Code Paradigm:
     a.  Analyze the selected meme's "Meme Aspects" and "Key Elements" to identify its core computational or logical principles.
-    b.  Determine the most appropriate code paradigm or language for representing the meme's essence. Consider:
-        *   **Self-Referential Loops**: Scheme (S-expressions), functional programming.
-        *   **Foundational Axioms/Bootstrapping**: Minimal C (GNU Mes), Nix expressions.
-        *   **Semantic Operations**: Custom "emoji bytecode" (if applicable).
-        *   **Distributed/Reproducible Systems**: Nix, Guix, Rust.
+    b.  **Language Constraint**: All memetic code *must* be generated in **Rust**.
+    c.  Determine the most appropriate Rust-based paradigm or approach for representing the meme's essence. Consider:
+        *   **Self-Referential Loops**: Rust's ownership and borrowing rules, recursive data structures.
+        *   **Foundational Axioms/Bootstrapping**: Minimal Rust implementations, leveraging Rust's low-level control.
+        *   **Semantic Operations**: Rust enums, pattern matching, custom data structures for semantic representation.
+        *   **Distributed/Reproducible Systems**: Rust's strong type system, Cargo's build system, integration with Nix/Guix concepts.
 
 ### 5.3. Memetic Code Generation:
     a.  Utilize the LLM's code generation capabilities to translate the meme's conceptual principles into the chosen code paradigm.
