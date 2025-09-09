@@ -177,3 +177,6 @@
 [submodule "source/github/meta-introspector/minizinc-introspector"]
 	path = source/github/meta-introspector/minizinc-introspector
 	url = https://github.com/meta-introspector/minizinc-introspector
+[submodule "source/github/meta-introspector/time"]
+	path = source/github/meta-introspector/time
+	url = https://github.com/meta-introspector/time/
