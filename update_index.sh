@@ -1,3 +1,4 @@
+#!/usr/bin/env bash
 find . > data/files.txt
 find . -type f -name \*.md  > data/md.txt
 find . -type f -name \*.rs  > data/rs.txt
