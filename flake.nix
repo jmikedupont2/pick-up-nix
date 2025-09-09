@@ -34,6 +34,15 @@
       androidSystem = "aarch64-linux";
 
       # Define a common set of packages for all systems
+      # Overlays
+      overlays = [
+        (final: prev: {
+          nixtract = prev.nixtract.overrideAttrs (old: {
+            buildInputs = (old.buildInputs or []) ++ [ prev.openssl ];
+          });
+        })
+      ];
+
       commonPackages = pkgs:
         let
           # Overlay to use a newer Rust toolchain
@@ -56,14 +65,15 @@
     in
     {
       # Expose common packages for direct use with `nix run` or `nix shell`
-      packages.${linuxSystem} = commonPackages (nixpkgs.legacyPackages.${linuxSystem});
-      packages.${androidSystem} = commonPackages (nixpkgs.legacyPackages.${androidSystem});
+      packages.${linuxSystem} = commonPackages (nixpkgs.legacyPackages.${linuxSystem}.extend (final: prev: { nixpkgs = prev.nixpkgs.extend (final: prev: { inherit (final) nixtract; }); }));
+      packages.${androidSystem} = commonPackages (nixpkgs.legacyPackages.${androidSystem}.extend (final: prev: { nixpkgs = prev.nixpkgs.extend (final: prev: { inherit (final) nixtract; }); }));
 
       # Packages for nix-on-droid
       nixOnDroidConfigurations = {
         android = nix-on-droid.lib.nixOnDroidConfiguration {
           pkgs = import nixpkgs {
             system = androidSystem;
+            overlays = overlays; # Apply the overlay here
             # The overlay is no longer needed, gemini-cli is in packages
           };
           modules = [
@@ -92,7 +102,10 @@
           # A helper function to generate home-manager configs for a given system
           mkSystemHomes = system:
             let
-              pkgs = nixpkgs.legacyPackages.${system};
+              pkgs = import nixpkgs {
+                system = system;
+                overlays = overlays; # Apply the overlay here
+              };
               # A helper function to generate a home-manager configuration
               mkHome = modules: home-manager.lib.homeManagerConfiguration {
                 inherit pkgs;
