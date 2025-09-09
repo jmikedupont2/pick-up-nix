@@ -43,15 +43,140 @@
 [submodule "source/github/meta-introspector/solfunmeme"]
 	path = source/github/meta-introspector/solfunmeme
 	url = https://github.com/meta-introspector/solfunmeme
-[submodule "source/github/meta-introspector/streamofrandom"]
-	path = source/github/meta-introspector/streamofrandom
-	url = ./source/github/meta-introspector/streamofrandom
+
 [submodule "source/github/meta-introspector/lean4"]
 	path = source/github/meta-introspector/lean4
 	url = ./source/github/meta-introspector/lean4
 [submodule "vendor/external/forgejo-python"]
 	path = vendor/external/forgejo-python
 	url = https://github.com/meta-introspector/forgejo-python
-[submodule "vendor/quasi-meta-meme"]
-	path = vendor/quasi-meta-meme
+[submodule "vendor/external/tmux"]
+	path = vendor/external/tmux
+	url = https://github.com/tmux/tmux
+[submodule "vendor/external/minizinc-introspector"]
+	path = vendor/external/minizinc-introspector
+	url = https://github.com/meta-introspector/minizinc-introspector
+
+[submodule "vendor/external/tmux-interface-rs"]
+	path = vendor/external/tmux-interface-rs
+	url = https://github.com/meta-introspector/tmux-interface-rs
+[submodule "vendor/external/n00b"]
+	path = vendor/external/n00b
+	url = https://github.com/meta-introspector/n00b
+[submodule "vendor/external/monomcp-rust"]
+	path = vendor/external/monomcp-rust
+	url = https://github.com/meta-introspector/monomcp-rust
+[submodule "vendor/external/hugging-face-dataset-validator-rust"]
+	path = vendor/external/hugging-face-dataset-validator-rust
+	url = https://github.com/meta-introspector/hugging-face-dataset-validator-rust
+[submodule "vendor/external/turbomcp"]
+	path = vendor/external/turbomcp
+	url = https://github.com/meta-introspector/turbomcp
+[submodule "vendor/external/bitchat-solana-zos-solfunmeme"]
+	path = vendor/external/bitchat-solana-zos-solfunmeme
+	url = https://github.com/meta-introspector/bitchat-solana-zos-solfunmeme
+[submodule "vendor/external/trident"]
+	path = vendor/external/trident
+	url = https://github.com/meta-introspector/trident
+[submodule "vendor/external/solfunmeme-banner"]
+	path = vendor/external/solfunmeme-banner
+	url = https://github.com/meta-introspector/solfunmeme-banner
+[submodule "vendor/external/ragit"]
+	path = vendor/external/ragit
+	url = https://github.com/meta-introspector/ragit
+[submodule "vendor/external/bootstrap-meme"]
+	path = vendor/external/bootstrap-meme
+	url = https://github.com/meta-introspector/bootstrap-meme
+[submodule "vendor/external/emojis-rs"]
+	path = vendor/external/emojis-rs
+	url = https://github.com/meta-introspector/emojis-rs
+[submodule "vendor/external/introspector-llc"]
+	path = vendor/external/introspector-llc
+	url = https://github.com/meta-introspector/introspector-llc
+[submodule "vendor/external/coccinelleforrust_personal_mirror"]
+	path = vendor/external/coccinelleforrust_personal_mirror
+	url = https://github.com/meta-introspector/coccinelleforrust_personal_mirror
+[submodule "vendor/external/solfunmeme-model-builder-quiz"]
+	path = vendor/external/solfunmeme-model-builder-quiz
+	url = https://github.com/meta-introspector/solfunmeme-model-builder-quiz
+[submodule "vendor/external/solfunmeme-dioxus"]
+	path = vendor/external/solfunmeme-dioxus
+	url = https://github.com/meta-introspector/solfunmeme-dioxus
+[submodule "vendor/external/sophia_rs"]
+	path = vendor/external/sophia_rs
+	url = https://github.com/meta-introspector/sophia_rs
+[submodule "vendor/external/solfunmeme-metameme"]
+	path = vendor/external/solfunmeme-metameme
+	url = https://github.com/meta-introspector/solfunmeme-metameme
+[submodule "vendor/external/amazon-q-developer-cli"]
+	path = vendor/external/amazon-q-developer-cli
+	url = https://github.com/meta-introspector/amazon-q-developer-cli
+[submodule "vendor/external/bootstrap"]
+	path = vendor/external/bootstrap
+	url = https://github.com/meta-introspector/bootstrap
+[submodule "vendor/external/grok-cli"]
+	path = vendor/external/grok-cli
+	url = https://github.com/meta-introspector/grok-cli
+[submodule "vendor/external/tclifford"]
+	path = vendor/external/tclifford
+	url = https://github.com/meta-introspector/tclifford
+[submodule "vendor/external/meta-meme"]
+	path = vendor/external/meta-meme
+	url = https://github.com/meta-introspector/meta-meme
+[submodule "vendor/external/gemini-cli"]
+	path = vendor/external/gemini-cli
+	url = https://github.com/meta-introspector/gemini-cli
+[submodule "source/github/meta-introspector/streamofrandom"]
+	path = source/github/meta-introspector/streamofrandom
+	url = https://github.com/meta-introspector/streamofrandom
+[submodule "source/github/meta-introspector/lattice-introspector"]
+	path = source/github/meta-introspector/lattice-introspector
+	url = https://github.com/meta-introspector/lattice-introspector
+[submodule "vendor/external/rust"]
+	path = vendor/external/rust
+	url = https://github.com/meta-introspector/rust
+[submodule "vendor/external/asciinema-scenario"]
+	path = vendor/external/asciinema-scenario
+	url = https://github.com/garbas/asciinema-scenario
+[submodule "vendor/external/nix-asciinema-agg"]
+	path = vendor/external/nix-asciinema-agg
+	url = https://github.com/a-h/nix-asciinema-agg
+[submodule "vendor/external/asciinema"]
+	path = vendor/external/asciinema
+	url = https://github.com/asciinema/asciinema
+[submodule "vendor/nix/nixtract"]
+	path = vendor/nix/nixtract
+	url = https://github.com/tweag/nixtract.git
+[submodule "vendor/nix/nixpkgs-lint"]
+	path = vendor/nix/nixpkgs-lint
+	url = https://github.com/nix-community/nixpkgs-lint.git
+[submodule "data"]
+	path = data
+	url = /data/data/com.termux.nix/files/home/git/data/
+[submodule "vendor/guix/mes"]
+	path = vendor/guix/mes
+	url = https://github.com/meta-introspector/mes
+[submodule "vendor/guix/guix"]
+	path = vendor/guix/guix
+	url = https://github.com/meta-introspector/guix
+[submodule "vendor/lang-c"]
+	path = vendor/lang-c
+	url = https://github.com/vickenty/lang-c
+[submodule "vendor/steel"]
+	path = vendor/steel
+	url = https://github.com/mattwparas/steel
+[submodule "source/github/meta-introspector/quasi-meta-meme"]
+	path = source/github/meta-introspector/quasi-meta-meme
 	url = https://github.com/meta-introspector/quasi-meta-meme
+[submodule "source/github/meta-introspector/hackathon"]
+	path = source/github/meta-introspector/hackathon
+	url = https://github.com/meta-introspector/hackathon
+[submodule "vendor/external/github-issues-export-rs"]
+	path = vendor/external/github-issues-export-rs
+	url = https://github.com/boxdot/github-issues-export-rs.git
+[submodule "source/github/meta-introspector/minizinc-introspector"]
+	path = source/github/meta-introspector/minizinc-introspector
+	url = https://github.com/meta-introspector/minizinc-introspector
+[submodule "source/github/meta-introspector/time"]
+	path = source/github/meta-introspector/time
+	url = https://github.com/meta-introspector/time/

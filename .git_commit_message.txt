@@ -1,0 +1,5 @@
+feat: Document git status --ignore-submodules and create wiki import CRQ
+
+- Added documentation for `git status --ignore-submodules` in `docs/GIT_STATUS_IGNORE_SUBMODULES.md`.
+- Created a Change Request (CRQ) for importing wiki content into memes in `docs/crqs/WIKI_IMPORT_CRQ.md`.
+- Renamed meme files in `docs/memes/` to remove unicode characters for better readability and compatibility.
