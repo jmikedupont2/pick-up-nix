@@ -114,4 +114,3 @@ You can then use the `asciinema` executable located at `./result/bin/asciinema`.
 ```bash
 ./result/bin/asciinema rec my_session.cast
 ```
-

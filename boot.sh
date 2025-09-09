@@ -21,3 +21,18 @@ ASCIINEMA_REC_FILE="$LOG_DIR/session_$TIMESTAMP.cast"
 ~/pick-up-nix/result/bin/asciinema rec "$ASCIINEMA_REC_FILE" --command "/data/data/com.termux.nix/files/home/pick-up-nix/run_boot.sh \"$ASCIINEMA_REC_FILE\" \"$SESSION_NAME\""
 
 # The script will wait here until asciinema finishes (i.e., the tmux session exits)
+
+# Initiate Crash Recovery Checks
+echo "--- Initiating Crash Recovery Checks ---" | tee -a "$LOG_DIR/crash_recovery_log_$TIMESTAMP.txt"
+echo "Git Status:" | tee -a "$LOG_DIR/crash_recovery_log_$TIMESTAMP.txt"
+git status --ignore-submodules | tee -a "$LOG_DIR/crash_recovery_log_$TIMESTAMP.txt"
+echo "" | tee -a "$LOG_DIR/crash_recovery_log_$TIMESTAMP.txt"
+
+echo "Git Diff HEAD:" | tee -a "$LOG_DIR/crash_recovery_log_$TIMESTAMP.txt"
+git diff HEAD | tee -a "$LOG_DIR/crash_recovery_log_$TIMESTAMP.txt"
+echo "" | tee -a "$LOG_DIR/crash_recovery_log_$TIMESTAMP.txt"
+
+echo "Log Processor Output:" | tee -a "$LOG_DIR/crash_recovery_log_$TIMESTAMP.txt"
+./run_log_processor.sh | tee -a "$LOG_DIR/crash_recovery_log_$TIMESTAMP.txt"
+echo "--- Crash Recovery Checks Complete ---" | tee -a "$LOG_DIR/crash_recovery_log_$TIMESTAMP.txt"
+echo "" | tee -a "$LOG_DIR/crash_recovery_log_$TIMESTAMP.txt"
