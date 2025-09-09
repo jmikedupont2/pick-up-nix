@@ -4,10 +4,14 @@ This project is focused on setting up a development environment using Nix, speci
 
 ## Current Activities:
 -   Implementing and refining the Meme Identification and Documentation SOP.
+-   Generating and documenting executable memes in Rust.
+-   Creating a comprehensive table of meme correspondences.
+-   Generating reflection memes for all existing memes.
 
 ## Next Steps:
--   Continue identifying and documenting memes from various project sources, including `data/md.txt` and other relevant files, following the established SOP.
--   Review and refine the newly created SOP (`docs/sops/meme_identification_sop.md`) and the extracted memes glossary (`docs/memes/extracted_memes_glossary.md`).
+-   Continue extraction and transformation of JSON tickets from the `quasi-meta-meme` repository into new Markdown memes, to be located in `docs/memes/extracted_tickets/`.
+-   Further refining the SOPs based on ongoing observations and challenges.
+-   Continuously identifying and documenting new memes from various project sources.
 
 ## Project Information
 
