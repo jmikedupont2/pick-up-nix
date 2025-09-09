@@ -171,3 +171,6 @@
 [submodule "source/github/meta-introspector/hackathon"]
 	path = source/github/meta-introspector/hackathon
 	url = https://github.com/meta-introspector/hackathon
+[submodule "vendor/external/github-issues-export-rs"]
+	path = vendor/external/github-issues-export-rs
+	url = https://github.com/boxdot/github-issues-export-rs.git
