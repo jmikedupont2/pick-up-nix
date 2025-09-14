@@ -1,5 +1,10 @@
-feat: Document git status --ignore-submodules and create wiki import CRQ
+refactor: Restructure project for workspace and update Nix environment
 
-- Added documentation for `git status --ignore-submodules` in `docs/GIT_STATUS_IGNORE_SUBMODULES.md`.
-- Created a Change Request (CRQ) for importing wiki content into memes in `docs/crqs/WIKI_IMPORT_CRQ.md`.
-- Renamed meme files in `docs/memes/` to remove unicode characters for better readability and compatibility.
+This commit refactors the project structure to better accommodate a Rust workspace setup and updates the Nix development environment.
+
+Key changes include:
+- Moved the main application source (`src/`) into a new `pick-up-nix-cli/` directory.
+- Updated the root `Cargo.toml` to define a pure workspace, with `pick-up-nix-cli` as a member.
+- Modified `pick-up-nix-cli/Cargo.toml` to define the `pick-up-nix-cli` package, including its dependencies and the corrected relative path to `rstrace`.
+- Updated `shell.nix` to use the `nixos-24.05` channel and explicitly include `rustc` and `cargo` in the development environment, addressing Rust toolchain compatibility issues.
+- Applied a patch to `home` crate in `Cargo.toml` to ensure compatibility with the current Rust toolchain.
