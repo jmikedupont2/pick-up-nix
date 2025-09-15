@@ -183,3 +183,6 @@
 [submodule "source/github/meta-introspector/neo"]
 	path = source/github/meta-introspector/neo
 	url = https://github.com/meta-introspector/neo
+[submodule "vendor/nixpkgs"]
+	path = vendor/nixpkgs
+	url = https://github.com/NixOS/nixpkgs
