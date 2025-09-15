@@ -19,7 +19,7 @@ pkgs.mkShellNoCC {
     ))
   rustc
   cargo
-
+  direnv
 ];
 }
 

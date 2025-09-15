@@ -1,12 +1,12 @@
-{ pkgs }:
+{ pkgs, nodejs, geminiCliSrc }:
 
 pkgs.stdenv.mkDerivation {
   pname = "gemini-cli";
   version = "0.3.4"; # Match the version from package.json
 
-  src = /data/data/com.termux.nix/files/home/pick-up-nix/vendor/external/gemini-cli;
+  src = geminiCliSrc;
 
-  nativeBuildInputs = [ pkgs.nodejs pkgs.npm ];
+  nativeBuildInputs = [ nodejs pkgs.which ];
 
   installPhase = ''
     npm install
