@@ -61,3 +61,6 @@ lean4_nix_develop.log
 
 # Nix build result symlink
 /result
+
+# Temporary Git commit message file
+.git_commit_message.txt

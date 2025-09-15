@@ -1,10 +1,14 @@
-refactor: Restructure project for workspace and update Nix environment
+feat: Implement Nix-LLM Interaction and Nested Environment Reconstruction
 
-This commit refactors the project structure to better accommodate a Rust workspace setup and updates the Nix development environment.
+This commit introduces the foundational elements for reproducible LLM interactions
+within a Nix-managed environment, aligning with the "Extreme Nixism" manifesto.
 
 Key changes include:
-- Moved the main application source (`src/`) into a new `pick-up-nix-cli/` directory.
-- Updated the root `Cargo.toml` to define a pure workspace, with `pick-up-nix-cli` as a member.
-- Modified `pick-up-nix-cli/Cargo.toml` to define the `pick-up-nix-cli` package, including its dependencies and the corrected relative path to `rstrace`.
-- Updated `shell.nix` to use the `nixos-24.05` channel and explicitly include `rustc` and `cargo` in the development environment, addressing Rust toolchain compatibility issues.
-- Applied a patch to `home` crate in `Cargo.toml` to ensure compatibility with the current Rust toolchain.
+- **Nix-LLM Manifesto:** Added `docs/extreme-nixism-llm-manifesto.md` outlining the vision for reproducible and auditable AI through Nix derivations.
+- **Gemini Interaction Package:** Created `pkgs/gemini-interaction/default.nix` to encapsulate Gemini CLI interactions as Nix derivations.
+- **Nested Environment Reconstruction:** Implemented a modular script-based approach (`reconstruct_nested_env.sh`, `rust_nix_entrypoint.sh`, `gemini_cli_entrypoint.sh`) to reliably enter nested Nix development environments.
+- **Flake Refinements:** Updated `flake.nix` and `pkgs/gemini-cli/default.nix` to correctly handle flake inputs, absolute paths, and `rust-bin` dependencies, resolving previous evaluation errors.
+- **Direnv Setup:** Added `setup_direnv.sh` and `.envrc` for future environment management.
+- **Debugging Tools:** Included `inspect_nix_env_stack.sh` and `test_reconstruction_env.sh` for environment inspection and testing.
+
+This lays the groundwork for treating LLM invocations as auditable, reproducible derivations.
