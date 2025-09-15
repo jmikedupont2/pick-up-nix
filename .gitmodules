@@ -3,40 +3,40 @@
 	url = https://github.com/railwayapp/nixpacks
 [submodule "vendor/rust-index-guix"]
 	path = vendor/rust-index-guix
-	url = https://github.com/meta-introspector/rust-index-guix.git
+	url = https://github.com/meta-introspector/rust-index-guix
 [submodule ".github/actions/install-nix-action"]
 	path = .github/actions/install-nix-action
-	url = https://github.com/meta-introspector/install-nix-action.git
+	url = https://github.com/meta-introspector/install-nix-action
 [submodule ".github/actions/nix-github-actions"]
 	path = .github/actions/nix-github-actions
-	url = https://github.com/meta-introspector/nix-github-actions.git
+	url = https://github.com/meta-introspector/nix-github-actions
 [submodule ".github/actions/nix-installer-action"]
 	path = .github/actions/nix-installer-action
-	url = https://github.com/meta-introspector/nix-installer-action.git
+	url = https://github.com/meta-introspector/nix-installer-action
 [submodule ".github/actions/cache-nix-action"]
 	path = .github/actions/cache-nix-action
-	url = https://github.com/meta-introspector/cache-nix-action.git
+	url = https://github.com/meta-introspector/cache-nix-action
 [submodule ".github/actions/cache"]
 	path = .github/actions/cache
-	url = https://github.com/meta-introspector/cache.git
+	url = https://github.com/meta-introspector/cache
 [submodule ".github/actions/checkout"]
 	path = .github/actions/checkout
-	url = https://github.com/meta-introspector/checkout.git
+	url = https://github.com/meta-introspector/checkout
 [submodule "vendor/rnix-parser"]
 	path = vendor/rnix-parser
-	url = https://github.com/nix-community/rnix-parser.git
+	url = https://github.com/nix-community/rnix-parser
 [submodule ".github/actions/upload-artifact"]
 	path = .github/actions/upload-artifact
 	url = https://github.com/meta-introspector/upload-artifact
 [submodule "vendor/nix-on-droid"]
 	path = vendor/nix-on-droid
-	url = https://github.com/nix-community/nix-on-droid.git
+	url = https://github.com/nix-community/nix-on-droid
 [submodule "source/github/jmikedupont2/orgs/Escaped-RDFa/namespace"]
 	path = source/github/jmikedupont2/orgs/Escaped-RDFa/namespace
-	url = https://github.com/Escaped-RDFa/namespace.git
+	url = https://github.com/Escaped-RDFa/namespace
 [submodule "source/github/meta-introspector/git-submodule-tools-rs"]
 	path = source/github/meta-introspector/git-submodule-tools-rs
-	url = https://github.com/meta-introspector/git-submodule-tools-rs.git
+	url = https://github.com/meta-introspector/git-submodule-tools-rs
 [submodule "vendor/external/git-submodule-tools-rs"]
 	path = vendor/external/git-submodule-tools-rs
 	url = https://github.com/meta-introspector/git-submodule-tools-rs
@@ -146,10 +146,10 @@
 	url = https://github.com/asciinema/asciinema
 [submodule "vendor/nix/nixtract"]
 	path = vendor/nix/nixtract
-	url = https://github.com/tweag/nixtract.git
+	url = https://github.com/tweag/nixtract
 [submodule "vendor/nix/nixpkgs-lint"]
 	path = vendor/nix/nixpkgs-lint
-	url = https://github.com/nix-community/nixpkgs-lint.git
+	url = https://github.com/nix-community/nixpkgs-lint
 [submodule "data"]
 	path = data
 	url = /data/data/com.termux.nix/files/home/git/data/
@@ -173,7 +173,7 @@
 	url = https://github.com/meta-introspector/hackathon
 [submodule "vendor/external/github-issues-export-rs"]
 	path = vendor/external/github-issues-export-rs
-	url = https://github.com/boxdot/github-issues-export-rs.git
+	url = https://github.com/boxdot/github-issues-export-rs
 [submodule "source/github/meta-introspector/minizinc-introspector"]
 	path = source/github/meta-introspector/minizinc-introspector
 	url = https://github.com/meta-introspector/minizinc-introspector
