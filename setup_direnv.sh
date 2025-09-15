@@ -27,8 +27,8 @@ else
     if ! grep -q "direnv" "$SHELL_NIX_PATH"; then
       log "Adding direnv to existing shell.nix..."
       # Using sed to insert 'direnv' before the closing '];'
-      sed -i '/];/i \n  direnv' "$SHELL_NIX_PATH"
-      if [ $? -ne 0 ]; then
+      if ! sed -i '/];/i 
+  direnv' "$SHELL_NIX_PATH"; then
         error "Failed to add direnv to shell.nix."
       fi
       log "direnv added to shell.nix. You will need to re-enter your nix-shell for this to take effect."
@@ -46,10 +46,10 @@ log "Attempting to add direnv hook to shell configuration..."
 SHELL_CONFIG_FILE=""
 if [[ "$SHELL" == *bash* ]]; then
   SHELL_CONFIG_FILE="$HOME/.bashrc-cursor"
-  HOOK_COMMAND='eval "$(direnv hook bash)"'
+  HOOK_COMMAND="eval $(direnv hook bash)"
 elif [[ "$SHELL" == *zsh* ]]; then
   SHELL_CONFIG_FILE="$HOME/.zshrc"
-  HOOK_COMMAND='eval "$(direnv hook zsh)"'
+  HOOK_COMMAND="eval $(direnv hook zsh)"
 elif [[ "$SHELL" == *fish* ]]; then
   SHELL_CONFIG_FILE="$HOME/.config/fish/config.fish"
   HOOK_COMMAND='direnv hook fish | source'
@@ -89,8 +89,7 @@ fi
 # --- Step 5: Run direnv allow ---
 log "Running 'direnv allow' for the current directory..."
 if command -v direnv &> /dev/null; then
-  direnv allow .
-  if [ $? -ne 0 ]; then
+  if ! direnv allow .; then
     error "Failed to run 'direnv allow .'. Make sure direnv is correctly installed and sourced."
   fi
   log "'direnv allow .' executed successfully."
@@ -108,7 +107,7 @@ fi
 echo "2. direnv Hook: $(if [ -n "$SHELL_CONFIG_FILE" ] && grep -q "direnv hook" "$SHELL_CONFIG_FILE"; then echo "Added to $SHELL_CONFIG_FILE"; else echo "Manual action may be required"; fi)"
 echo "   (Action: Please source your shell config file or open a new terminal for the hook to take effect.)"
 echo "3. .envrc File: $(if [ -f "$ENVRC_PATH" ]; then echo "Created/Updated $ENVRC_PATH"; else echo "Failed to create $ENVRC_PATH"; fi)"
-echo "4. direnv allow: $(if command -v direnv &> /dev/null && [ $? -eq 0 ]; then echo "Executed successfully"; else echo "Skipped or failed (direnv not in PATH)"; fi)"
+echo "4. direnv allow: $(if command -v direnv &> /dev/null && direnv allow .; then echo "Executed successfully"; else echo "Skipped or failed (direnv not in PATH)"; fi)"
 echo ""
 echo "--- Next Steps ---"
 echo "1. If direnv was installed via Nix, exit and re-enter your nix-shell to ensure 'direnv' is in your PATH."
