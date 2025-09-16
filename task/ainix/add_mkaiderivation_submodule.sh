@@ -1,45 +1,64 @@
 #!/usr/bin/env bash
-# File: task/ainix/add_mkaiderivation_submodule.sh
 
-# Change to the project root directory
-cd /data/data/com.termux.nix/files/home/pick-up-nix2
+# Exit immediately if a command exits with a non-zero status.
+set -e
 
-# Set up logging and error handling
-LOG_FILE="/data/data/com.termux.nix/files/home/pick-up-nix2/task/ainix/logs/add_mkaiderivation_submodule.log"
-STRACE_FILE="/data/data/com.termux.nix/files/home/pick-up-nix2/task/ainix/logs/add_mkaiderivation_submodule_strace.log"
+# Enable verbose logging
+set -x
+
+# Capture all logs to a file
+LOG_FILE="$(dirname "$0")/add_mkaiderivation_submodule.log"
 exec > >(tee -a "$LOG_FILE") 2>&1
-set -e # Exit immediately if a command exits with a non-zero status.
-set -u # Treat unset variables as an error.
-set -o pipefail # Return value of a pipeline is the value of the last command to exit with a non-zero status.
-set -x # Print a trace of commands and their arguments as they are executed.
 
-echo "Starting submodule addition for mkAIDerivation at $(date)"
+# Set a timeout for the script (e.g., 5 minutes)
+TIMEOUT_SECONDS=300
 
-# Define the submodule URL and path
-SUBMODULE_URL="https://github.com/meta-introspector/mkAIDerivation.git"
+# Function to handle timeouts
+handle_timeout() {
+    echo "Script timed out after $TIMEOUT_SECONDS seconds."
+    exit 1
+}
+
+trap handle_timeout SIGINT SIGTERM
+
+# Start the timeout in a subshell
+( sleep "$TIMEOUT_SECONDS" && kill -SIGTERM $$ ) &
+TIMEOUT_PID=$!
+
+PROJECT_ROOT="/data/data/com.termux.nix/files/home/pick-up-nix2"
 SUBMODULE_PATH="vendor/mkAIDerivation"
-SUBMODULE_NAME="mkAIDerivation"
+SUBMODULE_URL="https://github.com/meta-introspector/mkAIDerivation.git"
 
-# Check if the submodule entry already exists in .gitmodules
-if git config -f .gitmodules --get submodule."$SUBMODULE_PATH".url &> /dev/null; then
-    echo "Submodule $SUBMODULE_NAME (path: $SUBMODULE_PATH) already exists in .gitmodules. Skipping addition."
-    exit 0
+cd "$PROJECT_ROOT"
+
+echo "Attempting to add submodule: $SUBMODULE_URL to $SUBMODULE_PATH"
+
+# Check if the submodule path already exists in .gitmodules
+if grep -q "[submodule \"$SUBMODULE_PATH\"]" .gitmodules; then
+    echo "Submodule $SUBMODULE_PATH already exists in .gitmodules. Skipping 'git submodule add'."
+else
+    # Add the submodule
+    git submodule add "$SUBMODULE_URL" "$SUBMODULE_PATH"
 fi
 
-# Check if the target directory already exists and is not empty
-if [ -d "$SUBMODULE_PATH" ] && [ "$(ls -A "$SUBMODULE_PATH")" ]; then
-    echo "Target directory $SUBMODULE_PATH exists and is not empty. Please handle manually or remove it."
-    exit 1
+# Initialize and update submodules
+echo "Initializing and updating all submodules..."
+git submodule update --init --recursive "$SUBMODULE_PATH"
+
+# Verify the submodule status
+echo "Verifying submodule status..."
+git submodule status
+
+# Commit changes if any
+if ! git diff --quiet --exit-code .gitmodules "$SUBMODULE_PATH"; then
+    echo "Committing changes..."
+    git add .gitmodules "$SUBMODULE_PATH"
+    git commit -m "feat: Add mkAIDerivation as a Git submodule"
+else
+    echo "No changes to commit for mkAIDerivation submodule."
 fi
 
-# Add the submodule with a timeout
-echo "Adding submodule $SUBMODULE_NAME from $SUBMODULE_URL to $SUBMODULE_PATH..."
-# Using strace to log system calls for the git submodule add command
-if ! timeout 300 strace -o "$STRACE_FILE" git submodule add --force "$SUBMODULE_URL" "$SUBMODULE_PATH"; then
-    echo "Error: Failed to add submodule $SUBMODULE_NAME. Check $LOG_FILE and $STRACE_FILE for details."
-    exit 1
-fi
+kill "$TIMEOUT_PID"
+wait "$TIMEOUT_PID" 2>/dev/null || true
 
-echo "Submodule $SUBMODULE_NAME added successfully."
-
-echo "Finishing submodule addition for mkAIDerivation at $(date)"
+echo "Script finished successfully."

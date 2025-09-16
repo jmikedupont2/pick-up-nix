@@ -1,4 +1,5 @@
-docs: Add CRQ for prompt output files review
+feat: Add reproducible git checkout flake for gitoxide
 
-Document the outcome of reviewing `prompts/task_*.md.out*` files.
-No new content was found to be integrated into base `task_*.md` files.
+This commit introduces a new Nix flake in `nix-git-checkout` that demonstrates a reproducible Git checkout of the `gitoxide` submodule. It utilizes the `mkSubmodule` function from `submodule-checkout/flake.nix` to fetch a specific revision of `gitoxide`.
+
+The flake also includes a `devShell` for easy interaction with the checked-out content.

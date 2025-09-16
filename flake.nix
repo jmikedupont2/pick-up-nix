@@ -26,8 +26,8 @@
       flake = false; # Not a flake itself, just a source
     };
     nixpkgs-lint-src = {
-      url = "git+file:///data/data/com.termux.nix/files/home/pick-up-nix/vendor/nix/nixpkgs-lint"; # Explicitly a local Git repo
-      # flake = false; # REMOVE THIS LINE (it's a flake)
+      url = "path:/data/data/com.termux.nix/files/home/pick-up-nix/vendor/nix/nixpkgs-lint"; # Explicitly a local path
+      flake = false; # Not a flake itself, just a source
     };
 
     streamofrandom = {
@@ -71,6 +71,34 @@
 
           # Gemini Interaction package
           gemini-interaction = pkgs.callPackage ./pkgs/gemini-interaction { geminiCli = self.packages.${pkgs.system}.gemini-cli; };
+          hello-world-rust = pkgs.stdenv.mkDerivation rec {
+            pname = "hello-world-rust";
+            version = "0.1.0";
+
+            src = builtins.path { path = self.inputs.self.outPath + "/tasks/hello-world-rust"; name = "hello-world-rust-src"; };
+
+            buildInputs = with pkgs; [
+              rustc
+              cargo
+            ];
+
+            buildPhase = ''
+              export HOME=$(mktemp -d)
+              cargo build --release --target-dir $out/target
+            '';
+
+            installPhase = ''
+              mkdir -p $out/bin
+              cp $out/target/release/hello-world-rust $out/bin/hello-world-rust
+            '';
+
+            meta = with pkgs.lib; {
+              description = "A simple Rust 'Hello World' program as a Nix derivation.";
+              homepage = "https://example.com/hello-world-rust";
+              license = licenses.mit;
+              platforms = platforms.linux;
+            };
+          };
         };
     in
     {
