@@ -6,12 +6,25 @@
       },
       "locked": {
         "lastModified": 0,
-        "narHash": "sha256-VlTAmXOv2UDutEVJjj9Z1nF38FqWYWI+Nw6zA5ySi0Q=",
+        "narHash": "sha256-ttCFy80UuR5MZyRpKVNRzQ5HNkTj5hPWowsOHzU848Y=",
         "path": "/data/data/com.termux.nix/files/home/pick-up-nix/vendor/external/gemini-cli",
         "type": "path"
       },
       "original": {
         "path": "/data/data/com.termux.nix/files/home/pick-up-nix/vendor/external/gemini-cli",
+        "type": "path"
+      }
+    },
+    "git-submodule-tools-rs": {
+      "flake": false,
+      "locked": {
+        "lastModified": 0,
+        "narHash": "sha256-XbAWGMhx9PeAujQRZYBrhfLZXmj/Kr+C2/cua4XiodY=",
+        "path": "/data/data/com.termux.nix/files/home/pick-up-nix2/source/github/meta-introspector/git-submodule-tools-rs",
+        "type": "path"
+      },
+      "original": {
+        "path": "/data/data/com.termux.nix/files/home/pick-up-nix2/source/github/meta-introspector/git-submodule-tools-rs",
         "type": "path"
       }
     },
@@ -168,11 +181,11 @@
     },
     "nixpkgs-unstable": {
       "locked": {
-        "lastModified": 1758042318,
-        "narHash": "sha256-z1D6I/H1Cg+tBvz9L4lhNC/tSrUuMmEbKqqrZYsKKBs=",
+        "lastModified": 1758049960,
+        "narHash": "sha256-nc0lN/gIxPka4knT73mlecVzWX86DOPQSUTm8c+MKcM=",
         "owner": "NixOS",
         "repo": "nixpkgs",
-        "rev": "93b1ca689db2d45504a9db2fba906547bd082029",
+        "rev": "a14ad4087b6efbe0b6d4f0a9cd0dfb0482a78459",
         "type": "github"
       },
       "original": {
@@ -268,6 +281,7 @@
     "root": {
       "inputs": {
         "gemini-cli": "gemini-cli",
+        "git-submodule-tools-rs": "git-submodule-tools-rs",
         "home-manager": "home-manager",
         "nix-on-droid": "nix-on-droid",
         "nixpkgs": "nixpkgs_2",

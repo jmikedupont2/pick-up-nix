@@ -20,6 +20,7 @@ pkgs.mkShellNoCC {
   rustc
   cargo
   direnv
+  python3
 ];
 }
 

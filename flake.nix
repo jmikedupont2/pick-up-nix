@@ -36,10 +36,14 @@
     };
 
     gemini-cli.url = "path:/data/data/com.termux.nix/files/home/pick-up-nix/vendor/external/gemini-cli";
+    git-submodule-tools-rs = {
+      url = "path:/data/data/com.termux.nix/files/home/pick-up-nix2/source/github/meta-introspector/git-submodule-tools-rs";
+      flake = false;
+    };
   };
 
   outputs = { self, nixpkgs, nixpkgs-unstable, nix-on-droid, home-manager,
-              nixtract-src, nixpkgs-lint-src, streamofrandom, rust-toolchain, gemini-cli }@inputs:
+              nixtract-src, nixpkgs-lint-src, streamofrandom, rust-toolchain, gemini-cli, git-submodule-tools-rs }@inputs:
 
     let
       lib = nixpkgs.lib;
@@ -62,6 +66,11 @@
           figlet = pkgs.figlet;
           which = pkgs.which;
           gemini-cli = pkgs.callPackage ./pkgs/gemini-cli { inherit geminiCliSrc; };
+          batch-task-processor = pkgs.writeShellApplication {
+            name = "batch-task-processor";
+            runtimeInputs = [ pkgs.bash ];
+            text = builtins.readFile ./tools/batch_task_processor.sh;
+          };
           tiktok_cli_adaptor = pkgs.callPackage "${streamofrandom}/livestream-tiktok-plugin/tiktok_cli_adaptor/default.nix" {};
 
           # Vendored tools
@@ -71,6 +80,12 @@
 
           # Gemini Interaction package
           gemini-interaction = pkgs.callPackage ./pkgs/gemini-interaction { geminiCli = self.packages.${pkgs.system}.gemini-cli; };
+          runprompt1-builder = pkgs.writeShellApplication {
+            name = "runprompt1-builder";
+            runtimeInputs = [ pkgs.bash ];
+            text = builtins.readFile (git-submodule-tools-rs + "/runprompt1.sh");
+          };
+
           hello-world-rust = pkgs.stdenv.mkDerivation rec {
             pname = "hello-world-rust";
             version = "0.1.0";
@@ -130,8 +145,8 @@
         ];
       }) inputs.gemini-cli;
 
-      defaultPackage.${linuxSystem} = self.packages.${linuxSystem}.gemini-cli;
-      defaultPackage.${androidSystem} = self.packages.${androidSystem}.gemini-cli;
+      defaultPackage.${linuxSystem} = self.packages.${linuxSystem}.batch-task-processor;
+      defaultPackage.${androidSystem} = self.packages.${androidSystem}.batch-task-processor;
 
       # Packages for nix-on-droid
       nixOnDroidConfigurations = {
