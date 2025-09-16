@@ -7,9 +7,14 @@ This project is focused on setting up a development environment using Nix, speci
 -   Generating and documenting executable memes in Rust.
 -   Creating a comprehensive table of meme correspondences.
 -   Generating reflection memes for all existing memes.
+-   Reviewed and standardized `prompts/task_X.md` files.
+-   Consolidated numerous CRQs into new, focused task files.
+-   Grouped and proposed new tasks for `Cargo.toml` files.
+-   Initiated development of a podcast episode generator for submodule commits.
 
 ## Next Steps:
--   Continue extraction and transformation of JSON tickets from the `quasi-meta-meme` repository into new Markdown memes, to be located in `docs/memes/extracted_tickets/`.
+-   Continue development of the podcast episode generator.
+-   Begin work on the newly defined tasks for `Cargo.toml` file groups.
 -   Further refining the SOPs based on ongoing observations and challenges.
 -   Continuously identifying and documenting new memes from various project sources.
 -   Always initiate crash recovery on boot, following the MIB Crash Retrieval Protocol.
