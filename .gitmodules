@@ -243,3 +243,6 @@
 [submodule "source/github/meta-introspector/git-submodules-rs-nix"]
 	path = source/github/meta-introspector/git-submodules-rs-nix
 	url = https://github.com/meta-introspector/git-submodules-rs-nix.git
+[submodule "vendor/mkAIDerivation"]
+	path = vendor/mkAIDerivation
+	url = https://github.com/meta-introspector/mkAIDerivation.git

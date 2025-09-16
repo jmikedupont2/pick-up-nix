@@ -134,3 +134,18 @@ You can then use the `asciinema` executable located at `./result/bin/asciinema`.
 ```bash
 ./result/bin/asciinema rec my_session.cast
 ```
+
+
+# emacs
+
+cd source/github/meta-introspector/git-submodules-rs-nix/.emacs.d/nix-magit/
+nix run .#nix-magit
+
+# current task
+
+~/pick-up-nix2/source/github/meta-introspector/git-submodule-tools-rs/runprompt2.sh
+
+tasks in 
+~/pick-up-nix2/source/github/meta-introspector/git-submodule-tools-rs/prompts/
+
+
