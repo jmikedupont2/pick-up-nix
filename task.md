@@ -4,8 +4,9 @@ This project is focused on setting up a development environment using Nix, speci
 
 ## Recent Accomplishments:
 -   Implemented Nix-based Git submodule management, including reproducible checkouts and automated flake generation.
+-   Integrated mkAIDerivation as a Git submodule, with associated helper scripts found at `task/ainix/add_mkaiderivation_submodule.sh` and `task/ainix/update_all_submodules.sh` (also present in `source/github/meta-introspector/git-submodule-tools-rs/tools/`).
 -   Enhanced Gemini CLI prompt processing with a sliding window context.
--   Developed Emacs Lisp functions for Gemini CLI integration.
+-   Developed and integrated Emacs Lisp functions for Gemini CLI interaction, enabling interactive commands and automated task processing within Emacs. (See prompts/task_001_emacs_lisp.md.out1.md for details and usage instructions).
 -   Created GitHub Actions workflow for automated submodule updates.
 -   Documented automated submodule updates and Nix submodule integration.
 -   Consolidated generated prompt outputs into base task files and cleaned up temporary files.
