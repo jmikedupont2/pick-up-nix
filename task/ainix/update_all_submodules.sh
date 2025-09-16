@@ -1,26 +1,42 @@
 #!/usr/bin/env bash
-# File: task/ainix/update_all_submodules.sh
 
-# Set up logging and error handling
-LOG_FILE="/data/data/com.termux.nix/files/home/pick-up-nix2/task/ainix/logs/update_all_submodules.log"
-STRACE_FILE="/data/data/com.termux.nix/files/home/pick-up-nix2/task/ainix/logs/update_all_submodules_strace.log"
+# Exit immediately if a command exits with a non-zero status.
+set -e
+
+# Enable verbose logging
+set -x
+
+# Capture all logs to a file
+LOG_FILE="$(dirname "$0")"/update_all_submodules.log
 exec > >(tee -a "$LOG_FILE") 2>&1
-set -e # Exit immediately if a command exits with a non-zero status.
-set -u # Treat unset variables as an error.
-set -o pipefail # Return value of a pipeline is the value of the last command to exit with a non-zero status.
-set -x # Print a trace of commands and their arguments as they are executed.
 
-echo "Starting submodule update at $(date)"
+# Set a timeout for the script (e.g., 5 minutes)
+TIMEOUT_SECONDS=300
 
-# Update all submodules with a timeout
-echo "Updating all submodules..."
-# Using strace to log system calls for the git submodule update command
-if ! timeout 600 strace -o "$STRACE_FILE" git submodule update --init --recursive --force;
-then
-    echo "Error: Failed to update submodules. Check $LOG_FILE and $STRACE_FILE for details."
+# Function to handle timeouts
+handle_timeout() {
+    echo "Script timed out after $TIMEOUT_SECONDS seconds."
     exit 1
-fi
+}
 
-echo "All submodules updated successfully."
+trap handle_timeout SIGINT SIGTERM
 
-echo "Finishing submodule update at $(date)"
+# Start the timeout in a subshell
+( sleep "$TIMEOUT_SECONDS" && kill -SIGTERM $$ ) & 
+TIMEOUT_PID=$!
+
+PROJECT_ROOT="/data/data/com.termux.nix/files/home/pick-up-nix2"
+
+cd "$PROJECT_ROOT"
+
+echo "Updating all submodules..."
+git submodule update --init --recursive
+
+# Verify the submodule status
+echo "Verifying submodule status..."
+git submodule status
+
+kill "$TIMEOUT_PID"
+wait "$TIMEOUT_PID" 2>/dev/null || true
+
+echo "Script finished successfully."
