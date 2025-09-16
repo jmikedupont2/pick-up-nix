@@ -18,9 +18,9 @@ then
 fi
 
 # --- State 2: Submodule update and remote adjustment ---
-# Check for uncommitted changes in main repo only
-if ! git diff-index --quiet HEAD --; then
-    echo "Uncommitted changes detected in the main repository. Run:"
+# Check for uncommitted changes in main repo only, explicitly excluding submodules
+if git status --porcelain | grep -v "^.M" | grep -q "^M"; then
+    echo "Uncommitted changes detected in the main repository (excluding submodule content). Run:"
     echo "git add -A"
     echo "git commit -m \"feat: Prepare submodules and remotes\""
     exit 0
