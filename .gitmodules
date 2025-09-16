@@ -31,6 +31,9 @@
 [submodule "vendor/nix-on-droid"]
 	path = vendor/nix-on-droid
 	url = https://github.com/nix-community/nix-on-droid
+[submodule "vendor/nix/nix"]
+	path = vendor/nix/nix
+	url = https://github.com/NixOS/nix
 [submodule "source/github/jmikedupont2/orgs/Escaped-RDFa/namespace"]
 	path = source/github/jmikedupont2/orgs/Escaped-RDFa/namespace
 	url = https://github.com/Escaped-RDFa/namespace
@@ -46,7 +49,7 @@
 
 [submodule "source/github/meta-introspector/lean4"]
 	path = source/github/meta-introspector/lean4
-	url = ./source/github/meta-introspector/lean4
+	url = https://github.com/meta-introspector/lean4
 [submodule "vendor/external/forgejo-python"]
 	path = vendor/external/forgejo-python
 	url = https://github.com/meta-introspector/forgejo-python
@@ -150,9 +153,7 @@
 [submodule "vendor/nix/nixpkgs-lint"]
 	path = vendor/nix/nixpkgs-lint
 	url = https://github.com/nix-community/nixpkgs-lint
-[submodule "data"]
-	path = data
-	url = /data/data/com.termux.nix/files/home/git/data/
+
 [submodule "vendor/guix/mes"]
 	path = vendor/guix/mes
 	url = https://github.com/meta-introspector/mes
@@ -165,6 +166,18 @@
 [submodule "vendor/steel"]
 	path = vendor/steel
 	url = https://github.com/mattwparas/steel
+[submodule "vendor/strace/dutchcoders-trace"]
+	path = vendor/strace/dutchcoders-trace
+	url = https://github.com/dutchcoders/trace
+[submodule "vendor/strace/intentrace"]
+	path = vendor/strace/intentrace
+	url = https://github.com/sectordistrict/intentrace
+[submodule "vendor/strace/lurk"]
+	path = vendor/strace/lurk
+	url = https://github.com/JakWai01/lurk
+[submodule "vendor/strace/rstrace"]
+	path = vendor/strace/rstrace
+	url = https://github.com/thundergolfer/strace-rs
 [submodule "source/github/meta-introspector/quasi-meta-meme"]
 	path = source/github/meta-introspector/quasi-meta-meme
 	url = https://github.com/meta-introspector/quasi-meta-meme
@@ -183,6 +196,50 @@
 [submodule "source/github/meta-introspector/neo"]
 	path = source/github/meta-introspector/neo
 	url = https://github.com/meta-introspector/neo
+[submodule "source/github/meta-introspector/neo2"]
+	path = source/github/meta-introspector/neo2
+	url = https://github.com/meta-introspector/neo
+[submodule "source/github/meta-introspector/submodules"]
+	path = source/github/meta-introspector/submodules
+	url = https://github.com/meta-introspector/git-submodule-tools-rs
 [submodule "vendor/nixpkgs"]
 	path = vendor/nixpkgs
 	url = https://github.com/NixOS/nixpkgs
+
+[submodule "data"]
+	path = data
+	url = /data/data/com.termux.nix/files/home/git/data/
+
+[submodule "vendor/plantuml-stdlib/C4-PlantUML"]
+	path = vendor/plantuml-stdlib/C4-PlantUML
+	url = https://github.com/plantuml-stdlib/C4-PlantUML
+
+
+[submodule "vendor/ebpf/aya"]
+	path = vendor/ebpf/aya
+	url = https://github.com/meta-introspector/aya
+[submodule "vendor/ebpf/ayaoo"]
+	path = vendor/ebpf/ayaoo
+	url = https://github.com/meta-introspector/aya
+
+[submodule "vendor/ebpf/bpfjit"]
+	path = vendor/ebpf/bpfjit
+	url = https://github.com/meta-introspector/bpfjit
+[submodule "vendor/ebpf/bpfman"]
+	path = vendor/ebpf/bpfman
+	url = https://github.com/bpfman/bpfman
+[submodule "vendor/ebpf/clean-dns-bpf"]
+	path = vendor/ebpf/clean-dns-bpf
+	url = https://github.com/ihciah/clean-dns-bpf
+[submodule "vendor/ebpf/eadb"]
+	path = vendor/ebpf/eadb
+	url = https://github.com/tiann/eadb
+[submodule "vendor/ebpf/ebpfguard"]
+	path = vendor/ebpf/ebpfguard
+	url = https://github.com/deepfence/ebpfguard
+[submodule "vendor/ebpf/libbpf-rs"]
+	path = vendor/ebpf/libbpf-rs
+	url = https://github.com/libbpf/libbpf-rs
+[submodule "vendor/ebpf/rbpf"]
+	path = vendor/ebpf/rbpf
+	url = https://github.com/qmonnet/rbpf
