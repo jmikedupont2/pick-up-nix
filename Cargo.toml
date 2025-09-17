@@ -9,7 +9,8 @@ members = [
 "pick-up-nix-cli",
 "source/github/meta-introspector/neo/neo",
  "file_analyzer", "vendor/strace/rstrace/crates/rstrace-cuda-sniff", "enum-self",
-"wrappers/syn-wrapper"]
+"wrappers/syn-wrapper",
+"wrappers/git-wrapper"]
 
 
 # task: "source/github/meta-introspector/submodules" please add these above

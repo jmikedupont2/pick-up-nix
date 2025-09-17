@@ -20,6 +20,9 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    naersk.url = "github:nix-community/naersk/master";
+    flake-utils.url = "github:numtide/flake-utils";
+
     # NEW: Add vendored tools as local inputs
     nixtract-src = {
       url = "path:/data/data/com.termux.nix/files/home/pick-up-nix/vendor/nix/nixtract"; # Absolute path to the submodule
@@ -42,7 +45,7 @@
     };
   };
 
-  outputs = { self, nixpkgs, nixpkgs-unstable, nix-on-droid, home-manager,
+  outputs = { self, nixpkgs, nixpkgs-unstable, nix-on-droid, home-manager, naersk, flake-utils,
               nixtract-src, nixpkgs-lint-src, streamofrandom, rust-toolchain, gemini-cli, git-submodule-tools-rs }@inputs:
 
     let
@@ -130,7 +133,14 @@
             rustToolchain = inputs.nixpkgs-unstable.legacyPackages.${linuxSystem}.rust-bin.stable.latest.default;
           })
         ];
-      }) inputs.gemini-cli;
+      }) inputs.gemini-cli // {
+        git-wrapper = (import nixpkgs { system = linuxSystem; }).callPackage naersk {}.buildPackage {
+          pname = "git-wrapper";
+          version = "0.1.0";
+          src = ./wrappers/git-wrapper;
+          cargoLock.lockFile = ./wrappers/git-wrapper/Cargo.lock;
+        };
+      };
       packages.${androidSystem} = commonPackages (import nixpkgs {
         system = androidSystem;
         overlays = [
@@ -143,7 +153,14 @@
             rustToolchain = inputs.nixpkgs-unstable.legacyPackages.${androidSystem}.rust-bin.stable.latest.default;
           })
         ];
-      }) inputs.gemini-cli;
+      }) inputs.gemini-cli // {
+        git-wrapper = (import nixpkgs { system = androidSystem; }).callPackage naersk {}.buildPackage {
+          pname = "git-wrapper";
+          version = "0.1.0";
+          src = ./wrappers/git-wrapper;
+          cargoLock.lockFile = ./wrappers/git-wrapper/Cargo.lock;
+        };
+      };
 
       defaultPackage.${linuxSystem} = self.packages.${linuxSystem}.batch-task-processor;
       defaultPackage.${androidSystem} = self.packages.${androidSystem}.batch-task-processor;
@@ -220,7 +237,7 @@
             })
             pkgs.cargo
           ];
-          RUST_SRC_PATH = "${rustPkgs.rust-bin.stable.latest.default.src}/lib/rustlib/src/rust/library}";
+          RUST_SRC_PATH = "${rustPkgs.rust-bin.stable.latest.default.src}/lib/rustlib/src/rust/library";
         };
       });
     };
