@@ -12,3 +12,7 @@ edition = "2021"
 # `serde` is used for serialization and deserialization of the enums,
 # which is useful for saving and loading the project structure.
 serde = { version = "1.0", features = ["derive"] }
+syn-wrapper = { path = "../wrappers/syn-wrapper" }
+
+[dev-dependencies]
+serde_json = "1.0"

@@ -2,10 +2,10 @@
 // which categorize different aspects of the project's structure.
 
 use crate::{
-    config, configurations, documentation, etc, experiments, file_analyzer, github, home,
+    config, configurations, documentation, enum_self, etc, experiments, file_analyzer, github, home,
     json_to_memes_extractor, logs, manifests, memetic_code, new, nixpacks, packages,
     pick_up_nix_cli, prompts, qa, source, src_dir, submodule_flakes, task, tasks, test_flake,
-    tools, vendor,
+    tools, vendor, wrappers,
 };
 
 /// Represents a top-level item or category within the project structure.
@@ -18,6 +18,7 @@ pub enum ProjectItem {
     ProjectManagement(ProjectManagement),
     ExternalVendor(ExternalVendor),
     TopLevelFile(TopLevelFile),
+    Wrapped(wrappers::WrappedItem),
 }
 
 /// Categorizes configuration and environment-related components.
@@ -34,6 +35,7 @@ pub enum ConfigurationAndEnvironment {
 /// Categorizes code and development-related components.
 #[derive(Debug, Clone, PartialEq, Eq, Hash, serde::Serialize, serde::Deserialize, PartialOrd, Ord)]
 pub enum CodeAndDevelopment {
+    EnumSelf(crate::enum_self::EnumSelf),
     FileAnalyzer(crate::file_analyzer::FileAnalyzer),
     JsonToMemesExtractor(crate::json_to_memes_extractor::JsonToMemesExtractor),
     MemeticCode(crate::memetic_code::MemeticCode),
