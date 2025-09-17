@@ -1,3 +1,5 @@
+// This module defines enums related to vendored or external dependencies.
+
 #[derive(Debug, Clone, PartialEq, Eq, Hash, serde::Serialize, serde::Deserialize, PartialOrd, Ord)]
 pub enum Vendor {
     Ebpf(VendorEbpf),
@@ -15,6 +17,7 @@ pub enum Vendor {
     Strace(VendorStrace),
 }
 
+/// Represents eBPF-related vendor components.
 #[derive(Debug, Clone, PartialEq, Eq, Hash, serde::Serialize, serde::Deserialize, PartialOrd, Ord)]
 pub enum VendorEbpf {
     Aya,
@@ -28,6 +31,7 @@ pub enum VendorEbpf {
     Rbpf,
 }
 
+/// Represents external vendor components.
 #[derive(Debug, Clone, PartialEq, Eq, Hash, serde::Serialize, serde::Deserialize, PartialOrd, Ord)]
 pub enum VendorExternal {
     AmazonQDeveloperCli,
@@ -63,12 +67,14 @@ pub enum VendorExternal {
     Turbomcp,
 }
 
+/// Represents Guix-related vendor components.
 #[derive(Debug, Clone, PartialEq, Eq, Hash, serde::Serialize, serde::Deserialize, PartialOrd, Ord)]
 pub enum VendorGuix {
     Guix,
     Mes,
 }
 
+/// Represents C language-related vendor components.
 #[derive(Debug, Clone, PartialEq, Eq, Hash, serde::Serialize, serde::Deserialize, PartialOrd, Ord)]
 pub enum VendorLangC {
     GitHub,
@@ -85,6 +91,7 @@ pub enum VendorLangC {
     Readme,
 }
 
+/// Represents mkAIDerivation vendor components.
 #[derive(Debug, Clone, PartialEq, Eq, Hash, serde::Serialize, serde::Deserialize, PartialOrd, Ord)]
 pub enum VendorMkAiDerivation {
     Vscode,
@@ -99,6 +106,7 @@ pub enum VendorMkAiDerivation {
     ShellNix,
 }
 
+/// Represents Nix-related vendor components.
 #[derive(Debug, Clone, PartialEq, Eq, Hash, serde::Serialize, serde::Deserialize, PartialOrd, Ord)]
 pub enum VendorNix {
     Nix,
@@ -106,6 +114,7 @@ pub enum VendorNix {
     Nixtract,
 }
 
+/// Represents Nix-on-Droid vendor components.
 #[derive(Debug, Clone, PartialEq, Eq, Hash, serde::Serialize, serde::Deserialize, PartialOrd, Ord)]
 pub enum VendorNixOnDroid {
     GitHub,
@@ -128,6 +137,7 @@ pub enum VendorNixOnDroid {
     Readme,
 }
 
+/// Represents Nixpkgs vendor components.
 #[derive(Debug, Clone, PartialEq, Eq, Hash, serde::Serialize, serde::Deserialize, PartialOrd, Ord)]
 pub enum VendorNixpkgs {
     Devcontainer,
@@ -153,11 +163,13 @@ pub enum VendorNixpkgs {
     ShellNix,
 }
 
+/// Represents PlantUML standard library vendor components.
 #[derive(Debug, Clone, PartialEq, Eq, Hash, serde::Serialize, serde::Deserialize, PartialOrd, Ord)]
 pub enum VendorPlantumlStdlib {
     C4PlantUml,
 }
 
+/// Represents rnix-parser vendor components.
 #[derive(Debug, Clone, PartialEq, Eq, Hash, serde::Serialize, serde::Deserialize, PartialOrd, Ord)]
 pub enum VendorRnixParser {
     GitHub,
@@ -180,6 +192,7 @@ pub enum VendorRnixParser {
     ShellNix,
 }
 
+/// Represents rust-index-guix vendor components.
 #[derive(Debug, Clone, PartialEq, Eq, Hash, serde::Serialize, serde::Deserialize, PartialOrd, Ord)]
 pub enum VendorRustIndexGuix {
     Src,
@@ -192,6 +205,7 @@ pub enum VendorRustIndexGuix {
     UpdateSh,
 }
 
+/// Represents Steel (Scheme dialect) vendor components.
 #[derive(Debug, Clone, PartialEq, Eq, Hash, serde::Serialize, serde::Deserialize, PartialOrd, Ord)]
 pub enum VendorSteel {
     Cargo,
@@ -230,6 +244,7 @@ pub enum VendorSteel {
     ShellNix,
 }
 
+/// Represents strace-related vendor components.
 #[derive(Debug, Clone, PartialEq, Eq, Hash, serde::Serialize, serde::Deserialize, PartialOrd, Ord)]
 pub enum VendorStrace {
     DutchcodersTrace,

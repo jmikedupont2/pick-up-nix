@@ -1,3 +1,5 @@
+// This module defines enums related to project documentation.
+
 #[derive(Debug, Clone, PartialEq, Eq, Hash, serde::Serialize, serde::Deserialize, PartialOrd, Ord)]
 pub enum Documentation {
     Crqs(Crqs),
@@ -38,6 +40,7 @@ pub enum Documentation {
     Submodules,
 }
 
+/// Represents Change Request (CRQ) documents.
 #[derive(Debug, Clone, PartialEq, Eq, Hash, serde::Serialize, serde::Deserialize, PartialOrd, Ord)]
 pub enum Crqs {
     BugReportNixOnDroidPathsIssue,
@@ -59,16 +62,19 @@ pub enum Crqs {
     WIKIIMPORTCRQ,
 }
 
+/// Represents design documents.
 #[derive(Debug, Clone, PartialEq, Eq, Hash, serde::Serialize, serde::Deserialize, PartialOrd, Ord)]
 pub enum Designs {
     EmacsGeminiCLIGUIDesign,
 }
 
+/// Represents educational philosophy documents.
 #[derive(Debug, Clone, PartialEq, Eq, Hash, serde::Serialize, serde::Deserialize, PartialOrd, Ord)]
 pub enum EducationalPhilosophy {
     CompilingFromSourceLearning,
 }
 
+/// Represents meme-related documents.
 #[derive(Debug, Clone, PartialEq, Eq, Hash, serde::Serialize, serde::Deserialize, PartialOrd, Ord)]
 pub enum Memes {
     TheStandardsOverloadMeme,
@@ -82,21 +88,25 @@ pub enum Memes {
     TheSopForMemesMetaMeme,
 }
 
+/// Represents Nix example documents.
 #[derive(Debug, Clone, PartialEq, Eq, Hash, serde::Serialize, serde::Deserialize, PartialOrd, Ord)]
 pub enum NixExamples {
     TempShell,
 }
 
+/// Represents Quality Assurance (QA) documents.
 #[derive(Debug, Clone, PartialEq, Eq, Hash, serde::Serialize, serde::Deserialize, PartialOrd, Ord)]
 pub enum Qa {
     TracenixQaProcedure,
 }
 
+/// Represents review findings documents.
 #[derive(Debug, Clone, PartialEq, Eq, Hash, serde::Serialize, serde::Deserialize, PartialOrd, Ord)]
 pub enum ReviewFindings {
     CRQSOPReview2025_09_16,
 }
 
+/// Represents shell scripting standards documents.
 #[derive(Debug, Clone, PartialEq, Eq, Hash, serde::Serialize, serde::Deserialize, PartialOrd, Ord)]
 pub enum ShellScriptingStandards {
     Readme,
@@ -104,6 +114,7 @@ pub enum ShellScriptingStandards {
     ShellScriptBestPractices,
 }
 
+/// Represents Standard Operating Procedure (SOP) documents.
 #[derive(Debug, Clone, PartialEq, Eq, Hash, serde::Serialize, serde::Deserialize, PartialOrd, Ord)]
 pub enum Sops {
     MemeIdentificationSop,
@@ -120,11 +131,13 @@ pub enum Sops {
     SUBMODULESETUPSOP,
 }
 
+/// Represents tutorial documents.
 #[derive(Debug, Clone, PartialEq, Eq, Hash, serde::Serialize, serde::Deserialize, PartialOrd, Ord)]
 pub enum Tutorials {
     EmacsGeminiCLIIntegrationTutorial,
 }
 
+/// Represents user guide documents.
 #[derive(Debug, Clone, PartialEq, Eq, Hash, serde::Serialize, serde::Deserialize, PartialOrd, Ord)]
 pub enum UserGuide {
     TracenixUserGuide,

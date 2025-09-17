@@ -1,3 +1,6 @@
+// This is the main library file for the `enum-self` crate.
+// It re-exports all the modules that define the project structure enums.
+
 pub mod project_items;
 pub mod config;
 pub mod documentation;

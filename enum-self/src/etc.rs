@@ -1,3 +1,5 @@
+// This module defines enums related to system configuration files typically found in /etc.
+
 #[derive(Debug, Clone, PartialEq, Eq, Hash, serde::Serialize, serde::Deserialize, PartialOrd, Ord)]
 pub enum Etc {
     Apache2(Apache2),
@@ -5,6 +7,7 @@ pub enum Etc {
     Nagios4(Nagios4),
 }
 
+/// Represents Apache2 configuration files.
 #[derive(Debug, Clone, PartialEq, Eq, Hash, serde::Serialize, serde::Deserialize, PartialOrd, Ord)]
 pub enum Apache2 {
     ConfAvailable,
@@ -19,11 +22,13 @@ pub enum Apache2 {
     PortsConf,
 }
 
+/// Represents Nagios configuration files.
 #[derive(Debug, Clone, PartialEq, Eq, Hash, serde::Serialize, serde::Deserialize, PartialOrd, Ord)]
 pub enum Nagios {
     NrpeCfg,
 }
 
+/// Represents Nagios4 configuration files.
 #[derive(Debug, Clone, PartialEq, Eq, Hash, serde::Serialize, serde::Deserialize, PartialOrd, Ord)]
 pub enum Nagios4 {
     ConfD,

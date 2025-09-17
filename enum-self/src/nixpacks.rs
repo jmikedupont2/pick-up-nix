@@ -1,3 +1,5 @@
+// This module defines enums related to Nixpacks configurations and components.
+
 #[derive(Debug, Clone, PartialEq, Eq, Hash, serde::Serialize, serde::Deserialize, PartialOrd, Ord)]
 pub enum Nixpacks {
     Cargo(NixpacksCargo),
@@ -26,11 +28,13 @@ pub enum Nixpacks {
     UninstallSh,
 }
 
+/// Represents Nixpacks Cargo-related components.
 #[derive(Debug, Clone, PartialEq, Eq, Hash, serde::Serialize, serde::Deserialize, PartialOrd, Ord)]
 pub enum NixpacksCargo {
     ConfigToml,
 }
 
+/// Represents Nixpacks Devcontainer-related components.
 #[derive(Debug, Clone, PartialEq, Eq, Hash, serde::Serialize, serde::Deserialize, PartialOrd, Ord)]
 pub enum NixpacksDevcontainer {
     LibraryScripts,
@@ -38,6 +42,7 @@ pub enum NixpacksDevcontainer {
     Dockerfile,
 }
 
+/// Represents Nixpacks GitHub-related components.
 #[derive(Debug, Clone, PartialEq, Eq, Hash, serde::Serialize, serde::Deserialize, PartialOrd, Ord)]
 pub enum NixpacksGitHub {
     IssueTemplate,
@@ -47,12 +52,14 @@ pub enum NixpacksGitHub {
     PullRequestTemplate,
 }
 
+/// Represents Nixpacks Base-related components.
 #[derive(Debug, Clone, PartialEq, Eq, Hash, serde::Serialize, serde::Deserialize, PartialOrd, Ord)]
 pub enum NixpacksBase {
     Debian,
     Ubuntu,
 }
 
+/// Represents Nixpacks Docs-related components.
 #[derive(Debug, Clone, PartialEq, Eq, Hash, serde::Serialize, serde::Deserialize, PartialOrd, Ord)]
 pub enum NixpacksDocs {
     Components,
@@ -77,6 +84,7 @@ pub enum NixpacksDocs {
     YarnLock,
 }
 
+/// Represents Nixpacks Examples.
 #[derive(Debug, Clone, PartialEq, Eq, Hash, serde::Serialize, serde::Deserialize, PartialOrd, Ord)]
 pub enum NixpacksExamples {
     AptFfmpeg,
@@ -84,6 +92,7 @@ pub enum NixpacksExamples {
     Clojure,
 }
 
+/// Represents Nixpacks Source-related components.
 #[derive(Debug, Clone, PartialEq, Eq, Hash, serde::Serialize, serde::Deserialize, PartialOrd, Ord)]
 pub enum NixpacksSrc {
     Nixpacks,
@@ -93,12 +102,14 @@ pub enum NixpacksSrc {
     MainRs,
 }
 
+/// Represents Nixpacks Test Helper components.
 #[derive(Debug, Clone, PartialEq, Eq, Hash, serde::Serialize, serde::Deserialize, PartialOrd, Ord)]
 pub enum NixpacksTestHelper {
     Src,
     CargoToml,
 }
 
+/// Represents Nixpacks Tests.
 #[derive(Debug, Clone, PartialEq, Eq, Hash, serde::Serialize, serde::Deserialize, PartialOrd, Ord)]
 pub enum NixpacksTests {
     Snapshots,
@@ -106,6 +117,7 @@ pub enum NixpacksTests {
     GeneratePlanTestsRs,
 }
 
+/// Represents Nixpacks Wix-related components.
 #[derive(Debug, Clone, PartialEq, Eq, Hash, serde::Serialize, serde::Deserialize, PartialOrd, Ord)]
 pub enum NixpacksWix {
     LicenseRtf,

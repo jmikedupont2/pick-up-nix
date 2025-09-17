@@ -1,29 +1,36 @@
+// This module defines enums related to external source code repositories and their structures.
+
 #[derive(Debug, Clone, PartialEq, Eq, Hash, serde::Serialize, serde::Deserialize, PartialOrd, Ord)]
 pub enum Source {
     GitHub(SourceGitHub),
 }
 
+/// Represents GitHub repositories and organizations.
 #[derive(Debug, Clone, PartialEq, Eq, Hash, serde::Serialize, serde::Deserialize, PartialOrd, Ord)]
 pub enum SourceGitHub {
     Jmikedupont2(SourceGitHubJmikedupont2),
     MetaIntrospector(SourceGitHubMetaIntrospector),
 }
 
+/// Represents repositories under the `jmikedupont2` GitHub account.
 #[derive(Debug, Clone, PartialEq, Eq, Hash, serde::Serialize, serde::Deserialize, PartialOrd, Ord)]
 pub enum SourceGitHubJmikedupont2 {
     Orgs(SourceGitHubJmikedupont2Orgs),
 }
 
+/// Represents organizations under the `jmikedupont2` GitHub account.
 #[derive(Debug, Clone, PartialEq, Eq, Hash, serde::Serialize, serde::Deserialize, PartialOrd, Ord)]
 pub enum SourceGitHubJmikedupont2Orgs {
     EscapedRdfa(SourceGitHubJmikedupont2OrgsEscapedRdfa),
 }
 
+/// Represents the `Escaped-RDFa` repository.
 #[derive(Debug, Clone, PartialEq, Eq, Hash, serde::Serialize, serde::Deserialize, PartialOrd, Ord)]
 pub enum SourceGitHubJmikedupont2OrgsEscapedRdfa {
     Namespace(SourceGitHubJmikedupont2OrgsEscapedRdfaNamespace),
 }
 
+/// Represents the `namespace` within the `Escaped-RDFa` repository.
 #[derive(Debug, Clone, PartialEq, Eq, Hash, serde::Serialize, serde::Deserialize, PartialOrd, Ord)]
 pub enum SourceGitHubJmikedupont2OrgsEscapedRdfaNamespace {
     BookSrc(SourceGitHubJmikedupont2OrgsEscapedRdfaNamespaceBookSrc),
@@ -32,12 +39,12 @@ pub enum SourceGitHubJmikedupont2OrgsEscapedRdfaNamespace {
     ConfigYml,
     Gitignore,
     BookToml,
-    FlakeLock,
     FlakeNix,
     License,
     RequirementsTxt,
 }
 
+/// Represents the `book_src` directory within the `Escaped-RDFa` namespace.
 #[derive(Debug, Clone, PartialEq, Eq, Hash, serde::Serialize, serde::Deserialize, PartialOrd, Ord)]
 pub enum SourceGitHubJmikedupont2OrgsEscapedRdfaNamespaceBookSrc {
     Md1_0,
@@ -47,6 +54,7 @@ pub enum SourceGitHubJmikedupont2OrgsEscapedRdfaNamespaceBookSrc {
     SummaryMd,
 }
 
+/// Represents the `src` directory within the `Escaped-RDFa` namespace.
 #[derive(Debug, Clone, PartialEq, Eq, Hash, serde::Serialize, serde::Deserialize, PartialOrd, Ord)]
 pub enum SourceGitHubJmikedupont2OrgsEscapedRdfaNamespaceSrc {
     Src(SourceGitHubJmikedupont2OrgsEscapedRdfaNamespaceSrcSrc),
@@ -55,11 +63,13 @@ pub enum SourceGitHubJmikedupont2OrgsEscapedRdfaNamespaceSrc {
     JsonurlCliPy,
 }
 
+/// Represents the nested `src` directory within the `Escaped-RDFa` namespace.
 #[derive(Debug, Clone, PartialEq, Eq, Hash, serde::Serialize, serde::Deserialize, PartialOrd, Ord)]
 pub enum SourceGitHubJmikedupont2OrgsEscapedRdfaNamespaceSrcSrc {
     PipDeleteThisDirectoryTxt,
 }
 
+/// Represents the `tests` directory within the `Escaped-RDFa` namespace.
 #[derive(Debug, Clone, PartialEq, Eq, Hash, serde::Serialize, serde::Deserialize, PartialOrd, Ord)]
 pub enum SourceGitHubJmikedupont2OrgsEscapedRdfaNamespaceTests {
     Makefile,
@@ -85,6 +95,7 @@ pub enum SourceGitHubJmikedupont2OrgsEscapedRdfaNamespaceTests {
     Test007ChannelHeaderRss,
 }
 
+/// Represents repositories under the `meta-introspector` GitHub account.
 #[derive(Debug, Clone, PartialEq, Eq, Hash, serde::Serialize, serde::Deserialize, PartialOrd, Ord)]
 pub enum SourceGitHubMetaIntrospector {
     GitSubmoduleToolsRs,

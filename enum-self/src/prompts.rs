@@ -1,3 +1,5 @@
+// This module defines enums related to prompt files and their outputs.
+
 #[derive(Debug, Clone, PartialEq, Eq, Hash, serde::Serialize, serde::Deserialize, PartialOrd, Ord)]
 pub enum Prompts {
     Task000ReviewStatus(PromptsTask000ReviewStatus),
@@ -63,11 +65,13 @@ pub enum Prompts {
     TaskZosStructure,
 }
 
+/// Represents outputs for `task_000_review_status` prompts.
 #[derive(Debug, Clone, PartialEq, Eq, Hash, serde::Serialize, serde::Deserialize, PartialOrd, Ord)]
 pub enum PromptsTask000ReviewStatus {
     Outputs(PromptsTask000ReviewStatusOutputs),
 }
 
+/// Represents specific output files for `task_000_review_status`.
 #[derive(Debug, Clone, PartialEq, Eq, Hash, serde::Serialize, serde::Deserialize, PartialOrd, Ord)]
 pub enum PromptsTask000ReviewStatusOutputs {
     Out20250916211828,
