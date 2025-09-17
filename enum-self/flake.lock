@@ -96,7 +96,8 @@
       "inputs": {
         "flake-utils": "flake-utils",
         "naersk": "naersk",
-        "nixpkgs": "nixpkgs_2"
+        "nixpkgs": "nixpkgs_2",
+        "syn-wrapper": "syn-wrapper"
       }
     },
     "rust-analyzer-src": {
@@ -115,6 +116,18 @@
         "repo": "rust-analyzer",
         "type": "github"
       }
+    },
+    "syn-wrapper": {
+      "flake": false,
+      "locked": {
+        "path": "../wrappers/syn-wrapper",
+        "type": "path"
+      },
+      "original": {
+        "path": "../wrappers/syn-wrapper",
+        "type": "path"
+      },
+      "parent": []
     },
     "systems": {
       "locked": {
