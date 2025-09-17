@@ -1,3 +1,6 @@
+// This file defines the top-level `ProjectItem` enum and its sub-enums,
+// which categorize different aspects of the project's structure.
+
 use crate::{
     config, configurations, documentation, etc, experiments, file_analyzer, github, home,
     json_to_memes_extractor, logs, manifests, memetic_code, new, nixpacks, packages,
@@ -5,6 +8,7 @@ use crate::{
     tools, vendor,
 };
 
+/// Represents a top-level item or category within the project structure.
 #[derive(Debug, Clone, PartialEq, Eq, Hash, serde::Serialize, serde::Deserialize, PartialOrd, Ord)]
 pub enum ProjectItem {
     ConfigurationAndEnvironment(ConfigurationAndEnvironment),
@@ -16,55 +20,62 @@ pub enum ProjectItem {
     TopLevelFile(TopLevelFile),
 }
 
+/// Categorizes configuration and environment-related components.
 #[derive(Debug, Clone, PartialEq, Eq, Hash, serde::Serialize, serde::Deserialize, PartialOrd, Ord)]
 pub enum ConfigurationAndEnvironment {
-    Config(config::Config),
+    Config(crate::config::Config),
     NixDefexpr,
-    Configurations(configurations::Configurations),
-    Home(home::Home),
-    New(new::New),
-    Etc(etc::Etc),
+    Configurations(crate::configurations::Configurations),
+    Home(crate::home::Home),
+    New(crate::new::New),
+    Etc(crate::etc::Etc),
 }
 
+/// Categorizes code and development-related components.
 #[derive(Debug, Clone, PartialEq, Eq, Hash, serde::Serialize, serde::Deserialize, PartialOrd, Ord)]
 pub enum CodeAndDevelopment {
-    FileAnalyzer(file_analyzer::FileAnalyzer),
-    JsonToMemesExtractor(json_to_memes_extractor::JsonToMemesExtractor),
-    MemeticCode(memetic_code::MemeticCode),
-    PickUpNixCli(pick_up_nix_cli::PickUpNixCli),
-    Pkgs(packages::Packages),
-    Src(src_dir::Src),
-    Tools(tools::Tools),
-    Experiments(experiments::Experiments),
+    FileAnalyzer(crate::file_analyzer::FileAnalyzer),
+    JsonToMemesExtractor(crate::json_to_memes_extractor::JsonToMemesExtractor),
+    MemeticCode(crate::memetic_code::MemeticCode),
+    PickUpNixCli(crate::pick_up_nix_cli::PickUpNixCli),
+    Pkgs(crate::packages::Packages),
+    Src(crate::src_dir::Src),
+    Tools(crate::tools::Tools),
+    Experiments(crate::experiments::Experiments),
 }
 
+/// Categorizes documentation and metadata-related components.
 #[derive(Debug, Clone, PartialEq, Eq, Hash, serde::Serialize, serde::Deserialize, PartialOrd, Ord)]
 pub enum DocumentationAndMetadata {
-    Docs(documentation::Documentation),
-    Logs(logs::Logs),
-    Manifests(manifests::Manifests),
-    Prompts(prompts::Prompts),
-    Qa(qa::Qa),
+    Docs(crate::documentation::Documentation),
+    Logs(crate::logs::Logs),
+    Manifests(crate::manifests::Manifests),
+    Prompts(crate::prompts::Prompts),
+    Qa(crate::qa::Qa),
 }
 
+/// Categorizes version control and build system-related components.
 #[derive(Debug, Clone, PartialEq, Eq, Hash, serde::Serialize, serde::Deserialize, PartialOrd, Ord)]
 pub enum VersionControlAndBuildSystems {
-    GitHub(github::GitHub),
-    SubmoduleFlakes(submodule_flakes::SubmoduleFlakes),
-    Nixpacks(nixpacks::Nixpacks),
+    GitHub(crate::github::GitHub),
+    SubmoduleFlakes(crate::submodule_flakes::SubmoduleFlakes),
+    Nixpacks(crate::nixpacks::Nixpacks),
 }
 
+/// Categorizes project management-related components.
 #[derive(Debug, Clone, PartialEq, Eq, Hash, serde::Serialize, serde::Deserialize, PartialOrd, Ord)]
 pub enum ProjectManagement {
-    Task(task::Task),
-    Tasks(tasks::Tasks),
+    Task(crate::task::Task),
+    Tasks(crate::tasks::Tasks),
 }
 
+/// Categorizes external and vendor-provided components.
 #[derive(Debug, Clone, PartialEq, Eq, Hash, serde::Serialize, serde::Deserialize, PartialOrd, Ord)]
 pub enum ExternalVendor {
-    Vendor(vendor::Vendor),
+    Vendor(crate::vendor::Vendor),
 }
 
+/// Represents various top-level files in the project root.
 #[derive(Debug, Clone, PartialEq, Eq, Hash, serde::Serialize, serde::Deserialize, PartialOrd, Ord)]
 pub enum TopLevelFile {
     CargoToml,
