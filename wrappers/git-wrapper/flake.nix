@@ -20,7 +20,6 @@
             rustToolchain
             pkgs.gix # Assuming gix is a dependency and needs to be in the devShell
           ];
-          RUST_SRC_PATH = rustToolchain.rustcSource;
         };
 
         packages.default = pkgs.rustPlatform.buildRustPackage {
