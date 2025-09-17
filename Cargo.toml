@@ -8,10 +8,7 @@ members = [
 "memetic_code/log_processor",
 "pick-up-nix-cli",
 "source/github/meta-introspector/neo/neo",
-"source/github/meta-introspector/submodules",
-"vendor/external/gemini-cli/rust-vendor/rust-vendor-lib",
-"source/github/meta-introspector/submodules"
-, "vendor/external/gemini-cli/rust-vendor/rust-crate-searcher"]
+ "file_analyzer", "vendor/strace/rstrace/crates/rstrace-cuda-sniff", "enum-self"]
 
 
 # task: "source/github/meta-introspector/submodules" please add these above
@@ -244,6 +241,8 @@ regex = "1.11.1"
 # ramparts dependencies
 dirs = "6.0"
 futures-util = "0.3.31"
+rstrace-cuda-sniff = { path = "vendor/strace/rstrace/crates/rstrace-cuda-sniff" }
+libc = "0.2.139"
 
 [workspace.package]
 version = "0.1.0"
