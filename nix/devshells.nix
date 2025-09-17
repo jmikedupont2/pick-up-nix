@@ -1,4 +1,8 @@
 {
+  lib, nixpkgs, nixpkgs-unstable, ...
+}:
+
+{
   devShells = lib.genAttrs lib.systems.flakeExposed (system: {
     default = let
       pkgs = import nixpkgs { inherit system; }; # Stable nixpkgs

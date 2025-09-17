@@ -1,4 +1,8 @@
 {
+  nixpkgs, nix-on-droid, home-manager, overlays, androidSystem, ...
+}:
+
+{
   nixOnDroidConfigurations = {
     android = nix-on-droid.lib.nixOnDroidConfiguration {
       pkgs = import nixpkgs {

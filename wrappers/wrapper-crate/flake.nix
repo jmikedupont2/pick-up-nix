@@ -26,8 +26,13 @@
         packages.default = rustPlatform.buildRustPackage {
           pname = "wrapper-crate";
           version = "0.1.0";
-          src = ./.;
-          cargoHash = "";
+          src = ../.;
+          sourceRoot = "wrapper-crate";
+
+          cargoLock = {
+            lockFile = ./Cargo.lock;
+          };
+          
 
           
 

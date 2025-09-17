@@ -1,4 +1,8 @@
 {
+  self, nixpkgs, ...
+}:
+
+{
   # Overlays
   overlays = [
     (final: prev: {

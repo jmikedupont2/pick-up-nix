@@ -1,0 +1,14 @@
+Attempting to build 'enum-self' from its subdirectory using 'nix build'...
+This command is expected to fail due to Nix version limitations.
+
+
+-------------------------------------------------------------------
+BUILD FAILED as expected.
+Reason: The current Nix environment's version is too old to fully
+support modern flake features, particularly the '--flake' flag
+and proper resolution of flakes in subdirectories.
+
+Please refer to the Standard Operating Procedure (SOP) for details
+and solutions:
+docs/sops/nix_build_subdir_sop.md
+-------------------------------------------------------------------

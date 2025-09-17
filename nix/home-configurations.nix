@@ -1,4 +1,8 @@
 {
+  nixpkgs, nixpkgs-unstable, home-manager, overlays, ...
+}:
+
+{
   homeConfigurations = 
     let
       # A helper function to generate home-manager configs for a given system

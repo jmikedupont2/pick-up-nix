@@ -5,8 +5,6 @@
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-24.05";
     nixpkgs-unstable.url = "github:NixOS/nixpkgs/master";
 
-    
-
     nix-on-droid = {
       url = "github:nix-community/nix-on-droid/release-24.05";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -20,14 +18,13 @@
     naersk.url = "github:nix-community/naersk/master";
     flake-utils.url = "github:numtide/flake-utils";
 
-    # NEW: Add vendored tools as local inputs
     nixtract-src = {
-      url = "path:/data/data/com.termux.nix/files/home/pick-up-nix/vendor/nix/nixtract"; # Absolute path to the submodule
-      flake = false; # Not a flake itself, just a source
+      url = "path:/data/data/com.termux.nix/files/home/pick-up-nix/vendor/nix/nixtract";
+      flake = false;
     };
     nixpkgs-lint-src = {
-      url = "path:/data/data/com.termux.nix/files/home/pick-up-nix/vendor/nix/nixpkgs-lint"; # Explicitly a local path
-      flake = false; # Not a flake itself, just a source
+      url = "path:/data/data/com.termux.nix/files/home/pick-up-nix/vendor/nix/nixpkgs-lint";
+      flake = false;
     };
 
     streamofrandom = {
@@ -50,87 +47,28 @@
       linuxSystem = "x86_64-linux";
       androidSystem = "aarch64-linux";
 
-      # Define a common set of packages for all systems
-      # Overlays
-      overlays = [
-        (final: prev: {
-          nixtract = prev.nixtract.overrideAttrs (old: {
-            buildInputs = (old.buildInputs or []) ++ [ prev.openssl ];
-          });
-        })
-      ];
+      # Import overlays
+      overlays = (builtins.import ./nix/overlays.nix { inherit self nixpkgs; }).overlays;
 
-      commonPackages = pkgs: geminiCliSrc:
-        {
-          hello = pkgs.hello;
-          figlet = pkgs.figlet;
-          which = pkgs.which;
-          gemini-cli = pkgs.callPackage ./pkgs/gemini-cli { inherit geminiCliSrc; };
-          batch-task-processor = pkgs.writeShellApplication {
-            name = "batch-task-processor";
-            runtimeInputs = [ pkgs.bash ];
-            text = builtins.readFile ./tools/batch_task_processor.sh;
-          };
-          tiktok_cli_adaptor = pkgs.callPackage "${streamofrandom}/livestream-tiktok-plugin/tiktok_cli_adaptor/default.nix" {};
+      # Import common packages
+      commonPackages = (builtins.import ./nix/packages/default.nix { inherit self nixpkgs nixpkgs-unstable nixtract-src nixpkgs-lint-src streamofrandom git-submodule-tools-rs; }).commonPackages;
 
-          # Vendored tools
-          # Now reference the inputs directly
-          nixtract = pkgs.callPackage "${nixtract-src}/default.nix" {}; # Use the input path
-          nixpkgs-lint = nixpkgs-lint-src.packages.${pkgs.system}.default; # Access its default package
+      # Import nix-on-droid configurations
+      nixOnDroidConfigurations = (builtins.import ./nix/nix-on-droid.nix { inherit nixpkgs nix-on-droid home-manager overlays androidSystem; }).nixOnDroidConfigurations;
 
-          # Gemini Interaction package
-          gemini-interaction = pkgs.callPackage ./pkgs/gemini-interaction { geminiCli = self.packages.${pkgs.system}.gemini-cli; };
-          runprompt1-builder = pkgs.writeShellApplication {
-            name = "runprompt1-builder";
-            runtimeInputs = [ pkgs.bash ];
-            text = builtins.readFile (git-submodule-tools-rs + "/runprompt1.sh");
-          };
+      # Import home configurations
+      homeConfigurations = (builtins.import ./nix/home-configurations.nix { inherit nixpkgs nixpkgs-unstable home-manager overlays; }).homeConfigurations;
 
-          hello-world-rust = pkgs.stdenv.mkDerivation rec {
-            pname = "hello-world-rust";
-            version = "0.1.0";
+      # Import devShells
+      devShells = (builtins.import ./nix/devshells.nix { inherit lib nixpkgs nixpkgs-unstable; }).devShells;
 
-            src = builtins.path { path = self.inputs.self.outPath + "/tasks/hello-world-rust"; name = "hello-world-rust-src"; };
-
-            buildInputs = with pkgs; [
-              rustc
-              cargo
-            ];
-
-            buildPhase = ''
-              export HOME=$(mktemp -d)
-              cargo build --release --target-dir $out/target
-            '';
-
-            installPhase = ''
-              mkdir -p $out/bin
-              cp $out/target/release/hello-world-rust $out/bin/hello-world-rust
-            '';
-
-            meta = with pkgs.lib; {
-              description = "A simple Rust 'Hello World' program as a Nix derivation.";
-              homepage = "https://example.com/hello-world-rust";
-              license = licenses.mit;
-              platforms = platforms.linux;
-            };
-          };
-        };
     in
     {
       # Expose common packages for direct use with `nix run` or `nix shell`
-      packages.${linuxSystem} = commonPackages (import nixpkgs {
+      packages.${linuxSystem} = (commonPackages (import nixpkgs {
         system = linuxSystem;
-        overlays = [
-          (final: prev: {
-            nixtract = prev.nixtract.overrideAttrs (old: {
-              buildInputs = (old.buildInputs or []) ++ [ prev.openssl ];
-            });
-          })
-          (final: prev: {
-            rustToolchain = inputs.nixpkgs-unstable.legacyPackages.${linuxSystem}.rust-bin.stable.latest.default;
-          })
-        ];
-      }) inputs.gemini-cli // {
+        overlays = overlays;
+      }) inputs.gemini-cli) // {
         git-wrapper = (import nixpkgs { system = linuxSystem; }).callPackage naersk {}.buildPackage {
           pname = "git-wrapper";
           version = "0.1.0";
@@ -138,19 +76,10 @@
           cargoLock.lockFile = ./wrappers/git-wrapper/Cargo.lock;
         };
       };
-      packages.${androidSystem} = commonPackages (import nixpkgs {
+      packages.${androidSystem} = (commonPackages (import nixpkgs {
         system = androidSystem;
-        overlays = [
-          (final: prev: {
-            nixtract = prev.nixtract.overrideAttrs (old: {
-              buildInputs = (old.buildInputs or []) ++ [ prev.openssl ];
-            });
-          })
-          (final: prev: {
-            rustToolchain = inputs.nixpkgs-unstable.legacyPackages.${androidSystem}.rust-bin.stable.latest.default;
-          })
-        ];
-      }) inputs.gemini-cli // {
+        overlays = overlays;
+      }) inputs.gemini-cli) // {
         git-wrapper = (import nixpkgs { system = androidSystem; }).callPackage naersk {}.buildPackage {
           pname = "git-wrapper";
           version = "0.1.0";
@@ -162,84 +91,7 @@
       defaultPackage.${linuxSystem} = self.packages.${linuxSystem}.batch-task-processor;
       defaultPackage.${androidSystem} = self.packages.${androidSystem}.batch-task-processor;
 
-      # Packages for nix-on-droid
-      nixOnDroidConfigurations = {
-        android = nix-on-droid.lib.nixOnDroidConfiguration {
-          pkgs = import nixpkgs {
-            system = androidSystem;
-            overlays = overlays; # Apply the overlay here
-            # The overlay is no longer needed, gemini-cli is in packages
-          };
-          modules = [
-            ./configurations/android.nix
-            home-manager.nixosModules.home-manager
-            {
-              home-manager.useGlobalPkgs = true;
-              home-manager.useUserPackages = true;
-              home-manager.users.user = {
-                imports = [
-                  ./.config/home-manager/home.nix
-                  ./home/base.nix
-                  ./home/emacs.nix
-                ];
-                # Add gemini-cli to home packages for android
-                home.packages = [ self.packages.${androidSystem}.gemini-cli ];
-              };
-            }
-          ];
-        };
-      };
-
-      # Packages for other Linux systems (Ubuntu, GitHub Actions)
-      homeConfigurations = 
-        let
-          # A helper function to generate home-manager configs for a given system
-          mkSystemHomes = system:
-            let
-              pkgs = import nixpkgs {
-                system = system;
-                overlays = overlays; # Apply the overlay here
-              };
-              # A helper function to generate a home-manager configuration
-              mkHome = modules: home-manager.lib.homeManagerConfiguration {
-                inherit pkgs;
-                extraSpecialArgs = { inherit nixpkgs-unstable; };
-                # NOTE: This assumes your username is 'user'
-                modules = [
-                  { home.username = "user"; home.homeDirectory = "/home/user"; }
-                  ./.config/home-manager/home.nix
-                ] ++ modules;
-              };
-            in
-            {
-              "github-runner" = mkHome [ ./home/base.nix ];
-              "linux-dev" = mkHome [ ./home/base.nix ./home/emacs.nix ];
-              "linux-sci" = mkHome [ ./home/base.nix ./home/emacs.nix ./home/scientific.nix ];
-            };
-        in
-        {
-          "x86_64-linux" = mkSystemHomes "x86_64-linux";
-          "aarch64-linux" = mkSystemHomes "aarch64-linux";
-        };
-
-      devShells = lib.genAttrs lib.systems.flakeExposed (system: {
-        default = let
-          pkgs = import nixpkgs { inherit system; }; # Stable nixpkgs
-          unstablePkgs = import nixpkgs-unstable { inherit system; }; # Unstable nixpkgs
-        in
-        pkgs.mkShell {
-          buildInputs = [
-            unstablePkgs.rustc
-            unstablePkgs.cargo
-          ];
-          shellHook = ''
-            echo "Current PATH: $PATH"
-            echo "Contents of unstablePkgs.cargo/bin: $(ls ${unstablePkgs.cargo}/bin)"
-            # No need to export PATH again, it's already there from buildInputs
-            echo "Attempting to run cargo check..."
-            bash -c "cargo check"
-          '';
-        };
-      });
+      # Expose configurations
+      inherit nixOnDroidConfigurations homeConfigurations devShells;
     };
 }
