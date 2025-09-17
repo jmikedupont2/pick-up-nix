@@ -2,7 +2,7 @@
   description = "Nix flake for the enum-self Rust crate";
 
   inputs = {
-    nixpkgs.url = "github:NixOS/nixpkgs/nixos-23.11"; # Use a stable nixpkgs
+    nixpkgs.url = "github:NixOS/nixpkgs/nixos-25.05"; # Use a stable nixpkgs
     naersk.url = "github:nix-community/naersk/master"; # Use naersk
     flake-utils.url = "github:numtide/flake-utils"; # For easier cross-platform builds
   };
@@ -25,7 +25,7 @@
 
           # This will automatically use the Cargo.lock from the source directory
           # If your Cargo.lock is in the parent directory, you might need:
-          # cargoLock = { lockFile = ../Cargo.lock; };
+          cargoLock = ../../Cargo.lock;
 
           # If you need a specific Rust toolchain (e.g., nightly), uncomment and adjust:
           # rustToolchain = pkgs.rust-bin.nightly.latest.default;
