@@ -12,8 +12,9 @@ members = [
  "file_analyzer", "vendor/strace/rstrace/crates/rstrace-cuda-sniff", "enum-self",
 "wrappers/syn-wrapper",
 "wrappers/git-wrapper",
-"wrappers/wrapper-crate"
-]
+"wrappers/wrapper-crate",
+"source/github/meta-introspector/git-submodules-rs-nix/report-analyzer-rs"
+, "tools/nix-analyzer-rs"]
 
 
 # task: "source/github/meta-introspector/submodules" please add these above

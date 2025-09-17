@@ -33,14 +33,14 @@
     };
 
     gemini-cli.url = "path:/data/data/com.termux.nix/files/home/pick-up-nix/vendor/external/gemini-cli";
-    git-submodule-tools-rs = {
-      url = "path:/data/data/com.termux.nix/files/home/pick-up-nix2/source/github/meta-introspector/git-submodule-tools-rs";
-      flake = false;
+    git-submodules-rs-nix = {
+      url = "path:./source/github/meta-introspector/git-submodules-rs-nix";
     };
+    
   };
 
   outputs = { self, nixpkgs, nixpkgs-unstable, nix-on-droid, home-manager, naersk, flake-utils,
-              nixtract-src, nixpkgs-lint-src, streamofrandom, gemini-cli, git-submodule-tools-rs }@inputs:
+              nixtract-src, nixpkgs-lint-src, streamofrandom, gemini-cli, git-submodules-rs-nix }@inputs:
 
     let
       lib = nixpkgs.lib;
@@ -63,35 +63,28 @@
       devShells = (builtins.import ./nix/devshells.nix { inherit lib nixpkgs nixpkgs-unstable; }).devShells;
 
     in
-    {
-      # Expose common packages for direct use with `nix run` or `nix shell`
-      packages.${linuxSystem} = (commonPackages (import nixpkgs {
-        system = linuxSystem;
-        overlays = overlays;
-      }) inputs.gemini-cli) // {
-        git-wrapper = (import nixpkgs { system = linuxSystem; }).callPackage naersk {}.buildPackage {
-          pname = "git-wrapper";
-          version = "0.1.0";
-          src = ./wrappers/git-wrapper;
-          cargoLock.lockFile = ./wrappers/git-wrapper/Cargo.lock;
+    flake-utils.lib.eachDefaultSystem (system:
+      let
+        pkgs = import nixpkgs {
+          inherit system;
+          overlays = overlays;
         };
-      };
-      packages.${androidSystem} = (commonPackages (import nixpkgs {
-        system = androidSystem;
-        overlays = overlays;
-      }) inputs.gemini-cli) // {
-        git-wrapper = (import nixpkgs { system = androidSystem; }).callPackage naersk {}.buildPackage {
-          pname = "git-wrapper";
-          version = "0.1.0";
-          src = ./wrappers/git-wrapper;
-          cargoLock.lockFile = ./wrappers/git-wrapper/Cargo.lock;
+      in
+      {
+        packages.default = (commonPackages pkgs inputs.gemini-cli) // {
+          git-wrapper = pkgs.callPackage naersk {}.buildPackage {
+            pname = "git-wrapper";
+            version = "0.1.0";
+            src = ./wrappers/git-wrapper;
+            cargoLock.lockFile = ./wrappers/git-wrapper/Cargo.lock;
+          };
+                  report-analyzer-rs = git-submodules-rs-nix.packages.${system}.report-analyzer-rs;
         };
-      };
 
-      defaultPackage.${linuxSystem} = self.packages.${linuxSystem}.batch-task-processor;
-      defaultPackage.${androidSystem} = self.packages.${androidSystem}.batch-task-processor;
+        defaultPackage = self.packages.${system}.default;
 
-      # Expose configurations
-      inherit nixOnDroidConfigurations homeConfigurations devShells;
-    };
+        # Expose configurations
+        inherit nixOnDroidConfigurations homeConfigurations devShells;
+      }
+    );
 }
