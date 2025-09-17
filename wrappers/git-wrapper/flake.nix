@@ -18,7 +18,6 @@
         devShell = pkgs.mkShell {
           buildInputs = [
             rustToolchain
-            pkgs.gix # Assuming gix is a dependency and needs to be in the devShell
           ];
         };
 
