@@ -27,16 +27,12 @@
           pname = "wrapper-crate";
           version = "0.1.0";
           src = ./.;
+          cargoHash = "";
 
-          cargoLock = {
-            lockFile = ./Cargo.lock;
-          };
+          
 
           # Dependencies from the inputs
-          buildInputs = [
-            git-wrapper
-            syn-wrapper
-          ];
+          buildInputs = [];
 
           # If you have any native dependencies for git-wrapper or syn-wrapper,
           # you might need to add them here or ensure they are handled by their flakes.

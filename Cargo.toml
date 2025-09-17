@@ -11,7 +11,9 @@ members = [
 "source/github/meta-introspector/neo/neo",
  "file_analyzer", "vendor/strace/rstrace/crates/rstrace-cuda-sniff", "enum-self",
 "wrappers/syn-wrapper",
-"wrappers/git-wrapper"]
+"wrappers/git-wrapper",
+"wrappers/wrapper-crate"
+]
 
 
 # task: "source/github/meta-introspector/submodules" please add these above
