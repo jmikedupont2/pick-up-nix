@@ -1,4 +1,4 @@
-{ self, nixpkgs, nixpkgs-unstable, nixtract-src, nixpkgs-lint-src, streamofrandom, git-submodule-tools-rs, ... }:
+{ self, nixpkgs, nixpkgs-unstable, nixtract-src, nixpkgs-lint-src, streamofrandom, git-submodules-rs-nix, ... }:
 
 {
   commonPackages = pkgs: geminiCliSrc:
@@ -70,7 +70,7 @@
       runprompt1-builder = pkgs.writeShellApplication {
         name = "runprompt1-builder";
         runtimeInputs = [ pkgs.bash ];
-        text = builtins.readFile (git-submodule-tools-rs + "/runprompt1.sh");
+        text = builtins.readFile (git-submodules-rs-nix + "/runprompt1.sh");
       };
 
       hello-world-rust = pkgs.stdenv.mkDerivation rec {

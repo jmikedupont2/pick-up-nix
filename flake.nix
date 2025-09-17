@@ -51,7 +51,7 @@
       overlays = (builtins.import ./nix/overlays.nix { inherit self nixpkgs; }).overlays;
 
       # Import common packages
-      commonPackages = (builtins.import ./nix/packages/default.nix { inherit self nixpkgs nixpkgs-unstable nixtract-src nixpkgs-lint-src streamofrandom git-submodule-tools-rs; }).commonPackages;
+      commonPackages = (builtins.import ./nix/packages/default.nix { inherit self nixpkgs nixpkgs-unstable nixtract-src nixpkgs-lint-src streamofrandom; }).commonPackages;
 
       # Import nix-on-droid configurations
       nixOnDroidConfigurations = (builtins.import ./nix/nix-on-droid.nix { inherit nixpkgs nix-on-droid home-manager overlays androidSystem; }).nixOnDroidConfigurations;
