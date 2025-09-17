@@ -1,5 +1,6 @@
-use lang_c::driver::parse;
+use lang_c::driver::{parse, Config};
 use lang_c::visit::{self, Visit};
+use lang_c::span::Span;
 use std::env;
 use std::fs;
 
@@ -19,7 +20,7 @@ impl IfVisitor {
 }
 
 impl<'ast> Visit<'ast> for IfVisitor {
-    fn visit_if_statement(&mut self, if_statement: &'ast lang_c::ast::IfStatement) {
+    fn visit_if_statement(&mut self, if_statement: &'ast lang_c::ast::IfStatement, span: &'ast Span) {
         // If we are already inside an if, this one is nested.
         if self.if_nest_level > 0 {
             self.nested_if_count += 1;
@@ -28,14 +29,55 @@ impl<'ast> Visit<'ast> for IfVisitor {
         // Increment nesting level for the body of this if statement.
         self.if_nest_level += 1;
         // Continue traversal into the `then` body.
-        visit::walk_statement(self, &if_statement.then_statement);
+        use lang_c::driver::{parse, Config};
+use lang_c::visit::Visit;
+use lang_c::span::Span;
+use std::env;
+use std::fs;
+
+struct IfVisitor {
+    nested_if_count: usize,
+    // Stack to track if we are inside an if statement's body
+    if_nest_level: usize,
+}
+
+impl IfVisitor {
+    fn new() -> Self {
+        IfVisitor {
+            nested_if_count: 0,
+            if_nest_level: 0,
+        }
+    }
+}
+
+impl<'ast> Visit<'ast> for IfVisitor {
+    fn visit_if_statement(&mut self, if_statement: &'ast lang_c::ast::IfStatement, span: &'ast Span) {
+        // If we are already inside an if, this one is nested.
+        if self.if_nest_level > 0 {
+            self.nested_if_count += 1;
+        }
+
+        // Increment nesting level for the body of this if statement.
+        self.if_nest_level += 1;
+        // Continue traversal into the `then` body.
+        self.visit_statement(&if_statement.then_statement, span);
         // After visiting the `then` body, decrement the level.
         self.if_nest_level -= 1;
 
-        // The `else` part is not considered nested in the same way, 
+        // The `else` part is not considered nested in the same way,
         // but we still need to traverse it to find other ifs.
         if let Some(else_statement) = &if_statement.else_statement {
-            visit::walk_statement(self, else_statement);
+            self.visit_statement(else_statement, span);
+        }
+    }
+}
+        // After visiting the `then` body, decrement the level.
+        self.if_nest_level -= 1;
+
+        // The `else` part is not considered nested in the same way,
+        // but we still need to traverse it to find other ifs.
+        if let Some(else_statement) = &if_statement.else_statement {
+            visit::walk_statement(self, else_statement, span);
         }
     }
 }
@@ -56,7 +98,7 @@ fn main() {
         }
     };
 
-    let parse_result = parse(&content);
+    let parse_result = parse(&Config::default(), &content);
 
     match parse_result {
         Ok(parse) => {

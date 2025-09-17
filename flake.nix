@@ -5,10 +5,7 @@
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-24.05";
     nixpkgs-unstable.url = "github:NixOS/nixpkgs/master";
 
-    rust-toolchain = {
-      url = "github:NixOS/nixpkgs/nixos-unstable";
-      inputs.nixpkgs.follows = "nixpkgs-unstable"; # Ensure it uses the same unstable nixpkgs
-    };
+    
 
     nix-on-droid = {
       url = "github:nix-community/nix-on-droid/release-24.05";
@@ -46,7 +43,7 @@
   };
 
   outputs = { self, nixpkgs, nixpkgs-unstable, nix-on-droid, home-manager, naersk, flake-utils,
-              nixtract-src, nixpkgs-lint-src, streamofrandom, rust-toolchain, gemini-cli, git-submodule-tools-rs }@inputs:
+              nixtract-src, nixpkgs-lint-src, streamofrandom, gemini-cli, git-submodule-tools-rs }@inputs:
 
     let
       lib = nixpkgs.lib;
@@ -227,17 +224,21 @@
 
       devShells = lib.genAttrs lib.systems.flakeExposed (system: {
         default = let
-          pkgs = import nixpkgs { inherit system; };
-          rustPkgs = import rust-toolchain { inherit system; }; # Import rust-toolchain
+          pkgs = import nixpkgs { inherit system; }; # Stable nixpkgs
+          unstablePkgs = import nixpkgs-unstable { inherit system; }; # Unstable nixpkgs
         in
         pkgs.mkShell {
           buildInputs = [
-            (rustPkgs.rust-bin.stable.latest.default.override {
-              extensions = [ "rust-src" "rust-analyzer" ];
-            })
-            pkgs.cargo
+            unstablePkgs.rustc
+            unstablePkgs.cargo
           ];
-          RUST_SRC_PATH = "${rustPkgs.rust-bin.stable.latest.default.src}/lib/rustlib/src/rust/library";
+          shellHook = ''
+            echo "Current PATH: $PATH"
+            echo "Contents of unstablePkgs.cargo/bin: $(ls ${unstablePkgs.cargo}/bin)"
+            # No need to export PATH again, it's already there from buildInputs
+            echo "Attempting to run cargo check..."
+            bash -c "cargo check"
+          '';
         };
       });
     };

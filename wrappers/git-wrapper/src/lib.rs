@@ -44,7 +44,7 @@ impl Readable for GitItem {
 
         match object.kind {
             Kind::Commit => {
-                let commit = object.into_commit()?;
+                let commit = object.into_commit();
                 let my_commit = MyCommit {
                     id: commit.id.to_string(),
                     message: commit.message_raw()?.to_string(),
@@ -52,14 +52,14 @@ impl Readable for GitItem {
                 Ok(GitItem::Commit(my_commit))
             }
             Kind::Tree => {
-                let tree = object.into_tree()?;
+                let tree = object.into_tree();
                 let my_tree = MyTree {
                     id: tree.id.to_string(),
                 };
                 Ok(GitItem::Tree(my_tree))
             }
             Kind::Blob => {
-                let blob = object.into_blob()?;
+                let blob = object.into_blob();
                 let my_blob = MyBlob {
                     id: blob.id.to_string(),
                     size: blob.data.len() as u64,
@@ -67,10 +67,10 @@ impl Readable for GitItem {
                 Ok(GitItem::Blob(my_blob))
             }
             Kind::Tag => {
-                let tag = object.into_tag()?;
+                let tag = object.into_tag();
                 let my_tag = MyTag {
                     id: tag.id.to_string(),
-                    target: tag.target()?.to_string(),
+                    target: tag.target_id()?.to_string(),
                 };
                 Ok(GitItem::Tag(my_tag))
             }

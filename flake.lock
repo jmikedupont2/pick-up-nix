@@ -366,7 +366,6 @@
         "nixpkgs-lint-src": "nixpkgs-lint-src",
         "nixpkgs-unstable": "nixpkgs-unstable",
         "nixtract-src": "nixtract-src",
-        "rust-toolchain": "rust-toolchain",
         "streamofrandom": "streamofrandom"
       }
     },
@@ -384,22 +383,6 @@
         "owner": "rust-lang",
         "ref": "nightly",
         "repo": "rust-analyzer",
-        "type": "github"
-      }
-    },
-    "rust-toolchain": {
-      "locked": {
-        "lastModified": 1757745802,
-        "narHash": "sha256-hLEO2TPj55KcUFUU1vgtHE9UEIOjRcH/4QbmfHNF820=",
-        "owner": "NixOS",
-        "repo": "nixpkgs",
-        "rev": "c23193b943c6c689d70ee98ce3128239ed9e32d1",
-        "type": "github"
-      },
-      "original": {
-        "owner": "NixOS",
-        "ref": "nixos-unstable",
-        "repo": "nixpkgs",
         "type": "github"
       }
     },
