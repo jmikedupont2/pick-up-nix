@@ -7,21 +7,21 @@
     flake-utils.url = "github:numtide/flake-utils"; # For easier cross-platform builds
   };
 
-  outputs = { self, nixpkgs, naersk, flake-utils }:
+  outputs = { self, flake-utils, naersk, nixpkgs }:
     flake-utils.lib.eachDefaultSystem (system:
       let
         pkgs = import nixpkgs {
           inherit system;
-          # overlays = [ naersk.overlay ]; # naersk provides its own rustPlatform
         };
-        naersk-lib = pkgs.callPackage naersk { };
-      in
-      {
-        packages.enum-self = naersk-lib.buildRustPackage {
-          pname = "enum-self";
-          version = "0.1.0";
 
+        naersk' = pkgs.callPackage naersk {}; # Correct way to get naersk's functions
+
+      in rec {
+        # For `nix build` & `nix run`:
+        defaultPackage = naersk'.buildPackage {
           src = ./.;
+          pname = "enum-self"; # Add pname and version
+          version = "0.1.0";
 
           # This will automatically use the Cargo.lock from the source directory
           # If your Cargo.lock is in the parent directory, you might need:
@@ -36,6 +36,11 @@
             license = licenses.mit; # Or licenses.apache20
             platforms = platforms.linux;
           };
+        };
+
+        # For `nix develop`:
+        devShell = pkgs.mkShell {
+          nativeBuildInputs = with pkgs; [ rustc cargo ];
         };
       }
     );

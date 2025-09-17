@@ -8,7 +8,8 @@ members = [
 "memetic_code/log_processor",
 "pick-up-nix-cli",
 "source/github/meta-introspector/neo/neo",
- "file_analyzer", "vendor/strace/rstrace/crates/rstrace-cuda-sniff", "enum-self"]
+ "file_analyzer", "vendor/strace/rstrace/crates/rstrace-cuda-sniff", "enum-self",
+"wrappers/syn-wrapper"]
 
 
 # task: "source/github/meta-introspector/submodules" please add these above
@@ -246,8 +247,8 @@ libc = "0.2.139"
 
 [workspace.package]
 version = "0.1.0"
-edition = "2024"
-rust-version = "1.85.0"
+edition = "2021"
+rust-version = "1.73.0"
 license = "MIT OR Apache-2.0"
 authors = ["Eric Evans <ciresnave@gmail.com>"]
 repository = "https://github.com/ciresnave/mocopr"
