@@ -4,12 +4,14 @@
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-23.11"; # Use a stable Nixpkgs channel
     flake-utils.url = "github:numtide/flake-utils";
+    rust-overlay.url = "github:oxalica/rust-overlay";
   };
 
-  outputs = { self, nixpkgs, flake-utils }:
+  outputs = { self, nixpkgs, flake-utils, rust-overlay }:
     flake-utils.lib.eachDefaultSystem (system:
       let
-        pkgs = nixpkgs.legacyPackages.${system};
+        overlays = [ rust-overlay.overlays.default ];
+        pkgs = import nixpkgs { inherit system overlays; };
         rustToolchain = pkgs.rust-bin.fromRustupToolchainFile ./rust-toolchain.toml;
       in
       {
