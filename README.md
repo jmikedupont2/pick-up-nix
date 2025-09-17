@@ -136,6 +136,14 @@ You can then use the `asciinema` executable located at `./result/bin/asciinema`.
 ```
 
 
+## Task Status
+
+This section provides an overview of the current status of key tasks within the project.
+
+*   **Task 001: Initial Setup** - Completed
+*   **Task 002: Core Feature Development** - In Progress
+*   **Task 003: Documentation Review** - Pending
+
 # emacs
 
 cd source/github/meta-introspector/git-submodules-rs-nix/.emacs.d/nix-magit/
@@ -149,3 +157,9 @@ tasks in
 ~/pick-up-nix2/source/github/meta-introspector/git-submodule-tools-rs/prompts/
 
 
+# rust 
+cd ~/nix2/vendor/external/rust/src/tools/nix-dev-shell
+nix develop
+
+cd ~/nix2/
+~/pick-up-nix2/gemini_cli_recent.sh

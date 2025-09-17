@@ -1,5 +1,5 @@
 let
-  nixpkgs = fetchTarball "https://github.com/NixOS/nixpkgs/tarball/master";
+  nixpkgs = fetchTarball "https://github.com/NixOS/nixpkgs/archive/41b48ac.tar.gz";
   pkgs = import nixpkgs { config = {}; overlays = []; };
 in
 
@@ -23,4 +23,3 @@ pkgs.mkShellNoCC {
   python3
 ];
 }
-
