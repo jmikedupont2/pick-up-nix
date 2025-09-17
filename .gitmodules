@@ -215,10 +215,6 @@
 [submodule "vendor/ebpf/aya"]
 	path = vendor/ebpf/aya
 	url = https://github.com/meta-introspector/aya
-[submodule "vendor/ebpf/ayaoo"]
-	path = vendor/ebpf/ayaoo
-	url = https://github.com/meta-introspector/aya
-
 [submodule "vendor/ebpf/bpfjit"]
 	path = vendor/ebpf/bpfjit
 	url = https://github.com/meta-introspector/bpfjit
