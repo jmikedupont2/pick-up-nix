@@ -1,20 +1,44 @@
 # Task: Upgrade Nix Environment and Build with Nix
 
-Our goal is to resolve the `rustc` version mismatch by using the Nix environment defined in `flake.nix`.
+1.  **`flake.nix` and `nix/devshells.nix` have been refactored to a minimal, best-practice compliant setup.**
+2.  **`rust-toolchain.toml` has been created.**
+3.  **Nix environment successfully entered and `rustc` version verified.**
+    *   `rustc 1.90.0` is now available in the development shell, meeting the requirement of `1.82` or newer.
 
 ## Next Steps:
+update vendor/nix/flake.nix
+to include vendor/nix/*/flake.nix submodules
 
-1.  **Update `flake.nix` for the new Rust version.**
-    The current `flake.nix` already points to `nixpkgs-unstable` for the `rust-toolchain`. This should provide a sufficiently new `rustc`. No changes to `flake.nix` should be necessary at this time.
+rules:
+each git repo will have a task.md with the next steps in it to run.
+those steps will be run in nix.
+the input to the nix will include its entire context.
+the context is constructed to be passed to gemini via the task.md
+a backpack filling algorithm finds the optimal contents for each step in the workflow.
+each new bit of code needs an doc/sops/ standard operating procedure
+each change should be associated with a doc/crq/ Change ReQuest
+each crq should be updated with which commits are part of it.
+the crq number is mentioned in each commit message.
+look first for scripts/<usefulname>
+run all changes via scripts/<usefulname>
+commit all changes before your run.
+write tests first
+create branches first
+do not delete anything
+do not run git anything for now except to add and commit any new files.
+do not commit any deletes
+do not rm any files
+do not rm .git
+carefule that some git commands process in parallel and cause locks.
 
-2.  **User Action: Reboot into the new Nix environment.**
-    The user will need to ensure their shell is configured to use the `devShell` from the `flake.nix`. This is typically done by running `nix develop` or using a tool like `direnv` with `use flake`.
+*   Integrating specific project components into the new flake.
+We want to use those nix tools to index
+all the nix packages in ~/pick-up-nix2/index/file_nix.txt and to understand  the graphs
+and how they fit int our project. and make a report.
 
-3.  **Verification: Check `rustc` version.**
-    Once in the new environment, I will run `rustc --version` to confirm that the version is 1.82 or newer.
+*   Defining packages or applications within the flake.
 
-4.  **Build with Nix.**
-    I will use `nix build .#git-wrapper` to build the `git-wrapper` crate using the Nix toolchain. This will confirm that the build is successful with the new `rustc`.
+our boot.sh runs gemini
 
-5.  **Test with Nix.**
-    I will run the tests for `git-wrapper` within the Nix shell to ensure everything is working as expected. The command will be `nix-shell --run "cargo test -p git-wrapper"`.
+*   Setting up build and test commands for your project.
+*   Further refining the `devShell`.
