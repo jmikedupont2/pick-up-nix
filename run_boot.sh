@@ -11,7 +11,7 @@ TASK_FILE="task.md" # Placeholder for the task file
 #then
 #  GEMINI_INVOCATION="bunx @google/gemini-cli"
 #fi
-GEMINI_INVOCATION="gemini"
+GEMINI_INVOCATION="./gemini_cli_recent.sh"
 # Start or attach to a tmux session
 # If the session doesn't exist, it will create it and run the gemini command
 if ! tmux has-session -t "$SESSION_NAME" 2>/dev/null; then
