@@ -22,7 +22,7 @@
       {
         packages.default = nix-tools.packages.${system}.default;
 
-        devShells.default = (builtins.import ./nix/devshells.nix { inherit pkgs; }).devShells.default;
+        devShells.default = (builtins.import ./nix/devshells.nix { inherit pkgs inputs; }).devShells.default;
       }
     );
 }

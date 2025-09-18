@@ -1,7 +1,16 @@
 {
   pkgs,
+  inputs,
 }:
 
+let
+  unstablePkgs = import inputs.nixpkgs-unstable {
+    inherit (pkgs) system;
+    overlays = [
+      inputs.rust-overlay.overlays.default
+    ];
+  };
+in
 {
   devShells = {
     default = pkgs.mkShell {
@@ -11,7 +20,29 @@
       shellHook = ''
         #!/usr/bin/env bash
         echo "Current PATH: $PATH"
-        echo "Nix development shell entered."
+        echo "Nix development shell entered (stable Rust)."
+      '';
+    };
+
+    stableRust = pkgs.mkShell {
+      buildInputs = [
+        pkgs.rust-bin.stable.latest.rustc
+      ];
+      shellHook = ''
+        #!/usr/bin/env bash
+        echo "Current PATH: $PATH"
+        echo "Nix development shell entered (stable Rust)."
+      '';
+    };
+
+    unstableRust = unstablePkgs.mkShell {
+      buildInputs = [
+        unstablePkgs.rust-bin.nightly.latest.rustc
+      ];
+      shellHook = ''
+        #!/usr/bin/env bash
+        echo "Current PATH: $PATH"
+        echo "Nix development shell entered (unstable Rust)."
       '';
     };
   };
