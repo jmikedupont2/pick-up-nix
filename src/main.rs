@@ -1,7 +1,21 @@
+mod fixed_point_enum;
+mod fixed_point_traits;
+
 use clap::Parser;
 use std::fs;
 use std::path::Path;
 use std::process::Command;
+
+use crate::fixed_point_traits::FixedPointAnalysis;
+use crate::fixed_point_traits::prime_2::IsDual;
+use crate::fixed_point_traits::prime_3::IsTriadic;
+use crate::fixed_point_traits::prime_5::IsFiveResonant;
+use crate::fixed_point_traits::prime_7::IsSevenResonant;
+use crate::fixed_point_traits::prime_11::IsElevenResonant;
+use crate::fixed_point_traits::prime_13::IsThirteenResonant;
+use crate::fixed_point_traits::prime_17::IsSeventeenResonant;
+use crate::fixed_point_traits::prime_19::IsNineteenResonant;
+
 
 /// The nix-introspector: A tool to manage and analyze Nix projects.
 #[derive(Parser, Debug)]
@@ -19,6 +33,8 @@ enum Commands {
         #[arg(short, long)]
         url: String,
     },
+    /// Analyzes the fixed point properties of the knowledge lattice.
+    AnalyzeFixedPoint,
 }
 
 /// Extracts a project name from a git URL.
@@ -203,6 +219,80 @@ fn main() {
             }
 
             println!("Tool execution complete.");
-        }
+        },
+        Commands::AnalyzeFixedPoint => {
+            println!("Performing fixed point and resonance analysis of the knowledge lattice...");
+
+            // Create instances of KnowledgeConcept for demonstration
+            let system_concept = fixed_point_enum::KnowledgeConcept::System {
+                components: vec![Box::new(fixed_point_enum::KnowledgeConcept::Concept), Box::new(fixed_point_enum::KnowledgeConcept::Hardware)],
+                behavior: Box::new(fixed_point_enum::KnowledgeConcept::BehaviorAbstract),
+            };
+            let computation_concept = fixed_point_enum::KnowledgeConcept::Computation {
+                algorithm: Box::new(fixed_point_enum::KnowledgeConcept::AlgorithmAbstract),
+                data: Box::new(fixed_point_enum::KnowledgeConcept::DataAbstract),
+                model: Box::new(fixed_point_enum::KnowledgeConcept::ModelAbstract),
+            };
+            let fixed_point_concept = fixed_point_enum::KnowledgeConcept::FixedPoint {
+                self_reference: Box::new(fixed_point_enum::KnowledgeConcept::SelfReference {
+                    concept: Box::new(fixed_point_enum::KnowledgeConcept::Concept),
+                    fixed_point: Box::new(fixed_point_enum::KnowledgeConcept::FixedPoint {
+                        self_reference: Box::new(fixed_point_enum::KnowledgeConcept::Concept),
+                        cycle: Box::new(fixed_point_enum::KnowledgeConcept::ProcessAbstract),
+                    }),
+                }),
+                cycle: Box::new(fixed_point_enum::KnowledgeConcept::ProcessAbstract),
+            };
+            let self_reference_concept = fixed_point_enum::KnowledgeConcept::SelfReference {
+                concept: Box::new(fixed_point_enum::KnowledgeConcept::Concept),
+                fixed_point: Box::new(fixed_point_enum::KnowledgeConcept::FixedPoint {
+                    self_reference: Box::new(fixed_point_enum::KnowledgeConcept::Concept),
+                    cycle: Box::new(fixed_point_enum::KnowledgeConcept::ProcessAbstract),
+                }),
+            };
+            let topology_concept = fixed_point_enum::KnowledgeConcept::Topology {
+                space: Box::new(fixed_point_enum::KnowledgeConcept::Concept),
+                structure: Box::new(fixed_point_enum::KnowledgeConcept::StructureAbstract),
+            };
+            let category_theory_concept = fixed_point_enum::KnowledgeConcept::CategoryTheory {
+                objects: vec![Box::new(fixed_point_enum::KnowledgeConcept::Concept)],
+                morphisms: vec![Box::new(fixed_point_enum::KnowledgeConcept::Relationship)],
+            };
+            let algorithm_concept = fixed_point_enum::KnowledgeConcept::Algorithm {
+                process: Box::new(fixed_point_enum::KnowledgeConcept::ProcessAbstract),
+                computation: Box::new(fixed_point_enum::KnowledgeConcept::Computation {
+                    algorithm: Box::new(fixed_point_enum::KnowledgeConcept::AlgorithmAbstract),
+                    data: Box::new(fixed_point_enum::KnowledgeConcept::DataAbstract),
+                    model: Box::new(fixed_point_enum::KnowledgeConcept::ModelAbstract),
+                }),
+            };
+            let data_concept = fixed_point_enum::KnowledgeConcept::Data {
+                information: Box::new(fixed_point_enum::KnowledgeConcept::InformationAbstract),
+                structure: Box::new(fixed_point_enum::KnowledgeConcept::StructureAbstract),
+            };
+            let imperative_programming_concept = fixed_point_enum::KnowledgeConcept::ImperativeProgramming;
+            let pure_functions_concept = fixed_point_enum::KnowledgeConcept::PureFunctions;
+
+
+            println!("\n--- Fixed Point Analysis ---");
+            println!("System Concept: {}", system_concept.analyze_fixed_point());
+            println!("Fixed Point Concept: {}", fixed_point_concept.analyze_fixed_point());
+            println!("Self-Reference Concept: {}", self_reference_concept.analyze_fixed_point());
+
+            println!("\n--- Prime Resonance Analysis ---");
+            println!("{}", system_concept.perform_resonance_analysis());
+            println!("{}", computation_concept.perform_resonance_analysis());
+            println!("{}", fixed_point_concept.perform_resonance_analysis());
+            println!("{}", self_reference_concept.perform_resonance_analysis());
+            println!("{}", topology_concept.perform_resonance_analysis());
+            println!("{}", category_theory_concept.perform_resonance_analysis());
+            println!("{}", algorithm_concept.perform_resonance_analysis());
+            println!("{}", data_concept.perform_resonance_analysis());
+            println!("{}", imperative_programming_concept.perform_resonance_analysis());
+            println!("{}", pure_functions_concept.perform_resonance_analysis());
+
+            println!("\nFixed point and resonance analysis complete.");
+        },
     }
+
 }

@@ -23,7 +23,8 @@ members = [
 , "wrappers/git-wrapper"
 , "wrappers/syn-wrapper"
 , "wrappers/wrapper-crate"
-
+, "source/github/meta-introspector/streamofrandom/2025/09/18/fixed_point_enum"
+, "source/github/meta-introspector/streamofrandom/2025/09/18/fixed_point_traits"
 ]
 
 
