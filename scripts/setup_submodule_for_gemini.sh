@@ -14,20 +14,26 @@ echo "Setting up submodule: $SUBMODULE_PATH"
 # Navigate into the submodule directory
 pushd "$SUBMODULE_PATH"
 
-# Create task.md, docs/crq, and docs/sops
-mkdir -p docs/crq docs/sops
-touch task.md docs/crq/CRQ-006_nix-config-merger_edition_fix.md docs/sops/SOP_nix-config-merger_setup.md
-
-# Specific fix for nix-config-merger: Downgrade Rust edition
-if [ "$(basename "$SUBMODULE_PATH")" == "nix-config-merger" ]; then
-  echo "Applying specific fix for nix-config-merger: Downgrading Rust edition in Cargo.toml"
-  sed -i 's/edition = "2024"/edition = "2021"/g' Cargo.toml
-  git add Cargo.toml
+# Run the submodule's setup script
+if [ -f scripts/setup_gemini_context.sh ]; then
+  ./scripts/setup_gemini_context.sh
+else
+  echo "Warning: scripts/setup_gemini_context.sh not found in $SUBMODULE_PATH"
 fi
 
-# Add and commit changes within the submodule
-git add task.md docs/crq/CRQ-006_nix-config-merger_edition_fix.md docs/sops/SOP_nix-config-merger_setup.md
-git commit -m "CRQ-006: Downgrade Rust edition and add task/docs for nix-config-merger"
+# Run the submodule's build script if it exists
+if [ -f scripts/build.sh ]; then
+  ./scripts/build.sh
+else
+  echo "Warning: scripts/build.sh not found in $SUBMODULE_PATH"
+fi
+
+# Run the submodule's test script if it exists
+if [ -f scripts/test.sh ]; then
+  ./scripts/test.sh
+else
+  echo "Warning: scripts/test.sh not found in $SUBMODULE_PATH"
+fi
 
 # Navigate back to the original directory
 popd
