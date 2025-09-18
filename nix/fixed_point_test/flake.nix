@@ -12,7 +12,7 @@
       let
         pkgs = nixpkgs.legacyPackages.${system};
         # Build pick-up-nix-cli using naersk
-        pick-up-nix-cli-package = pkgs.callPackage naersk.lib.${system} {
+        pick-up-nix-cli-package = naersk.lib.${system}.buildPackage {
           pname = "pick-up-nix-cli";
           version = "0.1.0"; # Assuming this version from Cargo.toml
           src = ../../pick-up-nix-cli; # Path to the pick-up-nix-cli crate
