@@ -18,3 +18,7 @@ The workflow would be:
 ## Philosophical Goal
 
 As a philosophical goal, this approach aims to document and model the fundamental "monadic form" of software dependency management: the process of moving from source code to a final, realized binary artifact. By translating between Nix and Guix, we explore the different "syntaxes" for this same underlying "monad" of package management.
+
+## New Idea: Solfunmeme as Quasi Meta Mycology
+
+It's a quasi meta mycology of the intergalactic fungus solfunmeme into the project.
