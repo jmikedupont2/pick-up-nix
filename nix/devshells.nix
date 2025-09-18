@@ -16,11 +16,14 @@ in
     default = pkgs.mkShell {
       buildInputs = [
         pkgs.rust-bin.stable.latest.rustc
+        pkgs.pre-commit # Add pre-commit
+        pkgs.shellcheck # Add shellcheck
       ];
       shellHook = ''
         #!/usr/bin/env bash
         echo "Current PATH: $PATH"
         echo "Nix development shell entered (stable Rust)."
+        pre-commit install # Install pre-commit hooks when entering the shell
       '';
     };
 

@@ -254,3 +254,6 @@
 [submodule "vendor/nix/rnix-parser-tester"]
 	path = vendor/nix/rnix-parser-tester
 	url = https://github.com/darichey/rnix-parser-tester
+[submodule "source/github/meta-introspector/introspector-llc"]
+	path = source/github/meta-introspector/introspector-llc
+	url = https://github.com/meta-introspector/introspector-llc/
