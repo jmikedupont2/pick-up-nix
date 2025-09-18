@@ -1,20 +1,30 @@
 [workspace]
 resolver="2"
 members = [
-"json_to_memes_extractor",
-"memetic_code/emoji_llm_machine_rust",
-"source/github/meta-introspector/streamofrandom/livestream-tiktok-plugin/tiktok_cli_adaptor",
-"source/github/meta-introspector/streamofrandom/livestream-tiktok-plugin/tiktok_viewer_tracker",
-"tools/if-counter",
-"memetic_code/log_processor",
-"pick-up-nix-cli",
-"source/github/meta-introspector/neo/neo",
- "file_analyzer", "vendor/strace/rstrace/crates/rstrace-cuda-sniff", "enum-self",
-"wrappers/syn-wrapper",
-"wrappers/git-wrapper",
-"wrappers/wrapper-crate",
-"source/github/meta-introspector/git-submodules-rs-nix/report-analyzer-rs"
-, "tools/nix-analyzer-rs"]
+"json_to_memes_extractor"
+, "enum-self"
+, "file_analyzer"
+, "memetic_code/emoji_llm_machine_rust"
+, "memetic_code/log_processor"
+, "pick-up-nix-cli"
+, "source/github/meta-introspector/git-submodules-rs-nix/report-analyzer-rs"
+, "source/github/meta-introspector/neo/neo"
+, "source/github/meta-introspector/streamofrandom/livestream-tiktok-plugin/tiktok_cli_adaptor"
+, "source/github/meta-introspector/streamofrandom/livestream-tiktok-plugin/tiktok_viewer_tracker"
+, "tools/if-counter"
+, "tools/nix-analyzer-rs"
+, "vendor/nix/nix-config-merger"
+, "vendor/nix/nix-files-comparator"
+, "vendor/nix/nixpkgs-lint"
+, "vendor/nix/nixtract"
+, "vendor/nix/renix"
+, "vendor/nix/rnix-parser-tester/crates/normal-ast"
+, "vendor/strace/rstrace/crates/rstrace-cuda-sniff"
+, "wrappers/git-wrapper"
+, "wrappers/syn-wrapper"
+, "wrappers/wrapper-crate"
+
+]
 
 
 # task: "source/github/meta-introspector/submodules" please add these above
@@ -348,3 +358,16 @@ result_large_err = "allow"
 large_enum_variant = "allow"
 
 
+
+# Config for 'cargo dist'
+# [workspace.metadata.dist]
+# # The preferred cargo-dist version to use in CI (Cargo.toml SemVer syntax)
+# cargo-dist-version = "0.8.2"
+# # CI backends to support
+# ci = ["github"]
+# # The installers to generate for each app
+# installers = []
+# # Target platforms to build apps for (Rust target-triple syntax)
+# targets = ["aarch64-apple-darwin", "x86_64-apple-darwin", "x86_64-unknown-linux-gnu"]
+# # Publish jobs to run in CI
+# pr-run-mode = "plan"

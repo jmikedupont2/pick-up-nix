@@ -242,3 +242,15 @@
 [submodule "vendor/mkAIDerivation"]
 	path = vendor/mkAIDerivation
 	url = https://github.com/meta-introspector/mkAIDerivation.git
+[submodule "vendor/nix/renix"]
+	path = vendor/nix/renix
+	url = https://github.com/meta-introspector/renix.git
+[submodule "vendor/nix/nix-config-merger"]
+	path = vendor/nix/nix-config-merger
+	url = https://github.com/spectropaws/nix-config-merger
+[submodule "vendor/nix/nix-files-comparator"]
+	path = vendor/nix/nix-files-comparator
+	url = https://github.com/yashghogre/nix-files-comparator
+[submodule "vendor/nix/rnix-parser-tester"]
+	path = vendor/nix/rnix-parser-tester
+	url = https://github.com/darichey/rnix-parser-tester

@@ -17,6 +17,7 @@
 
     naersk.url = "github:nix-community/naersk/master";
     flake-utils.url = "github:numtide/flake-utils";
+    rust-overlay.url = "github:oxalica/rust-overlay";
 
     nixtract-src = {
       url = "path:/data/data/com.termux.nix/files/home/pick-up-nix/vendor/nix/nixtract";
@@ -39,7 +40,7 @@
     
   };
 
-  outputs = { self, nixpkgs, nixpkgs-unstable, nix-on-droid, home-manager, naersk, flake-utils,
+  outputs = { self, nixpkgs, nixpkgs-unstable, nix-on-droid, home-manager, naersk, flake-utils, rust-overlay,
               nixtract-src, nixpkgs-lint-src, streamofrandom, gemini-cli, git-submodules-rs-nix }@inputs:
 
     let
@@ -48,7 +49,9 @@
       androidSystem = "aarch64-linux";
 
       # Import overlays
-      overlays = (builtins.import ./nix/overlays.nix { inherit self nixpkgs; }).overlays;
+      overlays = [
+        rust-overlay.overlays.default
+      ] ++ (builtins.import ./nix/overlays.nix { inherit self nixpkgs; }).overlays;
 
       # Import common packages
       commonPackages = (builtins.import ./nix/packages/default.nix { inherit self nixpkgs nixpkgs-unstable nixtract-src nixpkgs-lint-src streamofrandom; }).commonPackages;
@@ -60,7 +63,7 @@
       homeConfigurations = (builtins.import ./nix/home-configurations.nix { inherit nixpkgs nixpkgs-unstable home-manager overlays; }).homeConfigurations;
 
       # Import devShells
-      devShells = (builtins.import ./nix/devshells.nix { inherit lib nixpkgs nixpkgs-unstable; }).devShells;
+      devShells = (builtins.import ./nix/devshells.nix { inherit lib nixpkgs nixpkgs-unstable rustToolchain; }).devShells;
 
     in
     flake-utils.lib.eachDefaultSystem (system:
@@ -69,6 +72,7 @@
           inherit system;
           overlays = overlays;
         };
+        rustToolchain = pkgs.rust-bin.fromRustupToolchainFile ./rust-toolchain.toml;
       in
       {
         packages.default = (commonPackages pkgs inputs.gemini-cli) // {

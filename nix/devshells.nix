@@ -1,5 +1,5 @@
 {
-  lib, nixpkgs, nixpkgs-unstable, ...
+  lib, nixpkgs, nixpkgs-unstable, rustToolchain, ...
 }:
 
 {
@@ -10,8 +10,7 @@
     in
     pkgs.mkShell {
       buildInputs = [
-        unstablePkgs.rustc
-        unstablePkgs.cargo
+        rustToolchain
       ];
       shellHook = ''
         #!/usr/bin/env bash
