@@ -11,17 +11,17 @@ if [ "$1" == "--apply" ]; then
 fi
 
 # Extract repository names from flake.nix
-REPOS=$(grep "github:meta-introspector" flake.nix | cut -d'/' -f2 | cut -d'/' -f1)
+# Discover submodules by finding flake.nix files in vendor/nix subdirectories
+SUBMODULE_PATHS=$(find vendor/nix -mindepth 2 -maxdepth 2 -type f -name "flake.nix" -print0 | xargs -0 -n1 dirname)
 
-if [ -z "$REPOS" ]; then
-    echo "No meta-introspector repositories found in flake.nix"
+if [ -z "$SUBMODULE_PATHS" ]; then
+    echo "No submodules with flake.nix found in vendor/nix"
     exit 1
 fi
 
-echo "Found the following repositories to nixify: $REPOS"
+echo "Found the following submodules to nixify: $SUBMODULE_PATHS"
 
-for repo in $REPOS; do
-    submodule_path="vendor/nix/$repo"
+for submodule_path in $SUBMODULE_PATHS; do
     echo "--- Processing $submodule_path ---"
     ./scripts/nixify.sh "$submodule_path" $APPLY_FLAG
     echo "--- Finished $submodule_path ---"
