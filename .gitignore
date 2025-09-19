@@ -67,4 +67,5 @@ lean4_nix_develop.log
 /file.txt
 
 # Gemini CLI logs
-.gemini_logs/
+.gemini_logs/logs/*.log
+logs/
