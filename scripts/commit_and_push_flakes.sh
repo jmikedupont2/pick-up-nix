@@ -9,7 +9,8 @@ COMMIT_DESCRIPTION="Standardize flake.nix from template"
 if [ -n "$1" ]; then
     SUBMODULE_PATHS="$1"
 else
-    SUBMODULE_PATHS=$(grep "github:meta-introspector" flake.nix | cut -d'/' -f2 | cut -d'/' -f1 | while read repo; do echo "vendor/nix/$repo"; done)
+    # Discover submodules by finding flake.nix files in vendor/nix subdirectories
+    SUBMODULE_PATHS=$(find vendor/nix -mindepth 2 -maxdepth 2 -type f -name "flake.nix" -print0 | xargs -0 -n1 dirname)
 fi
 
 if [ -z "$SUBMODULE_PATHS" ]; then
