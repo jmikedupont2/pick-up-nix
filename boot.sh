@@ -1,38 +1,60 @@
 #!/usr/bin/env bash
 
-# This script orchestrates the recording of a tmux session with asciinema,
-# and then launches the Gemini CLI within that session, configured for this project.
+# This script is used to boot the development environment.
+# It is designed to be sourced by other scripts or run directly.
 
-# Configuration
-SESSION_NAME="gemini-dev-session" # Define SESSION_NAME here
-LOG_DIR="${HOME}/logs/gemini"
-mkdir -p "${LOG_DIR}"
-# TASK_FILE="task.md" # Placeholder for the task file, currently unused
+# Get the directory of the current script
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" &>/dev/null && pwd)"
 
-# Ensure log directory exists
-mkdir -p "$LOG_DIR"
+# --- Dependency Checks ---
 
-# Start asciinema recording in the background
-# The output will be saved to a unique file in the logs directory
-TIMESTAMP=$(date +"%Y%m%d_%H%M%S")
-ASCIINEMA_REC_FILE="$LOG_DIR/session_$TIMESTAMP.cast"
+# Check for direnv
+if ! command -v direnv &> /dev/null; then
+    echo "direnv not found in PATH. Attempting to enter Nix development shell to provide it." >&2
+    # Check for nix
+    if ! command -v nix &> /dev/null; then
+        echo "Error: Nix is not installed or not in PATH. Cannot provide direnv via Nix development shell." >&2
+        echo "Please install direnv or Nix to proceed." >&2
+        exit 1
+    fi
+    # Enter nix develop and re-execute this script
+    echo "Entering Nix development environment to provide direnv..."
+    exec nix develop "${SCRIPT_DIR}" --command bash -c "${BASH_SOURCE[0]}"
+fi
 
-# Start asciinema recording
-~/pick-up-nix/result/bin/asciinema rec "$ASCIINEMA_REC_FILE" --command "/data/data/com.termux.nix/files/home/pick-up-nix/run_boot.sh \"$ASCIINEMA_REC_FILE\" \"$SESSION_NAME\""
+# Check for nix (optional, if nix develop/nix-shell are intended to be used)
+if ! command -v nix &> /dev/null; then
+    echo "Warning: Nix is not installed or not in PATH. Nix-related commands will not work." >&2
+    # Do not exit, as direnv and gemini_cli.sh might still function without Nix.
+fi
 
-# The script will wait here until asciinema finishes (i.e., the tmux session exits)
+# --- Environment Setup ---
 
-# Initiate Crash Recovery Checks
-echo "--- Initiating Crash Recovery Checks ---" | tee -a "$LOG_DIR/crash_recovery_log_$TIMESTAMP.txt"
-echo "Git Status:" | tee -a "$LOG_DIR/crash_recovery_log_$TIMESTAMP.txt"
-git status --ignore-submodules | tee -a "$LOG_DIR/crash_recovery_log_$TIMESTAMP.txt"
-echo "" | tee -a "$LOG_DIR/crash_recovery_log_$TIMESTAMP.txt"
+# Allow direnv to load the environment variables from .envrc in the script's directory
+# This ensures direnv is always applied to the correct project root.
+direnv allow "${SCRIPT_DIR}"
 
-echo "Git Diff HEAD:" | tee -a "$LOG_DIR/crash_recovery_log_$TIMESTAMP.txt"
-git diff HEAD | tee -a "$LOG_DIR/crash_recovery_log_$TIMESTAMP.txt"
-echo "" | tee -a "$LOG_DIR/crash_recovery_log_$TIMESTAMP.txt"
+# Execute the gemini_cli.sh script within the direnv environment
+# Use the script's directory to find gemini_cli.sh
+if [ -f "${SCRIPT_DIR}/gemini_cli.sh" ]; then
+    echo "Starting gemini_cli.sh..."
+    direnv exec "${SCRIPT_DIR}" "${SCRIPT_DIR}/gemini_cli.sh"
+else
+    echo "Error: gemini_cli.sh not found at ${SCRIPT_DIR}/gemini_cli.sh" >&2
+    exit 1
+fi
 
-echo "Log Processor Output:" | tee -a "$LOG_DIR/crash_recovery_log_$TIMESTAMP.txt"
-./run_log_processor.sh | tee -a "$LOG_DIR/crash_recovery_log_$TIMESTAMP.txt"
-echo "--- Crash Recovery Checks Complete ---" | tee -a "$LOG_DIR/crash_recovery_log_$TIMESTAMP.txt"
-echo "" | tee -a "$LOG_DIR/crash_recovery_log_$TIMESTAMP.txt"
+# --- Nix Development Environment (Optional) ---
+# If you intend to use a Nix development environment, uncomment one of the following:
+
+# Option 1: Use nix develop (recommended for flakes)
+# echo "Entering Nix development environment with 'nix develop'..."
+# nix develop "${SCRIPT_DIR}" --command bash -c "echo 'Exited Nix development environment.'"
+
+# Option 2: Use nix-shell (for legacy or non-flake projects)
+# echo "Entering Nix shell environment with 'nix-shell'..."
+# nix-shell "${SCRIPT_DIR}" --command bash -c "echo 'Exited Nix shell environment.'"
+
+# Note: If you use nix develop or nix-shell, the direnv exec command above might not be necessary
+# as the Nix environment itself might set up the necessary paths and dependencies.
+# Consider your workflow and uncomment only one option if needed.

@@ -91,16 +91,34 @@ cat << 'EOF' > "${FULL_TARGET_PATH}/flake.nix"
             bash
             git
             asciinema
+            pre-commit # Add pre-commit to the devShell
+            shellcheck # Add shellcheck to the devShell
           ];
 
           shellHook = ''
             echo "Welcome to the submodule Gemini CLI development shell!"
+            pre-commit install # Install pre-commit hooks when entering the shell
           '';
         };
       }
     );
 }
 EOF
+
+# --- Create .pre-commit-config.yaml for shellcheck ---
+PRE_COMMIT_CONFIG_PATH="${FULL_TARGET_PATH}/.pre-commit-config.yaml"
+
+if [ -f "$PRE_COMMIT_CONFIG_PATH" ]; then
+  echo "Warning: .pre-commit-config.yaml already exists in ${FULL_TARGET_PATH}. A new LLM task needs to be created to merge or fix the pre-commit configuration." | tee /dev/stderr
+else
+  cat << 'EOF' > "$PRE_COMMIT_CONFIG_PATH"
+repos:
+  - repo: https://github.com/shellcheck-py/shellcheck-py
+    rev: v0.9.0.5 # Use a specific version
+    hooks:
+      - id: shellcheck
+EOF
+fi
 
 # --- Copy docs ---
 

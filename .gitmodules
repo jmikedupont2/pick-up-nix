@@ -257,3 +257,30 @@
 [submodule "source/github/meta-introspector/introspector-llc"]
 	path = source/github/meta-introspector/introspector-llc
 	url = https://github.com/meta-introspector/introspector-llc/
+[submodule "vendor/nix/nix-direnv"]
+	path = vendor/nix/nix-direnv
+	url = https://github.com/nix-community/nix-direnv
+[submodule "vendor/hooks/shellcheck-precommit"]
+	path = vendor/hooks/shellcheck-precommit
+	url = https://github.com/koalaman/shellcheck-precommit
+[submodule "vendor/hooks/rusty-hook"]
+	path = vendor/hooks/rusty-hook
+	url = https://github.com/swellaby/rusty-hook
+[submodule "vendor/hooks/shebling"]
+	path = vendor/hooks/shebling
+	url = https://github.com/MariaSolOs/shebling
+[submodule "vendor/nix/tvix"]
+	path = vendor/nix/tvix
+	url = https://github.com/tvlfyi/tvix
+[submodule "vendor/nix/nil"]
+	path = vendor/nix/nil
+	url = https://github.com/oxalica/nil
+[submodule "vendor/lint/shellcheck"]
+	path = vendor/lint/shellcheck
+	url = https://github.com/koalaman/shellcheck
+[submodule "vendor/lint/git-hooks.nix"]
+	path = vendor/lint/git-hooks.nix
+	url = https://github.com/cachix/git-hooks.nix
+[submodule "vendor/lint/cachix-git-hooks.nix"]
+	path = vendor/lint/cachix-git-hooks.nix
+	url = https://github.com/cachix/git-hooks.nix

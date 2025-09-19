@@ -65,3 +65,6 @@ lean4_nix_develop.log
 # Temporary Git commit message file
 .git_commit_message.txt
 /file.txt
+
+# Gemini CLI logs
+.gemini_logs/
