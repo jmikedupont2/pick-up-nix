@@ -5,6 +5,7 @@ set -e
 TAG_NAME="alpha"
 CRQ_NUMBER="016"
 COMMIT_DESCRIPTION="Standardize flake.nix from template"
+BRANCH_NAME="feature/CRQ-016-nixify"
 
 if [ -n "$1" ]; then
     SUBMODULE_PATHS="$1"
@@ -23,6 +24,18 @@ echo "Found the following submodules to process: $SUBMODULE_PATHS"
 for submodule_path in $SUBMODULE_PATHS; do
     repo=$(basename "$submodule_path")
     echo "--- Processing $repo at $submodule_path ---"
+
+    # Ensure the correct branch is checked out
+    (
+        cd "$submodule_path"
+        if git rev-parse --verify "$BRANCH_NAME" &>/dev/null; then
+            echo "Branch $BRANCH_NAME already exists. Checking it out."
+            git checkout "$BRANCH_NAME"
+        else
+            echo "Branch $BRANCH_NAME does not exist. Creating and checking it out."
+            git checkout -b "$BRANCH_NAME"
+        fi
+    )
 
     # Commit the changes using the existing script
     ./scripts/commit_crq_submodule.sh "$submodule_path" "$CRQ_NUMBER" "$COMMIT_DESCRIPTION"
