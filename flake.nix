@@ -9,23 +9,21 @@
     git-hooks.url = "github:cachix/git-hooks.nix";
     statix.url = "github:nerdypepper/statix";
 
-    # Modular Nix tool inputs from the meta-introspector GitHub organization
-    nixtract.url = "github:meta-introspector/nixtract/feature/CRQ-016-nixify";
-    nixpkgs-lint.url = "github:meta-introspector/nixpkgs-lint/feature/CRQ-016-nixify";
-    renix.url = "github:meta-introspector/renix/feature/CRQ-016-nixify";
-    rnix-parser-tester.url = "github:meta-introspector/rnix-parser-tester/feature/CRQ-016-nixify";
-    nix.url = "github:meta-introspector/nix/feature/CRQ-016-nixify";
+    # Aggregated Nix tool inputs from vendor/nix
+    vendor-nix-flakes.url = "./vendor/nix";
   };
 
-  outputs = { self, nixpkgs, flake-utils, ... }@inputs:
+  outputs = { self, nixpkgs, flake-utils, vendor-nix-flakes, ... }@inputs:
     let
       # List of Nix tool inputs for modular composition
-      nix-tool-inputs = with inputs; [
-        nixtract
-        nixpkgs-lint
-        renix
-        rnix-parser-tester
-        nix
+      nix-tool-inputs = with vendor-nix-flakes; [
+        nixtract-flake
+        nix-flake
+        rnix-parser-tester-flake
+        renix-flake
+        nixpkgs-lint-flake
+        nil-flake
+        nix-direnv-flake
       ];
     in
     flake-utils.lib.eachDefaultSystem (system:
