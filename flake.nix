@@ -10,11 +10,11 @@
     statix.url = "github:nerdypepper/statix";
 
     # Modular Nix tool inputs from the meta-introspector GitHub organization
-    nixtract.url = "github:meta-introspector/nixtract/v0.0.1-pick-up-nix";
-    nixpkgs-lint.url = "github:meta-introspector/nixpkgs-lint/v0.0.1-pick-up-nix";
-    renix.url = "github:meta-introspector/renix/v0.0.1-pick-up-nix";
-    rnix-parser-tester.url = "github:meta-introspector/rnix-parser-tester/v0.0.1-pick-up-nix";
-    nix.url = "github:meta-introspector/nix/v0.0.1-pick-up-nix";
+    nixtract.url = "github:meta-introspector/nixtract/feature/CRQ-016-nixify";
+    nixpkgs-lint.url = "github:meta-introspector/nixpkgs-lint/feature/CRQ-016-nixify";
+    renix.url = "github:meta-introspector/renix/feature/CRQ-016-nixify";
+    rnix-parser-tester.url = "github:meta-introspector/rnix-parser-tester/feature/CRQ-016-nixify";
+    nix.url = "github:meta-introspector/nix/feature/CRQ-016-nixify";
   };
 
   outputs = { self, nixpkgs, flake-utils, ... }@inputs:

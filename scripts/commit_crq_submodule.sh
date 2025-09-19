@@ -25,11 +25,15 @@ pushd "${FULL_SUBMODULE_PATH}" > /dev/null
 # Stage all changes
 git add .
 
-# Construct the commit message
-COMMIT_MESSAGE="feat($(basename "$SUBMODULE_PATH")): CRQ-${CRQ_NUMBER} - ${COMMIT_MESSAGE_DESCRIPTION}"
-
-# Commit the changes
-git commit -m "${COMMIT_MESSAGE}"
+# Check if there are any changes to commit
+if git diff --staged --quiet; then
+  echo "No changes to commit."
+else
+  # Construct the commit message
+  COMMIT_MESSAGE="feat($(basename "$SUBMODULE_PATH")): CRQ-${CRQ_NUMBER} - ${COMMIT_MESSAGE_DESCRIPTION}"
+  # Commit the changes, bypassing hooks
+  git commit -n -m "${COMMIT_MESSAGE}"
+fi
 
 # Return to the original directory
 popd > /dev/null

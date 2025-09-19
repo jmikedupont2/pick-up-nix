@@ -107,9 +107,10 @@ EOF
 
 # --- Create .pre-commit-config.yaml for shellcheck ---
 PRE_COMMIT_CONFIG_PATH="${FULL_TARGET_PATH}/.pre-commit-config.yaml"
+LOG_FILE="${ROOT_DIR}/logs/inject_submodule_env.log"
 
 if [ -f "$PRE_COMMIT_CONFIG_PATH" ]; then
-  echo "Warning: .pre-commit-config.yaml already exists in ${FULL_TARGET_PATH}. A new LLM task needs to be created to merge or fix the pre-commit configuration." | tee /dev/stderr
+  echo "Warning: .pre-commit-config.yaml already exists in ${FULL_TARGET_PATH}. A new LLM task needs to be created to merge or fix the pre-commit configuration." | tee -a "$LOG_FILE"
 else
   cat << 'EOF' > "$PRE_COMMIT_CONFIG_PATH"
 repos:
@@ -133,7 +134,13 @@ mkdir -p "${FULL_TARGET_PATH}/docs/crqs"
 
 # Find and copy the specified CRQ file
 CRQ_GLOB="${ROOT_DIR}/docs/crqs/CRQ_${CRQ_NUMBER}_*.md"
-CRQ_FILE=$(compgen -G "$CRQ_GLOB")
+CRQ_FILE=""
+for file in $CRQ_GLOB; do
+  if [ -e "$file" ]; then
+    CRQ_FILE="$file"
+    break
+  fi
+done
 
 if [ -n "$CRQ_FILE" ]; then
   echo "Copying $(basename "$CRQ_FILE")..."
