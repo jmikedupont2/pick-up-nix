@@ -1,3 +1,4 @@
+#!/usr/bin/env bash
 
 #tailscale status |grep " v" |cut -b15-30  | parallel -j0 "echo ssh {} 'cd /mnt/data1/nix && git submodule init'"
 for x in aaj2 aav3-4 aav3-3 aav3-3 aav3-2 aav3-1 v2-4 v2-3 v2-2 v2-1 v2-0

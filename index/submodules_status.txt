@@ -35,13 +35,28 @@ Entering 'source/github/meta-introspector/git-submodule-tools-rs'
 On branch feature/prompts
 Your branch is up to date with 'origin/feature/prompts'.
 
-nothing to commit, working tree clean
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+  (commit or discard the untracked or modified content in submodules)
+	modified:   boot.sh
+	modified:   task/ainix/manage_mkaiderivation_submodule.sh
+	modified:   tools/update_all_submodules.sh
+	modified:   vendor/meta-introspector/meta-meme (modified content)
+
+no changes added to commit (use "git add" and/or "git commit -a")
 Entering 'source/github/meta-introspector/git-submodule-tools-rs/vendor/cargo_metadata'
 HEAD detached at f0df5d0
 nothing to commit, working tree clean
 Entering 'source/github/meta-introspector/git-submodule-tools-rs/vendor/meta-introspector/meta-meme'
 HEAD detached at a9ab89f
-nothing to commit, working tree clean
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   collect.sh
+	modified:   commit.sh
+
+no changes added to commit (use "git add" and/or "git commit -a")
 Entering 'source/github/meta-introspector/git-submodule-tools-rs/vendor/meta-introspector/meta-meme.wiki'
 HEAD detached at c5ca5fb
 nothing to commit, working tree clean
@@ -128,7 +143,12 @@ HEAD detached at 2a3e89e
 nothing to commit, working tree clean
 Entering 'source/github/meta-introspector/git-submodules-rs-nix'
 On branch feature/CRQ-016-nixify-workflow
-nothing to commit, working tree clean
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   tools/gh_scripts/create_crq_workflow.sh
+
+no changes added to commit (use "git add" and/or "git commit -a")
 Entering 'source/github/meta-introspector/git-submodules-rs-nix/.emacs.d/nix-magit'
 On branch feature/CRQ-016-nixify-workflow
 nothing to commit, working tree clean
@@ -637,6 +657,10 @@ HEAD detached at 106cdba
 nothing to commit, working tree clean
 Entering 'source/github/meta-introspector/ragit/vendor/amazon-q-developer-cli/vendor/solfunmeme-dioxus/hf_dataset'
 HEAD detached at 777c4c39
+
+It took 3.02 seconds to enumerate untracked files.
+See 'git help status' for information on how to improve this.
+
 nothing to commit, working tree clean
 Entering 'source/github/meta-introspector/ragit/vendor/amazon-q-developer-cli/vendor/solfunmeme-dioxus/hg_datasets/microlean4'
 HEAD detached at a9c4102
@@ -14906,12 +14930,7 @@ Your branch is ahead of 'origin/main' by 1 commit.
 nothing to commit, working tree clean
 Entering 'source/github/meta-introspector/streamofrandom'
 On branch feature/CRQ-016-nixify-workflow
-Changes not staged for commit:
-  (use "git add <file>..." to update what will be committed)
-  (use "git restore <file>..." to discard changes in working directory)
-	modified:   2025 (new commits)
-
-no changes added to commit (use "git add" and/or "git commit -a")
+nothing to commit, working tree clean
 Entering 'source/github/meta-introspector/streamofrandom/2025'
 On branch feature/CRQ-016-nixify-workflow
 nothing to commit, working tree clean
@@ -15079,6 +15098,10 @@ Entering 'vendor/external/rust'
 On branch master
 Your branch is up to date with 'origin/master'.
 
+
+It took 2.37 seconds to enumerate untracked files.
+See 'git help status' for information on how to improve this.
+
 nothing to commit, working tree clean
 Entering 'vendor/external/solfunmeme-banner'
 On branch main
@@ -15183,20 +15206,14 @@ On branch master
 Your branch is up to date with 'origin/master'.
 
 nothing to commit, working tree clean
+Entering 'vendor/nix/flake-utils'
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
 Entering 'vendor/nix/nil'
 On branch feature/CRQ-016-nixify-workflow
-Changes not staged for commit:
-  (use "git add <file>..." to update what will be committed)
-  (use "git restore <file>..." to discard changes in working directory)
-	modified:   dev/flake.nix
-	modified:   docs/crqs/crq_002_rust_nix_env_composer.md
-
-Untracked files:
-  (use "git add <file>..." to include in what will be committed)
-	rust_toolchain_test_results.txt
-	scripts/test_rust_toolchains.sh
-
-no changes added to commit (use "git add" and/or "git commit -a")
+nothing to commit, working tree clean
 Entering 'vendor/nix/nix'
 On branch feature/CRQ-016-nixify-workflow
 nothing to commit, working tree clean
@@ -15224,7 +15241,18 @@ On branch feature/CRQ-016-nixify-workflow
 nothing to commit, working tree clean
 Entering 'vendor/nix/nixtract'
 On branch feature/CRQ-016-nixify-workflow
-nothing to commit, working tree clean
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   .github/workflows/build_nix.yml
+	modified:   flake.lock
+	modified:   flake.nix
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	scripts/run_gemini_nixtract.sh
+
+no changes added to commit (use "git add" and/or "git commit -a")
 Entering 'vendor/nix/renix'
 On branch feature/CRQ-016-nixify-workflow
 nothing to commit, working tree clean
@@ -15239,7 +15267,7 @@ nothing to commit, working tree clean
 Entering 'vendor/nixpkgs'
 HEAD detached at 26833ad1dad8
 
-It took 14.33 seconds to enumerate untracked files.
+It took 15.66 seconds to enumerate untracked files.
 See 'git help status' for information on how to improve this.
 
 nothing to commit, working tree clean
@@ -15281,5 +15309,10 @@ nothing to commit, working tree clean
 Entering 'vendor/strace/rstrace'
 On branch main
 Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+Entering 'vendor/tools/detect-duplicates'
+On branch feature/CRQ-016-nixify
+Your branch is up to date with 'meta-introspector/feature/CRQ-016-nixify'.
 
 nothing to commit, working tree clean

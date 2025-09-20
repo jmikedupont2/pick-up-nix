@@ -86,7 +86,7 @@ FILES_TO_REFACTOR["source/github/meta-introspector/git-submodule-tools-rs/tools/
 # Apply refactoring
 for file_path in "${!FILES_TO_REFACTOR[@]}"; do
   echo "Applying refactoring to $file_path..."
-  for sed_command in "${FILES_TO_REFACTOR[$file_path]}"; do
+  for sed_command in "${FILES_TO_REFACTOR[$file_path][@]}"; do
     sed -i "$sed_command" "$file_path"
   done
 done

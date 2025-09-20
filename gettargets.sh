@@ -1,6 +1,7 @@
+#!/usr/bin/env bash
 
 #tailscale status |grep " v" |cut -b15-30  | parallel -j0 "echo ssh {} 'cd /mnt/data1/nix && git submodule init'"
- for x in aaj2 aav3-4 aav3-3 aav3-3 aav3-2 aav3-1 v2-4 v2-3 v2-2 v2-1 v2-0
+ for x in aaj2 aav3-4 aav3-3 aav3-2 aav3-1 v2-4 v2-3 v2-2 v2-1 v2-0
  do
      echo $x;
      ssha $x "echo $x; df -h /" & 
@@ -31,9 +32,6 @@
      #               ssh $x "cd /mnt/data1/nix/time && git pull origin main && git submodule init " &
 #          ssh $x "sudo apt build-dep guile-3.0 " &
      #     ssh $x "apt update && apt install guile-3.0 " &
-#     ssh $x "echo $x; cd /mnt/data1/nix/time/ && git checkout origin/main & git pull origin main && git submodule init  && git submodule update .  " 
-     #     ssh $x "cd /mnt/data1/nix/time/2024/03/12/guile/ &&git submodule init &&git submodule update . &&git pull origin  && git checkout master && ./autogen.sh  && ./configure && make  &&make install " &
-     #     ssh $x "sudo apt install -y devscripts" &
 #     ssh $x "sudo apt autoremove -y" &
      
      #                         ssh $x "sudo apt install -y autoconf automake" &

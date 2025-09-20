@@ -7,7 +7,7 @@ SUBMODULE_PATH="$1"
 if [ -z "$SUBMODULE_PATH" ]; then
   echo "Usage: $0 <submodule_path>"
   exit 1
-}
+fi
 
 echo "Running setup_gemini_context.sh in submodule: $SUBMODULE_PATH"
 

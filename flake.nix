@@ -34,6 +34,7 @@
         devShells.default = pkgs.mkShell {
           packages = with pkgs; [
             rustVersions.nightly_2025_09_16 # Use the pinned nightly toolchain
+	    which 
             gawk # For awk
           ];
         };

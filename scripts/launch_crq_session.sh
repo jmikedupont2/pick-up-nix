@@ -25,9 +25,7 @@ FULL_SUBMODULE_PATH="${ROOT_DIR}/${SUBMODULE_PATH}"
 echo "Launching CRQ session for ${SUBMODULE_NAME} (CRQ: ${CRQ_NUMBER}) in tmux session: ${SESSION_NAME}"
 
 # Check if tmux session already exists
-tmux has-session -t "$SESSION_NAME" 2>/dev/null
-
-if [ $? -eq 0 ]; then
+if tmux has-session -t "$SESSION_NAME" 2>/dev/null; then
   echo "Attaching to existing tmux session: ${SESSION_NAME}"
   tmux attach-session -t "$SESSION_NAME"
 else

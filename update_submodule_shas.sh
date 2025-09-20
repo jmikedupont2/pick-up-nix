@@ -18,7 +18,7 @@ update_single_submodule_sha() {
     # Corrected: Use --flake argument with the absolute path to the flake file
     nix_build_output=$(nix build --flake "${flake_file}#packages.x86_64-linux.${submodule_name}" 2>&1 || true)
 
-    echo "DEBUG: nix_build_output for ${submodule_name}:\n${nix_build_output}" # Added debug print
+    printf %b "DEBUG: nix_build_output for ${submodule_name}:\n${nix_build_output}" # Added debug print
 
     local correct_sha256
     correct_sha256=$(echo "${nix_build_output}" | grep "got:" | sed -E 's/.*got:\s+sha256-(.*)/\1/')

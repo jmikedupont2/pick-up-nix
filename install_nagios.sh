@@ -1,3 +1,4 @@
+#!/usr/bin/env bash
 
 #tailscale status |grep " v" |cut -b15-30  | parallel -j0 "echo ssh {} 'cd /mnt/data1/nix && git submodule init'"
 # for x in `tailscale status |grep " v" |cut -b15-30 | grep -v "\-0"`;

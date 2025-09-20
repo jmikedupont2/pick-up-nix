@@ -61,7 +61,7 @@ update_single_submodule_flake() {
 # git config --file .gitmodules --get-regexp submodule..*.path
 # Output format: submodule.<name>.path <path>
 git config --file "${GITMODULES_FILE}" --get-regexp submodule..*.path | \
-# grep "submodule..*.path" | \
+# grep "submodule..*.path" | 
 while IFS=' ' read -r _ original_submodule_path; do
     update_single_submodule_flake "${original_submodule_path}"
 done

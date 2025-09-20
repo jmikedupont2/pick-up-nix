@@ -51,9 +51,7 @@ fi
 echo "Dry run output saved to nixtract_build_plan.log"
 
 echo "--- Starting Actual Nix Build ---"
-nix build "$FULL_SUBMODULE_PATH"# $OFFLINE_MODE --extra-experimental-features "flakes nix-command"
-
-if [ $? -eq 0 ]; then
+if nix build "$FULL_SUBMODULE_PATH"# $OFFLINE_MODE --extra-experimental-features "flakes nix-command"; then
   echo "Nix submodule built successfully!"
   echo "You can find the result in: $(nix build --no-link --print-out-paths "$FULL_SUBMODULE_PATH"# $OFFLINE_MODE)"
 else

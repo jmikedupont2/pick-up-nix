@@ -1,3 +1,5 @@
+#!/usr/bin/env bash
+
 source "$(dirname "$0")"/scripts/lib_git_submodule.sh
 
 # Function to log messages

@@ -1,3 +1,4 @@
+#!/usr/bin/env bash
 
 #tailscale status |grep " v" |cut -b15-30  | parallel -j0 "echo ssh {} 'cd /mnt/data1/nix && git submodule init'"
  for x in v3-0 v3-4 v3-3 v3-3 v3-2 v3-1 v2-4 v2-3 v2-2 v2-1 v2-0
@@ -6,7 +7,7 @@
      #ssh -oStrictHostKeyChecking=no  $x "echo $x; df -h /" &
 
      #ssh -oStrictHostKeyChecking=no  $x "rm -rf ~/.cache/ &&df -h /" &
-     #ssh -oStrictHostKeyChecking=no $x "guix install protobuf grpc python-pytorch" &
+     #ssh $x "guix install protobuf grpc python-pytorch" &
      
      #ssh $x "cd /mnt/data1/nix/time && git status && git checkout origin/main && git pull origin main && cd /mnt/data1/nix/time/2024/03/27/hivemind/ && git submodule init . &&git submodule update . && git checkout feature/gcp_tpu && git pull origin"  &
 

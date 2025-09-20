@@ -24,13 +24,13 @@ ensure_meta_introspector_remote_and_fork() {
   if git remote get-url origin &>/dev/null && ! git remote get-url origin | grep -q "meta-introspector"; then
     echo "Renaming origin to upstream."
     git remote rename origin upstream
-  }
+  fi
   local meta_introspector_url="https://github.com/meta-introspector/$repo.git"
   if git remote | grep -q "^origin$"; then
     git remote set-url origin "$meta_introspector_url"
   else
     git remote add origin "$meta_introspector_url"
-  }
+  fi
   if ! gh repo view "meta-introspector/$repo" --json name --jq . >/dev/null 2>&1; then
     echo "Creating fork..."
     if gh repo fork --org meta-introspector --remote; then
