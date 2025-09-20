@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+source "$(dirname "$0")"/lib_git_submodule.sh
 
 set -e
 
@@ -53,9 +53,7 @@ for repo in $REPOS; do
     (
         cd "$submodule_path"
 
-        # --- Create and switch to new branch ---
-        echo "Creating and switching to new branch: $BRANCH_NAME"
-        git checkout -b "$BRANCH_NAME"
+        ensure_branch_exists_and_checkout "$BRANCH_NAME"
 
         # --- Commit ---
         echo "Staging and committing flake.nix"
@@ -64,29 +62,9 @@ for repo in $REPOS; do
         # Use --no-verify (-n) to bypass any pre-commit hooks
         git commit -n -m "$COMMIT_MESSAGE"
 
-        # --- Handle Remotes and Forking ---
-        if git remote get-url origin &>/dev/null && ! git remote get-url origin | grep -q "meta-introspector"; then
-            echo "Renaming origin to upstream."
-            git remote rename origin upstream
-        fi
-        meta_introspector_url="https://github.com/meta-introspector/$repo.git"
-        if git remote | grep -q "^origin$"; then
-            git remote set-url origin "$meta_introspector_url"
-        else
-            git remote add origin "$meta_introspector_url"
-        fi
-        if ! gh repo view "meta-introspector/$repo" --json name --jq . >/dev/null 2>&1; then
-            echo "Creating fork..."
-            if gh repo fork --org meta-introspector --remote; then
-                sleep 5
-            else
-                exit 1
-            fi
-        fi
+        ensure_meta_introspector_remote_and_fork "$repo"
 
-        # --- Push ---
-        echo "Pushing branch $BRANCH_NAME to origin"
-        git push -u origin "$BRANCH_NAME"
+        push_to_origin_branch "$BRANCH_NAME"
 
     )
     echo "--- Finished $repo ---"

@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+source "$(dirname "$0")"/scripts/lib_git_submodule.sh
 
 # Function to log messages
 log() {
@@ -27,7 +27,7 @@ SUBMODULE_PATHS=(
 ORIGINAL_DIR=$(pwd)
 
 log "Initial git status of superproject (ignoring submodules):"
-git status --ignore-submodules
+git_status_superproject_ignore_submodules
 
 for SUBMODULE_PATH in "${SUBMODULE_PATHS[@]}"; do
   log "Processing submodule: $SUBMODULE_PATH"
@@ -35,27 +35,27 @@ for SUBMODULE_PATH in "${SUBMODULE_PATHS[@]}"; do
     cd "$SUBMODULE_PATH" || error "Failed to change directory to $SUBMODULE_PATH"
 
     log "Git status of $SUBMODULE_PATH before processing:"
-    git status
+    git_status_submodule
 
     # Check if there are any changes to commit within the submodule
-    if ! git diff --quiet || ! git diff --quiet --cached; then
+    if ! git_diff_quiet || ! git_diff_quiet_cached; then
       log "Staging changes in $SUBMODULE_PATH..."
-      git add . || error "Failed to add changes in $SUBMODULE_PATH"
+      git_add_all || error "Failed to add changes in $SUBMODULE_PATH"
       log "Committing changes in $SUBMODULE_PATH..."
-      git commit -m "Update submodule content" || log "No changes to commit in $SUBMODULE_PATH"
+      git_commit_message "Update submodule content" || log "No changes to commit in $SUBMODULE_PATH"
     else
       log "No changes to commit in $SUBMODULE_PATH."
     fi
 
     # Check for untracked files and add them
-    if [ -n "$(git status --porcelain)" ]; then
+    if [ -n "$(git_status_porcelain)" ]; then
       log "Untracked files found in $SUBMODULE_PATH. Staging and committing..."
-      git add . || error "Failed to add untracked files in $SUBMODULE_PATH"
-      git commit -m "Add untracked files in submodule" || log "No untracked files to commit in $SUBMODULE_PATH"
+      git_add_all || error "Failed to add untracked files in $SUBMODULE_PATH"
+      git_commit_message "Add untracked files in submodule" || log "No untracked files to commit in $SUBMODULE_PATH"
     fi
 
     log "Git status of $SUBMODULE_PATH after processing:"
-    git status
+    git_status_submodule
 
     cd "$ORIGINAL_DIR" || error "Failed to change back to original directory"
   else
@@ -66,6 +66,6 @@ done
 log "Finished processing all specified submodules."
 
 log "Final git status of superproject (ignoring submodules):"
-git status --ignore-submodules
+git_status_superproject_ignore_submodules
 
 log "Submodule fix script finished."

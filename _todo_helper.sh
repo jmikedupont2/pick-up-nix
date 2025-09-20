@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+source "$(dirname "$0")"/scripts/lib_git_submodule.sh
+
 submodule_path="$1"
 repo_name="$2"
 new_origin_url="$3"
@@ -14,13 +16,13 @@ if [[ "$current_origin_url" != *"meta-introspector"* ]]; then
     fi
     git remote add origin "$new_origin_url"
     echo "Attempting to fetch from new origin..."
-    if git fetch origin; then
+    if git_fetch_origin; then
         echo "  Fetch from new origin successful."
     else
         echo "  Fetch from new origin failed. Attempting to fork..."
         if command_exists gh;
         then
-            gh repo fork --org meta-introspector --remote "$new_origin_url"
+            ensure_meta_introspector_remote_and_fork "$repo_name"
             echo "# After forking, you might need to run git fetch origin again manually."
         else
             echo "gh CLI not found. Please install and authenticate gh, then manually fork $new_origin_url to meta-introspector."
@@ -29,6 +31,6 @@ if [[ "$current_origin_url" != *"meta-introspector"* ]]; then
 else
     echo "  Submodule is already from meta-introspector. Skipping remote changes." # This line will not be echoed in the actual script output
 fi
-git add -A
-git commit -m "chore: Update submodule remotes" || true
+git_add_all
+git_commit_message "chore: Update submodule remotes" || true
 cd - || exit

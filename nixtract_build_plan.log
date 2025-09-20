@@ -1,0 +1,16 @@
+[K[Kerror:
+       … while updating the lock file of flake 'git+file:///data/data/com.termux.nix/files/home/pick-up-nix2/vendor/tools/detect-duplicates?ref=refs/heads/feature/CRQ-016-nixify&rev=4dde3b82a17d141e82bc695be6e03a0f0732f44b'
+
+       … while updating the flake input 'flake-utils'
+
+       … while fetching the input 'github:meta-introspector/flake-utils/feature/CRQ-016-nixify'
+
+       error: unable to download 'https://api.github.com/repos/meta-introspector/flake-utils/commits/feature/CRQ-016-nixify': HTTP error 404
+
+       response body:
+
+       {
+         "message": "Not Found",
+         "documentation_url": "https://docs.github.com/rest/commits/commits#get-a-commit",
+         "status": "404"
+       }

@@ -1,0 +1,124 @@
+      1  "../..";
+      1             curl
+      1  github:a-h/nix-asciinema-agg;
+      1  "github:cachix/pre-commit-hooks.nix";
+      1  "github:deemp/devshell";
+      1  "github:edolstra/import-cargo";
+      1  "github:emacs-twist/org-babel";
+      1  "github:emacs-twist/twist.nix";
+      1  "github:Gerschtli/nix-formatter-pack";
+      1  "github:Kha/alectryon/typeid";
+      1  "github:Kha/temci";
+      1  "github:leanprover/lean4";
+      1  "github:leanprover/LeanInk/refs/pull/57/merge";
+      1  "github:leanprover/mdBook";
+      1  "github:melpa/melpa";
+      1  "github:meta-introspector/nixpacks?ref
+      1  "github:meta-introspector/nixpkgs-fork?ref
+      1  "github:meta-introspector/rust-overlay-fork?ref
+      1  "github:nix-community/cache-nix-action";
+      1  "github:nix-community/emacs-overlay";
+      1  "github:nix-community/naersk"; # Add naersk as an input
+      1  "github:nix-community/naersk/master";
+      1  "github:nix-community/naersk/master"; # Naersk for Rust builds
+      1  "github:nix-community/naersk/master"; # Use naersk
+      1  "github:NixOS/nix/2.13.3";
+      1  "github:NixOS/nixpkgs";
+      1  "github:NixOS/nixpkgs/02032da4af073d0f6110540c8677f16d4be0117f";
+      1  "github:NixOS/nixpkgs/02032da4af073d0f6110540c8677f16d4be0117f?dir
+      1  "github:NixOS/nixpkgs/49ee0e94463abada1de470c9c07bfc12b36dcf40";
+      1  "github:NixOS/nixpkgs/5ed481943351e9fd354aeb557679624224de38d5";
+      1  "github:NixOS/nixpkgs/nixos-22.11";
+      1  "github:nixos/nixpkgs/nixos-23.05";
+      1  "github:NixOS/nixpkgs/nixos-23.11"; # Or your preferred nixpkgs branch
+      1  "github:NixOS/nixpkgs/nixos-23.11"; # Pinning nixpkgs for reproducibility
+      1  "github:NixOS/nixpkgs/nixos-23.11"; # Pin to a stable NixOS release
+      1  "github:NixOS/nixpkgs/nixos-23.11"; # Use a stable Nixpkgs channel
+      1  "github:NixOS/nixpkgs/nixos-23.11"; # Using a stable Nixpkgs branch
+      1  "github:NixOS/nixpkgs/nixos-25.05"; # Use a stable nixpkgs
+      1  "github:NixOS/nixpkgs/nixos-unstable-small";
+      1  "github:nixos/nixpkgs/nixpkgs-unstable";
+      1  "github:NixOS/nixpkgs?ref
+      1  "github:NixOS/nixpkgs/release-23.05";
+      1  "github:numtide/flake-utils"; # For easier cross-platform builds
+      1  "github:numtide/flake-utils?ref
+      1  "github:terlar/dev-flake";
+      1  "https://channels.nixos.org/nixos-18.03/nixexprs.tar.xz";
+      1  "https://channels.nixos.org/nixos-19.03/nixexprs.tar.xz";
+      1  "https://channels.nixos.org/nixos-unstable/nixexprs.tar.xz";
+      1  "https://codeberg.org/ideasman42/emacs-idle-highlight-mode.git";
+      1  "https://codeberg.org/joostkremers/visual-fill-column.git";
+      1  "https://flakehub.com/f/NixOS/nixpkgs/0.1.0.tar.gz";
+      1  "https://flakehub.com/f/NixOS/nixpkgs/0.1.*.tar.gz";
+      1  "https://github.com/jmikedupont2/git-submodules-rs-nix.git";
+      1  "https://github.com/Kha/lean4/commit/no-st.patch";
+      1  "https://github.com/meta-introspector/git-submodule-tools-rs";
+      1  "https://git.savannah.gnu.org/git/hello.git";
+      1  "https://raw.githubusercontent.com/NixOS/nix/7304806241fe4f72c5f33a5a929d675c8342fabd/flake.nix";
+      1  "./nil";
+      1  "./nix";
+      1  "./nix-direnv";
+      1  "./nixpacks";
+      1  "@nixpkgs@";
+      1  "./nixpkgs-lint";
+      1       # nix-prefetch-url --unpack <submoduleUrl> <submoduleRev>
+      1  "./nixtract";
+      1  "path:../";
+      1  "path:../..";
+      1  path:../.;
+      1  "path:/data/data/com.termux.nix/files/home/pick-up-nix2/nixpacks/examples/rust-cargo-workspaces/binary"; # Path to the crate source
+      1  "path:/data/data/com.termux.nix/files/home/pick-up-nix2/nixpacks/examples/rust-cargo-workspaces-glob/example/binary"; # Path to the crate source
+      1  "path:/data/data/com.termux.nix/files/home/pick-up-nix2/nixpacks/examples/rust-cargo-workspaces-glob/example/library"; # Path to the crate source
+      1  "path:/data/data/com.termux.nix/files/home/pick-up-nix2/nixpacks/examples/rust-cargo-workspaces-glob"; # Path to the crate source
+      1  "path:/data/data/com.termux.nix/files/home/pick-up-nix2/nixpacks/examples/rust-cargo-workspaces"; # Path to the crate source
+      1  "path:/data/data/com.termux.nix/files/home/pick-up-nix2/source/github/meta-introspector/git-submodule-tools-rs/submodule-checkout";
+      1  "path:../../../../docs";
+      1  "path:../git-wrapper";
+      1  "path:../../../nixpacks/examples/rust-cargo-workspaces/library"; # Path to the crate source
+      1  "path:../../../nixpacks/examples/rust-custom-toolchain"; # Path to the crate source
+      1  "path:../../../nixpacks/examples/rust-custom-version"; # Path to the crate source
+      1  "path:../../../nixpacks/examples/rust-multiple-bins"; # Path to the crate source
+      1  "path:../"; # Path to the nil flake
+      1  "path:../../../../scripts";
+      1  "path:../syn-wrapper";
+      1  "./renix";
+      1  "./rnix-parser-tester";
+      1  "sourcehut:~rycee/nmd";
+      1  "./tools/template_generator_bin"; # Keep this input
+      1  { url 
+      2  "github:cachix/git-hooks.nix";
+      2  "github:cdepillabout/evil-nix";
+      2  "github:gytis-ivaskevicius/flake-utils-plus";
+      2  "github:meta-introspector/flake-utils/feature/CRQ-016-nixify";
+      2  "github:meta-introspector/naersk/feature/CRQ-016-nixify";
+      2  "github:meta-introspector/nixpkgs/feature/CRQ-016-nixify";
+      2  "github:nix-community/home-manager";
+      2  "github:nix-community/home-manager/release-24.05";
+      2  "github:NixOS/nixpkgs/nixos-23.11";
+      2  "https://flakehub.com/f/DeterminateSystems/flake-schemas/*.tar.gz";
+      2  "https://github.com/getzola/zola.git";
+      2  "https://github.com/GitoxideLabs/gitoxide";
+      2  "https://github.com/meta-introspector/meta-meme";
+      2  "https://github.com/meta-introspector/meta-meme.wiki.git";
+      2  "https://github.com/meta-introspector/mkAIDerivation.git";
+      2  "https://github.com/oli-obk/cargo_metadata";
+      2  "https://github.com/XAMPPRocky/octocrab";
+      2  "nixpkgs/nixpkgs-unstable";
+      3  "github:hercules-ci/gitignore.nix";
+      3  "github:nix-community/nix-on-droid/release-24.05";
+      3  "github:nixos/nixpkgs/nixos-unstable";
+      3  "github:numtide/treefmt-nix";
+      4  "github:nix-community/fenix";
+      5  "github:nixos/nixpkgs/nixos-22.11";
+      5  "github:oxalica/rust-overlay";
+      6  "github:edolstra/flake-compat";
+      7  "github:hercules-ci/flake-parts";
+      7  "github:nix-community/naersk";
+      7  "github:NixOS/nixpkgs/nixos-23.11"; # Pin to a stable NixOS version
+      7  "github:nix-systems/default";
+     10  "path:../../"; # Path to the nil flake
+     11  submoduleUrl;
+     13  "github:NixOS/nixpkgs/nixpkgs-unstable";
+     22  "github:NixOS/nixpkgs/nixos-unstable";
+     31  "github:NixOS/nixpkgs/nixos-24.05";
+     51  "github:numtide/flake-utils";
