@@ -1,25 +1,30 @@
-## Gemini Added Memories
-- The user wants to keep the file '.git_commit_message.txt' in the project root directory and prefers to use the '-F' flag for git commits, always.
-- User prefers to use 'git status --ignore-submodules' for speed (30 sec).
-- Rust toolchain management is handled via `shell.nix` using the `master` branch of `nixpkgs`.
+# Gemini CLI Task Context
 
-## Operational Principle
-- Always Observe and Orient before Deciding and Acting. Check first.
+This document provides context for the current task being performed by the Gemini CLI.
 
-## Submodule Nixification Task Summary (CRQ-016)
+## Current Task
 
-This section summarizes the recent work on standardizing and integrating Nix flakes across the project's submodules, particularly those under `vendor/nix/`.
+The current task involves:
+1.  **Creating SOPs:** Writing Standard Operating Procedures under `docs/sops/`.
+2.  **Creating CRQ:** Adding a Change Request `crq_001_add_quality_control.md` under `docs/crqs/`.
+3.  **Crafting `GEMINI.md` and `task.md`:** Creating these files for the current task (this document and `task.md`).
+4.  **Constructing `flake.nix`:** Creating a standalone `flake.nix` for working on this task, copying necessary docs from `~/nix2/docs` and `~/nix2/scripts` (or referencing them as inputs).
 
-**Key Outcomes:**
-*   **Standardized `flake.nix`**: All `vendor/nix/*` submodules now have a consistent `flake.nix` generated from `scripts/flake.template`.
-*   **Automated Workflow**: A suite of scripts (`scripts/branch_and_push_all.sh`, `scripts/commit_and_push_flakes.sh`, `scripts/commit_crq_submodule.sh`, `scripts/fix_submodule.sh`, `scripts/inject_submodule_env.sh`, `scripts/nixify.sh`, `scripts/nixify_vendor_nix.sh`, `scripts/commit_workflow.sh`) has been developed and documented to automate the Nixification process.
-*   **Root `flake.nix` Refactoring**: The main project's `flake.nix` now aggregates submodule flakes via a local `vendor/nix/flake.nix`, improving modularity.
-*   **Dedicated Branching**: Changes were applied on a dedicated `feature/CRQ-016-nixify` branch within each submodule.
-*   **Documentation**: Comprehensive CRQ (CRQ-016), SOP, and a tutorial (`docs/tutorials/Submodule_Nixification_Tutorial.md`) have been created to guide future maintenance and development.
+## Project Root
 
-**Relevant Directories and Files:**
-*   `vendor/nix/`: Contains the aggregated `flake.nix` and individual submodule `flake.nix` files.
-*   `scripts/`: Houses all automation scripts for the Nixification process.
-*   `docs/crqs/`: Contains the CRQ document for this task.
-*   `docs/sops/`: Contains the SOP document for this task.
-*   `docs/tutorials/`: Contains the tutorial for this task.
+`/data/data/com.termux.nix/files/home/pick-up-nix2/`
+
+## Relevant Directories Created
+
+*   `docs/sops/`
+*   `docs/crqs/`
+*   `task/`
+*   `templates/`
+
+## CRQ-001: Add Quality Control Procedures
+
+A new Change Request document `docs/crqs/crq_001_add_quality_control.md` has been created, outlining the plan to establish robust quality control procedures.
+
+## Next Steps
+
+The next steps involve creating the `task.md` file and then checking for and potentially creating a root `flake.nix` and a `task/flake.nix` for the development environment.

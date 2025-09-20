@@ -2,10 +2,10 @@
 
 set -e
 
-TAG_NAME="alpha"
+# TAG_NAME is skipped for now as per user request
 CRQ_NUMBER="016"
 COMMIT_DESCRIPTION="Standardize flake.nix from template"
-BRANCH_NAME="feature/CRQ-016-nixify"
+BRANCH_NAME="feature/CRQ-016-nixify-workflow" # Ensure this matches the current branch
 
 if [ -n "$1" ]; then
     SUBMODULE_PATHS="$1"
@@ -40,10 +40,10 @@ for submodule_path in $SUBMODULE_PATHS; do
     # Commit the changes using the existing script
     ./scripts/commit_crq_submodule.sh "$submodule_path" "$CRQ_NUMBER" "$COMMIT_DESCRIPTION"
 
-    # Now, tag and push
+    # Now, push (tagging is skipped as per user request)
     (
         cd "$submodule_path"
-        echo "Tagging and pushing..."
+        echo "Pushing changes..."
 
         # The remote handling logic is still needed here
         if git remote get-url origin &>/dev/null && ! git remote get-url origin | grep -q "meta-introspector"; then
@@ -64,11 +64,11 @@ for submodule_path in $SUBMODULE_PATHS; do
         fi
 
         git push origin HEAD
-        git tag -f "$TAG_NAME"
-        git push origin "$TAG_NAME" --force
+        # git tag -f "$TAG_NAME" # Tagging skipped
+        # git push origin "$TAG_NAME" --force # Tagging skipped
     )
     echo "--- Finished $repo ---"
     echo
 done
 
-echo "All submodules have been committed, tagged, and pushed."
+echo "All submodules have been committed and pushed."

@@ -284,3 +284,9 @@
 [submodule "vendor/lint/cachix-git-hooks.nix"]
 	path = vendor/lint/cachix-git-hooks.nix
 	url = https://github.com/cachix/git-hooks.nix
+[submodule "vendor/nix/nixpacks"]
+	path = vendor/nix/nixpacks
+	url = https://github.com/meta-introspector/nixpacks
+[submodule "source/github/meta-introspector/ragit"]
+	path = source/github/meta-introspector/ragit
+	url = https://github.com/meta-introspector/ragit

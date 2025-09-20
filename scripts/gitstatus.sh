@@ -1,0 +1,1 @@
+git status --ignore-submodules
