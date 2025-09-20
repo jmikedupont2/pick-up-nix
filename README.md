@@ -163,3 +163,12 @@ nix develop
 
 cd ~/nix2/
 ~/pick-up-nix2/gemini_cli_recent.sh
+
+
+# data
+scripts/generate_submodule_status.sh to git submodule foreach --recursive 'git status' > "index/submodules_status.txt"
+scripts/gitstatus.sh to git status --ignore-submodules > ~/pick-up-nix2/index/gitstatus.txt
+
+contains the last scan of nix store for file size
+run ./scripts/nix_store_size.sh to produce ~/nix2/index/sizes.txt
+
