@@ -2,8 +2,8 @@
   description = "A temporary environment for evaluating a tool.";
 
   inputs = {
-    nixpkgs.url = "github:NixOS/nixpkgs/nixos-24.05";
-    flake-utils.url = "github:numtide/flake-utils";
+    nixpkgs.url = "github:meta-introspector/nixpkgs?ref=feature/CRQ-016-nixify";
+    flake-utils.url = "github:meta-introspector/flake-utils?ref=feature/CRQ-016-nixify";
     
     # The tool to be evaluated
     eval_tool.url = "https://github.com/meta-introspector/git-submodule-tools-rs";

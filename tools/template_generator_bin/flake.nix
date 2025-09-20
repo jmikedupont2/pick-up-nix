@@ -2,9 +2,9 @@
   description = "A Nix flake for the template_generator_bin Rust project";
 
   inputs = {
-    nixpkgs.url = "github:NixOS/nixpkgs/nixos-24.05";
-    flake-utils.url = "github:numtide/flake-utils";
-    naersk.url = "github:nix-community/naersk/master"; # Naersk for Rust builds
+    nixpkgs.url = "github:meta-introspector/nixpkgs?ref=feature/CRQ-016-nixify";
+    flake-utils.url = "github:meta-introspector/flake-utils?ref=feature/CRQ-016-nixify";
+    naersk.url = "github:meta-introspector/naersk?ref=feature/CRQ-016-nixify"; # Naersk for Rust builds
   };
 
   outputs = { self, nixpkgs, flake-utils, naersk }:

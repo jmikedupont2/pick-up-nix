@@ -2,9 +2,9 @@
   description = "Nix flake for building and testing the fixed point analysis CLI command.";
 
   inputs = {
-    nixpkgs.url = "github:NixOS/nixpkgs/nixos-24.05";
-    naersk.url = "github:nix-community/naersk/master";
-    flake-utils.url = "github:numtide/flake-utils";
+    nixpkgs.url = "github:meta-introspector/nixpkgs?ref=feature/CRQ-016-nixify";
+    naersk.url = "github:meta-introspector/naersk?ref=feature/CRQ-016-nixify";
+    flake-utils.url = "github:meta-introspector/flake-utils?ref=feature/CRQ-016-nixify";
   };
 
   outputs = { self, nixpkgs, naersk, flake-utils }:

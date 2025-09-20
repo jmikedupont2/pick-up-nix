@@ -2,9 +2,9 @@
   description = "Nix flake for the enum-self Rust crate";
 
   inputs = {
-    nixpkgs.url = "github:NixOS/nixpkgs/nixos-25.05"; # Use a stable nixpkgs
-    naersk.url = "github:nix-community/naersk/master"; # Use naersk
-    flake-utils.url = "github:numtide/flake-utils"; # For easier cross-platform builds
+    nixpkgs.url = "github:meta-introspector/nixpkgs?ref=feature/CRQ-016-nixify"; # Use a stable nixpkgs
+    naersk.url = "github:meta-introspector/naersk?ref=feature/CRQ-016-nixify"; # Use naersk
+    flake-utils.url = "github:meta-introspector/flake-utils?ref=feature/CRQ-016-nixify"; # For easier cross-platform builds
     syn-wrapper = { url = "path:../wrappers/syn-wrapper"; flake = false; };
   };
 

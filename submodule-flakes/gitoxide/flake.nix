@@ -2,7 +2,7 @@
   description = "Nix flake for submodule gitoxide";
 
   inputs = {
-    nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
+    nixpkgs.url = "github:meta-introspector/nixpkgs?ref=feature/CRQ-016-nixify";
   };
 
   outputs = { self, nixpkgs }:
@@ -14,7 +14,7 @@
         version = "0.1.0"; # Placeholder, can be updated later
 
         src = pkgs.fetchgit {
-          url = "https://github.com/GitoxideLabs/gitoxide";
+          url = "github:meta-introspector/gitoxide?ref=feature/CRQ-016-nixify";
           rev = "fa1026ef79ecd5b77161f1b93089c5f5a7ea0ec6"; # Placeholder for the specific commit hash
           sha256 = "PUT_SUBMODULE_SHA256_HERE"; # Placeholder for the sha256 hash
         };

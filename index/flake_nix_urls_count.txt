@@ -1,5 +1,4 @@
       1  "../..";
-      1             curl
       1  github:a-h/nix-asciinema-agg;
       1  "github:cachix/pre-commit-hooks.nix";
       1  "github:deemp/devshell";
@@ -13,8 +12,8 @@
       1  "github:leanprover/LeanInk/refs/pull/57/merge";
       1  "github:leanprover/mdBook";
       1  "github:melpa/melpa";
+      1  "github:meta-introspector/flake-utils-fork?ref
       1  "github:meta-introspector/nixpacks?ref
-      1  "github:meta-introspector/nixpkgs-fork?ref
       1  "github:meta-introspector/rust-overlay-fork?ref
       1  "github:nix-community/cache-nix-action";
       1  "github:nix-community/emacs-overlay";
@@ -61,7 +60,6 @@
       1  "./nixpacks";
       1  "@nixpkgs@";
       1  "./nixpkgs-lint";
-      1       # nix-prefetch-url --unpack <submoduleUrl> <submoduleRev>
       1  "./nixtract";
       1  "path:../";
       1  "path:../..";
@@ -83,15 +81,16 @@
       1  "path:../syn-wrapper";
       1  "./renix";
       1  "./rnix-parser-tester";
+      1 ./source/github/meta-introspector/git-submodule-tools-rs/submodule-checkout3/flake.nix:      # nix-prefetch-url --unpack <submoduleUrl> <submoduleRev>
+      1 ./source/github/meta-introspector/time/flake.nix:            curl
       1  "sourcehut:~rycee/nmd";
       1  "./tools/template_generator_bin"; # Keep this input
       1  { url 
       2  "github:cachix/git-hooks.nix";
       2  "github:cdepillabout/evil-nix";
       2  "github:gytis-ivaskevicius/flake-utils-plus";
-      2  "github:meta-introspector/flake-utils/feature/CRQ-016-nixify";
       2  "github:meta-introspector/naersk/feature/CRQ-016-nixify";
-      2  "github:meta-introspector/nixpkgs/feature/CRQ-016-nixify";
+      2  "github:meta-introspector/nixpkgs-fork?ref
       2  "github:nix-community/home-manager";
       2  "github:nix-community/home-manager/release-24.05";
       2  "github:NixOS/nixpkgs/nixos-23.11";
@@ -105,6 +104,8 @@
       2  "https://github.com/XAMPPRocky/octocrab";
       2  "nixpkgs/nixpkgs-unstable";
       3  "github:hercules-ci/gitignore.nix";
+      3  "github:meta-introspector/flake-utils/feature/CRQ-016-nixify";
+      3  "github:meta-introspector/nixpkgs/feature/CRQ-016-nixify";
       3  "github:nix-community/nix-on-droid/release-24.05";
       3  "github:nixos/nixpkgs/nixos-unstable";
       3  "github:numtide/treefmt-nix";
@@ -120,5 +121,5 @@
      11  submoduleUrl;
      13  "github:NixOS/nixpkgs/nixpkgs-unstable";
      22  "github:NixOS/nixpkgs/nixos-unstable";
-     31  "github:NixOS/nixpkgs/nixos-24.05";
-     51  "github:numtide/flake-utils";
+     30  "github:NixOS/nixpkgs/nixos-24.05";
+     50  "github:numtide/flake-utils";

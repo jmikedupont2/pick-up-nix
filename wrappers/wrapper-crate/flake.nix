@@ -2,8 +2,8 @@
   description = "A wrapper crate for git-wrapper and syn-wrapper";
 
   inputs = {
-    nixpkgs.url = "github:NixOS/nixpkgs/nixos-23.11"; # Or your preferred nixpkgs branch
-    flake-utils.url = "github:numtide/flake-utils";
+    nixpkgs.url = "github:meta-introspector/nixpkgs?ref=feature/CRQ-016-nixify"; # Or your preferred nixpkgs branch
+    flake-utils.url = "github:meta-introspector/flake-utils?ref=feature/CRQ-016-nixify";
 
     git-wrapper = {
       url = "path:../git-wrapper";

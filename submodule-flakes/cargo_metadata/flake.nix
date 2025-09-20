@@ -2,7 +2,7 @@
   description = "Nix flake for submodule cargo_metadata";
 
   inputs = {
-    nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
+    nixpkgs.url = "github:meta-introspector/nixpkgs?ref=feature/CRQ-016-nixify";
   };
 
   outputs = { self, nixpkgs }:
@@ -14,7 +14,7 @@
         version = "0.1.0"; # Placeholder, can be updated later
 
         src = pkgs.fetchgit {
-          url = "https://github.com/oli-obk/cargo_metadata";
+          url = "github:meta-introspector/cargo_metadata?ref=feature/CRQ-016-nixify";
           rev = "f0df5d0d220c0625cfa1a624ae7cc3d3ac25e31f"; # Placeholder for the specific commit hash
           sha256 = "PUT_SUBMODULE_SHA256_HERE"; # Placeholder for the sha256 hash
         };

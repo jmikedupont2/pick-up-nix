@@ -2,7 +2,7 @@
   description = "Nix flake for submodule octocrab";
 
   inputs = {
-    nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
+    nixpkgs.url = "github:meta-introspector/nixpkgs?ref=feature/CRQ-016-nixify";
   };
 
   outputs = { self, nixpkgs }:
@@ -14,7 +14,7 @@
         version = "0.1.0"; # Placeholder, can be updated later
 
         src = pkgs.fetchgit {
-          url = "https://github.com/XAMPPRocky/octocrab";
+          url = "github:meta-introspector/octocrab?ref=feature/CRQ-016-nixify";
           rev = "1ca87c2b0a0bfcf4fd5f7fd14f29f65883b225f0"; # Placeholder for the specific commit hash
           sha256 = "PUT_SUBMODULE_SHA256_HERE"; # Placeholder for the sha256 hash
         };

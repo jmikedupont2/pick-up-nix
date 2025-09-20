@@ -2,7 +2,7 @@
   description = "Nix flake for submodule zola";
 
   inputs = {
-    nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
+    nixpkgs.url = "github:meta-introspector/nixpkgs?ref=feature/CRQ-016-nixify";
   };
 
   outputs = { self, nixpkgs }:
@@ -14,7 +14,7 @@
         version = "0.1.0"; # Placeholder, can be updated later
 
         src = pkgs.fetchgit {
-          url = "https://github.com/getzola/zola.git";
+          url = "github:meta-introspector/zola?ref=feature/CRQ-016-nixify";
           rev = "7d29fc51fd3fbdbad5d635b40118cc4f1469f615"; # Placeholder for the specific commit hash
           sha256 = "PUT_SUBMODULE_SHA256_HERE"; # Placeholder for the sha256 hash
         };

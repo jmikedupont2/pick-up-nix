@@ -2,7 +2,7 @@
   description = "A flake for the gemini-cli package";
 
   inputs = {
-    nixpkgs.url = "github:NixOS/nixpkgs/nixos-23.11"; # Pin to a stable NixOS release
+    nixpkgs.url = "github:meta-introspector/nixpkgs?ref=feature/CRQ-016-nixify"; # Pin to a stable NixOS release
   };
 
   outputs = { self, nixpkgs }:
