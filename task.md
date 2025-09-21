@@ -37,6 +37,25 @@ our boot.sh runs gemini
 CWD:  /data/data/com.termux.nix/files/home/pick-up-nix2 aka ~/nix2 (via ln)
 On branch feature/CRQ-016-nixify-workflow
 current change request :   docs/crqs/CRQ_016_Flake_Refactor_and_Nixify.md Read and understand and update
+current change request :   docs/crqs/CRQ_018_Automated_GitHub_Forking.md Read and understand and update
+
+## Next Steps:
+
+1.  **Continue Documentation Enhancement (CRQ-017):**
+    *   Create `docs/tutorials/Contributing_with_CRQs_and_SOPs.md`.
+    *   Review and update all existing SOPs in `docs/sops/` for accuracy and completeness.
+    *   Update `GEMINI.md` (project root) to summarize documentation efforts.
+    *   Ensure `docs/memos/Shellcheck_Always_After_Changes.md` is properly referenced and integrated into relevant SOPs.
+2.  **Address `nixpacks` submodule issue:**
+    *   Run `scripts/vendorize_and_fork_submodule.sh` for `nixpacks` to fork it under `meta-introspector` and update its remote.
+    *   Update the main repository's `.gitmodules` to point to the new `meta-introspector` fork.
+    *   Commit and push changes in the main repository.
+    *   Re-run `scripts/commit_all_submodule_changes.sh` to push `flake.nix` changes within `nixpacks`.
+    *   Verify the status.
+3.  **Implement CRQ-018: Automated GitHub Forking for Nix Flake Dependencies:**
+    *   Develop `scripts/automate_dependency_forking.sh` as outlined in `docs/crqs/CRQ_018_Automated_GitHub_Forking.md`.
+    *   Document the process in `docs/tutorials/Automated_Dependency_Forking_Tutorial.md`.
+    *   **Note:** Full implementation of forking functionality is dependent on the completion of CRQ-019 (Secure Credential Handling).
 
 ## Recent Progress and Current Status:
 
@@ -51,6 +70,12 @@ current change request :   docs/crqs/CRQ_016_Flake_Refactor_and_Nixify.md Read a
 *   **URL Vendorization:** `scripts/vendorize_flake_urls.sh` and `scripts/apply_vendorized_urls.sh` were created and executed to update `flake.nix` URLs to point to `meta-introspector` forks with the `feature/CRQ-016-nixify` branch.
 *   **Documentation Enhancement CRQ:** `docs/crqs/CRQ_017_Documentation_Enhancement.md` has been created to formalize the plan for documentation improvements.
 *   **New Tutorials:** `docs/tutorials/Onboarding_Guide.md`, `docs/tutorials/Git_Submodule_Guide.md`, and `docs/tutorials/Nix_Development_Basics.md` have been created.
+*   **CRQ-018 Implementation (Automated GitHub Forking):**
+    *   `scripts/automate_dependency_forking.sh` has been developed and documented in `docs/tutorials/Automated_Dependency_Forking_Tutorial.md`.
+    *   The script successfully runs in report mode, identifying dependencies and existing forks.
+    *   Full implementation of forking functionality is pending the secure credential handling solution from CRQ-019.
+*   **CRQ-019 (Secure Credential Handling):**
+    *   `docs/crqs/CRQ_019_Secure_Credential_Handling_in_Nix_Scripts.md` and `docs/sops/SOP_Secure_Credential_Handling_in_Nix_Scripts.md` have been created to formalize the approach to secure credential management.
 
 ## Next Steps:
 
