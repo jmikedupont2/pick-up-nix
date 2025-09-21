@@ -17,6 +17,7 @@ Prior to this CRQ, the project faced challenges related to:
 The solution involves a multi-faceted approach:
 *   **Standardized `flake.nix` Template**: Creation of a `flake.template` to ensure all submodule `flake.nix` files adhere to a consistent structure and include essential development tools.
 *   **Automated Nixification Scripts**: Development of a suite of shell scripts (`branch_and_push_all.sh`, `commit_and_push_flakes.sh`, `commit_crq_submodule.sh`, `fix_submodule.sh`, `inject_submodule_env.sh`, `nixify.sh`, `nixify_vendor_nix.sh`, `commit_workflow.sh`) to automate the creation, update, commitment, and pushing of `flake.nix` files in submodules.
+*   **Automated Submodule Rectification**: Development of `scripts/check_and_rectify_submodules.sh` to ensure submodules point to `meta-introspector` forks and are on the `feature/CRQ-016-nixify-workflow` branch.
 *   **Branching Strategy**: Implementation of a dedicated feature branch (`feature/CRQ-016-nixify`) within each submodule to isolate Nixification changes.
 *   **Root `flake.nix` Refactoring**: Updating the main project's `flake.nix` to aggregate submodule flakes via a local `vendor/nix/flake.nix`, improving modularity and local development efficiency.
 *   **Documentation**: Creation of comprehensive documentation (CRQ, SOP, script documentation) to guide future maintenance and development.
@@ -50,6 +51,7 @@ The solution involves a multi-faceted approach:
 *   `scripts/nixify.sh` (new)
 *   `scripts/nixify_vendor_nix.sh` (new, modified)
 *   `scripts/commit_workflow.sh` (new)
+*   `scripts/check_and_rectify_submodules.sh` (new)
 *   `vendor/nix/flake.nix` (new)
 *   `.gitignore` (modified)
 *   `docs/scripts/*.md` (new documentation for each script)
@@ -58,6 +60,7 @@ The solution involves a multi-faceted approach:
 *   **Root `flake.nix`**: Now references `vendor/nix/flake.nix` as a local input, which in turn aggregates individual submodule flakes.
 *   **Submodule `flake.nix`**: Generated from `flake.template`, providing a consistent `devShell` with `bash`, `git`, `asciinema`, `pre-commit`, and `shellcheck`.
 *   **Automation Scripts**: Provide a robust mechanism for applying these changes across multiple submodules, handling branching, committing, and pushing.
+*   **Submodule Rectification Script**: A new script to automatically check and rectify submodule origins and branches.
 
 ## 6. Testing
 
