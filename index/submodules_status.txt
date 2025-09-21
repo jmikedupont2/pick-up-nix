@@ -3,7 +3,13 @@ HEAD detached at ec7a111
 nothing to commit, working tree clean
 Entering '.github/actions/cache-nix-action'
 HEAD detached at e2cf51d
-nothing to commit, working tree clean
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   examples/saveFromGC/flake.nix
+	modified:   flake.nix
+
+no changes added to commit (use "git add" and/or "git commit -a")
 Entering '.github/actions/cache-nix-action/deps/actions/toolkit'
 HEAD detached at 9dd89564
 nothing to commit, working tree clean
@@ -27,42 +33,46 @@ HEAD detached at 9de00bc
 nothing to commit, working tree clean
 Entering 'nixpacks'
 HEAD detached at 1234b3b
-nothing to commit, working tree clean
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   flake.nix
+
+no changes added to commit (use "git add" and/or "git commit -a")
 Entering 'source/github/jmikedupont2/orgs/Escaped-RDFa/namespace'
 HEAD detached at b62c6ee
-nothing to commit, working tree clean
-Entering 'source/github/meta-introspector/git-submodule-tools-rs'
-On branch feature/prompts
-Your branch is up to date with 'origin/feature/prompts'.
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   flake.nix
 
+no changes added to commit (use "git add" and/or "git commit -a")
+Entering 'source/github/meta-introspector/git-submodule-tools-rs'
+On branch feature/CRQ-016-nixify-workflow
 Changes not staged for commit:
   (use "git add <file>..." to update what will be committed)
   (use "git restore <file>..." to discard changes in working directory)
   (commit or discard the untracked or modified content in submodules)
-	modified:   boot.sh
-	modified:   task/ainix/manage_mkaiderivation_submodule.sh
-	modified:   tools/update_all_submodules.sh
-	modified:   vendor/meta-introspector/meta-meme (modified content)
+	modified:   vendor/meta-introspector/mkAIDerivation (modified content)
 
 no changes added to commit (use "git add" and/or "git commit -a")
 Entering 'source/github/meta-introspector/git-submodule-tools-rs/vendor/cargo_metadata'
 HEAD detached at f0df5d0
 nothing to commit, working tree clean
 Entering 'source/github/meta-introspector/git-submodule-tools-rs/vendor/meta-introspector/meta-meme'
-HEAD detached at a9ab89f
-Changes not staged for commit:
-  (use "git add <file>..." to update what will be committed)
-  (use "git restore <file>..." to discard changes in working directory)
-	modified:   collect.sh
-	modified:   commit.sh
-
-no changes added to commit (use "git add" and/or "git commit -a")
+On branch feature/CRQ-016-nixify-workflow
+nothing to commit, working tree clean
 Entering 'source/github/meta-introspector/git-submodule-tools-rs/vendor/meta-introspector/meta-meme.wiki'
 HEAD detached at c5ca5fb
 nothing to commit, working tree clean
 Entering 'source/github/meta-introspector/git-submodule-tools-rs/vendor/meta-introspector/mkAIDerivation'
 HEAD detached at d79de32
-nothing to commit, working tree clean
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   flake.nix
+
+no changes added to commit (use "git add" and/or "git commit -a")
 Entering 'source/github/meta-introspector/git-submodule-tools-rs/vendor/octocrab'
 HEAD detached at 1ca87c2
 nothing to commit, working tree clean
@@ -146,17 +156,31 @@ On branch feature/CRQ-016-nixify-workflow
 Changes not staged for commit:
   (use "git add <file>..." to update what will be committed)
   (use "git restore <file>..." to discard changes in working directory)
-	modified:   tools/gh_scripts/create_crq_workflow.sh
+  (commit or discard the untracked or modified content in submodules)
+	modified:   .emacs.d/nix-magit (modified content)
+	modified:   .emacs.d/terlar-emacs-config (modified content)
+	modified:   naersk (modified content)
 
 no changes added to commit (use "git add" and/or "git commit -a")
 Entering 'source/github/meta-introspector/git-submodules-rs-nix/.emacs.d/nix-magit'
 On branch feature/CRQ-016-nixify-workflow
-nothing to commit, working tree clean
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   flake.nix
+
+no changes added to commit (use "git add" and/or "git commit -a")
 Entering 'source/github/meta-introspector/git-submodules-rs-nix/.emacs.d/terlar-emacs-config'
 On branch main
 Your branch is up to date with 'origin/main'.
 
-nothing to commit, working tree clean
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   dev/flake.nix
+	modified:   flake.nix
+
+no changes added to commit (use "git add" and/or "git commit -a")
 Entering 'source/github/meta-introspector/git-submodules-rs-nix/git-submodule-tools'
 On branch master
 Your branch is up to date with 'origin/master'.
@@ -176,7 +200,18 @@ Entering 'source/github/meta-introspector/git-submodules-rs-nix/naersk'
 On branch master
 Your branch is up to date with 'origin/master'.
 
-nothing to commit, working tree clean
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   examples/checks/flake.nix
+	modified:   examples/cross-windows/flake.nix
+	modified:   examples/hello-world/flake.nix
+	modified:   examples/multi-target/flake.nix
+	modified:   examples/multiple-binaries/flake.nix
+	modified:   examples/static-musl/flake.nix
+	modified:   flake.nix
+
+no changes added to commit (use "git add" and/or "git commit -a")
 Entering 'source/github/meta-introspector/git-submodules-rs-nix/qa/templates/incident'
 On branch main
 Your branch is up to date with 'origin/main'.
@@ -564,7 +599,14 @@ Your branch is up to date with 'origin/main'.
 nothing to commit, working tree clean
 Entering 'source/github/meta-introspector/lean4'
 HEAD detached at 68323f6dbb
-nothing to commit, working tree clean
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   doc/flake.nix
+	modified:   nix/templates/pkg/flake.nix
+	modified:   tests/bench/flake.nix
+
+no changes added to commit (use "git add" and/or "git commit -a")
 Entering 'source/github/meta-introspector/minizinc-introspector'
 On branch main
 Your branch is up to date with 'origin/main'.
@@ -586,6 +628,7 @@ Changes not staged for commit:
   (use "git add <file>..." to update what will be committed)
   (use "git restore <file>..." to discard changes in working directory)
   (commit or discard the untracked or modified content in submodules)
+	modified:   vendor/amazon-q-developer-cli (modified content)
 	modified:   vendor/ask_gemini (modified content)
 	modified:   vendor/askrepo (modified content)
 	modified:   vendor/ast-grep (modified content)
@@ -642,13 +685,26 @@ Entering 'source/github/meta-introspector/ragit/vendor/amazon-q-developer-cli'
 On branch feature/gemini
 Your branch is up to date with 'origin/feature/gemini'.
 
-nothing to commit, working tree clean
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+  (commit or discard the untracked or modified content in submodules)
+	modified:   vendor/solfunmeme-dioxus (modified content)
+
+no changes added to commit (use "git add" and/or "git commit -a")
 Entering 'source/github/meta-introspector/ragit/vendor/amazon-q-developer-cli/vendor/gemini-cli'
 HEAD detached at f5e0f161
 nothing to commit, working tree clean
 Entering 'source/github/meta-introspector/ragit/vendor/amazon-q-developer-cli/vendor/solfunmeme-dioxus'
 HEAD detached at e82b9c00
-nothing to commit, working tree clean
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+  (commit or discard the untracked or modified content in submodules)
+	modified:   vendor/fastembed-rs (modified content)
+	modified:   vendor/steel (modified content)
+
+no changes added to commit (use "git add" and/or "git commit -a")
 Entering 'source/github/meta-introspector/ragit/vendor/amazon-q-developer-cli/vendor/solfunmeme-dioxus/bootstrap'
 HEAD detached at 4d18f5f
 nothing to commit, working tree clean
@@ -657,10 +713,6 @@ HEAD detached at 106cdba
 nothing to commit, working tree clean
 Entering 'source/github/meta-introspector/ragit/vendor/amazon-q-developer-cli/vendor/solfunmeme-dioxus/hf_dataset'
 HEAD detached at 777c4c39
-
-It took 3.02 seconds to enumerate untracked files.
-See 'git help status' for information on how to improve this.
-
 nothing to commit, working tree clean
 Entering 'source/github/meta-introspector/ragit/vendor/amazon-q-developer-cli/vendor/solfunmeme-dioxus/hg_datasets/microlean4'
 HEAD detached at a9c4102
@@ -685,7 +737,12 @@ HEAD detached at 4117619
 nothing to commit, working tree clean
 Entering 'source/github/meta-introspector/ragit/vendor/amazon-q-developer-cli/vendor/solfunmeme-dioxus/vendor/fastembed-rs'
 HEAD detached at 8241183
-nothing to commit, working tree clean
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   flake.nix
+
+no changes added to commit (use "git add" and/or "git commit -a")
 Entering 'source/github/meta-introspector/ragit/vendor/amazon-q-developer-cli/vendor/solfunmeme-dioxus/vendor/float-cmp'
 HEAD detached at 2d71181
 nothing to commit, working tree clean
@@ -733,7 +790,12 @@ HEAD detached at 12607e8
 nothing to commit, working tree clean
 Entering 'source/github/meta-introspector/ragit/vendor/amazon-q-developer-cli/vendor/solfunmeme-dioxus/vendor/steel'
 HEAD detached at 7b1dffa1
-nothing to commit, working tree clean
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   flake.nix
+
+no changes added to commit (use "git add" and/or "git commit -a")
 Entering 'source/github/meta-introspector/ragit/vendor/amazon-q-developer-cli/vendor/solfunmeme-dioxus/vendor/tantivy'
 HEAD detached at 945af922
 nothing to commit, working tree clean
@@ -14927,7 +14989,12 @@ On branch main
 Your branch is ahead of 'origin/main' by 1 commit.
   (use "git push" to publish your local commits)
 
-nothing to commit, working tree clean
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   flake.nix
+
+no changes added to commit (use "git add" and/or "git commit -a")
 Entering 'source/github/meta-introspector/streamofrandom'
 On branch feature/CRQ-016-nixify-workflow
 nothing to commit, working tree clean
@@ -15003,12 +15070,22 @@ Entering 'vendor/external/asciinema'
 On branch develop
 Your branch is up to date with 'origin/develop'.
 
-nothing to commit, working tree clean
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   flake.nix
+
+no changes added to commit (use "git add" and/or "git commit -a")
 Entering 'vendor/external/asciinema-scenario'
 On branch main
 Your branch is up to date with 'origin/main'.
 
-nothing to commit, working tree clean
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   flake.nix
+
+no changes added to commit (use "git add" and/or "git commit -a")
 Entering 'vendor/external/bitchat-solana-zos-solfunmeme'
 On branch main
 Your branch is up to date with 'origin/main'.
@@ -15088,7 +15165,13 @@ Entering 'vendor/external/nix-asciinema-agg'
 On branch main
 Your branch is up to date with 'origin/main'.
 
-nothing to commit, working tree clean
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   _example/flake.nix
+	modified:   flake.nix
+
+no changes added to commit (use "git add" and/or "git commit -a")
 Entering 'vendor/external/ragit'
 On branch main
 Your branch is up to date with 'origin/main'.
@@ -15098,11 +15181,12 @@ Entering 'vendor/external/rust'
 On branch master
 Your branch is up to date with 'origin/master'.
 
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   src/tools/nix-dev-shell/flake.nix
 
-It took 2.37 seconds to enumerate untracked files.
-See 'git help status' for information on how to improve this.
-
-nothing to commit, working tree clean
+no changes added to commit (use "git add" and/or "git commit -a")
 Entering 'vendor/external/solfunmeme-banner'
 On branch main
 Your branch is up to date with 'origin/main'.
@@ -15185,12 +15269,24 @@ Entering 'vendor/lint/cachix-git-hooks.nix'
 On branch master
 Your branch is up to date with 'origin/master'.
 
-nothing to commit, working tree clean
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   flake.nix
+	modified:   template/flake.nix
+
+no changes added to commit (use "git add" and/or "git commit -a")
 Entering 'vendor/lint/git-hooks.nix'
 On branch master
 Your branch is up to date with 'origin/master'.
 
-nothing to commit, working tree clean
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   flake.nix
+	modified:   template/flake.nix
+
+no changes added to commit (use "git add" and/or "git commit -a")
 Entering 'vendor/lint/shellcheck'
 On branch master
 Your branch is up to date with 'origin/master'.
@@ -15200,23 +15296,66 @@ Entering 'vendor/mkAIDerivation'
 On branch master
 Your branch is up to date with 'origin/master'.
 
-nothing to commit, working tree clean
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   flake.nix
+
+no changes added to commit (use "git add" and/or "git commit -a")
 Entering 'vendor/nix-on-droid'
 On branch master
 Your branch is up to date with 'origin/master'.
 
-nothing to commit, working tree clean
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   flake.nix
+	modified:   templates/advanced/flake.nix
+	modified:   templates/home-manager/flake.nix
+	modified:   templates/minimal/flake.nix
+
+no changes added to commit (use "git add" and/or "git commit -a")
 Entering 'vendor/nix/flake-utils'
 On branch main
 Your branch is up to date with 'origin/main'.
 
-nothing to commit, working tree clean
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   examples/each-system/flake.nix
+	modified:   examples/simple-flake/flake.nix
+	modified:   flake.nix
+
+no changes added to commit (use "git add" and/or "git commit -a")
 Entering 'vendor/nix/nil'
 On branch feature/CRQ-016-nixify-workflow
-nothing to commit, working tree clean
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   crates/nix-interop/tests/nixpkgs_revs/flake.nix
+	modified:   crates/nix-interop/tests/test_flake/flake.nix
+	modified:   external_rust_packages/flake.nix
+	modified:   external_rust_packages/nixpacks/flake.nix
+	modified:   external_rust_packages/rust-cargo-workspaces-binary/flake.nix
+	modified:   external_rust_packages/rust-cargo-workspaces-glob-binary/flake.nix
+	modified:   external_rust_packages/rust-cargo-workspaces-glob-library/flake.nix
+	modified:   external_rust_packages/rust-cargo-workspaces-glob/flake.nix
+	modified:   external_rust_packages/rust-cargo-workspaces-library/flake.nix
+	modified:   external_rust_packages/rust-cargo-workspaces/flake.nix
+	modified:   external_rust_packages/rust-custom-toolchain/flake.nix
+	modified:   external_rust_packages/rust-custom-version/flake.nix
+	modified:   external_rust_packages/rust-multiple-bins/flake.nix
+	modified:   flake.nix
+
+no changes added to commit (use "git add" and/or "git commit -a")
 Entering 'vendor/nix/nix'
 On branch feature/CRQ-016-nixify-workflow
-nothing to commit, working tree clean
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   flake.nix
+
+no changes added to commit (use "git add" and/or "git commit -a")
 Entering 'vendor/nix/nix-config-merger'
 On branch main
 Your branch is ahead of 'origin/main' by 3 commits.
@@ -15225,7 +15364,14 @@ Your branch is ahead of 'origin/main' by 3 commits.
 nothing to commit, working tree clean
 Entering 'vendor/nix/nix-direnv'
 On branch feature/CRQ-016-nixify-workflow
-nothing to commit, working tree clean
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   flake.nix
+	modified:   templates/flake/flake.nix
+	modified:   tests/testenv/flake.nix
+
+no changes added to commit (use "git add" and/or "git commit -a")
 Entering 'vendor/nix/nix-files-comparator'
 On branch main
 Your branch is up to date with 'origin/main'.
@@ -15235,30 +15381,39 @@ Entering 'vendor/nix/nixpacks'
 On branch feature/CRQ-016-nixify-workflow
 Your branch is up to date with 'origin/feature/CRQ-016-nixify-workflow'.
 
-nothing to commit, working tree clean
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   flake.nix
+
+no changes added to commit (use "git add" and/or "git commit -a")
 Entering 'vendor/nix/nixpkgs-lint'
-On branch feature/CRQ-016-nixify-workflow
-nothing to commit, working tree clean
-Entering 'vendor/nix/nixtract'
 On branch feature/CRQ-016-nixify-workflow
 Changes not staged for commit:
   (use "git add <file>..." to update what will be committed)
   (use "git restore <file>..." to discard changes in working directory)
-	modified:   .github/workflows/build_nix.yml
-	modified:   flake.lock
 	modified:   flake.nix
 
-Untracked files:
-  (use "git add <file>..." to include in what will be committed)
-	scripts/run_gemini_nixtract.sh
-
 no changes added to commit (use "git add" and/or "git commit -a")
+Entering 'vendor/nix/nixtract'
+On branch feature/CRQ-016-nixify-workflow
+nothing to commit, working tree clean
 Entering 'vendor/nix/renix'
 On branch feature/CRQ-016-nixify-workflow
-nothing to commit, working tree clean
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   flake.nix
+
+no changes added to commit (use "git add" and/or "git commit -a")
 Entering 'vendor/nix/rnix-parser-tester'
 On branch feature/CRQ-016-nixify-workflow
-nothing to commit, working tree clean
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   flake.nix
+
+no changes added to commit (use "git add" and/or "git commit -a")
 Entering 'vendor/nix/tvix'
 On branch canon
 Your branch is up to date with 'origin/canon'.
@@ -15267,7 +15422,7 @@ nothing to commit, working tree clean
 Entering 'vendor/nixpkgs'
 HEAD detached at 26833ad1dad8
 
-It took 15.66 seconds to enumerate untracked files.
+It took 7.29 seconds to enumerate untracked files.
 See 'git help status' for information on how to improve this.
 
 nothing to commit, working tree clean
@@ -15280,7 +15435,12 @@ Entering 'vendor/rnix-parser'
 On branch master
 Your branch is up to date with 'origin/master'.
 
-nothing to commit, working tree clean
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   flake.nix
+
+no changes added to commit (use "git add" and/or "git commit -a")
 Entering 'vendor/rust-index-guix'
 On branch main
 Your branch is up to date with 'origin/main'.
@@ -15290,7 +15450,12 @@ Entering 'vendor/steel'
 On branch master
 Your branch is up to date with 'origin/master'.
 
-nothing to commit, working tree clean
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   flake.nix
+
+no changes added to commit (use "git add" and/or "git commit -a")
 Entering 'vendor/strace/dutchcoders-trace'
 On branch master
 Your branch is up to date with 'origin/master'.

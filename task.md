@@ -41,20 +41,27 @@ current change request :   docs/crqs/CRQ_016_Flake_Refactor_and_Nixify.md Read a
 ## Recent Progress and Current Status:
 
 *   **Submodule Branching and Pushing:** The `scripts/commit_and_push_flakes.sh` script has been updated and executed. It successfully created/checked out the `feature/CRQ-016-nixify-workflow` branch in relevant submodules and pushed their changes.
-*   **Deleted File Restoration:** The `scripts/restore_deleted_submodule_files.sh` script was created and refined to sequentially restore deleted files in submodules. This script is designed to be idempotent and prevent Git lock issues by avoiding parallel operations.
+*   **Deleted File Restoration:** The `scripts/restore_deleted_submodule_files.sh` script was created and refined to sequentially restore deleted files in submodules.
 *   **Submodule Status Generation:** The `scripts/generate_submodule_status.sh` script was created to generate `index/submodules_status.txt` for reviewing submodule states.
 *   **Documentation Updates:**
     *   A memo `docs/review_findings/Git_Lock_File_Issue.md` was created to explain the Git lock file issue, emphasizing its cause (parallel operations) and the resolution (sequential processing).
     *   The `GEMINI.md` operational guidelines were updated with a strict "Git Operations Policy" to prevent accidental deletion of Git files/locks and to enforce the use of branches and rewrites.
 *   **`vendor/nix/flake.nix` Review:** It was confirmed that `vendor/nix/flake.nix` is already correctly configured and does not require further updates for submodule aggregation.
 *   **Tagging:** Tagging of submodules is currently skipped as per user request.
+*   **URL Vendorization:** `scripts/vendorize_flake_urls.sh` and `scripts/apply_vendorized_urls.sh` were created and executed to update `flake.nix` URLs to point to `meta-introspector` forks with the `feature/CRQ-016-nixify` branch.
+*   **Documentation Enhancement CRQ:** `docs/crqs/CRQ_017_Documentation_Enhancement.md` has been created to formalize the plan for documentation improvements.
+*   **New Tutorials:** `docs/tutorials/Onboarding_Guide.md`, `docs/tutorials/Git_Submodule_Guide.md`, and `docs/tutorials/Nix_Development_Basics.md` have been created.
 
 ## Next Steps:
 
-1.  **Execute Submodule Commit and Push Script:** Run `scripts/commit_all_submodule_changes.sh` to commit and push any remaining modified/untracked files or new commits within the submodules. This script processes submodules sequentially to avoid Git lock issues.
-2.  **Commit Main Repository Changes:** Stage and commit changes in the main repository, including:
-    *   `.gitignore` modifications.
-    *   Updates to submodule gitlink entries (which reflect the submodule commits).
-    *   New untracked files like `logs/inject_submodule_env.log` and `scripts/commit_workflow.sh`.
-    Use a commit message associated with CRQ-016.
-3.  **Push Main Repository Changes:** Push the committed changes in the main repository to its remote.
+1.  **Continue Documentation Enhancement (CRQ-017):**
+    *   Create `docs/tutorials/Contributing_with_CRQs_and_SOPs.md`.
+    *   Review and update all existing SOPs in `docs/sops/` for accuracy and completeness.
+    *   Update `GEMINI.md` (project root) to summarize documentation efforts.
+    *   Ensure `docs/memos/Shellcheck_Always_After_Changes.md` is properly referenced and integrated into relevant SOPs.
+2.  **Address `nixpacks` submodule issue:**
+    *   Run `scripts/vendorize_and_fork_submodule.sh` for `nixpacks` to fork it under `meta-introspector` and update its remote.
+    *   Update the main repository's `.gitmodules` to point to the new `meta-introspector` fork.
+    *   Commit and push changes in the main repository.
+    *   Re-run `scripts/commit_all_submodule_changes.sh` to push `flake.nix` changes within `nixpacks`.
+    *   Verify the status.

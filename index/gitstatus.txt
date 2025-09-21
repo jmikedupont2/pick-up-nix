@@ -1,42 +1,10 @@
 On branch feature/CRQ-016-nixify-workflow
-Your branch is ahead of 'origin/feature/CRQ-016-nixify-workflow' by 2 commits.
-  (use "git push" to publish your local commits)
-
-Changes to be committed:
-  (use "git restore --staged <file>..." to unstage)
-	modified:   env.sh
-	modified:   files.sh
-	modified:   find_submodules.sh
-	modified:   fix_submodules.sh
-	modified:   flake.lock
-	modified:   flake.nix
-	modified:   gemini_cli.sh
-	modified:   gemini_cli_recent.sh
-	modified:   gettargets.sh
-	modified:   index/gitstatus.txt
-	modified:   install_nagios.sh
-	modified:   install_service2.sh
-	modified:   install_service3.sh
-	new file:   nixboot.sh
-	modified:   petals.sh
-	modified:   scripts/branch_and_push_all.sh
-	modified:   scripts/build_generic_nix_submodule.sh
-	modified:   scripts/generate_refactoring_sed_scripts.sh
-	modified:   scripts/gitstatus.sh
-	modified:   scripts/launch_crq_session.sh
-	modified:   scripts/lib_git_submodule.sh
-	modified:   scripts/nix_urls.sh
-	modified:   scripts/recover.sh
-	modified:   scripts/run_gemini.sh
-	modified:   scripts/run_submodule_setup.sh
-	modified:   scripts/stars.sh
-	modified:   update_submodule_flakes.sh
-	modified:   update_submodule_shas.sh
+Your branch is up to date with 'origin/feature/CRQ-016-nixify-workflow'.
 
 Changes not staged for commit:
   (use "git add <file>..." to update what will be committed)
   (use "git restore <file>..." to discard changes in working directory)
-	modified:   flake.lock
 	modified:   index/gitstatus.txt
 	modified:   index/submodules_status.txt
 
+no changes added to commit (use "git add" and/or "git commit -a")
