@@ -1,6 +1,6 @@
 [submodule "nixpacks"]
 	path = nixpacks
-	url = https://github.com/railwayapp/nixpacks
+	url = https://github.com/meta-introspector/nixpacks
 [submodule "vendor/rust-index-guix"]
 	path = vendor/rust-index-guix
 	url = https://github.com/meta-introspector/rust-index-guix
