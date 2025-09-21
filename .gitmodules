@@ -294,3 +294,18 @@
 [submodule "vendor/tools/detect-duplicates"]
 	path = vendor/tools/detect-duplicates
 	url = https://github.com/meta-introspector/detect-duplicates
+[submodule "vendor/nix/fenix"]
+	path = vendor/nix/fenix
+	url = https://github.com/nix-community/fenix.git
+[submodule "vendor/nix/nix-systems-default"]
+	path = vendor/nix/nix-systems-default
+	url = https://github.com/nix-systems/default.git
+[submodule "vendor/nix/nix-systems-default-fork"]
+	path = vendor/nix/nix-systems-default-fork
+	url = https://github.com/nix-systems/default.git
+[submodule "vendor/nix/home-manager"]
+	path = vendor/nix/home-manager
+	url = https://github.com/nix-community/home-manager.git
+[submodule "vendor/nix/nix-asciinema-agg"]
+	path = vendor/nix/nix-asciinema-agg
+	url = https://github.com/a-h/nix-asciinema-agg.git
