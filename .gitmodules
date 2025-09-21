@@ -203,9 +203,7 @@
 	path = vendor/nixpkgs
 	url = https://github.com/NixOS/nixpkgs
 
-[submodule "data"]
-	path = data
-	url = /data/data/com.termux.nix/files/home/git/data/
+
 
 [submodule "vendor/plantuml-stdlib/C4-PlantUML"]
 	path = vendor/plantuml-stdlib/C4-PlantUML
