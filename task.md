@@ -76,6 +76,8 @@ current change request :   docs/crqs/CRQ_018_Automated_GitHub_Forking.md Read an
     *   Full implementation of forking functionality is pending the secure credential handling solution from CRQ-019.
 *   **CRQ-019 (Secure Credential Handling):**
     *   `docs/crqs/CRQ_019_Secure_Credential_Handling_in_Nix_Scripts.md` and `docs/sops/SOP_Secure_Credential_Handling_in_Nix_Scripts.md` have been created to formalize the approach to secure credential management.
+*   **CRQ-020 (Automated Solution Discovery and Vendorization):**
+    *   `docs/crqs/CRQ_020_Automated_Solution_Discovery_and_Vendorization.md` has been created to formalize the process of automated solution discovery and vendorization.
 
 ## Next Steps:
 
