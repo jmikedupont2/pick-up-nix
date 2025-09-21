@@ -1,6 +1,4 @@
-[submodule "nixpacks"]
-	path = nixpacks
-	url = https://github.com/meta-introspector/nixpacks
+
 [submodule "vendor/rust-index-guix"]
 	path = vendor/rust-index-guix
 	url = https://github.com/meta-introspector/rust-index-guix
@@ -282,6 +280,7 @@
 [submodule "vendor/lint/cachix-git-hooks.nix"]
 	path = vendor/lint/cachix-git-hooks.nix
 	url = https://github.com/cachix/git-hooks.nix
+
 [submodule "vendor/nix/nixpacks"]
 	path = vendor/nix/nixpacks
 	url = https://github.com/meta-introspector/nixpacks
@@ -309,3 +308,6 @@
 [submodule "vendor/nix/nix-asciinema-agg"]
 	path = vendor/nix/nix-asciinema-agg
 	url = https://github.com/a-h/nix-asciinema-agg.git
+[submodule "vendor/external/fenix"]
+	path = vendor/external/fenix
+	url = https://github.com/nix-community/fenix
