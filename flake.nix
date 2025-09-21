@@ -28,6 +28,7 @@
       {
         packages = { # Re-add the packages section
           template-generator-bin = template-generator-bin.packages.${system}.default;
+          meta-introspector-repos = import ./pkgs/meta-introspector-repos { inherit pkgs; };
           default = self.packages.${system}.template-generator-bin; # Set default to it
         };
 
@@ -36,6 +37,7 @@
             rustVersions.nightly_2025_09_16 # Use the pinned nightly toolchain
 	    which 
             gawk # For awk
+            jq
           ];
         };
 

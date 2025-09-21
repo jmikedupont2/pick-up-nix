@@ -27,3 +27,4 @@ This Standard Operating Procedure (SOP) outlines the steps for updating all Git 
 *   [SOP: Submodule Nixification and Flake Refactoring](docs/sops/SOP_Submodule_Nixification.md)
 *   `docs/sops/sop_add_mkaiderivation_submodule.md`
 *   `tools/update_all_submodules.sh`
+*   [Memo: Use Shellcheck Always After Changes](docs/memos/Shellcheck_Always_After_Changes.md)

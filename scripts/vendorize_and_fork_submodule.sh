@@ -5,12 +5,13 @@
 
 ORIGINAL_REPO_URL="$1"
 SUBMODULE_PATH="$2"
+FORK_NAME="$3" # New argument for the forked repository name
 TARGET_BRANCH="feature/CRQ-016-nixify"
 META_INTROSPECTOR_ORG="meta-introspector"
 
 if [ -z "$ORIGINAL_REPO_URL" ] || [ -z "$SUBMODULE_PATH" ]; then
-    echo "Usage: $0 <original_repo_url> <submodule_path>"
-    echo "Example: $0 github:numtide/flake-utils vendor/nix/flake-utils"
+    echo "Usage: $0 <original_repo_url> <submodule_path> [fork_name]"
+    echo "Example: $0 github:numtide/flake-utils vendor/nix/flake-utils flake-utils-fork"
     exit 1
 fi
 
@@ -18,9 +19,14 @@ echo "Vendorizing $ORIGINAL_REPO_URL to $SUBMODULE_PATH"
 
 if [[ "$ORIGINAL_REPO_URL" =~ ^github:([^/]+)/([^/]+)$ ]]; then
     HTTPS_REPO_URL="https://github.com/${BASH_REMATCH[1]}/${BASH_REMATCH[2]}.git"
+    ORIGINAL_REPO_BASENAME="${BASH_REMATCH[2]}"
 else
     HTTPS_REPO_URL="$ORIGINAL_REPO_URL"
+    ORIGINAL_REPO_BASENAME=$(basename "$ORIGINAL_REPO_URL" .git)
 fi
+
+# Determine the name of the forked repository
+FORKED_REPO_NAME="${FORK_NAME:-$ORIGINAL_REPO_BASENAME}"
 
 # Check if submodule already exists
 if [ -d "$SUBMODULE_PATH" ]; then
@@ -38,13 +44,23 @@ fi
     cd "$SUBMODULE_PATH" || exit 1
 
     # Ensure the meta-introspector remote exists and is correct
-    META_INTROSPECTOR_REMOTE_URL="https://github.com/${META_INTROSPECTOR_ORG}/$(basename "$ORIGINAL_REPO_URL").git"
+    META_INTROSPECTOR_REMOTE_URL="https://github.com/${META_INTROSPECTOR_ORG}/${FORKED_REPO_NAME}.git"
     if git remote | grep -q "^${META_INTROSPECTOR_ORG}"$; then
         echo "Remote '${META_INTROSPECTOR_ORG}' already exists. Setting URL."
         git remote set-url "${META_INTROSPECTOR_ORG}" "$META_INTROSPECTOR_REMOTE_URL"
     else
         echo "Adding remote '${META_INTROSPECTOR_ORG}' with URL $META_INTROSPECTOR_REMOTE_URL"
         git remote add "${META_INTROSPECTOR_ORG}" "$META_INTROSPECTOR_REMOTE_URL"
+    fi
+
+    # Attempt to fork the repository if it doesn't exist in the meta-introspector organization
+    if ! gh repo view "${META_INTROSPECTOR_ORG}/${FORKED_REPO_NAME}" &>/dev/null; then
+        echo "Forking ${ORIGINAL_REPO_URL} to ${META_INTROSPECTOR_ORG}/${FORKED_REPO_NAME}..."
+        gh repo fork "${ORIGINAL_REPO_URL}" --org "${META_INTROSPECTOR_ORG}" --clone=false --fork-name "${FORKED_REPO_NAME}"
+        if [ $? -ne 0 ]; then
+            echo "Error: Failed to fork repository. Please ensure gh CLI is authenticated and has permissions."
+            exit 1
+        fi
     fi
 
     # Fetch the target branch from the meta-introspector remote
@@ -78,3 +94,4 @@ fi
 )
 
 echo "Finished vendorizing and forking $SUBMODULE_PATH."
+

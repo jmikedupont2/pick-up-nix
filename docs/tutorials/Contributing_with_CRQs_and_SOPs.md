@@ -1,47 +1,44 @@
 # Contributing with CRQs and SOPs
 
-This tutorial outlines the process for contributing to the project using Change Requests (CRQs) and Standard Operating Procedures (SOPs).
+This tutorial outlines the process for contributing to the project by adhering to Change ReQuests (CRQs) and Standard Operating Procedures (SOPs). Following these guidelines ensures consistency, maintainability, and auditable changes within the project.
 
-## 1. Understanding CRQs
+## 1. Understanding CRQs (Change ReQuests)
 
-Change Requests (CRQs) are formal documents that describe significant changes to the project. They provide a structured approach to proposing, reviewing, and implementing changes.
+CRQs are formal documents that define significant changes to the project. They provide:
+*   **Problem Statement:** What issue is being addressed.
+*   **Proposed Solution:** How the issue will be resolved.
+*   **Scope:** The boundaries of the change.
+*   **Technical Details:** In-depth explanation of the implementation.
+*   **Testing Plan:** How the change will be verified.
+*   **Rollback Plan:** How to revert the change if necessary.
 
-*   **Purpose:** To document the rationale, scope, technical details, and impact of a change.
-*   **Location:** CRQ documents are stored in the `docs/crqs/` directory.
-*   **Key Elements:** Each CRQ typically includes a problem statement, proposed solution, scope, technical design, testing plan, and rollback strategy.
+**When contributing:**
+*   Always check the `docs/crqs/` directory for existing CRQs related to your task.
+*   If your contribution is significant and not covered by an existing CRQ, propose a new one.
+*   Reference the relevant CRQ number in your commit messages.
 
-## 2. Understanding SOPs
+## 2. Adhering to SOPs (Standard Operating Procedures)
 
-Standard Operating Procedures (SOPs) are detailed, step-by-step instructions for performing recurring tasks within the project. They ensure consistency, reproducibility, and efficiency.
+SOPs are detailed, step-by-step instructions for performing recurring tasks. They ensure consistency and reproducibility.
 
-*   **Purpose:** To provide clear, unambiguous instructions for common operations.
-*   **Location:** SOP documents are stored in the `docs/sops/` directory.
-*   **Content:** SOPs cover prerequisites, step-by-step procedures, verification methods, and troubleshooting tips.
+**When contributing:**
+*   Consult the `docs/sops/` directory for SOPs relevant to your task (e.g., submodule management, Nixification).
+*   Follow the instructions precisely.
+*   If an SOP is outdated or missing for a common task, propose an update or a new SOP.
 
-## 3. Contribution Workflow
+## 3. General Contribution Workflow
 
-When contributing a significant change or a new recurring task, follow these general steps:
+1.  **Identify a Task:** This could be a bug fix, a new feature, or a refactoring effort.
+2.  **Check for CRQs:** See if an existing CRQ covers your task. If not, consider creating one.
+3.  **Consult SOPs:** Review relevant SOPs for guidance on how to perform the task.
+4.  **Create a Branch:** Always work on a new branch for your changes.
+5.  **Implement Changes:** Write code, update configurations, etc., following project conventions.
+6.  **Write Tests:** Ensure your changes are covered by appropriate tests.
+7.  **Update Documentation:** If your changes affect functionality or procedures, update relevant documentation (e.g., `README.md`, `docs/tutorials/`, `docs/sops/`).
+8.  **Commit Changes:**
+    *   Write clear and concise commit messages.
+    *   **Always reference the CRQ number** (e.g., `CRQ-016: Implement feature X`).
+9.  **Push Changes:** Push your branch to the remote repository.
+10. **Create a Pull Request:** Submit a pull request for review.
 
-1.  **Propose a CRQ (if applicable):** For major changes, start by drafting a CRQ document in `docs/crqs/` outlining your proposed change.
-2.  **Develop an SOP (if applicable):** If your change introduces a new recurring task or significantly alters an existing one, create or update an SOP in `docs/sops/`.
-3.  **Implement the Change:** Make your code changes, adhering to project conventions and best practices.
-4.  **Update Documentation:** Ensure all relevant documentation, including `README.md`, `GEMINI.md`, and any affected tutorials, are updated to reflect your changes.
-5.  **Testing and Verification:** Thoroughly test your changes and verify that they meet the requirements outlined in your CRQ and SOP.
-6.  **Submit for Review:** Submit your changes for review, ensuring all CRQ and SOP documents are included and up-to-date.
-
-## 4. Referencing CRQs and SOPs in Commits
-
-Always reference the relevant CRQ number in your commit messages. This helps link code changes directly to the documented change request.
-
-Example Commit Message:
-
-```
-feat: Implement new user authentication flow (CRQ-016)
-
-This commit introduces the new user authentication flow as defined in CRQ-016.
-It includes updates to the login module and associated tests.
-```
-
-## 5. Shellcheck Integration
-
-After any changes to shell scripts, always run `shellcheck` to ensure script quality and adherence to best practices. Refer to `docs/memos/Shellcheck_Always_After_Changes.md` for detailed instructions.
+By following this process, your contributions will be well-documented, easily auditable, and seamlessly integrated into the project.

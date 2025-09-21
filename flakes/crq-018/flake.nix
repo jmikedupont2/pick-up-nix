@@ -7,7 +7,7 @@
 
   outputs = { self, nixpkgs }:
     let
-      system = "x86_64-linux"; # Assuming x86_64-linux, adjust if needed
+      system = "aarch64-linux"; # Adjusted to user's system architecture
       pkgs = import nixpkgs { inherit system; };
     in
     {
@@ -16,6 +16,19 @@
           jq
           gh
         ];
+      };
+
+      packages.${system}.default = pkgs.stdenv.mkDerivation {
+        pname = "automate-dependency-forking-script";
+        version = "0.1.0";
+        src = builtins.path { path = ../../scripts; };
+        dontUnpack = true;
+        installPhase = ''
+          ls -R
+          mkdir -p $out/bin
+          cp automate_dependency_forking.sh $out/bin/automate-dependency-forking.sh
+          chmod +x $out/bin/automate_dependency_forking.sh
+        '';
       };
     };
 }

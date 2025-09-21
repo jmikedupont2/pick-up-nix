@@ -228,11 +228,11 @@
       "locked": {
         "lastModified": 1,
         "narHash": "sha256-hb9qghTJHN5p6/CzKWpYAql9VBuMSSpN1Y8+SQL91Ds=",
-        "path": "/nix/store/a9khx6blrgq4fjv3ni49bkf0wmfk9qvp-source/tools/template_generator_bin",
+        "path": "/nix/store/3f3km7nv1y4lcwaybr3amlmncm31rnwd-source/tools/template_generator_bin",
         "type": "path"
       },
       "original": {
-        "path": "/nix/store/a9khx6blrgq4fjv3ni49bkf0wmfk9qvp-source/tools/template_generator_bin",
+        "path": "/nix/store/3f3km7nv1y4lcwaybr3amlmncm31rnwd-source/tools/template_generator_bin",
         "type": "path"
       }
     }

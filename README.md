@@ -156,6 +156,14 @@ This section provides an overview of the current status of CRQ-016.
 *   **Main Repository Updates:** Completed. The main repository's `flake.lock`, `flake.nix`, and other relevant files have been updated, committed, and pushed.
 *   **Documentation Updates:** In Progress. `GEMINI.md` and `README.md` are being updated. `docs/sops/` and `docs/tutorials/` are next.
 
+## Current CRQ: CRQ-018: Automated GitHub Forking for Nix Flake Dependencies
+
+This CRQ is currently in progress. It aims to automate the forking of external GitHub dependencies into the `meta-introspector` organization to mitigate supply chain risks. Details can be found in `docs/crqs/CRQ_018_Automated_GitHub_Forking.md`.
+
+## Shell Script Refactoring Initiative
+
+An ongoing initiative is to refactor existing shell scripts (`*.sh` and `scripts/*.sh`) into reusable functions and libraries to promote the Don't Repeat Yourself (DRY) principle and improve maintainability. This will be applied as new scripts are developed and existing ones are modified.
+
 # Emacs Integration
 
 To work with Emacs within the Nix environment:
