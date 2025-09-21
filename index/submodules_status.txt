@@ -2,14 +2,8 @@ Entering '.github/actions/cache'
 HEAD detached at ec7a111
 nothing to commit, working tree clean
 Entering '.github/actions/cache-nix-action'
-HEAD detached at e2cf51d
-Changes not staged for commit:
-  (use "git add <file>..." to update what will be committed)
-  (use "git restore <file>..." to discard changes in working directory)
-	modified:   examples/saveFromGC/flake.nix
-	modified:   flake.nix
-
-no changes added to commit (use "git add" and/or "git commit -a")
+On branch feature/CRQ-016-nixify-workflow
+nothing to commit, working tree clean
 Entering '.github/actions/cache-nix-action/deps/actions/toolkit'
 HEAD detached at 9dd89564
 nothing to commit, working tree clean
@@ -32,28 +26,19 @@ Entering '.github/actions/upload-artifact'
 HEAD detached at 9de00bc
 nothing to commit, working tree clean
 Entering 'nixpacks'
-HEAD detached at 1234b3b
-Changes not staged for commit:
-  (use "git add <file>..." to update what will be committed)
-  (use "git restore <file>..." to discard changes in working directory)
-	modified:   flake.nix
+On branch feature/CRQ-016-nixify
+Your branch is up to date with 'meta-introspector/feature/CRQ-016-nixify'.
 
-no changes added to commit (use "git add" and/or "git commit -a")
+nothing to commit, working tree clean
 Entering 'source/github/jmikedupont2/orgs/Escaped-RDFa/namespace'
-HEAD detached at b62c6ee
-Changes not staged for commit:
-  (use "git add <file>..." to update what will be committed)
-  (use "git restore <file>..." to discard changes in working directory)
-	modified:   flake.nix
-
-no changes added to commit (use "git add" and/or "git commit -a")
+On branch feature/CRQ-016-nixify-workflow
+nothing to commit, working tree clean
 Entering 'source/github/meta-introspector/git-submodule-tools-rs'
 On branch feature/CRQ-016-nixify-workflow
 Changes not staged for commit:
   (use "git add <file>..." to update what will be committed)
   (use "git restore <file>..." to discard changes in working directory)
-  (commit or discard the untracked or modified content in submodules)
-	modified:   vendor/meta-introspector/mkAIDerivation (modified content)
+	modified:   vendor/meta-introspector/mkAIDerivation (new commits)
 
 no changes added to commit (use "git add" and/or "git commit -a")
 Entering 'source/github/meta-introspector/git-submodule-tools-rs/vendor/cargo_metadata'
@@ -66,13 +51,8 @@ Entering 'source/github/meta-introspector/git-submodule-tools-rs/vendor/meta-int
 HEAD detached at c5ca5fb
 nothing to commit, working tree clean
 Entering 'source/github/meta-introspector/git-submodule-tools-rs/vendor/meta-introspector/mkAIDerivation'
-HEAD detached at d79de32
-Changes not staged for commit:
-  (use "git add <file>..." to update what will be committed)
-  (use "git restore <file>..." to discard changes in working directory)
-	modified:   flake.nix
-
-no changes added to commit (use "git add" and/or "git commit -a")
+On branch feature/CRQ-016-nixify-workflow
+nothing to commit, working tree clean
 Entering 'source/github/meta-introspector/git-submodule-tools-rs/vendor/octocrab'
 HEAD detached at 1ca87c2
 nothing to commit, working tree clean
@@ -157,30 +137,17 @@ Changes not staged for commit:
   (use "git add <file>..." to update what will be committed)
   (use "git restore <file>..." to discard changes in working directory)
   (commit or discard the untracked or modified content in submodules)
-	modified:   .emacs.d/nix-magit (modified content)
-	modified:   .emacs.d/terlar-emacs-config (modified content)
+	modified:   .emacs.d/nix-magit (new commits)
+	modified:   .emacs.d/terlar-emacs-config (new commits)
 	modified:   naersk (modified content)
 
 no changes added to commit (use "git add" and/or "git commit -a")
 Entering 'source/github/meta-introspector/git-submodules-rs-nix/.emacs.d/nix-magit'
 On branch feature/CRQ-016-nixify-workflow
-Changes not staged for commit:
-  (use "git add <file>..." to update what will be committed)
-  (use "git restore <file>..." to discard changes in working directory)
-	modified:   flake.nix
-
-no changes added to commit (use "git add" and/or "git commit -a")
+nothing to commit, working tree clean
 Entering 'source/github/meta-introspector/git-submodules-rs-nix/.emacs.d/terlar-emacs-config'
-On branch main
-Your branch is up to date with 'origin/main'.
-
-Changes not staged for commit:
-  (use "git add <file>..." to update what will be committed)
-  (use "git restore <file>..." to discard changes in working directory)
-	modified:   dev/flake.nix
-	modified:   flake.nix
-
-no changes added to commit (use "git add" and/or "git commit -a")
+On branch feature/CRQ-016-nixify-workflow
+nothing to commit, working tree clean
 Entering 'source/github/meta-introspector/git-submodules-rs-nix/git-submodule-tools'
 On branch master
 Your branch is up to date with 'origin/master'.
@@ -197,8 +164,8 @@ Your branch is up to date with 'origin/main'.
 
 nothing to commit, working tree clean
 Entering 'source/github/meta-introspector/git-submodules-rs-nix/naersk'
-On branch master
-Your branch is up to date with 'origin/master'.
+On branch feature/CRQ-016-nixify
+Your branch is up to date with 'origin/feature/CRQ-016-nixify'.
 
 Changes not staged for commit:
   (use "git add <file>..." to update what will be committed)
@@ -15316,8 +15283,8 @@ Changes not staged for commit:
 
 no changes added to commit (use "git add" and/or "git commit -a")
 Entering 'vendor/nix/flake-utils'
-On branch main
-Your branch is up to date with 'origin/main'.
+On branch feature/CRQ-016-nixify
+Your branch is up to date with 'origin/feature/CRQ-016-nixify'.
 
 Changes not staged for commit:
   (use "git add <file>..." to update what will be committed)
@@ -15420,9 +15387,11 @@ Your branch is up to date with 'origin/canon'.
 
 nothing to commit, working tree clean
 Entering 'vendor/nixpkgs'
-HEAD detached at 26833ad1dad8
+On branch feature/CRQ-016-nixify
+Your branch is up to date with 'origin/feature/CRQ-016-nixify'.
 
-It took 7.29 seconds to enumerate untracked files.
+
+It took 9.07 seconds to enumerate untracked files.
 See 'git help status' for information on how to improve this.
 
 nothing to commit, working tree clean

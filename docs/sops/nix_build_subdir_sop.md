@@ -1,4 +1,17 @@
-# Building Nix Flakes in Subdirectories: Troubleshooting and Solutions
+# SOP: Building Nix Flakes in Subdirectories: Troubleshooting and Solutions
+
+## 1. Purpose
+
+This Standard Operating Procedure (SOP) provides guidance and solutions for troubleshooting issues encountered when building Nix flakes located in subdirectories. It addresses common problems related to Nix version compatibility and flake resolution, ensuring modular development and isolated building of components within a larger Nix-managed project.
+
+## 2. Scope
+
+This SOP applies to developers and contributors working with Nix flakes in subdirectories, particularly within projects that utilize Git submodules or other nested flake structures.
+
+## 3. Prerequisites
+
+*   Nix installed on your system.
+*   Familiarity with basic Nix flake concepts and commands.
 
 ## Problem:
 `nix build` and `nix-build` commands fail to build flakes located in subdirectories when executed from within those subdirectories, or when attempting to specify the local flake.
@@ -24,3 +37,7 @@ Prevents modular development and isolated building of components within a larger
 
 ## Verification:
 After implementing a solution, verify by successfully building the sub-flake in isolation.
+
+## Related Documents:
+*   [CRQ-016: Submodule Nixification and Flake Refactoring](docs/crqs/CRQ_016_Submodule_Nixification.md)
+*   [Memo: Use Shellcheck Always After Changes](docs/memos/Shellcheck_Always_After_Changes.md)

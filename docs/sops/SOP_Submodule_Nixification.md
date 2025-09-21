@@ -14,7 +14,7 @@ This SOP applies to all submodules located under the `vendor/nix/` directory tha
 *   `nix` package manager installed and configured.
 *   `gh` (GitHub CLI) installed and authenticated.
 *   Familiarity with basic Git and Nix flake concepts.
-*   The `scripts/` directory contains the necessary automation scripts (`branch_and_push_all.sh`, `commit_and_push_flakes.sh`, `commit_crq_submodule.sh`, `fix_submodule.sh`, `inject_submodule_env.sh`, `nixify.sh`, `nixify_vendor_nix.sh`, `commit_workflow.sh`).
+*   The `scripts/` directory contains the necessary automation scripts (`branch_and_push_all.sh`, `commit_and_push_flakes.sh`, `commit_crq_submodule.sh`, `fix_submodule.sh`, `inject_submodule_env.sh`, `nixify.sh`, `nixify_vendor_nix.sh`, `commit_workflow.sh`, `vendorize_flake_urls.sh`, `apply_vendorized_urls.sh`).
 *   The `scripts/flake.template` file exists and contains the desired base `flake.nix` structure.
 
 ## 4. Procedure
@@ -88,3 +88,6 @@ This SOP applies to all submodules located under the `vendor/nix/` directory tha
 *   `scripts/nixify.sh` documentation
 *   `scripts/nixify_vendor_nix.sh` documentation
 *   `scripts/commit_workflow.sh` documentation
+*   `scripts/vendorize_flake_urls.sh` documentation
+*   `scripts/apply_vendorized_urls.sh` documentation
+*   [Memo: Use Shellcheck Always After Changes](docs/memos/Shellcheck_Always_After_Changes.md)

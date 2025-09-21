@@ -63,5 +63,7 @@ For a series of complex refactoring operations, it is recommended to create a de
 
 ## 6. Related Documentation
 
+*   [CRQ-016: Submodule Nixification and Flake Refactoring](docs/crqs/CRQ_016_Submodule_Nixification.md)
+*   [Memo: Use Shellcheck Always After Changes](docs/memos/Shellcheck_Always_After_Changes.md)
 *   [scripts/lib_git_submodule.sh](scripts/lib_git_submodule.sh)
 *   [Git Access Policy](docs/standards/Git_Access_Policy.md)

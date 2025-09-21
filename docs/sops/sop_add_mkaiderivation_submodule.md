@@ -37,5 +37,7 @@ This Standard Operating Procedure (SOP) outlines the steps for adding the `mkAID
     ```
 
 ## Related Documents:
+*   [CRQ-016: Submodule Nixification and Flake Refactoring](docs/crqs/CRQ_016_Submodule_Nixification.md)
+*   [Memo: Use Shellcheck Always After Changes](docs/memos/Shellcheck_Always_After_Changes.md)
 *   `docs/sops/sop_update_submodules.md`
 *   `tools/add_mkaiderivation_submodule.sh`

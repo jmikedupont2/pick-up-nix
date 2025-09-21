@@ -23,5 +23,7 @@ This Standard Operating Procedure (SOP) outlines the steps for updating all Git 
     ```
 
 ## Related Documents:
+*   [CRQ-016: Submodule Nixification and Flake Refactoring](docs/crqs/CRQ_016_Submodule_Nixification.md)
+*   [SOP: Submodule Nixification and Flake Refactoring](docs/sops/SOP_Submodule_Nixification.md)
 *   `docs/sops/sop_add_mkaiderivation_submodule.md`
 *   `tools/update_all_submodules.sh`

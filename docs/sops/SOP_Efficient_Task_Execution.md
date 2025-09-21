@@ -40,6 +40,8 @@ This SOP applies to all interactions and task executions performed by the agent 
 -   **Log Review**: Review relevant logs (e.g., `shell.log`, build logs) for errors or unexpected output after executing commands.
 
 ## Related Documents:
+- [CRQ-016: Submodule Nixification and Flake Refactoring](docs/crqs/CRQ_016_Submodule_Nixification.md)
+- [Memo: Use Shellcheck Always After Changes](docs/memos/Shellcheck_Always_After_Changes.md)
 - `docs/crqs/CRQ_Enhance_Task_Execution_Efficiency.md`
 
 ## Revision History:

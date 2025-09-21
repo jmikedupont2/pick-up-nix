@@ -51,5 +51,6 @@ The project provides a convenience script, `scripts/vendorize_and_fork_submodule
 ## 6. Related Documentation
 
 *   [CRQ-002: Nixtract Integration and Quality](docs/crqs/CRQ_002_Nixtract_Integration_and_Quality.md)
+*   [CRQ-016: Submodule Nixification and Flake Refactoring](docs/crqs/CRQ_016_Submodule_Nixification.md)
 *   [SOP: Building a Generic Nix Submodule](docs/sops/SOP_Build_Generic_Nix_Submodule.md)
 *   [Tutorial: Vendorizing and Forking Git Submodules](docs/tutorials/Tutorial_Vendorize_And_Fork_Submodule.md)

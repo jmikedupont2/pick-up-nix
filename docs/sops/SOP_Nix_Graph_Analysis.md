@@ -76,6 +76,8 @@ Compile the findings from the analysis into a human-readable report. The report 
 
 ## 6. Related Documentation
 
+*   [CRQ-016: Submodule Nixification and Flake Refactoring](docs/crqs/CRQ_016_Submodule_Nixification.md)
+*   [Memo: Use Shellcheck Always After Changes](docs/memos/Shellcheck_Always_After_Changes.md)
 *   [SOP: Nixtract Usage and Graph Generation](docs/sops/SOP_Nixtract_Usage.md)
 *   [CRQ-001: Nix Package Indexing and Reporting](docs/crqs/CRQ_001_Nix_Package_Indexing_and_Reporting.md)
 *   [CRQ-002: Nixtract Integration and Quality](docs/crqs/CRQ_002_Nixtract_Integration_and_Quality.md)

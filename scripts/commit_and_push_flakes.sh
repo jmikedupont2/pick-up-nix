@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+source "$(dirname "$0")/lib_git_submodule.sh"
+
 set -e
 
 # TAG_NAME is skipped for now as per user request
@@ -45,25 +47,9 @@ for submodule_path in $SUBMODULE_PATHS; do
         cd "$submodule_path"
         echo "Pushing changes..."
 
-        # The remote handling logic is still needed here
-        if git remote get-url origin &>/dev/null && ! git remote get-url origin | grep -q "meta-introspector"; then
-            git remote rename origin upstream
-        fi
-        meta_introspector_url="https://github.com/meta-introspector/$repo.git"
-        if git remote | grep -q "^origin$"; then
-            git remote set-url origin "$meta_introspector_url"
-        else
-            git remote add origin "$meta_introspector_url"
-        fi
-        if ! gh repo view "meta-introspector/$repo" --json name --jq . >/dev/null 2>&1; then
-            if gh repo fork --org meta-introspector --remote; then
-                sleep 5
-            else
-                exit 1
-            fi
-        fi
+        ensure_meta_introspector_remote_and_fork "$repo"
 
-        git push origin HEAD
+        git push origin HEAD || { git pull --rebase origin HEAD && git push origin HEAD; }
         # git tag -f "$TAG_NAME" # Tagging skipped
         # git push origin "$TAG_NAME" --force # Tagging skipped
     )

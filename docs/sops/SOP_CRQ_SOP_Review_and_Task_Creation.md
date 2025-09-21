@@ -58,6 +58,8 @@ Based on the review of CRQs and SOPs, generate a list of new tasks. Each new tas
 -   Document the findings of the CRQ and SOP review, including identified gaps, areas for improvement, and the rationale behind the new tasks. This can be a simple markdown file or an update to a project status document.
 
 ## Related Documents:
+- [CRQ-016: Submodule Nixification and Flake Refactoring](docs/crqs/CRQ_016_Submodule_Nixification.md)
+- [Memo: Use Shellcheck Always After Changes](docs/memos/Shellcheck_Always_After_Changes.md)
 - `docs/crqs/` (directory)
 - `docs/sops/` (directory)
 - `prompts/` (directory for new tasks)

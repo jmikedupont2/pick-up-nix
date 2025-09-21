@@ -54,6 +54,8 @@ This SOP applies to all documented memes within the project's `docs/memes/` dire
         *   Any new insights or emergent memes arising from the execution.
 
 ## 6. Related Documents:
+*   [CRQ-016: Submodule Nixification and Flake Refactoring](docs/crqs/CRQ_016_Submodule_Nixification.md)
+*   [Memo: Use Shellcheck Always After Changes](docs/memos/Shellcheck_Always_After_Changes.md)
 *   `docs/sops/meme_identification_sop.md`
 *   `docs/memes/` (all meme files)
 *   Relevant code files (e.g., GNU Mes source, Nix expressions)

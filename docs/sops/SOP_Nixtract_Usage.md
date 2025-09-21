@@ -71,6 +71,8 @@ The `derivations.jsonl` file contains a series of JSON objects, one per line. Ea
 
 ## 7. Related Documentation
 
+*   [CRQ-016: Submodule Nixification and Flake Refactoring](docs/crqs/CRQ_016_Submodule_Nixification.md)
+*   [Memo: Use Shellcheck Always After Changes](docs/memos/Shellcheck_Always_After_Changes.md)
 *   [CRQ-002: Nixtract Integration and Quality](docs/crqs/CRQ_002_Nixtract_Integration_and_Quality.md)
 *   [SOP: Nix Graph Analysis](docs/sops/SOP_Nix_Graph_Analysis.md)
 *   [nixtract GitHub Repository](https://github.com/tweag/nixtract)

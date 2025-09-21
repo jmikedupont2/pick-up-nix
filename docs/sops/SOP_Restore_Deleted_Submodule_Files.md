@@ -55,10 +55,6 @@ Once you are satisfied with the dry run output, proceed with the actual restorat
 
 After the restoration process is complete, verify that the files have been restored correctly:
 
-## 4. Verification
-
-After the restoration process is complete, verify that the files have been restored correctly:
-
 1.  **Check `git status` in the main repository**: Run `git status` in the main project root. You should no longer see "deleted" files staged for commit within the affected submodules. Instead, you might see them as "modified" if there were other changes, or they might be clean.
 2.  **Check `git status` within affected submodules**: Navigate into each submodule directory that was processed and run `git status`. The output should indicate that the working tree is clean or show any other legitimate modifications, but not staged deletions.
 3.  **Inspect files**: Manually check some of the files that were previously marked as deleted to ensure their content has been restored as expected.
@@ -67,3 +63,8 @@ After the restoration process is complete, verify that the files have been resto
 
 *   **Script not found/executable:** Ensure the path to `restore_deleted_submodule_files.sh` is correct and that it has execute permissions (`chmod +x scripts/restore_deleted_submodule_files.sh`).
 *   **Script errors**: If the `restore_deleted_submodule_files.sh` script itself is failing, ensure it passes `shellcheck`. Refer to [Memo: Use Shellcheck Always After Changes](docs/memos/Shellcheck_Always_After_Changes.md) for details.
+
+## 6. Related Documents
+
+*   [CRQ-016: Submodule Nixification and Flake Refactoring](docs/crqs/CRQ_016_Submodule_Nixification.md)
+*   [Memo: Use Shellcheck Always After Changes](docs/memos/Shellcheck_Always_After_Changes.md)

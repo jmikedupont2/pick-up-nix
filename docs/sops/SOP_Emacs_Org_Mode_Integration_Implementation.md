@@ -54,6 +54,9 @@ This SOP applies to the development of Emacs Lisp functions and Org mode configu
 - Test various scenarios, including error conditions and different `gemini-cli` parameters.
 
 ## Related Documents:
+- [CRQ-016: Submodule Nixification and Flake Refactoring](docs/crqs/CRQ_016_Submodule_Nixification.md)
+- [Memo: Use Shellcheck Always After Changes](docs/memos/Shellcheck_Always_After_Changes.md)
+- [Contributing with CRQs and SOPs Tutorial](docs/tutorials/Contributing_with_CRQs_and_SOPs.md)
 - `docs/crqs/CRQ_Emacs_Org_Mode_Integration_for_Gemini_CLI.md`
 - `solfunmeme-gemini.el`
 - Org Mode Manual

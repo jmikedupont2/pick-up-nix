@@ -61,6 +61,8 @@ This allows you to see which dependencies have been updated and to what versions
 
 ## 6. Related Documentation
 
+*   [CRQ-016: Submodule Nixification and Flake Refactoring](docs/crqs/CRQ_016_Submodule_Nixification.md)
+*   [Memo: Use Shellcheck Always After Changes](docs/memos/Shellcheck_Always_After_Changes.md)
 *   [CRQ-002: Nixtract Integration and Quality](docs/crqs/CRQ_002_Nixtract_Integration_and_Quality.md)
 *   [SOP: Building the Nixtract Submodule](docs/sops/SOP_Build_Nixtract_Submodule.md)
 *   [SOP: Nixtract Usage and Graph Generation](docs/sops/SOP_Nixtract_Usage.md)

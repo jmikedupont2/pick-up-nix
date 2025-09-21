@@ -54,6 +54,9 @@ This SOP applies to all development tasks within the project, particularly those
 - Periodically, completed tasks in the `completed_tasks/` directory may be archived or further organized as per project needs.
 
 ## Related Documents:
+- [CRQ-016: Submodule Nixification and Flake Refactoring](docs/crqs/CRQ_016_Submodule_Nixification.md)
+- [Memo: Use Shellcheck Always After Changes](docs/memos/Shellcheck_Always_After_Changes.md)
+- [Contributing with CRQs and SOPs Tutorial](docs/tutorials/Contributing_with_CRQs_and_SOPs.md)
 - `docs/crqs/CRQ_Standardize_Task_Management.md`
 - `task.md`
 

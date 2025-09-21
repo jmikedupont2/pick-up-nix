@@ -54,4 +54,6 @@ The `scripts/search_index.sh` script provides a convenient way to search for a g
 
 ## 6. Related Documentation
 
+*   [CRQ-016: Submodule Nixification and Flake Refactoring](docs/crqs/CRQ_016_Submodule_Nixification.md)
+*   [Memo: Use Shellcheck Always After Changes](docs/memos/Shellcheck_Always_After_Changes.md)
 *   [scripts/search_index.sh](scripts/search_index.sh)

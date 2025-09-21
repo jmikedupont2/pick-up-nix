@@ -4,7 +4,37 @@ Your branch is up to date with 'origin/feature/CRQ-016-nixify-workflow'.
 Changes not staged for commit:
   (use "git add <file>..." to update what will be committed)
   (use "git restore <file>..." to discard changes in working directory)
+	modified:   GEMINI.md
+	modified:   docs/sops/MIB_CRASH_RETRIEVAL_PROTOCOL.md
+	modified:   docs/sops/SOP_Automated_Text_Replacement_with_Sed.md
+	modified:   docs/sops/SOP_Build_Generic_Nix_Submodule.md
+	modified:   docs/sops/SOP_CRQ_SOP_Review_and_Task_Creation.md
+	modified:   docs/sops/SOP_Check_Submodule_Flake_Status.md
+	modified:   docs/sops/SOP_Efficient_Task_Execution.md
+	modified:   docs/sops/SOP_Emacs_Configurable_Items_and_Help_Implementation.md
+	modified:   docs/sops/SOP_Emacs_Org_Mode_Integration_Implementation.md
+	modified:   docs/sops/SOP_Gemini_AI_Context_Lattice.md
+	modified:   docs/sops/SOP_Git_Access_Check.md
+	modified:   docs/sops/SOP_Nix_First_Policy.md
+	modified:   docs/sops/SOP_Nix_Flake_Update.md
+	modified:   docs/sops/SOP_Nix_Graph_Analysis.md
+	modified:   docs/sops/SOP_Nixtract_Usage.md
+	modified:   docs/sops/SOP_Restore_Deleted_Submodule_Files.md
+	modified:   docs/sops/SOP_Searching_Project_Index.md
+	modified:   docs/sops/SOP_Submodule_Nixification.md
+	modified:   docs/sops/SOP_Task_Management_Workflow.md
+	modified:   docs/sops/SOP_Vendorize_And_Fork_Submodule.md
+	modified:   docs/sops/SUBMODULE_SETUP_SOP.md
+	modified:   docs/sops/memetic_code_generation_sop.md
+	modified:   docs/sops/nix_build_subdir_sop.md
+	modified:   docs/sops/solfunmeme-injection.md
+	modified:   docs/sops/solfunmeme_communication_sop.md
+	modified:   docs/sops/sop_add_mkaiderivation_submodule.md
+	modified:   docs/sops/sop_update_submodules.md
+	modified:   docs/tutorials/Contributing_with_CRQs_and_SOPs.md
 	modified:   index/gitstatus.txt
 	modified:   index/submodules_status.txt
+	modified:   scripts/commit_and_push_flakes.sh
+	modified:   scripts/recover.sh
 
 no changes added to commit (use "git add" and/or "git commit -a")

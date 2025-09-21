@@ -78,6 +78,8 @@ This SOP applies to all Emacs Lisp files related to the `gemini-cli` integration
 - Ensure all new `defcustom` variables are properly typed and have sensible default values.
 
 ## Related Documents:
+- [CRQ-016: Submodule Nixification and Flake Refactoring](docs/crqs/CRQ_016_Submodule_Nixification.md)
+- [Memo: Use Shellcheck Always After Changes](docs/memos/Shellcheck_Always_After_Changes.md)
 - `docs/crqs/CRQ_Emacs_Configurable_Items_and_Online_Help.md`
 - `solfunmeme-gemini.el`
 - `solfunmeme-mode.el`

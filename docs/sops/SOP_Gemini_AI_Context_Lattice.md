@@ -79,7 +79,10 @@ Gemini is designed to automatically leverage the information within `GEMINI.md` 
 
 ## 7. Related Documents
 
+*   [CRQ-016: Submodule Nixification and Flake Refactoring](docs/crqs/CRQ_016_Submodule_Nixification.md)
+*   [Memo: Use Shellcheck Always After Changes](docs/memos/Shellcheck_Always_After_Changes.md)
 *   CRQ-017: Formalizing Gemini AI Context as a Primorial Knowledge Lattice
+*   [Contributing with CRQs and SOPs Tutorial](docs/tutorials/Contributing_with_CRQs_and_SOPs.md)
 *   All CRQ documents in `docs/crqs/`
 *   All SOP documents in `docs/sops/`
 *   All tutorial documents in `docs/tutorials/`

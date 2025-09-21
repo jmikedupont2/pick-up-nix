@@ -37,6 +37,9 @@ The "Nix-First" policy mandates that all development, build, and testing process
 *   **"No such file or directory" errors for sources:** Verify that the `src` attribute in your `flake.nix` correctly points to the source directory and that the source is properly tracked by Git.
 *   **Git lock file issues:** These are caused by parallel Git operations. Ensure scripts execute Git commands sequentially. If a lock file persists, it indicates a crashed process, and manual intervention might be required (though this should be rare with sequential operations).
 
-## 7. CRQ Association
+## 7. Related Documents
 
-This SOP is directly associated with CRQ-017: Nix-First Development and Immutable State Policy.
+*   [CRQ-016: Submodule Nixification and Flake Refactoring](docs/crqs/CRQ_016_Submodule_Nixification.md)
+*   [Memo: Use Shellcheck Always After Changes](docs/memos/Shellcheck_Always_After_Changes.md)
+*   [CRQ-017: Nix-First Development and Immutable State Policy](docs/crqs/CRQ_017_Nix_First_Development_and_Immutable_State_Policy.md)
+*   [Contributing with CRQs and SOPs Tutorial](docs/tutorials/Contributing_with_CRQs_and_SOPs.md)

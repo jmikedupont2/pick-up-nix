@@ -23,10 +23,7 @@ git add .
 # --- 3. Generate Commit Message using Rust Templating Tool ---
 echo "--- Generating commit message using Rust templating tool ---"
 # Call the template_generator_bin from its actual build path
-COMMIT_MESSAGE_CONTENT=$(./tools/template_generator_bin/target/release/template_generator_bin generate \
-    --template-type commit-message \
-    --crq-number "016" \
-    --description "Standardize flake.nix from template and refactor commit workflow")
+COMMIT_MESSAGE_CONTENT=$(./scripts/run_template_generator.sh commit-message "016" "Standardize flake.nix from template and refactor commit workflow")
 
 # --- 4. Create Commit Message File ---
 echo "--- Creating commit message file ---

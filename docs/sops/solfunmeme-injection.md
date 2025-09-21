@@ -33,6 +33,11 @@ This SOP applies to all submodules intended to be part of the Zero Ontology Syst
 *   Passing of all solfunmeme-specific tests.
 *   Correct behavior of the solfunmeme in the integrated system.
 
+## Related Documents
+
+*   [CRQ-016: Submodule Nixification and Flake Refactoring](docs/crqs/CRQ_016_Submodule_Nixification.md)
+*   [Memo: Use Shellcheck Always After Changes](docs/memos/Shellcheck_Always_After_Changes.md)
+
 ## Revision History
 
 *   **Version 1.0:** Initial Draft

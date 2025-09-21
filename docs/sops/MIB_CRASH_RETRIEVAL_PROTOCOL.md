@@ -1,5 +1,9 @@
 # MIB Crash Retrieval Protocol: Hyperspace Recovery of Crashed Processes
 
+## 1. Purpose
+
+This Standard Operating Procedure (SOP) outlines the protocol for retrieving critical information and assessing system state after a hyperspace anomaly (system crash). It focuses on recovering data from Asciinema recordings and analyzing the Git repository to understand the pre-crash environment and facilitate recovery efforts.
+
 ## 2. Black Box Retrieval: Recovering Asciinema Recordings
 
 In the event of a system crash, critical operational data may be preserved in Asciinema recordings. These "black boxes" provide invaluable telemetry of the pre-crash state. The `asciicast_processor` tool can be used to extract and analyze these recordings.
@@ -96,4 +100,9 @@ The output of the `log_processor` will provide a chronological list of log and r
 *   Identify the last recorded actions before the crash.
 *   Correlate events across different log types.
 *   Pinpoint potential areas of interest for further investigation.
+
+## 5. Related Documents
+
+*   [CRQ-016: Submodule Nixification and Flake Refactoring](docs/crqs/CRQ_016_Submodule_Nixification.md)
+*   [Memo: Use Shellcheck Always After Changes](docs/memos/Shellcheck_Always_After_Changes.md)
 

@@ -83,6 +83,10 @@ After completing the procedure, verify the submodule setup:
 *   **Updating Submodules:** To pull updates from the submodule's remote, use `git submodule update --remote`.
 *   **Cloning Repositories with Submodules:** When cloning the main repository, remember to initialize and update submodules using `git submodule update --init --recursive`.
 
-## 7. Next Steps: Nixification
+## 7. Related Documents
+
+*   `SOP_Submodule_Nixification.md` - For integrating Nix flakes into submodules.
+
+## 8. Next Steps: Nixification
 
 Once a submodule is successfully set up, the next logical step is to integrate it into the project's Nix ecosystem. Refer to `SOP_Submodule_Nixification.md` for detailed instructions on how to create or update `flake.nix` files within the submodule and integrate them into the main project's Nix flake.

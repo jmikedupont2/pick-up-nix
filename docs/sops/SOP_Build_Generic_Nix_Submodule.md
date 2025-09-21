@@ -43,7 +43,9 @@ The project provides a convenience script, `scripts/build_generic_nix_submodule.
 
 ## 6. Related Documentation
 
+*   [CRQ-016: Submodule Nixification and Flake Refactoring](docs/crqs/CRQ_016_Submodule_Nixification.md)
 *   [CRQ-002: Nixtract Integration and Quality](docs/crqs/CRQ_002_Nixtract_Integration_and_Quality.md)
+*   [Memo: Use Shellcheck Always After Changes](docs/memos/Shellcheck_Always_After_Changes.md)
 *   [SOP: Nixtract Usage and Graph Generation](docs/sops/SOP_Nixtract_Usage.md)
 *   [SOP: Nix Graph Analysis](docs/sops/SOP_Nix_Graph_Analysis.md)
 *   [Tutorial: Building Nix Submodules](docs/tutorials/Tutorial_Build_Generic_Nix_Submodule.md)

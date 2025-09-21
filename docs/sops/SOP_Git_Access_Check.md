@@ -58,3 +58,4 @@ If the `check.sh` script reports violations, you must refactor the identified sh
 
 *   [Git Access Policy](docs/standards/Git_Access_Policy.md)
 *   [scripts/lib_git_submodule.sh](scripts/lib_git_submodule.sh)
+*   [Memo: Use Shellcheck Always After Changes](docs/memos/Shellcheck_Always_After_Changes.md)

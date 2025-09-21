@@ -45,10 +45,11 @@ The script will output the following information:
 *   **Script not found/executable:** Ensure the path to `check_submodule_flake_status.sh` is correct and that it has execute permissions (`chmod +x scripts/check_submodule_flake_status.sh`).
 *   **Script errors**: If the `check_submodule_flake_status.sh` script itself is failing, ensure it passes `shellcheck`. Refer to [Memo: Use Shellcheck Always After Changes](docs/memos/Shellcheck_Always_After_Changes.md) for details.
 
-## 7. Related Scripts
+## 7. Related Documents
 
 *   `scripts/generate_submodule_status.sh`: Generates a status report for all submodules, which can be used to get an overview before drilling down with this script.
+*   [Memo: Use Shellcheck Always After Changes](docs/memos/Shellcheck_Always_After_Changes.md)
 
-## 7. CRQ Association
+## 8. CRQ Association
 
 This SOP is part of the ongoing efforts related to CRQ-016 (Submodule Nixification and Flake Refactoring), as it provides a tool for maintaining consistency and debugging issues within the Nix-enabled submodules.

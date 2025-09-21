@@ -36,6 +36,8 @@ This SOP applies to all participants, contributors, and stakeholders engaging wi
     c.  **Reference**: Further details on the SSO portal development can be found in `https://codeberg.org/introspector/SOLFUNMEME/issues/5`.
 
 ## 6. Related Documents:
+*   [CRQ-016: Submodule Nixification and Flake Refactoring](docs/crqs/CRQ_016_Submodule_Nixification.md)
+*   [Memo: Use Shellcheck Always After Changes](docs/memos/Shellcheck_Always_After_Changes.md)
 *   `solfunmeme_communication_protocol_meme.md` (Conceptual basis for this SOP)
 *   `https://codeberg.org/introspector/SOLFUNMEME/issues/new` (Primary communication channel)
 *   `https://codeberg.org/introspector/SOLFUNMEME/issues/8` (Wallet verification details)
