@@ -39,6 +39,7 @@ The project provides a convenience script, `scripts/build_generic_nix_submodule.
 *   **"Usage: ..." error:** Ensure you provide the path to the Nix submodule as an argument to the script.
 *   **"Error: Dry run failed..." or "Error: Failed to build Nix submodule."**: Check the output for specific Nix build errors. This could be due to missing dependencies, syntax errors in the submodule's `flake.nix`, or network issues. If using `--offline`, ensure all dependencies are available locally.
 *   **Nix experimental features not enabled:** Ensure `nix-command` and `flakes` are enabled in your `nix.conf`.
+*   **Script errors**: If the `build_generic_nix_submodule.sh` script itself is failing, ensure it passes `shellcheck`. Refer to [Memo: Use Shellcheck Always After Changes](docs/memos/Shellcheck_Always_After_Changes.md) for details.
 
 ## 6. Related Documentation
 

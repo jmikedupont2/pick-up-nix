@@ -76,8 +76,13 @@ After completing the procedure, verify the submodule setup:
 *   Run `git status` in the main repository to ensure no pending changes related to the submodule.
 *   Run `git submodule status` to confirm the submodule is correctly initialized and pointing to the expected commit.
 *   Navigate into the submodule directory and run `git log` to confirm the initial commit is present.
+*   If any new scripts were created or existing ones modified within the submodule, run `shellcheck` on them. Refer to [Memo: Use Shellcheck Always After Changes](docs/memos/Shellcheck_Always_After_Changes.md) for details.
 
 ## 6. Future Considerations
 *   **Pushing to a Remote (e.g., Hugging Face):** Once the local setup is complete, you can add a remote to your submodule's bare repository and push its content to a public or private hosting service.
 *   **Updating Submodules:** To pull updates from the submodule's remote, use `git submodule update --remote`.
 *   **Cloning Repositories with Submodules:** When cloning the main repository, remember to initialize and update submodules using `git submodule update --init --recursive`.
+
+## 7. Next Steps: Nixification
+
+Once a submodule is successfully set up, the next logical step is to integrate it into the project's Nix ecosystem. Refer to `SOP_Submodule_Nixification.md` for detailed instructions on how to create or update `flake.nix` files within the submodule and integrate them into the main project's Nix flake.

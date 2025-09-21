@@ -36,16 +36,17 @@ The project provides a convenience script, `scripts/vendorize_and_fork_submodule
     The script will perform the following actions:
     *   Check if the submodule already exists. If not, it will add it.
     *   Ensure a remote named `meta-introspector` exists in the submodule, pointing to the `meta-introspector` fork of the repository. If the fork doesn't exist, it will attempt to create it using `gh cli`.
-    *   Fetch the `feature/CRQ-016-nixify` branch from the `meta-introspector` remote.
-    *   Check out the `feature/CRQ-016-nixify` branch in the submodule.
-    *   Push the `feature/CRQ-016-nixify` branch to the `meta-introspector` remote.
+    *   Fetch the `feature/CRQ-016-nixify-workflow` branch from the `meta-introspector` remote.
+    *   Check out the `feature/CRQ-016-nixify-workflow` branch in the submodule.
+    *   Push the `feature/CRQ-016-nixify-workflow` branch to the `meta-introspector` remote.
 
 ## 5. Troubleshooting
 
 *   **"Usage: ..." error:** Ensure you provide both the original repository URL and the submodule path as arguments.
 *   **`gh` CLI errors:** Ensure `gh` is installed and you are authenticated with sufficient permissions to fork repositories under the `meta-introspector` organization.
 *   **Git errors:** Check the output for specific Git errors (e.g., network issues, authentication problems).
-*   **Branch not found:** If the `feature/CRQ-016-nixify` branch does not exist in the `meta-introspector` fork, the script will fail when trying to fetch/checkout. You may need to manually create this branch in the forked repository.
+*   **Branch not found:** If the `feature/CRQ-016-nixify-workflow` branch does not exist in the `meta-introspector` fork, the script will fail when trying to fetch/checkout. You may need to manually create this branch in the forked repository.
+*   **Script errors**: If the `vendorize_and_fork_submodule.sh` script itself is failing, ensure it passes `shellcheck`. Refer to [Memo: Use Shellcheck Always After Changes](docs/memos/Shellcheck_Always_After_Changes.md) for details.
 
 ## 6. Related Documentation
 

@@ -47,7 +47,7 @@ This SOP applies to all shell scripts (`.sh` files) within the project and is in
 
 ## 5. Remediation
 
-If the `check.sh` script reports violations, you must refactor the identified shell scripts to use the corresponding functions from `scripts/lib_git_submodule.sh`. For example, replace `git add .` with a call to a function that encapsulates `git add`. If a required function does not exist in the library, it should be added to `scripts/lib_git_submodule.sh`.
+If the `check.sh` script reports violations, you must refactor the identified shell scripts to use the corresponding functions from `scripts/lib_git_submodule.sh`. For example, replace `git add .` with a call to a function that encapsulates `git add`. If a required function does not exist in the library, it should be added to `scripts/lib_git_submodule.sh`. After refactoring, always run `shellcheck` on the modified script to ensure code quality. Refer to [Memo: Use Shellcheck Always After Changes](docs/memos/Shellcheck_Always_After_Changes.md) for details.
 
 ## 6. Troubleshooting
 

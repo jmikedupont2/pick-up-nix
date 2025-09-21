@@ -27,6 +27,9 @@ The current task involves:
 *   **Deleted File Restoration:** The `scripts/restore_deleted_submodule_files.sh` script was created and refined to sequentially restore deleted files in submodules.
 *   **Submodule Status Generation:** The `scripts/generate_submodule_status.sh` script was created to generate `index/submodules_status.txt` for reviewing submodule states.
 *   **Documentation Updates:** A memo `docs/review_findings/Git_Lock_File_Issue.md` was created. The `GEMINI.md` operational guidelines were updated with a strict "Git Operations Policy".
+*   **Documentation Enhancement (CRQ-017) Progress**: 
+    *   Created `docs/tutorials/Contributing_with_CRQs_and_SOPs.md`.
+    *   Reviewed and updated `SOP_Submodule_Nixification.md`, `SUBMODULE_SETUP_SOP.md`, and `SOP_Vendorize_And_Fork_Submodule.md` for accuracy and consistency with CRQ-016 implementation.
 *   **`vendor/nix/flake.nix` Review:** Confirmed that `vendor/nix/flake.nix` is correctly configured for submodule aggregation.
 *   **Submodule Commit and Push:** The `scripts/commit_all_submodule_changes.sh` script was executed, committing and pushing remaining modified/untracked files or new commits within the submodules.
 *   **Main Repository Commit and Push:** Changes in the main repository (including `.gitignore` modifications, submodule gitlink updates, and new files like `nixboot.sh`) have been staged, committed, and pushed to the remote.

@@ -40,7 +40,12 @@ The script will output the following information:
 *   **"Your branch is ahead of 'origin/...' by X commits"**: The submodule has local commits that have not been pushed to its remote.
 *   **Differences in Nixpkgs URL**: If the `nixpkgs` URL differs from the expected version, it might indicate that the submodule's Nix environment is not aligned with the project's standards.
 
-## 6. Related Scripts
+## 6. Troubleshooting
+
+*   **Script not found/executable:** Ensure the path to `check_submodule_flake_status.sh` is correct and that it has execute permissions (`chmod +x scripts/check_submodule_flake_status.sh`).
+*   **Script errors**: If the `check_submodule_flake_status.sh` script itself is failing, ensure it passes `shellcheck`. Refer to [Memo: Use Shellcheck Always After Changes](docs/memos/Shellcheck_Always_After_Changes.md) for details.
+
+## 7. Related Scripts
 
 *   `scripts/generate_submodule_status.sh`: Generates a status report for all submodules, which can be used to get an overview before drilling down with this script.
 

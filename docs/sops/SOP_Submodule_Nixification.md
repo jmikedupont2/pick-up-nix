@@ -45,9 +45,9 @@ This SOP applies to all submodules located under the `vendor/nix/` directory tha
     ./scripts/commit_and_push_flakes.sh
     ```
     This script will:
-    *   Ensure the `feature/CRQ-016-nixify` branch is checked out (or created) in each submodule.
+    *   Ensure the `feature/CRQ-016-nixify-workflow` branch is checked out (or created) in each submodule.
     *   Commit the `flake.nix` changes (and any other staged changes) in each submodule with a CRQ-prefixed commit message.
-    *   Push the new branch and an "alpha" tag to the submodule's remote.
+    *   Push the new branch to the submodule's remote. (Note: Tagging of submodules is currently skipped as per user request.)
 
 ### 4.3. Verifying Changes
 
@@ -56,8 +56,9 @@ This SOP applies to all submodules located under the `vendor/nix/` directory tha
     git status
     git submodule foreach 'git status'
     ```
-2.  **Inspect `flake.nix` files**: Manually inspect a few `flake.nix` files in the `vendor/nix/*` submodules to confirm they match the `flake.template` and contain the expected content.
-3.  **Test `nix develop`**: Navigate into a submodule and attempt to enter its development shell to ensure it functions as expected.
+2.  **Run Shellcheck on Modified Scripts**: If any shell scripts were modified or created as part of the Nixification process, always run `shellcheck` to ensure code quality and catch potential errors. Refer to [Memo: Use Shellcheck Always After Changes](docs/memos/Shellcheck_Always_After_Changes.md) for details.
+3.  **Inspect `flake.nix` files**: Manually inspect a few `flake.nix` files in the `vendor/nix/*` submodules to confirm they match the `flake.template` and contain the expected content.
+4.  **Test `nix develop`**: Navigate into a submodule and attempt to enter its development shell to ensure it functions as expected.
     ```bash
     cd vendor/nix/nixtract
     nix develop
