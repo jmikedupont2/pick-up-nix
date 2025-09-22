@@ -58,7 +58,7 @@ All existing scripts that use `gh repo fork` will be updated to call this new li
 
 ## 5. Testing Plan
 
-1.  **Unit Test `lib_github_fork_repo`:** Create a temporary test script that calls `lib_github_fork_repo` with mock inputs (if possible, or with a test GitHub repository) and verifies its behavior (e.g., checks exit codes, logs).
+1.  **Integration Test `lib_github_fork_repo`:** Execute `./tests/lib/test_lib_github_fork.sh` and verify its output. Follow the instructions in `docs/sops/SOP_Testing_lib_github_fork.md` for running the test and manual verification.
 2.  **Integration Test Scripts:**
     *   Run `scripts/vendorize_flake_lock.sh` and verify that it correctly forks a repository using the new library function.
     *   Run `scripts/vendorize_and_fork_submodule.sh` and verify its functionality.
