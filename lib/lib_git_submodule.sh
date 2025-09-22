@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
-PROJECT_ROOT="$(pwd)"
-source "${PROJECT_ROOT}/lib/lib_github_fork.sh"
+#PROJECT_ROOT="$(pwd)"
+#source "${PROJECT_ROOT}/lib/lib_github_fork.sh"
 
 # Reusable bash library for Git submodule operations.
 
