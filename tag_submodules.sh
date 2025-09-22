@@ -2,6 +2,9 @@
 
 set -e
 
+PROJECT_ROOT="$(pwd)"
+source "${PROJECT_ROOT}/lib/lib_github_fork.sh"
+
 # Check if gh is installed
 if ! command -v gh &> /dev/null; then
     echo "GitHub CLI (gh) is not installed. Please install it to use the forking feature."
@@ -48,7 +51,7 @@ for repo in $REPOS; do
             # Check if the meta-introspector fork exists before trying to create it
             if ! gh repo view "meta-introspector/$repo" --json name --jq . >/dev/null 2>&1; then
                 echo "meta-introspector/$repo not found. Creating fork..."
-                if gh repo fork --org meta-introspector --remote; then
+                if lib_github_fork_repo "${repo}" "meta-introspector" "${repo}"; then
                     echo "Fork created successfully. Waiting 5 seconds for it to become available..."
                     sleep 5
                 else

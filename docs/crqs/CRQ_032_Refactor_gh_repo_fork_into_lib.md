@@ -30,6 +30,7 @@ All existing scripts that use `gh repo fork` will be updated to call this new li
     *   `scripts/vendorize_flake_lock.sh`
     *   `scripts/vendorize_and_fork_submodule.sh`
     *   `scripts/automate_dependency_forking.sh` (if it's found to execute `gh repo fork` directly, otherwise ensure it uses the new lib function for its forking logic)
+    *   `tag_submodules.sh`
 *   Updating `scripts/generate_refactoring_sed_scripts.sh` to generate `sed` commands that use the new `lib_github_fork_repo` function.
 *   Ensuring no direct `gh repo fork` calls remain in any `.sh` script outside of `lib/lib_github_fork.sh`.
 *   Updating relevant SOPs (e.g., `SOP_Automated_GitHub_Forking.md` if it exists, or creating one) to reflect the new standardized approach.
