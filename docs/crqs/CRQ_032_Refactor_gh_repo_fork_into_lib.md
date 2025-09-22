@@ -35,6 +35,8 @@ All existing scripts that use `gh repo fork` will be updated to call this new li
     *   `lib/lib_git_submodule.sh`
     *   `source/github/meta-introspector/time/2024/04/10/forkall2.sh`
     *   `source/github/meta-introspector/time/2024/04/10/forkall.sh`
+*   Creating `scripts/extract_and_vendorize_github_repos.sh` to utilize `lib_github_fork_repo`.
+*   Creating `docs/sops/SOP_Extract_and_Vendorize_GitHub_Repos.md` to document the new script.
 *   Updating `scripts/generate_refactoring_sed_scripts.sh` to generate `sed` commands that use the new `lib_github_fork_repo` function.
 *   Ensuring no direct `gh repo fork` calls remain in any `.sh` script outside of `lib/lib_github_fork.sh`.
 *   Updating relevant SOPs (e.g., `SOP_Automated_GitHub_Forking.md` if it exists, or creating one) to reflect the new standardized approach.
