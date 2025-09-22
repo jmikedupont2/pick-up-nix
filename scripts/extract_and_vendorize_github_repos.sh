@@ -26,6 +26,13 @@ log() {
 
 # --- Main Script Logic ---
 
+REPORT_MODE=false
+if [[ "$#" -gt 0 && "$1" == "--report" ]]; then
+  REPORT_MODE=true
+  log "Running in REPORT mode (dry-run). No actual forking will occur."
+  shift
+fi
+
 log "Starting extraction and vendorization of GitHub repositories."
 
 if [[ ! -f "${INPUT_FILE}" ]]; then
@@ -70,11 +77,19 @@ while IFS= read -r repo_url; do
 
   log "Processing repository: ${owner}/${repo_name}"
 
-  # Call the lib_github_fork_repo function
-  if lib_github_fork_repo "${owner}/${repo_name}" "${META_INTROSPECTOR_ORG}" "${repo_name}"; then
-    log "Successfully vendorized (forked) ${owner}/${repo_name}."
+  if "${REPORT_MODE}"; then
+    if gh repo view "${META_INTROSPECTOR_ORG}/${repo_name}" &>/dev/null; then
+      log "  REPORT: Fork '${META_INTROSPECTOR_ORG}/${repo_name}' already exists. No action needed."
+    else
+      log "  REPORT: Would fork '${owner}/${repo_name}' to '${META_INTROSPECTOR_ORG}/${repo_name}'."
+    fi
   else
-    log "Error: Failed to vendorize (fork) ${owner}/${repo_name}. See previous logs for details."
+    # Call the lib_github_fork_repo function
+    if lib_github_fork_repo "${owner}/${repo_name}" "${META_INTROSPECTOR_ORG}" "${repo_name}"; then
+      log "Successfully vendorized (forked) ${owner}/${repo_name}."
+    else
+      log "Error: Failed to vendorize (fork) ${owner}/${repo_name}. See previous logs for details."
+    fi
   fi
 done < "${UNIQUE_REPOS_FILE}"
 

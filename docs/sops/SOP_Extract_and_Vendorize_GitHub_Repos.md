@@ -23,7 +23,13 @@ Ensure that the input file (`index/all_github.txt` by default) is populated with
 
 ### 4.2. Execute the Extraction and Vendorization Script
 
-Run the `extract_and_vendorize_github_repos.sh` script from the project root directory:
+Run the `extract_and_vendorize_github_repos.sh` script from the project root directory. You can run it in dry-run (report) mode first to see what actions would be taken without actually performing any forks:
+
+```bash
+./scripts/extract_and_vendorize_github_repos.sh --report
+```
+
+To perform the actual forking, omit the `--report` flag:
 
 ```bash
 ./scripts/extract_and_vendorize_github_repos.sh
