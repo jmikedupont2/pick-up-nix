@@ -35,6 +35,7 @@
         devShells.default = pkgs.mkShell {
           packages = with pkgs; [
             rustVersions.nightly_2025_09_16 # Use the pinned nightly toolchain
+            self.packages.${system}.template-generator-bin # Add template-generator-bin to devShell
 	    which 
             gawk # For awk
             jq

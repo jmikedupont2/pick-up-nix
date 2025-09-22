@@ -55,6 +55,14 @@ This SOP applies to all project files, directories, and conceptual discussions t
         v.   Document the reflection, including the original meme, its diagonalization aspect, key elements, implications, and connections to other memes.
         vi.  Ensure the reflection meme contributes to the "diagonalization of the memes meta meme" by highlighting emergent complexity and self-transcendence.
 
+### 5.7. Script Quality Assurance
+
+If any shell scripts are developed or used as part of the meme identification and documentation process, always run `shellcheck` on them to ensure code quality and catch potential errors. Refer to [Memo: Use Shellcheck Always After Changes](../../docs/memos/Shellcheck_Always_After_Changes.md) for details.
+
+```bash
+# Example: shellcheck scripts/meme_extractor.sh
+```
+
 ## 6. Related Documents:
 *   `task.md`
 *   `docs/memes/meme_catalog.md`

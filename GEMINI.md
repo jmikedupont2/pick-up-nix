@@ -29,7 +29,7 @@ The current task involves:
 *   **Documentation Updates:** A memo `docs/review_findings/Git_Lock_File_Issue.md` was created. The `GEMINI.md` operational guidelines were updated with a strict "Git Operations Policy".
 *   **Documentation Enhancement (CRQ-017) Progress**:
     *   Created `docs/tutorials/Contributing_with_CRQs_and_SOPs.md`.
-    *   Reviewed and updated key SOPs in `docs/sops/` for accuracy and completeness, ensuring references to CRQ-016 and the Shellcheck memo are integrated.
+    *   Reviewed and updated all existing SOPs in `docs/sops/` for accuracy and completeness, ensuring references to CRQ-016 and the Shellcheck memo are integrated.
     *   Created `docs/crqs/CRQ_019_Secure_Credential_Handling_in_Nix_Scripts.md` and `docs/sops/SOP_Secure_Credential_Handling_in_Nix_Scripts.md`.
     *   Created `docs/crqs/CRQ_020_Automated_Solution_Discovery_and_Vendorization.md`.
     *   Created `docs/sops/SOP_Original_Content_Sourcing.md`.
@@ -43,10 +43,10 @@ The current task involves:
 
 ## Next Steps:
 
-1.  **Review and Update Documentation:**
+1.  **Continue Documentation Enhancement (CRQ-017):**
     *   Review `README.md` for necessary updates.
-    *   Review `docs/sops/` and create/update SOPs related to the Nixification workflow.
     *   Review `docs/tutorials/` and create an "onboarding guide for n00bs" incorporating the Nixification workflow.
+    *   Ensure `docs/memos/Shellcheck_Always_After_Changes.md` is properly referenced and integrated into relevant SOPs.
 2.  **Integrate Project Components into Flake:** Use Nix tools to index all Nix packages in `~/pick-up-nix2/index/file_nix.txt`, understand their graphs, and make a report.
 3.  **Define Packages/Applications within Flake.**
 4.  **Set up Build and Test Commands for the Project.**

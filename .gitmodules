@@ -311,3 +311,6 @@
 [submodule "vendor/external/fenix"]
 	path = vendor/external/fenix
 	url = https://github.com/nix-community/fenix
+[submodule "vendor/rust/just"]
+	path = vendor/rust/just
+	url = https://github.com/casey/just

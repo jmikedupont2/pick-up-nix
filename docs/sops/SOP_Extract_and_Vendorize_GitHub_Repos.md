@@ -50,6 +50,15 @@ After execution, a file named `index/unique_github_repos.txt` will be created or
 
 Manually verify on GitHub that the intended repositories have been successfully forked into the `meta-introspector` organization.
 
+### 4.6. Script Quality Assurance
+
+Before executing `scripts/extract_and_vendorize_github_repos.sh`, always run `shellcheck` on it and its dependencies (`lib/lib_github_fork.sh`) to ensure code quality and catch potential errors. Refer to [Memo: Use Shellcheck Always After Changes](../../docs/memos/Shellcheck_Always_After_Changes.md) for details.
+
+```bash
+shellcheck scripts/extract_and_vendorize_github_repos.sh
+shellcheck lib/lib_github_fork.sh
+```
+
 ## 5. Troubleshooting
 
 *   **`gh` CLI Authentication/Permissions:** If the script reports errors related to forking, ensure your `gh` CLI is authenticated (`gh auth login`) and has the necessary permissions (e.g., `repo` scope) to create repositories in the `meta-introspector` organization.
@@ -60,6 +69,7 @@ Manually verify on GitHub that the intended repositories have been successfully 
 ## 6. Related Documents
 
 *   `CRQ_032_Refactor_gh_repo_fork_into_lib.md`
+*   `CRQ_016_Submodule_Nixification.md`
 *   `lib/lib_github_fork.sh`
 *   `index/all_github.txt`
 *   `index/unique_github_repos.txt`

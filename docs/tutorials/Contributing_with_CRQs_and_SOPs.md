@@ -1,66 +1,36 @@
 # Contributing with CRQs and SOPs
 
-This tutorial outlines the process for contributing to the project using Change Request (CRQ) documents and Standard Operating Procedures (SOPs).
+This tutorial outlines the process for contributing to the project using Change ReQuests (CRQs) and Standard Operating Procedures (SOPs).
 
 ## 1. Understanding CRQs
 
-Change Request (CRQ) documents are formal proposals for significant changes to the project. They provide a structured way to:
+Change ReQuests (CRQs) are formal documents that define and track significant changes within the project. They provide a comprehensive overview of the problem, proposed solution, scope, technical details, testing, and rollback plan for a given change.
 
-*   **Define the Problem:** Clearly articulate the issue or enhancement being addressed.
-*   **Propose a Solution:** Detail the planned approach to resolve the problem.
-*   **Outline Scope:** Define the boundaries of the change.
-*   **Technical Details:** Provide in-depth technical specifications.
-*   **Testing Plan:** Describe how the changes will be verified.
-*   **Rollback Plan:** Outline steps to revert the changes if necessary.
-
-CRQs are stored in the `docs/crqs/` directory. Each CRQ is assigned a unique identifier (e.g., `CRQ_016`).
+*   **Purpose:** To ensure all major changes are well-thought-out, documented, and reviewed.
+*   **Location:** `docs/crqs/`
+*   **Key Elements:** Problem statement, proposed solution, scope, technical details, testing plan, rollback plan.
 
 ## 2. Understanding SOPs
 
-Standard Operating Procedures (SOPs) are detailed, step-by-step instructions for performing recurring tasks within the project. They ensure consistency, reproducibility, and efficiency.
+Standard Operating Procedures (SOPs) are detailed, step-by-step instructions for performing recurring tasks within the project. They ensure consistency, reproducibility, and efficiency in project operations.
 
-SOPs are stored in the `docs/sops/` directory. Each SOP is named descriptively (e.g., `SOP_Submodule_Nixification.md`).
+*   **Purpose:** To standardize common tasks and provide clear guidance.
+*   **Location:** `docs/sops/`
+*   **Key Elements:** Prerequisites, step-by-step instructions, verification, troubleshooting.
 
 ## 3. Contribution Workflow
 
-When making a significant contribution, follow these steps:
+1.  **Identify a need for change or a new task:** This could be a bug fix, a new feature, a refactoring effort, or a new operational procedure.
+2.  **Draft a CRQ (if applicable):** For significant changes, create a new CRQ document in `docs/crqs/`. Follow the existing CRQ structure as a template.
+3.  **Develop or update SOPs (if applicable):** If your change involves a new recurring task or modifies an existing one, create or update the relevant SOP in `docs/sops/`.
+4.  **Implement the change:** Write code, update configurations, or perform the necessary actions as described in your CRQ and SOPs.
+5.  **Test and Verify:** Ensure your changes work as expected and do not introduce regressions.
+6.  **Update CRQ with commit details:** Once the changes are committed, update the CRQ document to reference the relevant commit hashes.
+7.  **Submit for Review:** Follow the project's standard code review process.
 
-### 3.1. Create a New CRQ (if applicable)
+## 4. Best Practices
 
-If your contribution involves a substantial change or new feature, create a new CRQ document in `docs/crqs/`. Use the existing CRQs as a template. Ensure you:
-
-*   Assign a new, unique CRQ number.
-*   Fill in all sections comprehensively.
-*   Get approval from relevant stakeholders (if required by project policy).
-
-### 3.2. Develop According to the CRQ
-
-Implement your changes based on the approved CRQ. During development:
-
-*   **Reference the CRQ:** Mention the CRQ number in your commit messages (e.g., `feat: Implement feature X (CRQ-0XX)`).
-*   **Adhere to SOPs:** Follow any relevant SOPs for tasks like submodule management, Nixification, or code style.
-*   **Create New SOPs (if applicable):** If your contribution introduces a new recurring task or significantly alters an existing one, create a new SOP in `docs/sops/` or update an existing one.
-
-### 3.3. Update the CRQ with Commit Information
-
-Once your changes are committed, update your CRQ document to include references to the commits that are part of that CRQ. This provides an auditable trail of changes.
-
-### 3.4. Review and Testing
-
-Ensure your changes are thoroughly reviewed and tested as per the testing plan outlined in your CRQ.
-
-### 3.5. Documentation Updates
-
-Update any relevant documentation (e.g., `README.md`, `GEMINI.md`, other tutorials) to reflect your changes.
-
-## Example
-
-Let's say you are implementing a new Nixification workflow. You would:
-
-1.  Create `docs/crqs/CRQ_016_Submodule_Nixification.md`.
-2.  Develop the Nixification scripts and `flake.nix` files, referencing `CRQ-016` in your commit messages.
-3.  Create `docs/sops/SOP_Submodule_Nixification.md` to document the step-by-step process.
-4.  Update `CRQ_016_Submodule_Nixification.md` with the relevant commit SHAs.
-5.  Update `GEMINI.md` to summarize the Nixification efforts.
-
-By following this workflow, we ensure that all significant changes are well-documented, traceable, and maintainable.
+*   **Adhere to existing conventions:** Maintain consistency with the project's coding style, documentation standards, and architectural patterns.
+*   **Be thorough:** Provide clear and complete information in CRQs and SOPs.
+*   **Link related documents:** Reference CRQs in SOPs and vice-versa where appropriate.
+*   **Use descriptive commit messages:** Include the CRQ number in your commit messages.
