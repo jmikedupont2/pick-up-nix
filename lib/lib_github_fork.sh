@@ -29,6 +29,12 @@ lib_github_fork_repo() {
 
     echo "Attempting to fork '$ORIGINAL_REPO_URL' to '$TARGET_ORG/$FORK_NAME'..."
 
+    # Check if the fork already exists
+    if gh repo view "${TARGET_ORG}/${FORK_NAME}" &>/dev/null; then
+        echo "Fork '${TARGET_ORG}/${FORK_NAME}' already exists. Skipping fork operation."
+        return 0
+    fi
+
     # Execute the gh repo fork command
     # --org: Specifies the organization to fork into.
     # --clone=false: Prevents cloning the repository after forking.
