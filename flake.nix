@@ -39,6 +39,7 @@
 	    which 
             gawk # For awk
             jq
+            ncurses # Added ncurses
           ];
         };
 
