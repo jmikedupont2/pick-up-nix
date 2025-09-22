@@ -33,12 +33,7 @@ On branch feature/CRQ-016-nixify-workflow
 nothing to commit, working tree clean
 Entering 'source/github/meta-introspector/git-submodule-tools-rs'
 On branch feature/CRQ-016-nixify-workflow
-Changes not staged for commit:
-  (use "git add <file>..." to update what will be committed)
-  (use "git restore <file>..." to discard changes in working directory)
-	modified:   vendor/meta-introspector/mkAIDerivation (new commits)
-
-no changes added to commit (use "git add" and/or "git commit -a")
+nothing to commit, working tree clean
 Entering 'source/github/meta-introspector/git-submodule-tools-rs/vendor/cargo_metadata'
 HEAD detached at f0df5d0
 nothing to commit, working tree clean
@@ -200,3 +195,1042 @@ Your branch is up to date with 'origin/master'.
 
 nothing to commit, working tree clean
 Entering 'source/github/meta-introspector/git-submodules-rs-nix/sources/meta-introspector/monomcp-rust'
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+Entering 'source/github/meta-introspector/git-submodules-rs-nix/sources/meta-introspector/monomcp-rust/monomcp/MoCoPr'
+HEAD detached at afe75fc
+nothing to commit, working tree clean
+Entering 'source/github/meta-introspector/git-submodules-rs-nix/sources/meta-introspector/monomcp-rust/monomcp/agentic'
+HEAD detached at d2f3802
+nothing to commit, working tree clean
+Entering 'source/github/meta-introspector/git-submodules-rs-nix/sources/meta-introspector/monomcp-rust/monomcp/generative_modular_forms'
+HEAD detached at e0ebeaf
+nothing to commit, working tree clean
+Entering 'source/github/meta-introspector/git-submodules-rs-nix/sources/meta-introspector/monomcp-rust/monomcp/mcp-attr'
+HEAD detached at 93ce8a7
+nothing to commit, working tree clean
+Entering 'source/github/meta-introspector/git-submodules-rs-nix/sources/meta-introspector/monomcp-rust/monomcp/mcp-attr/external/modelcontextprotocol-specification'
+HEAD detached at f5ccad9
+nothing to commit, working tree clean
+Entering 'source/github/meta-introspector/git-submodules-rs-nix/sources/meta-introspector/monomcp-rust/monomcp/mcp-discovery'
+HEAD detached at b9cd1d0
+nothing to commit, working tree clean
+Entering 'source/github/meta-introspector/git-submodules-rs-nix/sources/meta-introspector/monomcp-rust/monomcp/memkb-mcp-rust'
+HEAD detached at 631e896
+nothing to commit, working tree clean
+Entering 'source/github/meta-introspector/git-submodules-rs-nix/sources/meta-introspector/monomcp-rust/monomcp/paiml-mcp-agent-toolkit'
+HEAD detached at 80e1617
+nothing to commit, working tree clean
+Entering 'source/github/meta-introspector/git-submodules-rs-nix/sources/meta-introspector/monomcp-rust/monomcp/ramparts'
+HEAD detached at 5cb0031
+nothing to commit, working tree clean
+Entering 'source/github/meta-introspector/git-submodules-rs-nix/sources/meta-introspector/monomcp-rust/monomcp/rmcp-agent'
+HEAD detached at 464cbc6
+nothing to commit, working tree clean
+Entering 'source/github/meta-introspector/git-submodules-rs-nix/sources/meta-introspector/monomcp-rust/monomcp/rust-mcp-filesystem'
+HEAD detached at 72411d0
+nothing to commit, working tree clean
+Entering 'source/github/meta-introspector/git-submodules-rs-nix/sources/meta-introspector/monomcp-rust/monomcp/rust-mcp-sdk'
+HEAD detached at c39daae
+nothing to commit, working tree clean
+Entering 'source/github/meta-introspector/git-submodules-rs-nix/sources/meta-introspector/monomcp-rust/monomcp/simd-kernels'
+HEAD detached at 6df3f19
+nothing to commit, working tree clean
+Entering 'source/github/meta-introspector/git-submodules-rs-nix/sources/meta-introspector/monomcp-rust/monomcp/siumai'
+HEAD detached at 359b981
+nothing to commit, working tree clean
+Entering 'source/github/meta-introspector/git-submodules-rs-nix/sources/meta-introspector/monomcp-rust/monomcp/turbomcp'
+HEAD detached at fd386a0
+nothing to commit, working tree clean
+Entering 'source/github/meta-introspector/git-submodules-rs-nix/sources/meta-introspector/monomcp-rust/monomcp/vendor/ar_archive_writer'
+HEAD detached at 7473c3b
+nothing to commit, working tree clean
+Entering 'source/github/meta-introspector/git-submodules-rs-nix/sources/meta-introspector/monomcp-rust/monomcp/vendor/arrow-rs'
+HEAD detached at 38c4c5a8a
+nothing to commit, working tree clean
+Entering 'source/github/meta-introspector/git-submodules-rs-nix/sources/meta-introspector/monomcp-rust/monomcp/vendor/arrow-rs/parquet-testing'
+HEAD detached at 5cbfc43
+nothing to commit, working tree clean
+Entering 'source/github/meta-introspector/git-submodules-rs-nix/sources/meta-introspector/monomcp-rust/monomcp/vendor/arrow-rs/testing'
+HEAD detached at 735ae71
+nothing to commit, working tree clean
+Entering 'source/github/meta-introspector/git-submodules-rs-nix/sources/meta-introspector/monomcp-rust/monomcp/vendor/cargo-platform'
+HEAD detached at a6c58d430
+nothing to commit, working tree clean
+Entering 'source/github/meta-introspector/git-submodules-rs-nix/sources/meta-introspector/monomcp-rust/monomcp/vendor/cargo-rust-lang'
+HEAD detached at 64e1a2652
+nothing to commit, working tree clean
+Entering 'source/github/meta-introspector/git-submodules-rs-nix/sources/meta-introspector/monomcp-rust/monomcp/vendor/hugging-face-dataset-validator-rust'
+HEAD detached at 6ca49a5
+nothing to commit, working tree clean
+Entering 'source/github/meta-introspector/git-submodules-rs-nix/sources/meta-introspector/monomcp-rust/monomcp/vendor/rustc-stable-hash'
+HEAD detached at 0e8fdc6
+nothing to commit, working tree clean
+Entering 'source/github/meta-introspector/git-submodules-rs-nix/sources/meta-introspector/monomcp-rust/monomcp/vendor/smallvec'
+HEAD detached at 3cbc72f
+nothing to commit, working tree clean
+Entering 'source/github/meta-introspector/git-submodules-rs-nix/sources/meta-introspector/monomcp-rust/monomcp/vendor/tracing-vendor/tracing'
+HEAD detached at 20f5b3d8
+nothing to commit, working tree clean
+Entering 'source/github/meta-introspector/git-submodules-rs-nix/sources/meta-introspector/paiml-mcp-agent-toolkit'
+On branch master
+Your branch is up to date with 'origin/master'.
+
+nothing to commit, working tree clean
+Entering 'source/github/meta-introspector/git-submodules-rs-nix/sources/meta-introspector/ramparts'
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+Entering 'source/github/meta-introspector/git-submodules-rs-nix/sources/meta-introspector/rmcp-agent'
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+Entering 'source/github/meta-introspector/git-submodules-rs-nix/sources/meta-introspector/rust-mcp-filesystem'
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+Entering 'source/github/meta-introspector/git-submodules-rs-nix/sources/meta-introspector/rust-mcp-sdk'
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+Entering 'source/github/meta-introspector/git-submodules-rs-nix/sources/meta-introspector/turbomcp'
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+Entering 'source/github/meta-introspector/git-submodules-rs-nix/sources/simensgreen/cargo-incvec'
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+Entering 'source/github/meta-introspector/git-submodules-rs-nix/submod'
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+Entering 'source/github/meta-introspector/git-submodules-rs-nix/tools/tool-template'
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+Entering 'source/github/meta-introspector/git-submodules-rs-nix/tools/wikidata'
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+Entering 'source/github/meta-introspector/git-submodules-rs-nix/tools/wikidata/prelude'
+HEAD detached at d0a9eb4
+nothing to commit, working tree clean
+Entering 'source/github/meta-introspector/hackathon'
+HEAD detached at 8fb34a2
+nothing to commit, working tree clean
+Entering 'source/github/meta-introspector/introspector-llc'
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+Entering 'source/github/meta-introspector/lattice-introspector'
+On branch feature/CRQ-016-nixify-workflow
+nothing to commit, working tree clean
+Entering 'source/github/meta-introspector/lattice-introspector/data'
+HEAD detached at 7dabcab
+nothing to commit, working tree clean
+Entering 'source/github/meta-introspector/lattice-introspector/vendor/DaoFP'
+HEAD detached at d9e5248
+nothing to commit, working tree clean
+Entering 'source/github/meta-introspector/lattice-introspector/vendor/abi_stable_crates'
+HEAD detached at 9966b8f
+nothing to commit, working tree clean
+Entering 'source/github/meta-introspector/lattice-introspector/vendor/ai-agent-terraform'
+HEAD detached at f533db3
+nothing to commit, working tree clean
+Entering 'source/github/meta-introspector/lattice-introspector/vendor/aichat'
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+Entering 'source/github/meta-introspector/lattice-introspector/vendor/aichat/oauth_review/r-google-oauth2'
+HEAD detached at c59962c
+nothing to commit, working tree clean
+Entering 'source/github/meta-introspector/lattice-introspector/vendor/aichat/oauth_review/rs-gapi-oauth'
+HEAD detached at 6a1823e
+nothing to commit, working tree clean
+Entering 'source/github/meta-introspector/lattice-introspector/vendor/bootstrap'
+On branch master
+Your branch is up to date with 'origin/master'.
+
+nothing to commit, working tree clean
+Entering 'source/github/meta-introspector/lattice-introspector/vendor/copper'
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+Entering 'source/github/meta-introspector/lattice-introspector/vendor/cranelift'
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+Entering 'source/github/meta-introspector/lattice-introspector/vendor/cranelift/tests/component-model'
+HEAD detached at 3870cbe
+nothing to commit, working tree clean
+Entering 'source/github/meta-introspector/lattice-introspector/vendor/cranelift/tests/spec_testsuite'
+HEAD detached at f50a662
+nothing to commit, working tree clean
+Entering 'source/github/meta-introspector/lattice-introspector/vendor/cranelift/tests/wasi_testsuite/wasi-common'
+HEAD detached at c11cd6bb
+nothing to commit, working tree clean
+Entering 'source/github/meta-introspector/lattice-introspector/vendor/cranelift/tests/wasi_testsuite/wasi-threads'
+HEAD detached at e1893c0
+nothing to commit, working tree clean
+Entering 'source/github/meta-introspector/lattice-introspector/vendor/gen-mod-form'
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+Entering 'source/github/meta-introspector/lattice-introspector/vendor/grok-cli'
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+Entering 'source/github/meta-introspector/lattice-introspector/vendor/hugging-face-dataset-validator-rust'
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+Entering 'source/github/meta-introspector/lattice-introspector/vendor/intel-mkl-src'
+On branch master
+Your branch is up to date with 'origin/master'.
+
+nothing to commit, working tree clean
+Entering 'source/github/meta-introspector/lattice-introspector/vendor/libminizinc'
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+Entering 'source/github/meta-introspector/lattice-introspector/vendor/memkb-mcp-rust'
+On branch master
+Your branch is up to date with 'origin/master'.
+
+nothing to commit, working tree clean
+Entering 'source/github/meta-introspector/lattice-introspector/vendor/monomcp-rust'
+On branch feature/CRQ-016-nixify-workflow
+nothing to commit, working tree clean
+Entering 'source/github/meta-introspector/lattice-introspector/vendor/monomcp-rust/monomcp/MoCoPr'
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+Entering 'source/github/meta-introspector/lattice-introspector/vendor/monomcp-rust/monomcp/agentic'
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+Entering 'source/github/meta-introspector/lattice-introspector/vendor/monomcp-rust/monomcp/generative_modular_forms'
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+Entering 'source/github/meta-introspector/lattice-introspector/vendor/monomcp-rust/monomcp/mcp-attr'
+On branch master
+Your branch is up to date with 'origin/master'.
+
+nothing to commit, working tree clean
+Entering 'source/github/meta-introspector/lattice-introspector/vendor/monomcp-rust/monomcp/mcp-discovery'
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+Entering 'source/github/meta-introspector/lattice-introspector/vendor/monomcp-rust/monomcp/memkb-mcp-rust'
+On branch master
+Your branch is up to date with 'origin/master'.
+
+nothing to commit, working tree clean
+Entering 'source/github/meta-introspector/lattice-introspector/vendor/monomcp-rust/monomcp/paiml-mcp-agent-toolkit'
+On branch master
+Your branch is up to date with 'origin/master'.
+
+nothing to commit, working tree clean
+Entering 'source/github/meta-introspector/lattice-introspector/vendor/monomcp-rust/monomcp/ramparts'
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+Entering 'source/github/meta-introspector/lattice-introspector/vendor/monomcp-rust/monomcp/rmcp-agent'
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+Entering 'source/github/meta-introspector/lattice-introspector/vendor/monomcp-rust/monomcp/rust-mcp-filesystem'
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+Entering 'source/github/meta-introspector/lattice-introspector/vendor/monomcp-rust/monomcp/rust-mcp-sdk'
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+Entering 'source/github/meta-introspector/lattice-introspector/vendor/monomcp-rust/monomcp/simd-kernels'
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+Entering 'source/github/meta-introspector/lattice-introspector/vendor/monomcp-rust/monomcp/siumai'
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+Entering 'source/github/meta-introspector/lattice-introspector/vendor/monomcp-rust/monomcp/turbomcp'
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+Entering 'source/github/meta-introspector/lattice-introspector/vendor/monomcp-rust/monomcp/vendor/ar_archive_writer'
+On branch master
+Your branch is up to date with 'origin/master'.
+
+nothing to commit, working tree clean
+Entering 'source/github/meta-introspector/lattice-introspector/vendor/monomcp-rust/monomcp/vendor/arrow-rs'
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+Entering 'source/github/meta-introspector/lattice-introspector/vendor/monomcp-rust/monomcp/vendor/cargo-platform'
+On branch master
+Your branch is up to date with 'origin/master'.
+
+nothing to commit, working tree clean
+Entering 'source/github/meta-introspector/lattice-introspector/vendor/ragit'
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+Entering 'source/github/meta-introspector/lattice-introspector/vendor/rust-smallvec'
+On branch v2
+Your branch is up to date with 'origin/v2'.
+
+nothing to commit, working tree clean
+Entering 'source/github/meta-introspector/lattice-introspector/vendor/rustc-stable-hash'
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+Entering 'source/github/meta-introspector/lattice-introspector/vendor/scirs'
+On branch master
+Your branch is up to date with 'origin/master'.
+
+nothing to commit, working tree clean
+Entering 'source/github/meta-introspector/lattice-introspector/vendor/simd-kernels'
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+Entering 'source/github/meta-introspector/lattice-introspector/vendor/solfunmeme-dioxus'
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+Entering 'source/github/meta-introspector/lean4'
+On branch feature/CRQ-016-nixify-workflow
+nothing to commit, working tree clean
+Entering 'source/github/meta-introspector/minizinc-introspector'
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+Entering 'source/github/meta-introspector/neo'
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+Entering 'source/github/meta-introspector/quasi-meta-meme'
+On branch meetings/nft-investor-1
+Your branch is up to date with 'origin/meetings/nft-investor-1'.
+
+nothing to commit, working tree clean
+Entering 'source/github/meta-introspector/ragit'
+On branch feature/CRQ-016-nixify-workflow
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+  (commit or discard the untracked or modified content in submodules)
+	modified:   vendor/amazon-q-developer-cli (modified content)
+
+no changes added to commit (use "git add" and/or "git commit -a")
+Entering 'source/github/meta-introspector/ragit/idx'
+HEAD detached at cf232865
+nothing to commit, working tree clean
+Entering 'source/github/meta-introspector/ragit/index/solfunmeme-index'
+HEAD detached at cf232865
+nothing to commit, working tree clean
+Entering 'source/github/meta-introspector/ragit/pilot-agent-cli'
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+Entering 'source/github/meta-introspector/ragit/spinoffs/model-builder-quiz'
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+Entering 'source/github/meta-introspector/ragit/vendor/amazon-q-developer-cli'
+On branch feature/CRQ-016-nixify-workflow
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   vendor/solfunmeme-dioxus (new commits)
+
+no changes added to commit (use "git add" and/or "git commit -a")
+Entering 'source/github/meta-introspector/ragit/vendor/amazon-q-developer-cli/vendor/gemini-cli'
+HEAD detached at f5e0f161
+nothing to commit, working tree clean
+Entering 'source/github/meta-introspector/ragit/vendor/amazon-q-developer-cli/vendor/solfunmeme-dioxus'
+On branch feature/CRQ-016-nixify-workflow
+nothing to commit, working tree clean
+Entering 'source/github/meta-introspector/ragit/vendor/amazon-q-developer-cli/vendor/solfunmeme-dioxus/bootstrap'
+HEAD detached at 4d18f5f
+nothing to commit, working tree clean
+Entering 'source/github/meta-introspector/ragit/vendor/amazon-q-developer-cli/vendor/solfunmeme-dioxus/crates/task_manager'
+HEAD detached at 106cdba
+nothing to commit, working tree clean
+Entering 'source/github/meta-introspector/ragit/vendor/amazon-q-developer-cli/vendor/solfunmeme-dioxus/hf_dataset'
+HEAD detached at 777c4c39
+nothing to commit, working tree clean
+Entering 'source/github/meta-introspector/ragit/vendor/amazon-q-developer-cli/vendor/solfunmeme-dioxus/hg_datasets/microlean4'
+HEAD detached at a9c4102
+nothing to commit, working tree clean
+Entering 'source/github/meta-introspector/ragit/vendor/amazon-q-developer-cli/vendor/solfunmeme-dioxus/vendor/axum'
+HEAD detached at 3bd445d9
+nothing to commit, working tree clean
+Entering 'source/github/meta-introspector/ragit/vendor/amazon-q-developer-cli/vendor/solfunmeme-dioxus/vendor/bm25'
+HEAD detached at d44bcbb
+nothing to commit, working tree clean
+Entering 'source/github/meta-introspector/ragit/vendor/amazon-q-developer-cli/vendor/solfunmeme-dioxus/vendor/candle'
+HEAD detached at b759454d
+nothing to commit, working tree clean
+Entering 'source/github/meta-introspector/ragit/vendor/amazon-q-developer-cli/vendor/solfunmeme-dioxus/vendor/candle/candle-flash-attn/cutlass'
+HEAD detached at 4c42f73f
+nothing to commit, working tree clean
+Entering 'source/github/meta-introspector/ragit/vendor/amazon-q-developer-cli/vendor/solfunmeme-dioxus/vendor/dioxus-charts'
+HEAD detached at 10d2cb3
+nothing to commit, working tree clean
+Entering 'source/github/meta-introspector/ragit/vendor/amazon-q-developer-cli/vendor/solfunmeme-dioxus/vendor/eliza-rs'
+HEAD detached at 4117619
+nothing to commit, working tree clean
+Entering 'source/github/meta-introspector/ragit/vendor/amazon-q-developer-cli/vendor/solfunmeme-dioxus/vendor/fastembed-rs'
+On branch feature/CRQ-016-nixify-workflow
+nothing to commit, working tree clean
+Entering 'source/github/meta-introspector/ragit/vendor/amazon-q-developer-cli/vendor/solfunmeme-dioxus/vendor/float-cmp'
+HEAD detached at 2d71181
+nothing to commit, working tree clean
+Entering 'source/github/meta-introspector/ragit/vendor/amazon-q-developer-cli/vendor/solfunmeme-dioxus/vendor/gline-rs'
+HEAD detached at 6a6a431
+nothing to commit, working tree clean
+Entering 'source/github/meta-introspector/ragit/vendor/amazon-q-developer-cli/vendor/solfunmeme-dioxus/vendor/json-ld'
+HEAD detached at 7f517eb
+nothing to commit, working tree clean
+Entering 'source/github/meta-introspector/ragit/vendor/amazon-q-developer-cli/vendor/solfunmeme-dioxus/vendor/json-ld/tests/json-ld-api'
+HEAD detached at 963c546
+nothing to commit, working tree clean
+Entering 'source/github/meta-introspector/ragit/vendor/amazon-q-developer-cli/vendor/solfunmeme-dioxus/vendor/keyword-extraction-rs'
+HEAD detached at 636891a
+nothing to commit, working tree clean
+Entering 'source/github/meta-introspector/ragit/vendor/amazon-q-developer-cli/vendor/solfunmeme-dioxus/vendor/layered-nlp'
+HEAD detached at a8a10e9
+nothing to commit, working tree clean
+Entering 'source/github/meta-introspector/ragit/vendor/amazon-q-developer-cli/vendor/solfunmeme-dioxus/vendor/linfa'
+HEAD detached at 77457b2
+nothing to commit, working tree clean
+Entering 'source/github/meta-introspector/ragit/vendor/amazon-q-developer-cli/vendor/solfunmeme-dioxus/vendor/llms-from-scratch-rs'
+HEAD detached at 4059ca3
+nothing to commit, working tree clean
+Entering 'source/github/meta-introspector/ragit/vendor/amazon-q-developer-cli/vendor/solfunmeme-dioxus/vendor/model2vec-rs'
+HEAD detached at 05a8b4a
+nothing to commit, working tree clean
+Entering 'source/github/meta-introspector/ragit/vendor/amazon-q-developer-cli/vendor/solfunmeme-dioxus/vendor/orp'
+HEAD detached at c074d0a
+nothing to commit, working tree clean
+Entering 'source/github/meta-introspector/ragit/vendor/amazon-q-developer-cli/vendor/solfunmeme-dioxus/vendor/rhai'
+HEAD detached at 8a16647b
+nothing to commit, working tree clean
+Entering 'source/github/meta-introspector/ragit/vendor/amazon-q-developer-cli/vendor/solfunmeme-dioxus/vendor/rust-embed'
+HEAD detached at 0c6bbaf
+nothing to commit, working tree clean
+Entering 'source/github/meta-introspector/ragit/vendor/amazon-q-developer-cli/vendor/solfunmeme-dioxus/vendor/rust_libloading'
+HEAD detached at 83f08b8
+nothing to commit, working tree clean
+Entering 'source/github/meta-introspector/ragit/vendor/amazon-q-developer-cli/vendor/solfunmeme-dioxus/vendor/solana-airdrop-service'
+HEAD detached at 9efd5ea
+nothing to commit, working tree clean
+Entering 'source/github/meta-introspector/ragit/vendor/amazon-q-developer-cli/vendor/solfunmeme-dioxus/vendor/sophia_rs'
+HEAD detached at 12607e8
+nothing to commit, working tree clean
+Entering 'source/github/meta-introspector/ragit/vendor/amazon-q-developer-cli/vendor/solfunmeme-dioxus/vendor/steel'
+On branch feature/CRQ-016-nixify-workflow
+nothing to commit, working tree clean
+Entering 'source/github/meta-introspector/ragit/vendor/amazon-q-developer-cli/vendor/solfunmeme-dioxus/vendor/tantivy'
+HEAD detached at 945af922
+nothing to commit, working tree clean
+Entering 'source/github/meta-introspector/ragit/vendor/amazon-q-developer-cli/vendor/solfunmeme-dioxus/vendor/tclifford'
+HEAD detached at 1fe1ab9
+nothing to commit, working tree clean
+Entering 'source/github/meta-introspector/ragit/vendor/amazon-q-developer-cli/vendor/solfunmeme-dioxus/vendor/tongrams-rs'
+HEAD detached at a1d63ad
+nothing to commit, working tree clean
+Entering 'source/github/meta-introspector/ragit/vendor/amazon-q-developer-cli/vendor/solfunmeme-dioxus/vendor/vaporetto'
+HEAD detached at 4608e57
+nothing to commit, working tree clean
+Entering 'source/github/meta-introspector/ragit/vendor/amazon-q-developer-cli/vendor/solfunmeme-dioxus/vendor/vibrato'
+HEAD detached at 0af7cd0
+nothing to commit, working tree clean
+Entering 'source/github/meta-introspector/ragit/vendor/ask_gemini'
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+Entering 'source/github/meta-introspector/ragit/vendor/askrepo'
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+Entering 'source/github/meta-introspector/ragit/vendor/ast-grep'
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+Entering 'source/github/meta-introspector/ragit/vendor/coccinelleforrust'
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+Entering 'source/github/meta-introspector/ragit/vendor/comby'
+On branch master
+Your branch is up to date with 'origin/master'.
+
+nothing to commit, working tree clean
+Entering 'source/github/meta-introspector/ragit/vendor/comby-rust'
+On branch master
+Your branch is up to date with 'origin/master'.
+
+nothing to commit, working tree clean
+Entering 'source/github/meta-introspector/ragit/vendor/em-refactor'
+On branch master
+Your branch is up to date with 'origin/master'.
+
+nothing to commit, working tree clean
+Entering 'source/github/meta-introspector/ragit/vendor/extricrate'
+On branch master
+Your branch is up to date with 'origin/master'.
+
+nothing to commit, working tree clean
+Entering 'source/github/meta-introspector/ragit/vendor/frustum'
+On branch master
+Your branch is up to date with 'origin/master'.
+
+nothing to commit, working tree clean
+Entering 'source/github/meta-introspector/ragit/vendor/google-ai-rs'
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+Entering 'source/github/meta-introspector/ragit/vendor/google-oauth'
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+Entering 'source/github/meta-introspector/ragit/vendor/llm'
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+Entering 'source/github/meta-introspector/ragit/vendor/llmclient'
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+Entering 'source/github/meta-introspector/ragit/vendor/meta-introspector/agave-solana-validator'
+On branch master
+Your branch is up to date with 'origin/master'.
+
+nothing to commit, working tree clean
+Entering 'source/github/meta-introspector/ragit/vendor/meta-introspector/ai-agent-terraform'
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+Entering 'source/github/meta-introspector/ragit/vendor/meta-introspector/bootstrap'
+On branch master
+Your branch is up to date with 'origin/master'.
+
+nothing to commit, working tree clean
+Entering 'source/github/meta-introspector/ragit/vendor/meta-introspector/hugging-face-dataset-validator-rust'
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+Entering 'source/github/meta-introspector/ragit/vendor/meta-introspector/meta-meme'
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+Entering 'source/github/meta-introspector/ragit/vendor/meta-introspector/quasi-meta-meme'
+On branch meetings/nft-investor-1
+Your branch is up to date with 'origin/meetings/nft-investor-1'.
+
+nothing to commit, working tree clean
+Entering 'source/github/meta-introspector/ragit/vendor/meta-introspector/solfunmeme'
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+Entering 'source/github/meta-introspector/ragit/vendor/meta-introspector/solfunmeme-dioxus'
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+Entering 'source/github/meta-introspector/ragit/vendor/mownstr'
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+Entering 'source/github/meta-introspector/ragit/vendor/ploke'
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+Entering 'source/github/meta-introspector/ragit/vendor/refren'
+On branch master
+Your branch is up to date with 'origin/master'.
+
+nothing to commit, working tree clean
+Entering 'source/github/meta-introspector/ragit/vendor/rem'
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+Entering 'source/github/meta-introspector/ragit/vendor/rust-analyzer'
+On branch master
+Your branch is up to date with 'origin/master'.
+
+nothing to commit, working tree clean
+Entering 'source/github/meta-introspector/ragit/vendor/rust-clippy'
+On branch master
+Your branch is up to date with 'origin/master'.
+
+nothing to commit, working tree clean
+Entering 'source/github/meta-introspector/ragit/vendor/rust-embed'
+On branch master
+Your branch is up to date with 'origin/master'.
+
+nothing to commit, working tree clean
+Entering 'source/github/meta-introspector/ragit/vendor/rust-refactor'
+On branch master
+Your branch is up to date with 'origin/master'.
+
+nothing to commit, working tree clean
+Entering 'source/github/meta-introspector/ragit/vendor/scientisto'
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+Entering 'source/github/meta-introspector/ragit/vendor/solfunmeme-metameme'
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+Entering 'source/github/meta-introspector/ragit/vendor/sophia_rs'
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+Entering 'source/github/meta-introspector/ragit/vendor/spacemod'
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+Entering 'source/github/meta-introspector/ragit/vendor/tclifford'
+On branch master
+Your branch is up to date with 'origin/master'.
+
+nothing to commit, working tree clean
+Entering 'source/github/meta-introspector/solfunmeme'
+On branch feature/CRQ-016-nixify-workflow
+nothing to commit, working tree clean
+Entering 'source/github/meta-introspector/streamofrandom'
+On branch feature/CRQ-016-nixify-workflow
+nothing to commit, working tree clean
+Entering 'source/github/meta-introspector/streamofrandom/2025'
+On branch feature/CRQ-016-nixify-workflow
+nothing to commit, working tree clean
+Entering 'source/github/meta-introspector/streamofrandom/vendor/elizaos-plugins/plugin-twitter'
+On branch 1.x
+Your branch is up to date with 'origin/1.x'.
+
+nothing to commit, working tree clean
+Entering 'source/github/meta-introspector/streamofrandom/vendor/livestream-tiktok-plugin'
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+Entering 'source/github/meta-introspector/streamofrandom/vendor/twitter-plugin'
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+Entering 'source/github/meta-introspector/time'
+On branch feature/CRQ-016-nixify-workflow
+nothing to commit, working tree clean
+Entering 'vendor/ebpf/aya'
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+Entering 'vendor/ebpf/bpfjit'
+On branch master
+Your branch is up to date with 'origin/master'.
+
+nothing to commit, working tree clean
+Entering 'vendor/ebpf/bpfman'
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+Entering 'vendor/ebpf/clean-dns-bpf'
+On branch master
+Your branch is up to date with 'origin/master'.
+
+nothing to commit, working tree clean
+Entering 'vendor/ebpf/eadb'
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+Entering 'vendor/ebpf/ebpfguard'
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+Entering 'vendor/ebpf/libbpf-rs'
+On branch master
+Your branch is up to date with 'origin/master'.
+
+nothing to commit, working tree clean
+Entering 'vendor/ebpf/rbpf'
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+Entering 'vendor/external/amazon-q-developer-cli'
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+Entering 'vendor/external/asciinema'
+On branch feature/CRQ-016-nixify-workflow
+nothing to commit, working tree clean
+Entering 'vendor/external/asciinema-scenario'
+On branch feature/CRQ-016-nixify-workflow
+nothing to commit, working tree clean
+Entering 'vendor/external/bitchat-solana-zos-solfunmeme'
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+Entering 'vendor/external/bootstrap'
+On branch master
+Your branch is up to date with 'origin/master'.
+
+nothing to commit, working tree clean
+Entering 'vendor/external/bootstrap-meme'
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+Entering 'vendor/external/coccinelleforrust_personal_mirror'
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+Entering 'vendor/external/emojis-rs'
+On branch trunk
+Your branch is up to date with 'origin/trunk'.
+
+nothing to commit, working tree clean
+Entering 'vendor/external/forgejo-python'
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+Entering 'vendor/external/gemini-cli'
+On branch feature/wip
+Your branch is up to date with 'origin/feature/wip'.
+
+nothing to commit, working tree clean
+Entering 'vendor/external/github-issues-export-rs'
+On branch master
+Your branch is up to date with 'origin/master'.
+
+nothing to commit, working tree clean
+Entering 'vendor/external/grok-cli'
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+Entering 'vendor/external/hugging-face-dataset-validator-rust'
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+Entering 'vendor/external/introspector-llc'
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+Entering 'vendor/external/meta-meme'
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+Entering 'vendor/external/minizinc-introspector'
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+Entering 'vendor/external/monomcp-rust'
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+Entering 'vendor/external/n00b'
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+Entering 'vendor/external/nix-asciinema-agg'
+On branch feature/CRQ-016-nixify-workflow
+nothing to commit, working tree clean
+Entering 'vendor/external/ragit'
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+Entering 'vendor/external/rust'
+On branch feature/CRQ-016-nixify-workflow
+nothing to commit, working tree clean
+Entering 'vendor/external/solfunmeme-banner'
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+Entering 'vendor/external/solfunmeme-dioxus'
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+Entering 'vendor/external/solfunmeme-metameme'
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+Entering 'vendor/external/solfunmeme-model-builder-quiz'
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+Entering 'vendor/external/sophia_rs'
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+Entering 'vendor/external/tclifford'
+On branch master
+Your branch is up to date with 'origin/master'.
+
+nothing to commit, working tree clean
+Entering 'vendor/external/tmux'
+On branch master
+Your branch is up to date with 'origin/master'.
+
+nothing to commit, working tree clean
+Entering 'vendor/external/tmux-interface-rs'
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+Entering 'vendor/external/trident'
+On branch master
+Your branch is up to date with 'origin/master'.
+
+nothing to commit, working tree clean
+Entering 'vendor/external/turbomcp'
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+Entering 'vendor/guix/guix'
+On branch master
+Your branch is up to date with 'origin/master'.
+
+nothing to commit, working tree clean
+Entering 'vendor/guix/mes'
+On branch master
+Your branch is up to date with 'origin/master'.
+
+nothing to commit, working tree clean
+Entering 'vendor/hooks/rusty-hook'
+On branch feature/CRQ-016-nixify-workflow
+nothing to commit, working tree clean
+Entering 'vendor/hooks/shebling'
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+Entering 'vendor/hooks/shellcheck-precommit'
+On branch master
+Your branch is up to date with 'origin/master'.
+
+nothing to commit, working tree clean
+Entering 'vendor/lang-c'
+On branch master
+Your branch is up to date with 'origin/master'.
+
+nothing to commit, working tree clean
+Entering 'vendor/lint/cachix-git-hooks.nix'
+On branch feature/CRQ-016-nixify-workflow
+nothing to commit, working tree clean
+Entering 'vendor/lint/git-hooks.nix'
+On branch feature/CRQ-016-nixify-workflow
+nothing to commit, working tree clean
+Entering 'vendor/lint/shellcheck'
+On branch master
+Your branch is up to date with 'origin/master'.
+
+nothing to commit, working tree clean
+Entering 'vendor/mkAIDerivation'
+On branch feature/CRQ-016-nixify-workflow
+nothing to commit, working tree clean
+Entering 'vendor/nix-on-droid'
+On branch feature/CRQ-016-nixify-workflow
+nothing to commit, working tree clean
+Entering 'vendor/nix/fenix'
+On branch feature/CRQ-016-nixify
+Your branch is up to date with 'meta-introspector/feature/CRQ-016-nixify'.
+
+nothing to commit, working tree clean
+Entering 'vendor/nix/flake-utils'
+On branch feature/CRQ-016-nixify-workflow
+nothing to commit, working tree clean
+Entering 'vendor/nix/home-manager'
+On branch feature/CRQ-016-nixify
+Your branch is up to date with 'meta-introspector/feature/CRQ-016-nixify'.
+
+nothing to commit, working tree clean
+Entering 'vendor/nix/nil'
+On branch feature/CRQ-016-nixify-workflow
+nothing to commit, working tree clean
+Entering 'vendor/nix/nix'
+On branch feature/CRQ-016-nixify-workflow
+nothing to commit, working tree clean
+Entering 'vendor/nix/nix-asciinema-agg'
+On branch feature/CRQ-016-nixify
+Your branch is up to date with 'meta-introspector/feature/CRQ-016-nixify'.
+
+nothing to commit, working tree clean
+Entering 'vendor/nix/nix-config-merger'
+On branch main
+Your branch is ahead of 'origin/main' by 3 commits.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+Entering 'vendor/nix/nix-direnv'
+On branch feature/CRQ-016-nixify-workflow
+nothing to commit, working tree clean
+Entering 'vendor/nix/nix-files-comparator'
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+Entering 'vendor/nix/nix-systems-default'
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+Entering 'vendor/nix/nix-systems-default-fork'
+On branch feature/CRQ-016-nixify
+Your branch is up to date with 'meta-introspector/feature/CRQ-016-nixify'.
+
+nothing to commit, working tree clean
+Entering 'vendor/nix/nixpacks'
+On branch feature/CRQ-016-nixify
+Your branch is up to date with 'meta-introspector/feature/CRQ-016-nixify'.
+
+nothing to commit, working tree clean
+Entering 'vendor/nix/nixpkgs-lint'
+On branch feature/CRQ-016-nixify-workflow
+nothing to commit, working tree clean
+Entering 'vendor/nix/nixtract'
+On branch feature/CRQ-016-nixify-workflow
+nothing to commit, working tree clean
+Entering 'vendor/nix/renix'
+On branch feature/CRQ-016-nixify-workflow
+nothing to commit, working tree clean
+Entering 'vendor/nix/rnix-parser-tester'
+On branch feature/CRQ-016-nixify-workflow
+nothing to commit, working tree clean
+Entering 'vendor/nix/tvix'
+On branch canon
+Your branch is up to date with 'origin/canon'.
+
+nothing to commit, working tree clean
+Entering 'vendor/nixpkgs'
+On branch feature/CRQ-016-nixify-workflow
+
+It took 7.77 seconds to enumerate untracked files.
+See 'git help status' for information on how to improve this.
+
+nothing to commit, working tree clean
+Entering 'vendor/plantuml-stdlib/C4-PlantUML'
+On branch master
+Your branch is up to date with 'origin/master'.
+
+nothing to commit, working tree clean
+Entering 'vendor/rnix-parser'
+On branch feature/CRQ-016-nixify-workflow
+nothing to commit, working tree clean
+Entering 'vendor/rust-index-guix'
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+Entering 'vendor/steel'
+On branch feature/CRQ-016-nixify-workflow
+nothing to commit, working tree clean
+Entering 'vendor/strace/dutchcoders-trace'
+On branch master
+Your branch is up to date with 'origin/master'.
+
+nothing to commit, working tree clean
+Entering 'vendor/strace/intentrace'
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+Entering 'vendor/strace/lurk'
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+Entering 'vendor/strace/rstrace'
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+Entering 'vendor/tools/detect-duplicates'
+On branch feature/CRQ-016-nixify-workflow
+nothing to commit, working tree clean

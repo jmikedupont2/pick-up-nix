@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+
+# Boot script for experimental task: {{ task_title }}
+
+echo "Starting experimental task: {{ task_title }} for muse: {{ muse_name }}"
+# Add task-specific boot logic here

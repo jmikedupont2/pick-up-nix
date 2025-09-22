@@ -1,0 +1,7 @@
+warning: Git tree '/data/data/com.termux.nix/files/home/pick-up-nix2' is dirty
+error:
+       … while updating the lock file of flake 'git+file:///data/data/com.termux.nix/files/home/pick-up-nix2?dir=flakes/crq-018'
+
+       … while updating the flake input 'projectScripts'
+
+       error: getting status of '/nix/store/8hky6fyq0bn6d8mmw4d7l2agxxv73xwl-source/flake.nix': No such file or directory

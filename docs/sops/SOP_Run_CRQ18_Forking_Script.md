@@ -35,6 +35,15 @@ To run the `automate_dependency_forking.sh` script, use the wrapper script `run_
         ./scripts/run_crq18_forking_script.sh
         ```
 
+### 4.3. Script Quality Assurance
+
+Before executing `scripts/run_crq18_forking_script.sh` or `scripts/automate_dependency_forking.sh`, always run `shellcheck` on them to ensure code quality and catch potential errors. Refer to [Memo: Use Shellcheck Always After Changes](../../docs/memos/Shellcheck_Always_After_Changes.md) for details.
+
+```bash
+shellcheck scripts/run_crq18_forking_script.sh
+shellcheck scripts/automate_dependency_forking.sh
+```
+
 ## 5. How it Works
 
 The `run_crq18_forking_script.sh` script performs the following actions:

@@ -29,12 +29,17 @@ The current task involves:
 *   **Documentation Updates:** A memo `docs/review_findings/Git_Lock_File_Issue.md` was created. The `GEMINI.md` operational guidelines were updated with a strict "Git Operations Policy".
 *   **Documentation Enhancement (CRQ-017) Progress**:
     *   Created `docs/tutorials/Contributing_with_CRQs_and_SOPs.md`.
-    *   Reviewed and confirmed accuracy and completeness of all SOPs in `docs/sops/` with CRQ-016 implementation, including adding CRQ-016 and Shellcheck memo references where appropriate.
+    *   Reviewed and updated key SOPs in `docs/sops/` for accuracy and completeness, ensuring references to CRQ-016 and the Shellcheck memo are integrated.
     *   Created `docs/crqs/CRQ_019_Secure_Credential_Handling_in_Nix_Scripts.md` and `docs/sops/SOP_Secure_Credential_Handling_in_Nix_Scripts.md`.
     *   Created `docs/crqs/CRQ_020_Automated_Solution_Discovery_and_Vendorization.md`.
+    *   Created `docs/sops/SOP_Original_Content_Sourcing.md`.
+    *   Created `scripts/lib_github_parsing.sh` and refactored several scripts (`scripts/automate_dependency_forking.sh`, `scripts/branch_and_push_all.sh`, `scripts/extract_and_vendorize_github_repos.sh`, `scripts/generate_dependency_list.sh`, `scripts/generate_update_lock_command.sh`, `scripts/onboard_project.sh`, `scripts/update_flake_lock.sh`) to use the new library functions for GitHub URL parsing.
 *   **`vendor/nix/flake.nix` Review:** Confirmed that `vendor/nix/flake.nix` is correctly configured for submodule aggregation.
 *   **Submodule Commit and Push:** The `scripts/commit_all_submodule_changes.sh` script was executed, committing and pushing remaining modified/untracked files or new commits within the submodules.
 *   **Main Repository Commit and Push:** Changes in the main repository (including `.gitignore` modifications, submodule gitlink updates, and new files like `nixboot.sh`) have been staged, committed, and pushed to the remote.
+*   **New Script Creation:** Created `scripts/onboard_project.sh` for project onboarding into the quality system, `scripts/create_muse_task.sh` for general task creation, and `scripts/create_experimental_task.sh` for experimental tasks.
+*   **New SOP Creation:** Created `docs/sops/SOP_Digital_Mycology_Experiment_Workflow.md` to define the workflow for LLM-based science experiments.
+*   **New Meme Creation:** Created `docs/memes/solfunmeme-mycology.md` describing the application of quality and agile frameworks to digital alife and meme mycology.
 
 ## Next Steps:
 

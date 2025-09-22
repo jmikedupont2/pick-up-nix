@@ -160,6 +160,11 @@ This section provides an overview of the current status of CRQ-016.
 
 This CRQ is currently in progress. It aims to automate the forking of external GitHub dependencies into the `meta-introspector` organization to mitigate supply chain risks. Details can be found in `docs/crqs/CRQ_018_Automated_GitHub_Forking.md`.
 
+## Project Policies
+
+*   **CRQ-021: Artistic Policy Framework:** This CRQ establishes a formal framework for the project's creative and artistic expression. Details can be found in `docs/crqs/CRQ_021_Artistic_Policy_Framework.md`.
+*   **CRQ-022: Project Quality Doctrine:** This CRQ defines the foundational principles for project quality, ensuring consistency, reproducibility, and adherence to high standards. Details can be found in `docs/crqs/CRQ_022_Quality_Doctrine.md`.
+
 ## Shell Script Refactoring Initiative
 
 An ongoing initiative is to refactor existing shell scripts (`*.sh` and `scripts/*.sh`) into reusable functions and libraries to promote the Don't Repeat Yourself (DRY) principle and improve maintainability. This will be applied as new scripts are developed and existing ones are modified.

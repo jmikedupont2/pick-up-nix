@@ -11,6 +11,7 @@ This SOP applies to all submodules located under the `vendor/nix/` directory tha
 ## 3. Prerequisites
 
 *   A working Git environment with access to the project repository.
+*   `git` command-line tool installed.
 *   `nix` package manager installed and configured.
 *   `gh` (GitHub CLI) installed and authenticated.
 *   Familiarity with basic Git and Nix flake concepts.
@@ -45,7 +46,7 @@ This SOP applies to all submodules located under the `vendor/nix/` directory tha
     ./scripts/commit_and_push_flakes.sh
     ```
     This script will:
-    *   Ensure the `feature/CRQ-016-nixify-workflow` branch is checked out (or created) in each submodule.
+        *   Ensure the `feature/CRQ-016-nixify-workflow` branch is checked out (or created) in each submodule.
     *   Commit the `flake.nix` changes (and any other staged changes) in each submodule with a CRQ-prefixed commit message.
     *   Push the new branch to the submodule's remote. (Note: Tagging of submodules is currently skipped as per user request.)
 
@@ -80,6 +81,8 @@ This SOP applies to all submodules located under the `vendor/nix/` directory tha
 ## 6. Related Documents
 
 *   CRQ-016: Submodule Nixification and Flake Refactoring
+*   CRQ-018: Automated GitHub Forking for Nix Flake Dependencies
+*   CRQ-019: Secure Credential Handling in Nix Scripts
 *   `scripts/branch_and_push_all.sh` documentation
 *   `scripts/commit_and_push_flakes.sh` documentation
 *   `scripts/commit_crq_submodule.sh` documentation

@@ -1,0 +1,20 @@
+[2025-09-21 16:35:56] Attempting to enter nix develop shell...
+warning: Git tree '/data/data/com.termux.nix/files/home/pick-up-nix2' is dirty
+[2025-09-21 16:35:58] Successfully entered nix develop shell.
+[2025-09-21 16:35:58] Attempting to build default package...
+warning: Git tree '/data/data/com.termux.nix/files/home/pick-up-nix2' is dirty
+this derivation will be built:
+  /nix/store/zic74n4x7q0wll1s2k34iylf5rr97ymk-automate-dependency-forking-script-0.1.0.drv
+building '/nix/store/zic74n4x7q0wll1s2k34iylf5rr97ymk-automate-dependency-forking-script-0.1.0.drv'...
+error: builder for '/nix/store/zic74n4x7q0wll1s2k34iylf5rr97ymk-automate-dependency-forking-script-0.1.0.drv' failed with exit code 1;
+       last 8 log lines:
+       > Running phase: patchPhase
+       > Running phase: updateAutotoolsGnuConfigScriptsPhase
+       > Running phase: configurePhase
+       > no configure script, doing nothing
+       > Running phase: buildPhase
+       > no Makefile or custom buildPhase, doing nothing
+       > Running phase: installPhase
+       > cp: cannot stat '/nix/store/m565vidvzyj368isy52d7mvbpfjyyqks-scripts/automate_dependency_forking.sh': No such file or directory
+       For full logs, run 'nix log /nix/store/zic74n4x7q0wll1s2k34iylf5rr97ymk-automate-dependency-forking-script-0.1.0.drv'.
+[2025-09-21 16:36:00] Error: Failed to build default package. Check flake_test_crq-018_20250921_163556.log for details.

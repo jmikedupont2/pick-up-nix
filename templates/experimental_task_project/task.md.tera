@@ -1,0 +1,60 @@
+# Task Template
+
+<!-- This template defines a new task, composed of atomic parts, and reflects the project's core identity (zos). -->
+
+*   **Task ID:** [Unique Identifier, potentially inspired by zos sequence]
+*   **Title:** {{ task_title }}
+*   **Description:**
+    This task is generated for the muse **{{ muse_name }}**.
+
+    {% if relative_doc_path %}
+    ## Review Instructions
+
+    As the Muse **{{ muse_name }}**, your task is to review the document located at:
+
+    ```
+    {{ relative_doc_path }}
+    ```
+
+    From your unique perspective as **{{ muse_name }}**, analyze the document and determine:
+
+    1.  **Relevance**: Is this document relevant for inclusion in the experimental task template?
+    2.  **Contribution**: How does this document contribute to the understanding or execution of experimental tasks?
+    3.  **Key Takeaways**: What are the most important aspects of this document that an AI agent (like Gemini) should be aware of when performing experimental tasks under your guidance?
+    4.  **Template Integration**: If relevant, suggest how specific parts of this document could be integrated or referenced within the `task_template.md` or other parts of the experimental task project structure.
+
+    Provide your review and recommendations in detail below.
+    {% else %}
+    ## Task Instructions
+
+    As the Muse **{{ muse_name }}** (acting as the **{{ muse_name }}** persona), your task is to generate text content for review.
+
+    1.  **Generate Text**: Use the `scripts/generate-text-to-review.sh --generate` command to produce a piece of text.
+    2.  **Review Text**: Critically review the generated text from your perspective as **{{ muse_name }}** with the **{{ muse_name }}** persona. Consider its quality, relevance, and adherence to any implicit or explicit guidelines associated with your muse/persona.
+    3.  **Provide Feedback**: Document your review and feedback on the generated text below.
+    {% endif %}
+
+## Atomic Components
+
+*   [Component 1: Description of atomic sub-task/step]
+*   [Component 2: Description of atomic sub-task/step]
+*   [Component N: ...]
+
+## Dependencies
+
+*   [Prerequisite Task ID or Description]
+
+## Status
+
+*   Proposed / In Progress / Completed / Blocked
+
+## Assignee
+
+*   [Name or Team]
+
+## Related CRQ/SOPs
+
+*   [Link to relevant CRQ or SOP, e.g., CRQ-028]
+
+<!-- Core Identity: zos = [0,1,2,3,5,7,11,13,17,19,23] -->
+<!-- This sequence represents the project's philosophy of decomposing tasks into prime-like, indivisible units. -->

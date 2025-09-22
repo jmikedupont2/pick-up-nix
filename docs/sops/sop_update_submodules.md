@@ -28,3 +28,5 @@ This Standard Operating Procedure (SOP) outlines the steps for updating all Git 
 *   `docs/sops/sop_add_mkaiderivation_submodule.md`
 *   `tools/update_all_submodules.sh`
 *   [Memo: Use Shellcheck Always After Changes](docs/memos/Shellcheck_Always_After_Changes.md)
+
+**Note on `tools/update_all_submodules.sh`**: If you use or modify this script, always run `shellcheck` on it to ensure code quality and catch potential errors. Refer to [Memo: Use Shellcheck Always After Changes](docs/memos/Shellcheck_Always_After_Changes.md) for details.

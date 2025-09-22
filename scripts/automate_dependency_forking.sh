@@ -10,6 +10,8 @@ PROJECT_ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")"/.. && pwd)"
 
 # Source lib_github.sh for fork_github_repo function
 source "${PROJECT_ROOT}/lib/lib_github_fork.sh"
+# Source lib_github_parsing.sh for GitHub URL parsing functions
+source "${PROJECT_ROOT}/scripts/lib_github_parsing.sh"
 
 # --- Configuration ---
 META_INTROSPECTOR_ORG="meta-introspector"
@@ -42,7 +44,8 @@ list_meta_introspector_repos() {
 # Function to extract GitHub dependencies from flake.nix files
 extract_github_dependencies() {
   local nix_file="$1"
-  grep -oP 'github:\K[^/]+/[^/]+' "${nix_file}" | sort -u
+  # Use the new library function to extract owner/repo from github: inputs
+  get_owner_repo_from_github_flake_input "$(cat "${nix_file}")" | sort -u
 }
 
 # --- Main Script Logic ---
@@ -90,7 +93,7 @@ log "Found $(echo "${!github_dependencies[@]}" | wc -w) unique GitHub dependenci
 
 for dep_repo in "${!github_dependencies[@]}"; do
   OWNER=$(echo "${dep_repo}" | cut -d'/' -f1)
-  REPO_NAME=$(echo "${dep_repo}" | cut -d'/' -f2)
+  REPO_NAME=$(get_repo_name_from_github_flake_input "github:${dep_repo}")
   FORK_FULL_NAME="${META_INTROSPECTOR_ORG}/${REPO_NAME}"
 
   log "Processing dependency: ${dep_repo}"

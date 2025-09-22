@@ -32,6 +32,8 @@ This SOP applies to all development tasks within the project, particularly those
   ```
   *(Note: The `/path/to/completed_tasks/` should be the specific directory for completed tasks, e.g., `source/github/meta-introspector/git-submodule-tools-rs/completed_tasks/`)*
 
+**Note on Helper Scripts**: If you create any helper shell scripts to automate the moving or processing of task files, always run `shellcheck` on them to ensure code quality and catch potential errors. Refer to [Memo: Use Shellcheck Always After Changes](../../docs/memos/Shellcheck_Always_After_Changes.md) for details.
+
 #### 4.2. Review and Summarize Results:
 - Review the content of the completed task file and its output files.
 - Extract key outcomes, changes, and any relevant instructions or observations.

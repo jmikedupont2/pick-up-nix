@@ -1,0 +1,9 @@
+[2025-09-21 15:57:43] Attempting to enter nix develop shell...
+warning: Git tree '/data/data/com.termux.nix/files/home/pick-up-nix2' is dirty
+error:
+       … while updating the lock file of flake 'git+file:///data/data/com.termux.nix/files/home/pick-up-nix2?dir=flakes/crq-018'
+
+       … while updating the flake input 'projectScripts'
+
+       error: getting status of '/nix/store/8hky6fyq0bn6d8mmw4d7l2agxxv73xwl-source/flake.nix': No such file or directory
+[2025-09-21 15:57:45] Error: Failed to enter nix develop shell. Check flake_test_crq-018_20250921_155743.log for details.

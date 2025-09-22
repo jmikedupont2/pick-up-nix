@@ -21,6 +21,11 @@ This SOP applies to developers and testers responsible for verifying the functio
 
 1.  Ensure your `gh` CLI is authenticated. If not, run `gh auth login` and follow the prompts.
 2.  Verify that your authenticated `gh` user has permissions to create repositories within the `meta-introspector` GitHub organization.
+3.  **Run Shellcheck on Test Scripts**: Before execution, run `shellcheck` on `lib/lib_github_fork.sh` and `tests/lib/test_lib_github_fork.sh` to ensure script quality. Refer to [Memo: Use Shellcheck Always After Changes](../../docs/memos/Shellcheck_Always_After_Changes.md) for details.
+    ```bash
+    shellcheck lib/lib_github_fork.sh
+    shellcheck tests/lib/test_lib_github_fork.sh
+    ```
 
 ### 4.2. Execute the Test Script
 

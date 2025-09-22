@@ -33,6 +33,14 @@ To test a Nix flake, use the `scripts/test_flake.sh` wrapper script:
         ./scripts/test_flake.sh flakes/crq-018
         ```
 
+### 4.3. Script Quality Assurance
+
+Before executing `scripts/test_flake.sh`, always run `shellcheck` on it to ensure code quality and catch potential errors. Refer to [Memo: Use Shellcheck Always After Changes](../../docs/memos/Shellcheck_Always_After_Changes.md) for details.
+
+```bash
+shellcheck scripts/test_flake.sh
+```
+
 ## 5. Expected Output and Logging
 
 The script will log all its actions and the output from `nix develop` and `nix build` commands to a dedicated log file. The log file will be named `flake_test_<FLAKE_DIR_BASENAME>_YYYYMMDD_HHMMSS.log` and will be created in the directory from which the script is executed.

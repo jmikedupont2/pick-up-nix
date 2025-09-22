@@ -11,6 +11,7 @@ set -euo pipefail
 
 PROJECT_ROOT="$(dirname "$(dirname "$(realpath "$0")")")"
 source "${PROJECT_ROOT}/lib/lib_github_fork.sh"
+source "${PROJECT_ROOT}/scripts/lib_github_parsing.sh"
 
 # --- Configuration ---
 INPUT_FILE="${PROJECT_ROOT}/index/all_github.txt"
@@ -43,14 +44,15 @@ fi
 log "Extracting unique GitHub repository URLs from '${INPUT_FILE}'..."
 
 # Extract HTTP/HTTPS URLs
-grep -oE 'https?://github.com/[a-zA-Z0-9_.-]+/[a-zA-Z0-9_.-]+' "${INPUT_FILE}" \
+get_https_github_urls "$(cat \"${INPUT_FILE}\")"
   > "${UNIQUE_REPOS_FILE}"
 
+
 # Extract SSH URLs, convert to HTTPS, and append
-grep -oE 'git@github.com:[a-zA-Z0-9_.-]+/[a-zA-Z0-9_.-]+\.git' "${INPUT_FILE}" \
+get_ssh_github_urls "$(cat \"${INPUT_FILE}\")" \
   | sed 's#git@github.com:#https://github.com/#' \
   | sed 's#\.git$##' \
-  >> "${UNIQUE_REPOS_FILE}"
+  >> \"${UNIQUE_REPOS_FILE}\"
 
 # Sort and unique the combined list
 sort -u -o "${UNIQUE_REPOS_FILE}" "${UNIQUE_REPOS_FILE}"
@@ -68,7 +70,7 @@ while IFS= read -r repo_url; do
   # Example: https://github.com/owner/repo -> owner/repo
   repo_path=$(echo "$repo_url" | sed -E 's#https?://github.com/##')
   owner=$(echo "$repo_path" | cut -d'/' -f1)
-  repo_name=$(echo "$repo_path" | cut -d'/' -f2)
+  repo_name=$(get_repo_name_from_github_url "$repo_url")
 
   if [[ -z "$owner" || -z "$repo_name" ]]; then
     log "Warning: Could not parse owner/repo from URL: '${repo_url}'. Skipping."

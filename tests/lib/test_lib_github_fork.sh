@@ -12,7 +12,7 @@
 
 set -euo pipefail
 
-PROJECT_ROOT="$(dirname "$(dirname "$(realpath "$0")")")"
+PROJECT_ROOT="$(dirname "$(dirname "$(dirname "$(realpath "$0")")")")"
 source "${PROJECT_ROOT}/lib/lib_github_fork.sh"
 
 # --- Configuration for Testing ---

@@ -41,3 +41,5 @@ This Standard Operating Procedure (SOP) outlines the steps for adding the `mkAID
 *   [Memo: Use Shellcheck Always After Changes](docs/memos/Shellcheck_Always_After_Changes.md)
 *   `docs/sops/sop_update_submodules.md`
 *   `tools/add_mkaiderivation_submodule.sh`
+
+**Note on `tools/add_mkaiderivation_submodule.sh`**: If you use or modify this script, always run `shellcheck` on it to ensure code quality and catch potential errors. Refer to [Memo: Use Shellcheck Always After Changes](docs/memos/Shellcheck_Always_After_Changes.md) for details.

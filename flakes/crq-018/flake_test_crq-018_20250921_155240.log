@@ -1,0 +1,24 @@
+[2025-09-21 15:52:40] Attempting to enter nix develop shell...
+warning: Git tree '/data/data/com.termux.nix/files/home/pick-up-nix2' is dirty
+[2025-09-21 15:52:43] Successfully entered nix develop shell.
+[2025-09-21 15:52:43] Attempting to build default package...
+warning: Git tree '/data/data/com.termux.nix/files/home/pick-up-nix2' is dirty
+error:
+       … while calling the 'derivationStrict' builtin
+
+         at /builtin/derivation.nix:9:12: (source not available)
+
+       … while evaluating derivation 'automate-dependency-forking-script-0.1.0'
+         whose name attribute is located at /nix/store/081zspnjiwbq85jqhx89gkk2nbyrfg3y-source/pkgs/stdenv/generic/make-derivation.nix:539:13
+
+       … while evaluating attribute 'src' of derivation 'automate-dependency-forking-script-0.1.0'
+
+         at /nix/store/y9i1f28n0zihwncifa2jlbc2gr9bmh1p-source/flakes/crq-018/flake.nix:24:9:
+
+           23|         version = "0.1.0";
+           24|         src = ../../scripts/automate_dependency_forking.sh;
+             |         ^
+           25|         dontUnpack = true;
+
+       error: getting status of '/nix/store/y9i1f28n0zihwncifa2jlbc2gr9bmh1p-source/scripts/automate_dependency_forking.sh': No such file or directory
+[2025-09-21 15:52:45] Error: Failed to build default package. Check flake_test_crq-018_20250921_155240.log for details.

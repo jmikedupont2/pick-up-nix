@@ -33,6 +33,16 @@ To check and rectify submodules, use the `scripts/check_and_rectify_submodules.s
     ./scripts/check_and_rectify_submodules.sh
     ```
 
+### 4.3. Script Quality Assurance
+
+Before executing any of the scripts mentioned in this SOP, always run `shellcheck` on them to ensure code quality and catch potential errors. Refer to [Memo: Use Shellcheck Always After Changes](../../docs/memos/Shellcheck_Always_After_Changes.md) for details.
+
+```bash
+shellcheck scripts/generate_submodule_status.sh
+shellcheck scripts/vendorize_and_fork_submodule.sh
+shellcheck scripts/check_and_rectify_submodules.sh
+```
+
 ## 5. How it Works
 
 The `check_and_rectify_submodules.sh` script performs the following actions:

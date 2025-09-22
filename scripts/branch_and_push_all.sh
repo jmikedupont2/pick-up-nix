@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 
 source "$(dirname "$0")"/lib_git_submodule.sh
+source "$(dirname "$0")"/lib_github_parsing.sh
 
 set -e
 
@@ -24,7 +25,7 @@ fi
 FLAKE_TEMPLATE=$(cat "$TEMPLATE_FILE")
 
 # --- Get Submodules ---
-REPOS=$(grep "github:meta-introspector" flake.nix | cut -d'/' -f2 | cut -d'/' -f1)
+REPOS=$(grep "github:meta-introspector" flake.nix | while read -r line; do get_repo_name_from_github_flake_input "$line"; done | sort -u)
 if [ -z "$REPOS" ]; then
     echo "No meta-introspector repositories found in flake.nix" >&2
     exit 1
