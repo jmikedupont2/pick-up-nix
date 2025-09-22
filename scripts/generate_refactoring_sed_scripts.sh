@@ -39,7 +39,7 @@ FILES_TO_REFACTOR["_todo_helper.sh"]=(
   's|git remote rename origin upstream|git remote rename origin upstream|g' # This is already a direct call, but needs to be wrapped in a function
   's|git remote add origin \"$new_origin_url\"|git remote add origin \"$new_origin_url\"|g' # Same as above
   's|if git fetch origin;|if git_fetch_origin;|g'
-  's|gh repo fork --org meta-introspector --remote \"$new_origin_url\"|ensure_meta_introspector_remote_and_fork \"$repo_name\"|g'
+  's|gh repo fork --org meta-introspector --remote "$new_origin_url"|lib_github_fork_repo "$new_origin_url" "meta-introspector" "$repo_name"|g'
   's|git add -A|git_add_all|g'
   's|git commit -m "chore: Update submodule remotes" || true|git_commit_message "chore: Update submodule remotes" || true|g'
 )

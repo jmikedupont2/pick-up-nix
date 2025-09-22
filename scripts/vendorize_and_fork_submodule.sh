@@ -1,5 +1,10 @@
 #!/usr/bin/env bash
 
+set -euo pipefail
+
+PROJECT_ROOT="$(dirname "$(dirname "$(realpath "$0")")")"
+source "${PROJECT_ROOT}/lib/lib_github_fork.sh"
+
 # This script vendorizes a GitHub repository as a Git submodule
 # and checks out a specific branch.
 
@@ -56,7 +61,7 @@ fi
     # Attempt to fork the repository if it doesn't exist in the meta-introspector organization
     if ! gh repo view "${META_INTROSPECTOR_ORG}/${FORKED_REPO_NAME}" &>/dev/null; then
         echo "Forking ${ORIGINAL_REPO_URL} to ${META_INTROSPECTOR_ORG}/${FORKED_REPO_NAME}..."
-        gh repo fork "${ORIGINAL_REPO_URL}" --org "${META_INTROSPECTOR_ORG}" --clone=false --fork-name "${FORKED_REPO_NAME}"
+        lib_github_fork_repo "${ORIGINAL_REPO_URL}" "${META_INTROSPECTOR_ORG}" "${FORKED_REPO_NAME}"
         if [ $? -ne 0 ]; then
             echo "Error: Failed to fork repository. Please ensure gh CLI is authenticated and has permissions."
             exit 1

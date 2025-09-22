@@ -8,6 +8,9 @@ set -euo pipefail
 
 PROJECT_ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")"/.. && pwd)"
 
+# Source lib_github.sh for fork_github_repo function
+source "${PROJECT_ROOT}/lib/lib_github_fork.sh"
+
 # --- Configuration ---
 META_INTROSPECTOR_ORG="meta-introspector"
 GITHUB_REPOS_INDEX="${PROJECT_ROOT}/index/github_${META_INTROSPECTOR_ORG}_repos.json"
@@ -113,7 +116,7 @@ for dep_repo in "${!github_dependencies[@]}"; do
     log "  REPORT: Would fork '${dep_repo}' to '${FORK_FULL_NAME}'."
   else
     log "  Attempting to fork '${dep_repo}' to '${FORK_FULL_NAME}'..."
-    if gh repo fork "${OWNER}/${REPO_NAME}" --org "${META_INTROSPECTOR_ORG}" --remote; then
+    if lib_github_fork_repo "${OWNER}/${REPO_NAME}" "${META_INTROSPECTOR_ORG}" "${REPO_NAME}"; then
       log "  Successfully forked '${dep_repo}' to '${FORK_FULL_NAME}'."
       # Update the local index after a successful fork
       list_meta_introspector_repos

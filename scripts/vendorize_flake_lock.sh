@@ -2,6 +2,9 @@
 
 set -euo pipefail
 
+PROJECT_ROOT="$(dirname "$(dirname "$(realpath "$0")")")"
+source "${PROJECT_ROOT}/lib/lib_github_fork.sh"
+
 # This script vendorizes the dependencies in the flake.lock file.
 
 # TODO: Replace with a real token
@@ -16,7 +19,7 @@ EXTERNAL_DEPS=$(echo "$FLAKE_LOCK" | jq -r '.nodes[] | select(.locked.type == "g
 # Fork the external dependencies
 for repo in $EXTERNAL_DEPS; do
   echo "Forking $repo..."
-  gh repo fork "$repo" "meta-introspector/$(basename $repo)" --clone=false
+  lib_github_fork_repo "$repo" "meta-introspector" "$(basename $repo)"
 done
 
 # Update the flake.nix file
