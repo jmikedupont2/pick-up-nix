@@ -1,0 +1,17 @@
+warning: Git tree '/data/data/com.termux.nix/files/home/pick-up-nix2' is dirty
+error:
+       … while updating the lock file of flake 'git+file:///data/data/com.termux.nix/files/home/pick-up-nix2?dir=tasks/2025/09/22/DataFunctorNix'
+
+       … while updating the flake input 'bootstrap'
+
+       … while fetching the input 'github:meta-introspector/bootstrap/feature/CRQ-016-nixify-workflow'
+
+       error: unable to download 'https://api.github.com/repos/meta-introspector/bootstrap/commits/feature/CRQ-016-nixify-workflow': HTTP error 422
+
+       response body:
+
+       {
+         "message": "No commit found for SHA: feature/CRQ-016-nixify-workflow",
+         "documentation_url": "https://docs.github.com/rest/commits/commits#get-a-commit",
+         "status": "422"
+       }

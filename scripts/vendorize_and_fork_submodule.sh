@@ -30,12 +30,12 @@ done
 ORIGINAL_REPO_URL="$1"
 SUBMODULE_PATH="$2"
 FORK_NAME="$3" # New argument for the forked repository name
-TARGET_BRANCH="feature/CRQ-016-nixify"
+TARGET_BRANCH="${4:-feature/CRQ-016-nixify-workflow}" # New argument for target branch, with default
 META_INTROSPECTOR_ORG="meta-introspector"
 
 if [ -z "$ORIGINAL_REPO_URL" ] || [ -z "$SUBMODULE_PATH" ]; then
-    echo "Usage: $0 [--dry-run] <original_repo_url> <submodule_path> [fork_name]"
-    echo "Example: $0 --dry-run github:numtide/flake-utils vendor/nix/flake-utils flake-utils-fork"
+    echo "Usage: $0 [--dry-run] <original_repo_url> <submodule_path> [fork_name] [target_branch]"
+    echo "Example: $0 --dry-run github:numtide/flake-utils vendor/nix/flake-utils flake-utils-fork feature/CRQ-016-nixify-workflow"
     exit 1
 fi
 

@@ -112,9 +112,6 @@
 [submodule "vendor/external/amazon-q-developer-cli"]
 	path = vendor/external/amazon-q-developer-cli
 	url = https://github.com/meta-introspector/amazon-q-developer-cli
-[submodule "vendor/external/bootstrap"]
-	path = vendor/external/bootstrap
-	url = https://github.com/meta-introspector/bootstrap
 [submodule "vendor/external/grok-cli"]
 	path = vendor/external/grok-cli
 	url = https://github.com/meta-introspector/grok-cli
@@ -314,3 +311,6 @@
 [submodule "vendor/rust/just"]
 	path = vendor/rust/just
 	url = https://github.com/casey/just
+[submodule "source/github/meta-introspector/bootstrap"]
+	path = source/github/meta-introspector/bootstrap
+	url = https://github.com/meta-introspector/bootstrap

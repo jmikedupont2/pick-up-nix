@@ -1,0 +1,40 @@
+# Experimental Task: {{TASK_TITLE}}
+
+## Muse: {{MUSE_NAME}}
+
+## Date: {{DATE}}
+
+## Description:
+This document outlines the experimental task "{{TASK_TITLE}}", initiated under the guidance of the {{MUSE_NAME}} muse. The goal of this experiment is to explore the creation of private data Nix elements, specifically focusing on "data_functor_nix" where each input is some data or a script that produces and captures data used by other Nix Data Functors (NDFs).
+
+## Objectives:
+*   Define the structure and behavior of a "data_functor_nix".
+*   Develop a prototype for a simple NDF.
+*   Investigate methods for securely handling private data within Nix.
+*   Document the process and findings.
+
+## Hypothesis:
+It is feasible to create a system of interconnected Nix Data Functors that can process and manage private data in a reproducible and auditable manner.
+
+## Methodology:
+1.  **Initial Research:** Explore existing Nix patterns for data handling and privacy.
+2.  **Design NDF Interface:** Define inputs, outputs, and expected behaviors for a generic NDF.
+3.  **Prototype Development:** Implement a basic "data_functor_nix" using Nix expressions.
+4.  **Data Integration:** Experiment with feeding various data types into the NDF.
+5.  **Security Considerations:** Analyze potential vulnerabilities and propose mitigation strategies for private data.
+6.  **Documentation:** Record all steps, decisions, and observations.
+
+## Expected Outcomes:
+*   A clear definition of "data_functor_nix".
+*   A working prototype of a simple NDF.
+*   Insights into secure private data handling in Nix.
+*   A comprehensive report of the experiment.
+
+## Resources:
+*   Nix documentation
+*   Relevant project SOPs and CRQs
+*   Existing Nix examples for data processing
+
+## Notes:
+*   This experiment is part of a larger effort to create self-proving, auditable AI systems.
+*   Focus on reproducibility and verifiability at every step.

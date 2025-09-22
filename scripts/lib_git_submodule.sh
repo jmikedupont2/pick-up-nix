@@ -117,3 +117,19 @@ git_get_toplevel_dir() {
 git_submodule_update_init_recursive() {
   git submodule update --init --recursive
 }
+
+# Function to force tag the current repository.
+# Arguments:
+#   $1: The tag name.
+git_tag_force() {
+  local tag_name="$1"
+  git tag -f "$tag_name"
+}
+
+# Function to force push a tag to origin.
+# Arguments:
+#   $1: The tag name.
+git_push_tag_force() {
+  local tag_name="$1"
+  git push origin "$tag_name" --force
+}

@@ -64,6 +64,7 @@ This ensures that `jq` and `gh` (as defined in `flakes/crq-018/flake.nix`) are a
 ## 7. Related Documents
 
 *   [CRQ-018: Automated GitHub Forking for Nix Flake Dependencies](docs/crqs/CRQ_018_Automated_GitHub_Forking.md)
+*   [CRQ-016: Submodule Nixification and Flake Refactoring](docs/crqs/CRQ_016_Submodule_Nixification.md)
 *   [Memo: Use Shellcheck Always After Changes](docs/memos/Shellcheck_Always_After_Changes.md)
 *   `scripts/automate_dependency_forking.sh`
 *   `flakes/crq-018/flake.nix`

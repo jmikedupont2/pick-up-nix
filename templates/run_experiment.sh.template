@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+
+# run_experiment.sh for {{TASK_TITLE}} experiment
+
+echo "Running the main logic for {{TASK_TITLE}} experiment..."
+echo "Muse: {{MUSE_NAME}}"
+
+# Add your experiment logic here
+# For example:
+# python3 my_script.py
+# nix build .#my-experiment-package
+# echo "Experiment logic goes here."
+
+echo "Experiment {{TASK_TITLE}} finished."
