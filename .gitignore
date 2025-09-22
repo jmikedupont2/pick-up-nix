@@ -68,4 +68,4 @@ lean4_nix_develop.log
 
 # Gemini CLI logs
 .gemini_logs/logs/*.log
-logs/
+logs/index/all_github.txt
