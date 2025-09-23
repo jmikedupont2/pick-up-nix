@@ -1,0 +1,5 @@
+Starting Nix submodule tests at Tue Sep 23 01:40:47 PM UTC 2025 for subdir: 09
+Processing submodule: source/github/meta-introspector/streamofrandom/2025
+Changed directory to /data/data/com.termux.nix/files/home/nix/source/github/meta-introspector/streamofrandom/2025
+Building flake at '.' with attribute path '.#09.packages.default'...
+[K[K

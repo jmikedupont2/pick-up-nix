@@ -1,0 +1,8 @@
+Starting Nix submodule tests at Tue Sep 23 01:31:25 PM UTC 2025
+Processing submodule: source/github/meta-introspector/streamofrandom/2025
+Changed directory to /data/data/com.termux.nix/files/home/nix/source/github/meta-introspector/streamofrandom/2025/09
+Found flake.nix in .. Building default package...
+warning: Git tree '/data/data/com.termux.nix/files/home/pick-up-nix2/source/github/meta-introspector/streamofrandom/2025' is dirty
+error: getting status of '/nix/store/hff4faxm1vcplq3rmffdqniypfn0fwy5-source/09/flake.nix': No such file or directory
+Finished building default package in .
+Finished Nix submodule tests at Tue Sep 23 01:31:26 PM UTC 2025
