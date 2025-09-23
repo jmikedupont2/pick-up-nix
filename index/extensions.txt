@@ -1,0 +1,5 @@
+git
+idx
+pack
+rev
+wiki
