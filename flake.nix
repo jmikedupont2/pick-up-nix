@@ -42,6 +42,7 @@
 	    which 
             gawk # For awk
             jq
+	    asciinema
             ncurses # Added ncurses
           ];
         };
