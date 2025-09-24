@@ -46,7 +46,7 @@
 	url = https://github.com/meta-introspector/solfunmeme
 
 [submodule "source/github/meta-introspector/lean4"]
-	path = source/github/meta-introspector/lean4
+	path = vendor/lean/lean4
 	url = https://github.com/meta-introspector/lean4
 [submodule "vendor/external/forgejo-python"]
 	path = vendor/external/forgejo-python
@@ -314,3 +314,9 @@
 [submodule "source/github/meta-introspector/bootstrap"]
 	path = source/github/meta-introspector/bootstrap
 	url = https://github.com/meta-introspector/bootstrap
+[submodule "vendor/nix/nix-nar-rs"]
+	path = vendor/nix/nix-nar-rs
+	url = https://gitlab.com/abstract-binary/nix-nar-rs
+[submodule "source/github/meta-introspector/ai-ml-zk-ops"]
+	path = source/github/meta-introspector/ai-ml-zk-ops
+	url = https://github.com/meta-introspector/ai-ml-zk-ops
