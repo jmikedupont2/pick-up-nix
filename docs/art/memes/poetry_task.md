@@ -1,1 +1,0 @@
-write self reflective poetry

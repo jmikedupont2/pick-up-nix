@@ -196,7 +196,7 @@
 	url = https://github.com/meta-introspector/neo
 [submodule "vendor/nixpkgs"]
 	path = vendor/nixpkgs
-	url = https://github.com/NixOS/nixpkgs
+	url = https://github.com/meta-introspector/nixpkgs
 
 
 
@@ -286,7 +286,7 @@
 	url = https://github.com/meta-introspector/ragit
 [submodule "vendor/nix/flake-utils"]
 	path = vendor/nix/flake-utils
-	url = https://github.com/numtide/flake-utils.git
+	url = https://github.com/meta-introspector/flake-utils
 [submodule "vendor/tools/detect-duplicates"]
 	path = vendor/tools/detect-duplicates
 	url = https://github.com/meta-introspector/detect-duplicates
@@ -320,3 +320,36 @@
 [submodule "source/github/meta-introspector/ai-ml-zk-ops"]
 	path = source/github/meta-introspector/ai-ml-zk-ops
 	url = https://github.com/meta-introspector/ai-ml-zk-ops
+[submodule "vendor/nix/rust-overlay"]
+	path = vendor/nix/rust-overlay
+	url = https://github.com/meta-introspector/rust-overlay
+	; upstream = https://github.com/oxalica/rust-overlay
+	branch = feature/CRQ-016-nixify
+
+[submodule "vendor/nix/naersk"]
+	path = vendor/nix/naersk
+	url = https://github.com/meta-introspector/naersk
+	; upstream = https://github.com/nix-community/naersk
+	branch = feature/CRQ-016-nixify
+[submodule "vendor/nix/flake-parts"]
+	path = vendor/nix/flake-parts
+	url = https://github.com/meta-introspector/flake-parts
+	; upstream = https://github.com/hercules-ci/flake-parts
+	branch = feature/CRQ-016-nixify
+[submodule "vendor/nix/treefmt-nix"]
+	path = vendor/nix/treefmt-nix
+	url = https://github.com/meta-introspector/treefmt-nix
+	; upstream = https://github.com/numtide/treefmt-nix
+	branch = feature/CRQ-016-nixify
+[submodule "vendor/nix/yarnpnp2nix"]
+	path = vendor/nix/yarnpnp2nix
+	url = https://github.com/madjam002/yarnpnp2nix
+[submodule "vendor/external/copilot-cli"]
+	path = vendor/external/copilot-cli
+	url = https://github.com/github/copilot-cli.git
+[submodule "source/github/meta-introspector/solfunmeme-gitbook"]
+	path = source/github/meta-introspector/solfunmeme-gitbook
+	url = https://github.com/meta-introspector/solfunmeme-gitbook.git
+[submodule "source/github/meta-introspector/solfunmeme-metameme"]
+	path = source/github/meta-introspector/solfunmeme-metameme
+	url = https://github.com/meta-introspector/solfunmeme-metameme.git
