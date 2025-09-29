@@ -40,12 +40,16 @@
           };
         };
         packages = { # Re-add the packages section
-            #template-generator-bin = template-generator-bin.packages.${system}.default;
-          log-analyzer = logAnalyzer;
-          my-new-flake = my-new-flake.packages.${system}.default;
-#          default = self.packages.${system}.template-generator-bin; # Set default to it
+            log-analyzer = logAnalyzer;
+            my-new-flake = my-new-flake.packages.${system}.default;
           };
-  
+
+          apps.log-analyzer = flake-utils.lib.mkApp {
+            drv = logAnalyzer;
+          };
+
+          inherit rustVersions logAnalyzer;
+
           devShells.default = pkgs.mkShell {
             packages = with pkgs; [
               rustVersions.nightly_2025_09_16 # Use the pinned nightly toolchain
