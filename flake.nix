@@ -30,9 +30,16 @@
             nightly_2025_09_16 = pkgs.rust-bin.nightly."2025-09-16".default; # Our pinned nightly
             # Add more versions here as needed
           };
-        in
-        {
-          packages = { # Re-add the packages section
+      in rec {
+        logAnalyzer = naersk.lib.${system}.buildPackage {
+          pname = "log-analyzer";
+          version = "0.1.0";
+          src = ./crates/log_analyzer;
+          cargoLock = {
+            lockFile = ./crates/log_analyzer/Cargo.lock;
+          };
+        };
+        packages = { # Re-add the packages section
             #template-generator-bin = template-generator-bin.packages.${system}.default;
             meta-introspector-repos = import ./pkgs/meta-introspector-repos { inherit pkgs; };
           log-analyzer = logAnalyzer;
