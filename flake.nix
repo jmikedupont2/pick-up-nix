@@ -15,23 +15,18 @@
     }:
       flake-utils.lib.eachDefaultSystem (system:
         let
-          pkgs = import nixpkgs {
-            inherit system;
-            overlays = [
-              rust-overlay.overlays.default
-            ];
-          };
-  
-  
-  
-          # Define an array of Rust versions for testing
-          rustVersions = {
-            stable = pkgs.rust-bin.stable.latest.default;
-            nightly_2025_09_16 = pkgs.rust-bin.nightly."2025-09-16".default; # Our pinned nightly
-            # Add more versions here as needed
-          };
+        pkgs = import nixpkgs {
+          inherit system;
+          overlays = [
+            rust-overlay.overlays.default
+          ];
+        };
+
+        naerskLib = naersk.lib.${system};
+
+        # Define an array of Rust versions for testing
       in rec {
-        logAnalyzer = naersk.lib.${system}.buildPackage {
+        logAnalyzer = naerskLib.buildPackage {
           pname = "log-analyzer";
           version = "0.1.0";
           src = ./crates/log_analyzer;
