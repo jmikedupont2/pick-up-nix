@@ -9,7 +9,7 @@
 #    template-generator-bin.url = "./tools/template_generator_bin"; # Keep this input
   };
 
-    outputs = { self, nixpkgs, flake-utils, rust-overlay, my-new-flake
+    outputs = { self, nixpkgs, flake-utils, rust-overlay, naersk, my-new-flake
     #,
     #template-generator-bin
     }:
