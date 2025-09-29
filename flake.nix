@@ -25,6 +25,11 @@
         naerskLib = naersk.lib.${system};
 
         # Define an array of Rust versions for testing
+        rustVersions = {
+          stable = pkgs.rust-bin.stable.latest.default;
+          nightly_2025_09_16 = pkgs.rust-bin.nightly."2025-09-16".default; # Our pinned nightly
+          # Add more versions here as needed
+        };
       in rec {
         logAnalyzer = naerskLib.buildPackage {
           pname = "log-analyzer";
