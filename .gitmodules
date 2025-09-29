@@ -407,3 +407,9 @@
 [submodule "nix/vendor/nix/disassembler-network"]
 	path = nix/vendor/nix/disassembler-network
 	url = https://github.com/disassembler/network
+[submodule "vendor/hooks/vale-precommit"]
+	path = vendor/hooks/vale-precommit
+	url = https://github.com/meta-introspector/vale-precommit
+[submodule "vendor/hooks/vale"]
+	path = vendor/hooks/vale
+	url = https://github.com/meta-introspector/vale
