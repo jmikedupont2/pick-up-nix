@@ -6,11 +6,10 @@
     flake-utils.url = "github:meta-introspector/flake-utils?ref=feature/CRQ-016-nixify";
     naersk.url = "github:meta-introspector/naersk?ref=feature/CRQ-016-nixify";
     my-new-flake.url = "./nix/flakes/my-new-flake";
-    meta-introspector-repos.url = "github:meta-introspector/meta-introspector-repos?ref=main"; # Changed ref to main
 #    template-generator-bin.url = "./tools/template_generator_bin"; # Keep this input
   };
 
-    outputs = { self, nixpkgs, flake-utils, rust-overlay, naersk, my-new-flake, meta-introspector-repos
+    outputs = { self, nixpkgs, flake-utils, rust-overlay, naersk, my-new-flake
     #,
     #template-generator-bin
     }:
@@ -42,7 +41,6 @@
         };
         packages = { # Re-add the packages section
             #template-generator-bin = template-generator-bin.packages.${system}.default;
-            meta-introspector-repos = meta-introspector-repos.packages.${system}.default;
           log-analyzer = logAnalyzer;
           my-new-flake = my-new-flake.packages.${system}.default;
 #          default = self.packages.${system}.template-generator-bin; # Set default to it
