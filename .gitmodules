@@ -353,3 +353,57 @@
 [submodule "source/github/meta-introspector/solfunmeme-metameme"]
 	path = source/github/meta-introspector/solfunmeme-metameme
 	url = https://github.com/meta-introspector/solfunmeme-metameme.git
+[submodule "vendor/nix/factorio-mods-nix"]
+	path = vendor/nix/factorio-mods-nix
+	url = https://github.com/YellowOnion/factorio-mods-nix
+[submodule "vendor/nix/vpsfree-cz-configuration"]
+	path = vendor/nix/vpsfree-cz-configuration
+	url = https://github.com/meta-introspector/vpsfree-cz-configuration
+[submodule "vendor/nix/sops-nix"]
+	path = vendor/nix/sops-nix
+	url = https://github.com/meta-introspector/sops-nix
+[submodule "nix/vendor/nix/croissong-system"]
+	path = nix/vendor/nix/croissong-system
+	url = https://github.com/croissong/system
+[submodule "nix/vendor/nix/bbigras-nix-config"]
+	path = nix/vendor/nix/bbigras-nix-config
+	url = https://github.com/bbigras/nix-config
+[submodule "nix/vendor/nix/gmkonan-flake"]
+	path = nix/vendor/nix/gmkonan-flake
+	url = https://github.com/GMkonan/flake
+[submodule "nix/vendor/nix/jpetrucciani-nix"]
+	path = nix/vendor/nix/jpetrucciani-nix
+	url = https://github.com/jpetrucciani/nix
+[submodule "nix/vendor/nix/stites-configs-mirror"]
+	path = nix/vendor/nix/stites-configs-mirror
+	url = https://github.com/stites/configs-mirror
+[submodule "nix/vendor/nix/privatevoid-depot"]
+	path = nix/vendor/nix/privatevoid-depot
+	url = https://github.com/privatevoid-net/depot
+[submodule "nix/vendor/nix/catircservices-org"]
+	path = nix/vendor/nix/catircservices-org
+	url = https://github.com/catircservices/catircservices.org
+[submodule "nix/vendor/nix/duck1123-k3s-fleetops"]
+	path = nix/vendor/nix/duck1123-k3s-fleetops
+	url = https://github.com/duck1123/k3s-fleetops
+[submodule "nix/vendor/nix/dominicegginton-dotfiles"]
+	path = nix/vendor/nix/dominicegginton-dotfiles
+	url = https://github.com/dominicegginton/dotfiles
+[submodule "nix/vendor/nix/fort-nix-bitcoin"]
+	path = nix/vendor/nix/fort-nix-bitcoin
+	url = https://github.com/fort-nix/nix-bitcoin
+[submodule "nix/vendor/nix/bojeran-dotfiles"]
+	path = nix/vendor/nix/bojeran-dotfiles
+	url = https://github.com/bojeran/dotfiles
+[submodule "nix/vendor/nix/sheeeng-nix"]
+	path = nix/vendor/nix/sheeeng-nix
+	url = https://github.com/sheeeng/nix
+[submodule "nix/vendor/nix/fjolne-dotfiles"]
+	path = nix/vendor/nix/fjolne-dotfiles
+	url = https://github.com/fjolne/dotfiles
+[submodule "nix/vendor/nix/vpsfreecz-config"]
+	path = nix/vendor/nix/vpsfreecz-config
+	url = https://github.com/vpsfreecz/vpsfree-cz-configuration
+[submodule "nix/vendor/nix/disassembler-network"]
+	path = nix/vendor/nix/disassembler-network
+	url = https://github.com/disassembler/network
