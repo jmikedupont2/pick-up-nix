@@ -40,6 +40,10 @@ The current task involves:
 *   **Main Repository Commit and Push:** Changes in the main repository (including `.gitignore` modifications, submodule gitlink updates, and new files like `nixboot.sh`) have been staged, committed, and pushed to the remote.
 *   **New Script Creation:** Created `scripts/onboard_project.sh` for project onboarding into the quality system, `scripts/create_muse_task.sh` for general task creation, and `scripts/create_experimental_task.sh` for experimental tasks.
 *   **New SOP Creation:** Created `docs/sops/SOP_Digital_Mycology_Experiment_Workflow.md` to define the workflow for LLM-based science experiments.
+    *   Documented `docs/Nix_and_Precommit_Setup.md` detailing the project's Nix and pre-commit configurations, including Git submodule management.
+    *   Created `docs/sops/SOP_Nix_Github_Meta_Introspector_Policy.md` documenting the policy for Nix flake inputs from `github:meta-introspector` and branch-only references.
+    *   Created `docs/Precommit_Nix_Submodule_Overview.md` providing a table of pre-commit hooks, Nix packages, and Git submodule information.
+    *   Created `docs/Precommit_Nix_Submodule_Summary.md` providing a focused summary table of pre-commit hooks, their associated submodules, branch/revision, and Nixification status.
 *   **New Meme Creation:** Created `docs/memes/solfunmeme-mycology.md` describing the application of quality and agile frameworks to digital alife and meme mycology.
 
 ## Next Steps:
