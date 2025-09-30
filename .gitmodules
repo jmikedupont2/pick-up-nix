@@ -413,3 +413,21 @@
 [submodule "vendor/hooks/vale"]
 	path = vendor/hooks/vale
 	url = https://github.com/meta-introspector/vale
+[submodule "source/github/meta-introspector/pre-commit-hooks-collection"]
+	path = source/github/meta-introspector/pre-commit-hooks-collection
+	url = https://github.com/meta-introspector/pre-commit-hooks-collection
+[submodule "vendor/nix/vale-precommit"]
+	path = vendor/nix/vale-precommit
+	url = https://github.com/pwalleni/vale-precommit
+[submodule "vendor/hooks/lint-staged"]
+	path = vendor/hooks/lint-staged
+	url = https://github.com/meta-introspector/lint-staged/
+[submodule "vendor/lint/nixpkgs-lint"]
+	path = vendor/lint/nixpkgs-lint
+	url = https://github.com/nix-community/nixpkgs-lint
+[submodule "vendor/nix/pre-commit-tool-hooks"]
+	path = vendor/nix/pre-commit-tool-hooks
+	url = https://github.com/google/pre-commit-tool-hooks
+[submodule "vendor/nix/nixdoc"]
+	path = vendor/nix/nixdoc
+	url = https://github.com/nix-community/nixdoc
